@@ -1,0 +1,9 @@
+/* menu */
+#menu ul li {position: relative;float: left;z-index: 888;}
+#menu ul li.active {background: #000;}
+#menu ul li a {font-size: 13px;color: #FFF;text-decoration: none;display: block;padding: 12px 15px 11px 15px;z-index: 6;position: relative;}
+#menu ul li div {display: none;background: #FFFFFF;position: absolute;z-index: 5;padding: 5px;border: 1px solid #000000;background: url('../images/menu.png');}
+#menu ul li.active div {display: block;}
+#menu ul li div li {float: none;}
+#menu ul li div li a {font-size: 12px;text-decoration: none;padding: 4px;color: #FFFFFF;display: block;width: 120px;white-space: normal;}
+#menu ul li div li a:hover {background: #000000;}

@@ -1,0 +1,77 @@
+.jcarousel-skin-daynex .jcarousel-container {
+	background: #FFF;
+	margin-bottom: 20px;
+}
+.jcarousel-skin-daynex .jcarousel-direction-rtl {
+	direction: rtl;
+}
+.jcarousel-skin-daynex .jcarousel-container-horizontal {
+	padding: 0px 40px;
+}
+.jcarousel-skin-daynex .jcarousel-clip {
+	overflow: hidden;
+}
+.jcarousel-skin-daynex .jcarousel-clip-horizontal {
+}
+.jcarousel-skin-daynex .jcarousel-item {
+	text-align: center;
+}
+.jcarousel-skin-daynex .jcarousel-item-horizontal {
+	margin-left: 0;
+	margin-right: 10px;
+}
+.jcarousel-skin-daynex .jcarousel-direction-rtl .jcarousel-item-horizontal {
+	margin-left: 10px;
+	margin-right: 0;
+}
+.jcarousel-skin-daynex .jcarousel-item-placeholder {
+	background: #fff;
+	color: #000;
+}
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-daynex .jcarousel-next-horizontal {
+	position: absolute;
+	top: 23px;
+	right: 5px;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	background: url('button-next.png') center no-repeat;
+}
+.jcarousel-skin-daynex .jcarousel-direction-rtl .jcarousel-next-horizontal {
+	left: 5px;
+	right: auto;
+	background: url('button-previous.png') center no-repeat;
+}
+.jcarousel-skin-daynex .jcarousel-next-horizontal:hover, .jcarousel-skin-daynex .jcarousel-next-horizontal:focus {
+}
+.jcarousel-skin-daynex .jcarousel-next-horizontal:active {
+}
+.jcarousel-skin-daynex .jcarousel-next-disabled-horizontal, .jcarousel-skin-daynex .jcarousel-next-disabled-horizontal:hover, .jcarousel-skin-daynex .jcarousel-next-disabled-horizontal:focus, .jcarousel-skin-daynex .jcarousel-next-disabled-horizontal:active {
+	cursor: default;
+	background: none;
+}
+.jcarousel-skin-daynex .jcarousel-prev-horizontal {
+	position: absolute;
+	top: 23px;
+	left: 0px;
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+	background: url('button-previous.png') center no-repeat;
+}
+.jcarousel-skin-daynex .jcarousel-direction-rtl .jcarousel-prev-horizontal {
+	left: auto;
+	right: 0px;
+	background: url('button-next.png') center no-repeat;
+}
+.jcarousel-skin-daynex .jcarousel-prev-horizontal:hover, .jcarousel-skin-daynex .jcarousel-prev-horizontal:focus {
+}
+.jcarousel-skin-daynex .jcarousel-prev-horizontal:active {
+}
+.jcarousel-skin-daynex .jcarousel-prev-disabled-horizontal, .jcarousel-skin-daynex .jcarousel-prev-disabled-horizontal:hover, .jcarousel-skin-daynex .jcarousel-prev-disabled-horizontal:focus, .jcarousel-skin-daynex .jcarousel-prev-disabled-horizontal:active {
+	cursor: default;
+	background: none;
+}
