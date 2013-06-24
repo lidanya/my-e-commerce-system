@@ -53,7 +53,7 @@
 	<meta name="description" content="<?php echo $ek_description; ?>" />
 	<meta name="keywords" content="<?php echo $ek_keywords; ?>" />
 	<meta name='robots' content='index, follow' />
-	<meta name="author" content="Daynex E-Ticaret ve Web Çözümleri" />
+	<meta name="author" content="E Ticaret Sistemim E-Ticaret ve Web Çözümleri" />
 </head>
 
 <body>

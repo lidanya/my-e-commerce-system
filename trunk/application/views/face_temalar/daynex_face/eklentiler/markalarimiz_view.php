@@ -7,7 +7,7 @@
 			{
 		?>
 		<div id="carouse" style="margin-top:20px;width:760px;">
-			<ul class="jcarousel-skin-daynex">
+			<ul class="jcarousel-skin-eticaretsistemim">
 				<?php $i = 0; ?>
 				<?php foreach ($manufacturers['query'] as $manufacturer): ?>
 					<li>

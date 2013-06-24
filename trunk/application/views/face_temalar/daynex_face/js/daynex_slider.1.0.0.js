@@ -1,6 +1,6 @@
 /*
 * daynex_Silier-1.0.0 jQuery Plug-In
-* http://www.daynex.com.tr/
+* http://www.eticaretsistemim.com/
 */
 (function($) {
 

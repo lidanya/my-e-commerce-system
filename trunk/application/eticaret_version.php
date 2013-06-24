@@ -4,7 +4,7 @@
  * Version file
  *
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 	define('ETICARET_VERSION', 'v10');

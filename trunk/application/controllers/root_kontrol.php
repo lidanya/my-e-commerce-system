@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class root_kontrol extends Public_Controller {
@@ -27,7 +27,7 @@ class root_kontrol extends Public_Controller {
 	 * index function
 	 *
 	 * @return void
-	 * @author Ali Çetin, M. Çağdaş Saygılı -> Dev10.net
+	 * @author Serkan Koch,  -> 
 	 **/
 
 	function index()

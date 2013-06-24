@@ -12,7 +12,7 @@
 	<meta name="description" content="<?php echo $ek_description; ?>" />
 	<meta name="keywords" content="<?php echo $ek_keywords; ?>" />
 	<meta name='robots' content='noindex, nofollow' />
-	<meta name="author" content="Daynex E-Ticaret ve Web Çözümleri" />
+	<meta name="author" content="E Ticaret Sistemim E-Ticaret ve Web Çözümleri" />
 </head>
 <body>
 <?php echo (config('site_ayar_bakim_sayfasi_detay')) ? config('site_ayar_bakim_sayfasi_detay') : '<p style="text-align: center; ">

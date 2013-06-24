@@ -6,7 +6,7 @@
  * --------------------------------------------------------------------------
  *
  * @package coupon codes
- * @author DAYNEX (Ali OYGUR)
+ * @author  (Serkan Koch)
  **/
 class Coupon_model extends CI_Model 
 {

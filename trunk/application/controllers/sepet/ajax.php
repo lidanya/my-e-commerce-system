@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class ajax extends Public_Controller {
@@ -177,7 +177,7 @@ class ajax extends Public_Controller {
 	 * Siparişte kullanılacak kupon kodunu uygular
 	 * 
 	 * @return string
-	 * @author Daynex (Ali OYGUR)
+	 * @author E Ticaret Sistemim (Serkan Koch)
 	 **/
 	public function apply_coupon_code()
 	{
@@ -209,7 +209,7 @@ class ajax extends Public_Controller {
 	/**
 	 * Girilen kupon kodunun uygunluğunu denetler
 	 * 
-	 * @author daynex (Ali OYGUR)
+	 * @author (Serkan Koch)
 	 * @return bool
 	 **/
 	public function _check_code($code)
@@ -262,6 +262,6 @@ class ajax extends Public_Controller {
 }
 
 /* End of file isimsiz.php */
-/* Location: ./daynex/application/controllers/isimsiz.php */
+/*  */
 
 ?>

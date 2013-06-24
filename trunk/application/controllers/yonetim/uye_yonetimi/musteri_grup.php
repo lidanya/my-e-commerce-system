@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class musteri_grup extends Admin_Controller {
@@ -164,6 +164,6 @@ class musteri_grup extends Admin_Controller {
 }
 
 /* End of file isimsiz.php */
-/* Location: ./daynex/application/controllers/isimsiz.php */
+/*  */
 
 ?>

@@ -21,7 +21,7 @@ function _get($name, $default = FALSE, $escape = TRUE) {
 /**
  * $_POST süper global indeki değeri CI $this->input->post() metodu yardımıyla alır.
  * 
- * @author Ali OYGUR
+ * @author Serkan Koch
  * 
  * @param string $name
  * @param string $default (sözkonusu değer yoksa alternatif bir değer girebilirsiniz)

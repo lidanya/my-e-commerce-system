@@ -91,7 +91,7 @@ if(config('site_ayar_ssl_kod') != '')
 	<div id="footer_bilgi">
 		<div class="sola"><?php echo anchor(face_site_url(), config('site_ayar_copyright')); ?></div>
 		<div class="saga">
-			<a href="http://www.daynex.com.tr/e-ticaret/daynex-e-ticaret?ref=<?php echo face_site_url(); ?>" target="_blank" title="<?php echo lang('footer_system_name'); ?>">
+			<a href="http://www.eticaretsistemim.com/e-ticaret/eticaretsistemim-e-ticaret?ref=<?php echo face_site_url(); ?>" target="_blank" title="<?php echo lang('footer_system_name'); ?>">
 				<?php echo strtr(lang('footer_copyright_text'), array('{version}' => DAYNEX_VERSION)); ?>
 			</a>
 		</div>

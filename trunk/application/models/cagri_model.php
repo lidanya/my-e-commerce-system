@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class cagri_model extends CI_Model
@@ -14,7 +14,7 @@ class cagri_model extends CI_Model
 	function __construct()
 	{
 		parent::__construct();
-		log_message('debug', 'Çaðrý Model Yüklendi');
+		log_message('debug', 'ï¿½aï¿½rï¿½ Model Yï¿½klendi');
 
 		$this->load->library('pagination');
 		$this->load->library('daynex_pagination');

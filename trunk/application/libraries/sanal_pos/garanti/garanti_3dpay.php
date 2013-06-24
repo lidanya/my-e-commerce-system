@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
  /*
@@ -32,7 +32,7 @@ class garanti_3dpay
 	 * garanti_3dfull construct
 	 *
 	 * @return void
-	 * @author Daynex.com.tr
+	 * @author E-Ticaret Sistemim
 	 **/
 
 	function __construct()

@@ -1,7 +1,7 @@
 /**
  * Arama sonuçları sayfasındaki filtrelemelerle alakalı js işlemlerini yürütür.
  * 
- * @author Ali OYGUR 
+ * @authorSerkan Koch 
  */
 /* 
 $(document).ready(function(){

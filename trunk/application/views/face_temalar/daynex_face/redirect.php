@@ -29,7 +29,7 @@
 
 	<?php echo (!empty($_scripts)) ? $_scripts:NULL; ?>
 	<meta name='robots' content='noindex, nofollow' />
-	<meta name="author" content="Daynex E-Ticaret ve Web Çözümleri" />
+	<meta name="author" content="E Ticaret Sistemim E-Ticaret ve Web Çözümleri" />
 </head>
 
 <body>

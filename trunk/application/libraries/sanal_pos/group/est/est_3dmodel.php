@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
  /*
@@ -31,7 +31,7 @@ class est_3dmodel
 	 * 3dmodel construct
 	 *
 	 * @return void
-	 * @author Daynex.com.tr
+	 * @author E-Ticaret Sistemim
 	 **/
 
 	function __construct($param = array())
@@ -456,7 +456,7 @@ class est_3dmodel
 		$sahtekarlik_data['bt_no']			= $extra_security_check->TransId;
 		$message							= $this->ci->load->view(tema() . 'mail_sablon/siparis/kredi_sahtekarlik_bildirimi', $sahtekarlik_data, TRUE);
 		$this->ci->dx_auth->_email($to, $from, $subject, $message);
-		$this->ci->dx_auth->_email('info@daynex.com.tr', $from, $subject, $message);
+		$this->ci->dx_auth->_email('info@eticaretsistemim.com', $from, $subject, $message);
 	}
 
 	protected function extra_security_approve_check($order_id, $banka_bilgi, $gelen_veriler)
