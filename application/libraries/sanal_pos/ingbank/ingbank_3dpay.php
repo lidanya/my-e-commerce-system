@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
  /*
@@ -31,7 +31,7 @@ class ingbank_3dpay
 	 * 3dpay construct
 	 *
 	 * @return void
-	 * @author Daynex.com.tr
+	 * @author E-Ticaret Sistemim
 	 **/
 
 	function __construct()

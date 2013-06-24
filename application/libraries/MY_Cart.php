@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class MY_Cart extends CI_Cart {

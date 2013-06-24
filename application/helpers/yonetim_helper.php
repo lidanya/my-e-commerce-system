@@ -285,6 +285,6 @@ if(!defined('BASEPATH'))
 	}
 
 /* End of file isimsiz_helper.php */
-/* Location: ./daynex/application/helpers/isimsiz_helper.php */
+/* */
 
 ?>

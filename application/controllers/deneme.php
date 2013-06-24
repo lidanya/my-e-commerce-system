@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class deneme extends Public_Controller {
@@ -31,7 +31,7 @@ class deneme extends Public_Controller {
 	 * index function
 	 *
 	 * @return void
-	 * @author Ali Çetin, M. Çağdaş Saygılı -> Dev10.net
+	 * @author Serkan Koch,  -> 
 	 **/
 
 	function index()
@@ -67,7 +67,7 @@ class deneme extends Public_Controller {
 	function _table_1_variables()
 	{
 		$db_array = array();
-		$db_1 = $this->load->database('daynex', TRUE);
+		$db_1 = $this->load->database('eticaretsistemim', TRUE);
 		$tables = $db_1->list_tables();
 		foreach($tables as $table)
 		{

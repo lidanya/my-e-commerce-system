@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 }
 
 /**
- * Serkan Koch Sitemap Generator daynex.com.tr
+ * Serkan Koch Sitemap Generator eticaretsistemim.com
  */
 
  

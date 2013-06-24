@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr Serkankoch
+ * @author E-Ticaret Sistemim Serkankoch
  * 
  **/
 

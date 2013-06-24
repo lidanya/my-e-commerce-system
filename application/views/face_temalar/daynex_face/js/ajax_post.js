@@ -2,7 +2,7 @@
 
 	/*
 		Plugin yazılış tarihi : 6 mayıs 2011
-		Yazar : Ali ÇETİN / info@dev10.net
+		Yazar : Serkan Koch / 
 		Versiyon : 1.0.1
 	*/
 

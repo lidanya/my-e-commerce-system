@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class eklentiler_reklam_5_model extends CI_Model

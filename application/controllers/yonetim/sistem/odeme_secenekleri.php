@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 if (!defined('BASEPATH')) exit('Doğrudan link ya da adres girişi yasaklanmıştır. !');
@@ -771,6 +771,6 @@ class odeme_secenekleri extends Admin_Controller {
 }
 
 /* End of file isimsiz.php */
-/* Location: ./daynex/application/controllers/isimsiz.php */
+/*  */
 
 ?>

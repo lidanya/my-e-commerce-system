@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class bilgi extends Public_Controller {
@@ -29,7 +29,7 @@ class bilgi extends Public_Controller {
 	 * index function
 	 *
 	 * @return void
-	 * @author Ali Çetin, Ahmet Çelebigil -> Daynex.com.tr
+	 * @author Serkan Koch, Serkan Koch -> E-Ticaret Sistemim
 	 **/
 	
 	function index()

@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class detay extends Face_Controller {
@@ -15,7 +15,7 @@ class detay extends Face_Controller {
 	 * Kategori Detay construct
 	 *
 	 * @return void
-	 * @author Ali Çetin, Ahmet Çelebigil -> Daynex.com.tr
+	 * @author Serkan Koch, Serkan Koch -> E-Ticaret Sistemim
 	 **/
 
 	function __construct()

@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class db_ayar
@@ -19,7 +19,7 @@ class db_ayar
 	 * isimsiz construct
 	 *
 	 * @return void
-	 * @author Ali Çetin, Ahmet Çelebigil -> Daynex.com.tr
+	 * @author Serkan Koch, Serkan Koch -> E-Ticaret Sistemim
 	 **/
 
 	function __construct()

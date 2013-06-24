@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
  /*
@@ -33,7 +33,7 @@ class isbank_3dmodel
 	 * 3dmodel construct
 	 *
 	 * @return void
-	 * @author Daynex.com.tr
+	 * @author E-Ticaret Sistemim
 	 **/
 
 	function __construct()

@@ -6,7 +6,7 @@ if(!defined('BASEPATH'))
 
 /**
  * @package E-Ticaret
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 class giris extends Face_Controller {
@@ -15,7 +15,7 @@ class giris extends Face_Controller {
 	 * Üye Giriş construct
 	 *
 	 * @return void
-	 * @author Ali Çetin, Ahmet Çelebigil -> Daynex.com.tr
+	 * @author Serkan Koch, Serkan Koch -> E-Ticaret Sistemim
 	 **/
 
 	function __construct()
@@ -30,7 +30,7 @@ class giris extends Face_Controller {
 	 * index function
 	 *
 	 * @return void
-	 * @author Ali Çetin, Ahmet Çelebigil -> Daynex.com.tr
+	 * @author Serkan Koch, Serkan Koch -> E-Ticaret Sistemim
 	 **/
 
 	public function facebook()
@@ -155,6 +155,6 @@ class giris extends Face_Controller {
 }
 
 /* End of file isimsiz.php */
-/* Location: ./daynex/application/controllers/isimsiz.php */
+/*  */
 
 ?>

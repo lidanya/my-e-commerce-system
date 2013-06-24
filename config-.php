@@ -4,7 +4,7 @@
  * Ayar Dosyası
  *
  * @package Config
- * @author Daynex.com.tr
+ * @author E-Ticaret Sistemim
  **/
 
 	/*
