@@ -26,6 +26,8 @@
 	</script>
 		<div class="kayan_urun" id="populer_urunler_1">
 			<ul>
+				
+				<?php $sablon_gonder = new stdClass(); ?>
 				<?php $i=1; foreach($populer_urunler_sorgu['query'] as $populer_urunler) { if($i <=5): ?>
 				<li>
 					<?php
