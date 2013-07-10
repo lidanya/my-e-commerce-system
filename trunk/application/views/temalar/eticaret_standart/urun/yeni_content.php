@@ -30,6 +30,7 @@
 		<div class="clear"></div>
 		<div class="liste_container">
 		<?php
+			$sablon_gonder = new stdClass();
 			foreach($urunler['query'] as $yeni_urunlerimiz) {
 				$i = $i+1;
 				$sablon_gonder->product_id		= $yeni_urunlerimiz->product_id;

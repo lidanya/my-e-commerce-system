@@ -10,7 +10,7 @@
 	/*
 		empty is this base folders
 	*/
-	$base_default_url = 'http://www.dynx.com';
+	$base_default_url = 'http://www.eticaretsistemim.com';
 	/*
 		default AUTO,
 		PATH_INFO,

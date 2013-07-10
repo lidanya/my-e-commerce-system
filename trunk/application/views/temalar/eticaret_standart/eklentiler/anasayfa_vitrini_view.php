@@ -13,6 +13,7 @@ if($eklenti_baslik_goster)
 		<!--Ürün Listele-->
 		<div class="liste_container" style="margin-top:0px;">
 		<?php
+			$sablon_gonder = new stdClass();
 			foreach($anasayfa_vitrini_sorgu['sorgu']->result() as $anasayfa_vitrini)
 			{
 				$i = $i+1;

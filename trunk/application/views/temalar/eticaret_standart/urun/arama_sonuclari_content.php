@@ -101,6 +101,7 @@ if($arama_sonuc AND $arama_sonuc['toplam'] > 0)
 			<div class="liste_container">
 			<?php
 				$sii = 0;
+				$sablon_gonder = new stdClass();
 				foreach($arama_sonuc['sorgu']->result() as $arama) {
 					$k = $sii%2;
 					if($k == 0) {

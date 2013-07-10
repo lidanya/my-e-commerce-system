@@ -1,71 +1,47 @@
 <?php
-if(!defined('BASEPATH'))
-{
-	header('Location: http://'. getenv('SERVER_NAME') .'/');
+
+if (!defined('BASEPATH')) {
+	header('Location: http://' . getenv('SERVER_NAME') . '/');
 }
 
 /**
  * @package E-Ticaret
  * @author E-Ticaret Sistemim
- **/
+ * */
+class site extends Public_Controller
+{
 
-class site extends Public_Controller {
-
-	function __construct()
-	{
+	function __construct() {
 		parent::__construct();
 		log_message('debug', 'Site Controller Yüklendi');
 
 		$this->load->library('encrypt');
 		$this->load->library('menu');
 		$this->load->model('site_model');
-                
-               // $memcache = new Memcache;  // starting the memcache
-               // $memcache->connect('localhost', 11211) or die ("Could not connect"); // connecting memcache 
-                
-               // $version = $memcache->getVersion();  
-
-
-
- 
-//$memcache->set('key', $tmp_object, false, 10) or  // setting memcache data value
-//die ("Failed to save data at the server"); 
-//echo "Store data in the cache (data will expire in 10 seconds) 
-//<br/>\n"; 
- 
-//$get_result = $memcache->get('key');  // getting memcache data value
-//echo "Data from the cache:<br/>\n";  
-  
-//var_export($get_result); 
-
-
 	}
 
 	/**
 	 * index function
 	 *
 	 * @return void
-	 **/
-
-	function index()
-	{
+	 * */
+	function index() {
 		$this->template->set_master_template(tema() . 'index/index');
 		$this->template->add_region('content');
 		$this->template->write_view('content', tema() . 'index/content');
 		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/anasayfa.css');
-		
-		  //SKOCH
+
+		//SKOCH
 		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
+		$this->output->enable_profiler(false);
 		//SKOCH
 
 		$this->template->render();
 	}
 
-	function page_not_found()
-	{
+	function page_not_found() {
 		$data['baslik'] = lang('messages_page_not_found_title');
 
 		$this->load->view(tema() . 'header', $data);
@@ -75,10 +51,8 @@ class site extends Public_Controller {
 		$this->load->view(tema() . 'footer');
 	}
 
-	function img_kontrol($neresi = 'uye_giris')
-	{
-		if($neresi == 'uye_giris')
-		{
+	function img_kontrol($neresi = 'uye_giris') {
+		if ($neresi == 'uye_giris') {
 			$random_key = $this->site_model->random_key('6'); // Kaç haneli Oluşturacağı
 			$key = $random_key;
 			$this->session->set_userdata('uye_giris', $key);
@@ -104,44 +78,39 @@ class site extends Public_Controller {
 			$this->session->set_userdata('sifre_hatirlat', $key);
 			$str = $key;
 		}
-		
-                //ob_start();
-		$im = imagecreatefrompng(APPPATH . 'views/' . tema_asset() .  'images/' . 'chapta.png');
-                //echo $im; return false;
+
+		ob_start();
+		$im = imagecreatefrompng(APPPATH . 'views/' . tema_asset() . 'images/' . 'face.png');
+		//echo $im; return false;
 		$color = imagecolorallocate($im, 255, 255, 255);
 		$font = APPPATH . 'fonts/arialbi.ttf';
 		$fontsize = 11;
 		imagettftext($im, $fontsize, 0, 17, 20, $color, $font, $str);
 		imagepng($im);
 		imagedestroy($im);
-		//echo $im; return;
 		exit(header('Content-type: image/png'));
-                //ob_end_flush();
-                //exit();
-                
+		ob_end_flush();
 	}
 
-	function mesaj()
-	{
+	function mesaj() {
 		$mesajlar = $this->session->flashdata('mesajlar');
-		if($mesajlar)
-		{
+		if ($mesajlar) {
 			$this->template->set_master_template(tema() . 'mesajlar/index');
 
 			$content_data = array();
 			$content_data['baslik'] = $mesajlar['baslik'];
-			$content_data['icerik']	= $mesajlar['icerik'];
+			$content_data['icerik'] = $mesajlar['icerik'];
 
 			$this->template->add_region('content');
 			$this->template->write_view('content', tema() . 'mesajlar/content', $content_data);
 			$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
-			
+
 			//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
+			$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
+			$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
+			$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
+			$this->output->enable_profiler(false);
+			//SKOCH
 
 			$this->output->enable_profiler(false);
 			$this->template->render();
@@ -151,34 +120,29 @@ class site extends Public_Controller {
 	}
 
 	/* Callback function */
-	function username_check($username)
-	{
+
+	function username_check($username) {
 		$result = $this->dx_auth->is_username_available($username);
-		if ( ! $result)
-		{
+		if (!$result) {
 			$this->validation->set_message('username_check', 'Girilen E-Posta adresi kullanılıyor başka deneyiniz.');
 		}
-				
+
 		return $result;
 	}
 
-	function email_check($email)
-	{
+	function email_check($email) {
 		$result = $this->dx_auth->is_email_available($email);
-		if ( ! $result)
-		{
+		if (!$result) {
 			$this->validation->set_message('email_check', 'Girilen E-Posta adresi kullanılıyor başka deneyiniz.');
 		}
-				
+
 		return $result;
 	}
 
-	function captcha_check_iletisim($code)
-	{
+	function captcha_check_iletisim($code) {
 		$this->load->model('uye_model');
 		$result = TRUE;
-		if ( ! $this->uye_model->captcha_check($code, 'iletisim') )
-		{
+		if (!$this->uye_model->captcha_check($code, 'iletisim')) {
 			$this->validation->set_message('captcha_check_iletisim', 'Girdiğiniz doğrulama kodu yanlıştır lütfen tekrar deneyiniz.');
 			$result = FALSE;
 		}
@@ -186,26 +150,24 @@ class site extends Public_Controller {
 		return $result;
 	}
 
-	function iletisim()
-	{
+	function iletisim() {
 		$val = $this->validation;
-		
-		$rules['eposta']		= 'trim|required|valid_email|xss_clean';
-		$rules['TxtAdSoyad']	= 'trim|required|xss_clean';
-		$rules['ticket_konu']	= 'trim|required|xss_clean';
-		$rules['ticket_mesaj']	= 'trim|required|xss_clean';
-		$rules['captcha']		= 'trim|required|xss_clean|callback_captcha_check_iletisim';
-		
-		$fields['eposta']		= lang('messages_static_page_contact_form_email_text');
-		$fields['TxtAdSoyad']	= lang('messages_static_page_contact_form_name_text');
-		$fields['ticket_konu']	= lang('messages_static_page_contact_form_subject_text');
-		$fields['ticket_mesaj']	= lang('messages_static_page_contact_form_message_text');
-		$fields['captcha']		= lang('messages_static_page_contact_form_security_text');;
-		
+
+		$rules['eposta'] = 'trim|required|valid_email|xss_clean';
+		$rules['TxtAdSoyad'] = 'trim|required|xss_clean';
+		$rules['ticket_konu'] = 'trim|required|xss_clean';
+		$rules['ticket_mesaj'] = 'trim|required|xss_clean';
+		$rules['captcha'] = 'trim|required|xss_clean|callback_captcha_check_iletisim';
+
+		$fields['eposta'] = lang('messages_static_page_contact_form_email_text');
+		$fields['TxtAdSoyad'] = lang('messages_static_page_contact_form_name_text');
+		$fields['ticket_konu'] = lang('messages_static_page_contact_form_subject_text');
+		$fields['ticket_mesaj'] = lang('messages_static_page_contact_form_message_text');
+		$fields['captcha'] = lang('messages_static_page_contact_form_security_text');
+
 		$val->set_rules($rules);
 		$val->set_fields($fields);
-		if($val->run() == FALSE)
-		{
+		if ($val->run() == FALSE) {
 			$this->template->add_region('baslik');
 			$this->template->write('baslik', lang('messages_static_page_contact_title'));
 
@@ -214,31 +176,28 @@ class site extends Public_Controller {
 			$content_data['bayiler'] = $this->db->get('bayiler');
 			$content_data['val'] = $val;
 			$content_data['ide_inf'] = "";
-			if($this->dx_auth->is_logged_in())
-			{
-				$content_data['ide_inf'] =  get_usr_ide_inf($this->dx_auth->get_user_id());
+			if ($this->dx_auth->is_logged_in()) {
+				$content_data['ide_inf'] = get_usr_ide_inf($this->dx_auth->get_user_id());
 			}
 
 			$this->template->add_region('content');
 			$this->template->write_view('content', tema() . 'iletisim/content', $content_data);
 			$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
-			
+
 			//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
+			$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
+			$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
+			$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
+			$this->output->enable_profiler(false);
+			//SKOCH
 			$this->output->enable_profiler(false);
 			$this->template->render();
 		} else {
 			$this->session->unset_userdata('val');
-			if(! $this->dx_auth->is_logged_in())
-			{
-				if(!$this->email_check($val->eposta))
-				{
-					$iletisim = array('email'=>$val->eposta, 'adsoyad' => $val->TxtAdSoyad, 'konu' => $val->ticket_konu, 'mesaj' => $val->ticket_mesaj);
-					$this->session->set_userdata('val',$iletisim);
+			if (!$this->dx_auth->is_logged_in()) {
+				if (!$this->email_check($val->eposta)) {
+					$iletisim = array('email' => $val->eposta, 'adsoyad' => $val->TxtAdSoyad, 'konu' => $val->ticket_konu, 'mesaj' => $val->ticket_mesaj);
+					$this->session->set_userdata('val', $iletisim);
 					redirect('uye/giris');
 				} else {
 					$this->site_model->ticket_ekle();
@@ -256,9 +215,8 @@ class site extends Public_Controller {
 			}
 		}
 	}
-	
-	function musteri_hizmetleri()
-	{
+
+	function musteri_hizmetleri() {
 		$this->template->set_master_template(tema() . 'musteri_hizmetleri/index');
 		$this->template->add_region('baslik');
 		$this->template->write('baslik', lang('messages_static_page_customer_services_title'));
@@ -266,26 +224,23 @@ class site extends Public_Controller {
 		$this->template->write_view('content', tema() . 'musteri_hizmetleri/content');
 		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
 		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/mushiz.css');
-		
+
 		//SKOCH
 		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
+		$this->output->enable_profiler(false);
 		//SKOCH
 		$this->output->enable_profiler(false);
 		$this->template->render();
 	}
 
-	function duyurular($seoname = null)
-	{
+	function duyurular($seoname = null) {
 		$this->load->model('site/information_model');
 
-		if(!is_null($seoname))
-		{
+		if (!is_null($seoname)) {
 			$information_info = $this->information_model->get_information_by_seo($seoname);
-			if($information_info)
-			{
+			if ($information_info) {
 				$this->template->set_master_template(tema() . 'duyurular/index');
 				$this->template->add_region('content');
 
@@ -297,14 +252,14 @@ class site extends Public_Controller {
 				$this->template->write_view('content', tema() . 'duyurular/content', $content_data);
 				$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
 				$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/mushiz.css');
-				
+
 				//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
-				
+				$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
+				$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
+				$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
+				$this->output->enable_profiler(false);
+				//SKOCH
+
 				$this->output->enable_profiler(false);
 				$this->template->render();
 			} else {
@@ -313,8 +268,7 @@ class site extends Public_Controller {
 		} else {
 			$type = 'announcement';
 			$information_info = $this->information_model->get_information_by_type($type, '-1');
-			if($information_info)
-			{
+			if ($information_info) {
 				$this->template->set_master_template(tema() . 'duyurular/index');
 				$this->template->add_region('content');
 
@@ -323,17 +277,17 @@ class site extends Public_Controller {
 				$content_data['keywords'] = lang('messages_extension_announcement_title_meta_keywords');
 				$content_data['description'] = lang('messages_extension_announcement_title_meta_description');
 
-				$this->template->write_view('content', tema() . 'duyurular/tumu_content',$content_data);
+				$this->template->write_view('content', tema() . 'duyurular/tumu_content', $content_data);
 				$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
 				$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/mushiz.css');
-				
+
 				//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
-				
+				$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
+				$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
+				$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
+				$this->output->enable_profiler(false);
+				//SKOCH
+
 				$this->output->enable_profiler(false);
 				$this->template->render();
 			} else {
@@ -341,16 +295,13 @@ class site extends Public_Controller {
 			}
 		}
 	}
-	
-	function haberler($seoname = null)
-	{
+
+	function haberler($seoname = null) {
 		$this->load->model('site/information_model');
 
-		if(!is_null($seoname))
-		{
+		if (!is_null($seoname)) {
 			$information_info = $this->information_model->get_information_by_seo($seoname);
-			if($information_info)
-			{
+			if ($information_info) {
 				$this->template->set_master_template(tema() . 'haberler/index');
 				$this->template->add_region('content');
 
@@ -362,14 +313,14 @@ class site extends Public_Controller {
 				$this->template->write_view('content', tema() . 'haberler/content', $content_data);
 				$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
 				$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/mushiz.css');
-				
+
 				//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
-				
+				$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
+				$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
+				$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
+				$this->output->enable_profiler(false);
+				//SKOCH
+
 				$this->output->enable_profiler(false);
 				$this->template->render();
 			} else {
@@ -378,8 +329,7 @@ class site extends Public_Controller {
 		} else {
 			$type = 'news';
 			$information_info = $this->information_model->get_information_by_type($type, '-1');
-			if($information_info)
-			{
+			if ($information_info) {
 				$this->template->set_master_template(tema() . 'haberler/index');
 				$this->template->add_region('content');
 
@@ -388,17 +338,17 @@ class site extends Public_Controller {
 				$content_data['keywords'] = lang('messages_extension_news_title_meta_keywords');
 				$content_data['description'] = lang('messages_extension_news_title_meta_description');
 
-				$this->template->write_view('content', tema() . 'haberler/tumu_content',$content_data);
+				$this->template->write_view('content', tema() . 'haberler/tumu_content', $content_data);
 				$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
 				$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/mushiz.css');
-				
+
 				//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
-				
+				$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
+				$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
+				$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
+				$this->output->enable_profiler(false);
+				//SKOCH
+
 				$this->output->enable_profiler(false);
 				$this->template->render();
 			} else {
@@ -407,8 +357,7 @@ class site extends Public_Controller {
 		}
 	}
 
-	function banka_bilgileri()
-	{		
+	function banka_bilgileri() {
 		$this->template->set_master_template(tema() . 'bilgilendirme/banka_bilgileri_index');
 
 		$this->template->add_region('baslik');
@@ -417,31 +366,30 @@ class site extends Public_Controller {
 		$this->template->add_region('content');
 		$this->template->write_view('content', tema() . 'bilgilendirme/banka_bilgileri_content');
 		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/bilgi_sayfalari.css');
-		
+
 		//SKOCH
 		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
+		$this->output->enable_profiler(false);
 		//SKOCH
 
 		$this->output->enable_profiler(false);
 		$this->template->render();
 	}
 
-	function odeme_secenekleri()
-	{		
+	function odeme_secenekleri() {
 		$this->template->set_master_template(tema() . 'bilgilendirme/odeme_secenekleri_index');
 
 		$this->template->add_region('content');
 		$this->template->write_view('content', tema() . 'bilgilendirme/odeme_secenekleri_content');
 		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/bilgi_sayfalari.css');
-		
+
 		//SKOCH
 		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
+		$this->output->enable_profiler(false);
 		//SKOCH
 
 		$this->template->add_region('baslik');
@@ -451,14 +399,13 @@ class site extends Public_Controller {
 		$this->template->render();
 	}
 
-	function bakim_modu()
-	{
-		if(config('site_ayar_bakim'))
-		{
+	function bakim_modu() {
+		if (config('site_ayar_bakim')) {
 			$data['baslik'] = 'Sitemiz Yapım Aşamasındadır';
-			$this->load->view(tema() . 'bakim_modu_view',$data);
+			$this->load->view(tema() . 'bakim_modu_view', $data);
 		} else {
 			redirect('');
 		}
 	}
+
 }
