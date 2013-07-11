@@ -80,7 +80,7 @@ class site extends Public_Controller
 		}
 
 		ob_start();
-		$im = imagecreatefrompng(APPPATH . 'views/' . tema_asset() . 'images/' . 'face.png');
+		$im = imagecreatefrompng(APPPATH . 'views/' . tema_asset() . 'images/' . 'chapta.png');
 		//echo $im; return false;
 		$color = imagecolorallocate($im, 255, 255, 255);
 		$font = APPPATH . 'fonts/arialbi.ttf';
