@@ -48,7 +48,7 @@ class detay extends Face_Controller {
 					}
 
 					$content_data['breadcrumbs'][] = array(
-						'href'		=> face_site_url($path . '--k'),
+						'href'		=> face_site_url($path . '--category'),
 						'text'		=> $category_info->name,
 						'separator'	=> ' &gt; '
 					);
@@ -59,7 +59,7 @@ class detay extends Face_Controller {
 		} else {
 			$category_id = 0;
 			$content_data['breadcrumbs'][] = array(
-				'href'		=> face_site_url('tum_kategoriler--k'),
+				'href'		=> face_site_url('tum_kategoriler--category'),
 				'text'		=> lang('messages_breadcrumbs_all_categories'),
 				'separator'	=> ' &gt; '
 			);
@@ -99,7 +99,7 @@ class detay extends Face_Controller {
 
 			$content_data['category_products'] = $category_products;
 			if($category_products) {
-				$content_data['category_products_pagination'] = create_pagination(face_site_url($seo . '--k/' . $sort_link), $category_products['total'], $limit, $uri_segment, 'face');
+				$content_data['category_products_pagination'] = create_pagination(face_site_url($seo . '--category/' . $sort_link), $category_products['total'], $limit, $uri_segment, 'face');
 			} else {
 				$content_data['category_products_pagination'] = FALSE;
 			}

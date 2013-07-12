@@ -71,13 +71,6 @@ class bilgi extends Public_Controller {
 				$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
 				$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.maskedinput-1.2.2.min.js');
 				
-					//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
-
 				$this->template->render();	
 			} else {
 				

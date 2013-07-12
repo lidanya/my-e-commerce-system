@@ -67,7 +67,7 @@ $(document).ready(function(){
 	$("#af_min_fiyat").html(format(min));
 	$("#af_max_fiyat").html(format(max));
 
-	// ali oygur ekledi
+	// ekledi
 	/*$("input#min_fiyat").val(format(min));
 	$("input#max_fiyat").val(format(max));*/
 	

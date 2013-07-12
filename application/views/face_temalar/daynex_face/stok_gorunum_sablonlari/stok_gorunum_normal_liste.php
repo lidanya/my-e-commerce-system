@@ -93,36 +93,36 @@
 		if($this->dx_auth->is_logged_in()) {
 			$fiyat = $k_fiyat;
 			if($degerler->quantity) {
-				$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u'))); //strtr($hizli_al_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('odeme/adim_1/hizli/'. $degerler->model) .'\');'));
+				$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product'))); //strtr($hizli_al_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('odeme/adim_1/hizli/'. $degerler->model) .'\');'));
 				$stok = ''; //strtr($sepete_at_buton_tanimi, array('{url}' => '$(\'#'. $key .'\').submit();'));
 			} else {
-				$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u')));
-				$stok = ''; //strtr($stokta_yok_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u')));
+				$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product')));
+				$stok = ''; //strtr($stokta_yok_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product')));
 			}
 		} else {
-			$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u'))); //strtr($hizli_al_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('uye/giris?ref=' . current_url()) .'\');'));
+			$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product'))); //strtr($hizli_al_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('uye/giris?ref=' . current_url()) .'\');'));
 			$stok = ''; //strtr($sepete_at_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('uye/giris?ref=' . current_url()) .'\');'));
 			$fiyat = $fiyat_gorunum_uye_ol_yazisi_tanimi;
 		}
 	} else if(config('site_ayar_fiyat_goster') == '0') {
 		$fiyat = $k_fiyat;
 		if($degerler->quantity) {
-			$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u'))); //strtr($hizli_al_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('odeme/adim_1/hizli/'. $degerler->model) .'\');'));
+			$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product'))); //strtr($hizli_al_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('odeme/adim_1/hizli/'. $degerler->model) .'\');'));
 			$stok = ''; //strtr($sepete_at_buton_tanimi, array('{url}' => '$(\'#'. $key .'\').submit();'));
 		} else {
-			$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u'))); //strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u')));
-			$stok = ''; //strtr($stokta_yok_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u')));
+			$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product'))); //strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product')));
+			$stok = ''; //strtr($stokta_yok_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product')));
 		}
 	} else {
-		$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u'))); //strtr($hizli_al_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('uye/giris?ref=' . current_url()) .'\');'));
+		$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product'))); //strtr($hizli_al_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('uye/giris?ref=' . current_url()) .'\');'));
 		$stok = ''; //strtr($sepete_at_buton_tanimi, array('{url}' => 'redirect(\''. face_ssl_url('uye/giris?ref=' . current_url()) .'\');'));
 		$fiyat = $fiyat_gorunum_uye_ol_yazisi_tanimi;
 	}
 
 	if($secenek_kontrol) {
-		$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u'))); //NULL;
-		$stok = ''; //strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--u')));
+		$hizli_al = strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product'))); //NULL;
+		$stok = ''; //strtr($secenek_var_buton_tanimi, array('{url}' => face_site_url($degerler->seo . '--product')));
 	}
 
-	echo strtr($urun_liste_detay_tanimi, array('{yeni_urun}' => $yeni_urun, '{kampanya}' => $kampanya, '{urun_liste_resim_a}' => face_site_url($degerler->seo . '--u'), '{urun_liste_resim_img_src}' => $resim, '{urun_liste_resim_img_alt}' => $degerler->name, '{urun_liste_resim_img_title}' => $degerler->name, '{urun_liste_baslik_a}' => face_site_url($degerler->seo . '--u'), '{urun_liste_baslik_deger}' => character_limiter($degerler->name, 50), '{fiyat}' => $fiyat, '{hizli_al}' => $hizli_al, '{stok}' => $stok, '{form_sepet_ekle_url}' => face_ssl_url('sepet/ekle/urun_ekle/index'), '{form_sepet_ekle_name}' => $key, '{form_sepet_ekle_id}' => $key, '{form_sepet_model_value}' => $degerler->model, '{form_sepet_stok_id_value}' => $degerler->product_id, '{form_sepet_stok_adet_value}' => '1', '{form_sepet_redirect_url_value}' => current_url(ssl_status())));
+	echo strtr($urun_liste_detay_tanimi, array('{yeni_urun}' => $yeni_urun, '{kampanya}' => $kampanya, '{urun_liste_resim_a}' => face_site_url($degerler->seo . '--product'), '{urun_liste_resim_img_src}' => $resim, '{urun_liste_resim_img_alt}' => $degerler->name, '{urun_liste_resim_img_title}' => $degerler->name, '{urun_liste_baslik_a}' => face_site_url($degerler->seo . '--product'), '{urun_liste_baslik_deger}' => character_limiter($degerler->name, 50), '{fiyat}' => $fiyat, '{hizli_al}' => $hizli_al, '{stok}' => $stok, '{form_sepet_ekle_url}' => face_ssl_url('sepet/ekle/urun_ekle/index'), '{form_sepet_ekle_name}' => $key, '{form_sepet_ekle_id}' => $key, '{form_sepet_model_value}' => $degerler->model, '{form_sepet_stok_id_value}' => $degerler->product_id, '{form_sepet_stok_adet_value}' => '1', '{form_sepet_redirect_url_value}' => current_url(ssl_status())));
 	?>

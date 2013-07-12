@@ -51,7 +51,7 @@
 						</td>
 						<td>
 							<?php if($product_info) { ?>
-								Ürün Adı&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <a href="<?php echo site_url($product_info->seo . '--u'); ?>" target="_blank" title="Ürünü görmek için tıklayın" /><?php echo $product_info->name; ?></a><br />
+								Ürün Adı&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <a href="<?php echo site_url($product_info->seo . '--product'); ?>" target="_blank" title="Ürünü görmek için tıklayın" /><?php echo $product_info->name; ?></a><br />
 								Ürün Kodu&nbsp;&nbsp;&nbsp;: <?php echo $product_info->model; ?>
 							<?php } ?>
 							<div class="clear"></div>

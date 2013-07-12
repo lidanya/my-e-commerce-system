@@ -222,7 +222,7 @@ LEFT OUTER JOIN '. $stok_resim_table_name .' ON
 		$config['full_tag_open'] = 'Sayfa : ';
 		$config['full_tag_close'] = '';
 		$config['num_links'] = 6;
-		$config['base_url'] = site_url($kategori_seo_name . '--k/' . $sort . '-' . $order);
+		$config['base_url'] = site_url($kategori_seo_name . '--category/' . $sort . '-' . $order);
 		$config['uri_segment'] = 3;
 
 		$config['full_tag_open'] = '<div class="liste_sag saga"><ul>';

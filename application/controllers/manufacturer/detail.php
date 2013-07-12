@@ -44,7 +44,7 @@ class detail extends Public_Controller {
 			$content_data['manufacturer_info'] = $manifacturer_info;
 			$content_data['urunler'] = $products;
 			if($products) {
-				$content_data['pagination'] = create_pagination(site_url($seo . '--mf/' . $sort_link), $products['total'], $limit, $uri_segment);
+				$content_data['pagination'] = create_pagination(site_url($seo . '--manufacturer/' . $sort_link), $products['total'], $limit, $uri_segment);
 			} else {
 				$content_data['pagination'] = FALSE;
 			}

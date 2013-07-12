@@ -53,12 +53,6 @@ class indirimli extends Public_Controller
 		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/anasayfa.css');
 		//$this->template->add_js(APPPATH . 'views/' . tema() . 'js/countdown.js');
 		
-	    //SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
 		$this->template->render();
 	}
 	

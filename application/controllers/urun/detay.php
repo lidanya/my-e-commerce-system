@@ -98,13 +98,6 @@ class detay extends Public_Controller {
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/tab.js');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.lightbox-0.5.js');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jsocial.js');
-		
-			//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
 
 		$this->template->render();
 	}

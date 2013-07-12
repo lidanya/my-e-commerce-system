@@ -14,7 +14,7 @@
 		foreach($urunler->result() as $urun)
 		{
 			echo '<div class="ta_oge">
-						<span class="ta_tablo01 sola"><a class="ta_link" href="'. site_url($urun->seo .'--u') .'" target="_blank" title="'. $urun->name .'">'. character_limiter($urun->name, 50) .'</a></span>
+						<span class="ta_tablo01 sola"><a class="ta_link" href="'. site_url($urun->seo .'--product') .'" target="_blank" title="'. $urun->name .'">'. character_limiter($urun->name, 50) .'</a></span>
 						<span class="ta_tablo02 sola">
 						<a class="butonum" href="javascript:;" onclick="redirect(\''. ssl_url('uye/urun_takip/listeden_cik/' . $urun->follow_id) .'\');">
 						<span class="butsol"></span>
