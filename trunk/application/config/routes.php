@@ -42,13 +42,13 @@ $route['default_controller']  								= "site";
 $route['404_override']										= "site/page_not_found";
 
 /* Face Kategoriler */
-$route['(\w{2})/face_app/(:any)--k']						= "face_app/kategori/detay/index/$2";
-$route['(\w{2})/face_app/(:any)--k/(:any)']					= "face_app/kategori/detay/index/$2/$3";
-$route['(\w{2})/face_app/(:any)--k/(:any)/(:any)']			= "face_app/kategori/detay/index/$2/$3/$4";
+$route['(\w{2})/face_app/(:any)--category']						= "face_app/kategori/detay/index/$2";
+$route['(\w{2})/face_app/(:any)--category/(:any)']					= "face_app/kategori/detay/index/$2/$3";
+$route['(\w{2})/face_app/(:any)--category/(:any)/(:any)']			= "face_app/kategori/detay/index/$2/$3/$4";
 /* Face Kategoriler */
 
 /* Face Ürünler */
-$route['(\w{2})/face_app/(:any)--u']						= "face_app/urun/detay/index/$2";
+$route['(\w{2})/face_app/(:any)--product']						= "face_app/urun/detay/index/$2";
 $route['(\w{2})/face_app/urun/arama_sonuc/(:any)']			= 'face_app/urun/arama_sonuc/index/$2';
 // indirimli ürünler
 $route['(\w{2})/face_app/urun/indirimli/index/(:any)']		= 'face_app/urun/indirimli/index/$2';
@@ -62,15 +62,15 @@ $route['(\w{2})/face_app/urun/yeni/(:any)']					= 'face_app/urun/yeni/index/$2';
 /* Face Ürünler */
 
 /* Face Duyurular & Haberler */
-$route['(\w{2})/face_app/(:any)--ad']						= 'face_app/information/detail/announcement/$2';
-$route['(\w{2})/face_app/(:any)--nd']						= 'face_app/information/detail/news/$2';
-$route['(\w{2})/face_app/(:any)--id']						= 'face_app/information/detail/information/$2';
+$route['(\w{2})/face_app/(:any)--announcement']						= 'face_app/information/detail/announcement/$2';
+$route['(\w{2})/face_app/(:any)--information']						= 'face_app/information/detail/news/$2';
+$route['(\w{2})/face_app/(:any)--information']						= 'face_app/information/detail/information/$2';
 /* Face Duyurular & Haberler */
 
 /* Face Markalar */
-$route['(\w{2})/face_app/(:any)--mf']						= 'face_app/manufacturer/detail/index/$2';
-$route['(\w{2})/face_app/(:any)--mf/(:any)']				= 'face_app/manufacturer/detail/index/$2/$3';
-$route['(\w{2})/face_app/(:any)--mf/(:any)/(:num)']			= 'face_app/manufacturer/detail/index/$2/$3/$4';
+$route['(\w{2})/face_app/(:any)--manufacturer']						= 'face_app/manufacturer/detail/index/$2';
+$route['(\w{2})/face_app/(:any)--manufacturer/(:any)']				= 'face_app/manufacturer/detail/index/$2/$3';
+$route['(\w{2})/face_app/(:any)--manufacturer/(:any)/(:num)']			= 'face_app/manufacturer/detail/index/$2/$3/$4';
 /* Face Markalar */
 
 /* Kategoriler */

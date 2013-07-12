@@ -83,8 +83,8 @@
 					}
 				?>
 				<div style="border:solid 1px #d2d2d2;width:140px;float:left;margin-left:15px;margin-right:7px;text-align:center;padding:5px;">
-					<a href="<?php echo site_url($new_product->seo . '--u'); ?>" target="_blank"><img style="border:none;width:120px;height:95px;" src="<?php echo $resim; ?>" alt="<?php echo $new_product->name; ?>" title="<?php echo $new_product->name; ?>"/></a><br />
-					<a style="text-decoration:none;font-size:10px;color:#ff6400 !important" href="<?php echo site_url($new_product->seo . '--u'); ?>" target="_blank"><?php echo $new_product->name;?></a><br />
+					<a href="<?php echo site_url($new_product->seo . '--product'); ?>" target="_blank"><img style="border:none;width:120px;height:95px;" src="<?php echo $resim; ?>" alt="<?php echo $new_product->name; ?>" title="<?php echo $new_product->name; ?>"/></a><br />
+					<a style="text-decoration:none;font-size:10px;color:#ff6400 !important" href="<?php echo site_url($new_product->seo . '--product'); ?>" target="_blank"><?php echo $new_product->name;?></a><br />
 					<?php echo $fiyat;?>
 				</div>
 				<?php 

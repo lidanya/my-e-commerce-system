@@ -124,13 +124,6 @@ class detay extends Public_Controller {
 		$this->template->add_region('content');
 		$this->template->write_view('content', tema() . 'kategori/content', $content_data);
 		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/listeler.css');
-		
-		//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
 
 		$this->template->render();
 	}

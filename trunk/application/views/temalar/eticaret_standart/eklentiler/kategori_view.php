@@ -70,7 +70,7 @@ if($eklenti_baslik_goster)
 						if($a_kategori_urunler) {
 							if($a_kategori_urunler['total']) {
 								foreach($a_kategori_urunler['query'] as $a_kategori_urunler) {
-									$urun_seo_name = str_replace('--u', '', $this->uri->segment(2));
+									$urun_seo_name = str_replace('--product', '', $this->uri->segment(2));
 									$a_u_aktif = NULL;
 									$parts = explode('---', $urun_seo_name);
 									if($parts[0] == $a_kategori_urunler->seo) {
@@ -78,7 +78,7 @@ if($eklenti_baslik_goster)
 									} else {
 										$a_u_aktif = NULL;
 									}
-									echo '<li><a '. $a_u_aktif .' href="'. site_url($a_kategori_urunler->seo . '--u') .'" title="'. $a_kategori_urunler->name .'">'. character_limiter($a_kategori_urunler->name, 15) .'</a>';
+									echo '<li><a '. $a_u_aktif .' href="'. site_url($a_kategori_urunler->seo . '--product') .'" title="'. $a_kategori_urunler->name .'">'. character_limiter($a_kategori_urunler->name, 15) .'</a>';
 								}
 							}
 						}
@@ -130,7 +130,7 @@ if($eklenti_baslik_goster)
 						if($a_kategori_urunler) {
 							if($a_kategori_urunler['total']) {
 								foreach($a_kategori_urunler['query'] as $a_kategori_urunler) {
-									$urun_seo_name = str_replace('--u', '', $this->uri->segment(2));
+									$urun_seo_name = str_replace('--product', '', $this->uri->segment(2));
 									$a_u_aktif = NULL;
 									$parts = explode('---', $urun_seo_name);
 									if($parts[0] == $a_kategori_urunler->seo) {
@@ -138,7 +138,7 @@ if($eklenti_baslik_goster)
 									} else {
 										$a_u_aktif = NULL;
 									}
-									echo '<li><a '. $a_u_aktif .' href="'. site_url($a_kategori_urunler->seo . '--u') .'" title="'. $a_kategori_urunler->name .'">'. character_limiter($a_kategori_urunler->name, 15) .'</a>';
+									echo '<li><a '. $a_u_aktif .' href="'. site_url($a_kategori_urunler->seo . '--product') .'" title="'. $a_kategori_urunler->name .'">'. character_limiter($a_kategori_urunler->name, 15) .'</a>';
 								}
 							}
 						}

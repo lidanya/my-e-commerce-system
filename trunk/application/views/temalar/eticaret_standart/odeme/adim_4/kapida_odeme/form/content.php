@@ -63,7 +63,7 @@
 		<div id="os">
 			<b class="os_baslik"><?php echo lang('messages_checkout_4_pay_door_payment_title'); ?></b>
 			<div id="os_k_aciklama">
-				<u><img src="application/views/temalar/daynex_standart/tema_asset/daynex_turuncu/images/ds3_kapida.png" alt="" /></u>
+				<u><img src="<?php echo site_resim(); ?>ds3_kapida.png" alt="" /></u>
 				<p><?php echo strtr(lang('messages_checkout_4_pay_door_message'), array('{toplam_ucret}' => format_number(config('site_ayar_kapida_odeme_tutari')))); ?></p>
 				<div class="clear"></div>
 				<br />

@@ -20,7 +20,8 @@
 	</script>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>style.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>css/anasayfa.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>anasayfa.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>jquery.countdown.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>custom.css"/>
 	<!--<link rel="shortcut icon" href="<?php echo site_resim(); ?>favicon.ico" />-->
     <link rel="shortcut icon" href="<?php echo base_url(ssl_status()); ?>upload/editor/<?php echo config('site_ayar_favicon'); ?>" />
@@ -39,7 +40,10 @@
 	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip04.js"></script>
 
 	<script type="text/javascript" src="<?php echo site_js(); ?>ajax_post.js"></script>
-
+	
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.countdown.js"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.countdown-tr.js"></script>
+	
 	<?php echo (!empty($_scripts)) ? $_scripts:NULL; ?>
 	<?php echo (config('site_google_analytics_durum') == 1) ? config('site_google_analytics_kodu'):NULL;?>
     
@@ -319,7 +323,7 @@
 		<ul>
 			<?php foreach ($categories as $category) { ?>
 				<li>
-					<a href="<?php echo site_url($category['href'] . '--k'); ?>" target="_top"><?php echo $category['name']; ?></a>
+					<a href="<?php echo site_url($category['href'] . '--category'); ?>" target="_top"><?php echo $category['name']; ?></a>
 					<?php if ($category['children']) { ?>
 						<div>
 							<?php for ($i = 0; $i < count($category['children']);) { ?>
@@ -328,7 +332,7 @@
 									<?php for (; $i < $j; $i++) { ?>
 										<?php if (isset($category['children'][$i])) { ?>
 											<li>
-												<a href="<?php echo site_url($category['children'][$i]['href'] . '--k'); ?>" target="_top"><?php echo $category['children'][$i]['name']; ?></a>
+												<a href="<?php echo site_url($category['children'][$i]['href'] . '--category'); ?>" target="_top"><?php echo $category['children'][$i]['name']; ?></a>
 											</li>
 										<?php } ?>
 									<?php } ?>

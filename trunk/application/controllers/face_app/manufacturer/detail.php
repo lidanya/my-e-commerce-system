@@ -44,7 +44,7 @@ class detail extends Face_Controller {
 			$content_data['manufacturer_info'] = $manifacturer_info;
 			$content_data['urunler'] = $products;
 			if($products) {
-				$content_data['pagination'] = create_pagination(face_site_url($seo . '--mf/' . $sort_link), $products['total'], $limit, $uri_segment, 'face');
+				$content_data['pagination'] = create_pagination(face_site_url($seo . '--manufacturer/' . $sort_link), $products['total'], $limit, $uri_segment, 'face');
 			} else {
 				$content_data['pagination'] = FALSE;
 			}

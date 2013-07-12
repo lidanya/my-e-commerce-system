@@ -12,7 +12,7 @@
 			imagedir: "<?php echo face_resim(); ?>sosyal_paylasimlar/kucuk/", 
 			imageextension: "gif", 
 			blanktarget: true,
-			longurl: "<?php echo face_site_url($product_info->seo . '--u'); ?>"
+			longurl: "<?php echo face_site_url($product_info->seo . '--product'); ?>"
 		});
 		$('#urun_resim a').lightBox();
 	});
@@ -367,7 +367,7 @@
 				<div class="clear"></div>
 			</div>
 			<div id="urun_detay_butonlar">
-				<a href="<?php echo face_site_url($product_info->seo . '--u'); ?>" class="u_favori jqbookmark"><?php echo lang('messages_product_detail_add_to_favorites'); ?></a>
+				<a href="<?php echo face_site_url($product_info->seo . '--product'); ?>" class="u_favori jqbookmark"><?php echo lang('messages_product_detail_add_to_favorites'); ?></a>
 				<a href="Javascript:;" onclick="window.print();" class="u_yazdir"><?php echo lang('messages_product_detail_print'); ?></a>
 				<a href="<?php echo current_url(); ?>#Yorumlar" onclick="$('#linkYorumlar').click();" class="u_yorum"><?php echo lang('messages_product_detail_add_comment'); ?></a>
 			</div>

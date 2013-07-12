@@ -17,7 +17,7 @@
 				'product_id-asc' => lang('messages_select_stok_id-asc')
 			);
 
-			$_uri = $seo . '--k/';
+			$_uri = $seo . '--category/';
 			if($category_products AND !$sub_category) {
 				echo form_dropdown('urun_filtreleme', $_option_array, $sort_link, 'onchange="redirect(site_url(\''. $_uri .'\' + this.value));"');
 			}
@@ -54,10 +54,10 @@
 				$total_products = $this->category_model->get_product_count($sub_categories->category_id);
 				$stok_say = ' ('. $total_products .')';
 
-				if($this->uri->segment(3) == 'tum_kategoriler--k') {
-					$category_url = str_replace('tum_kategoriler--k', '', $this->uri->segment(3)) . $sub_categories->seo . '--k';
+				if($this->uri->segment(3) == 'tum_kategoriler--category') {
+					$category_url = str_replace('tum_kategoriler--category', '', $this->uri->segment(3)) . $sub_categories->seo . '--category';
 				} else {
-					$category_url = str_replace('--k', '', $this->uri->segment(3)) . '---' . $sub_categories->seo . '--k';
+					$category_url = str_replace('--category', '', $this->uri->segment(3)) . '---' . $sub_categories->seo . '--category';
 				}
 		?>
 			<div class="kategori_liste_oge sola">

@@ -26,13 +26,7 @@ class fatura extends Public_Controller
 		$content_data['faturalarim'] = $this->faturaModel->fatura_getir($this->dx_auth->get_user_id());
 		$this->template->write_view('content', tema() . 'uye/fatura/content',$content_data);
 		$this->template->add_css(APPPATH. 'views/' . tema_asset() . 'css/uyeislem.css');
-			//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
-		
+			
 		$this->template->render();
 	}
 
@@ -49,12 +43,6 @@ class fatura extends Public_Controller
 			$content_data['fatura'] = $fatura;
 			$this->template->write_view('content', tema() . 'uye/fatura/goruntule_content',$content_data);
 			$this->template->add_css(APPPATH. 'views/' . tema_asset() . 'css/uyeislem.css');
-				//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
 			
 			$this->template->render();
 		} else {

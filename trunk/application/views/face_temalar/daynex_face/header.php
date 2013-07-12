@@ -163,7 +163,7 @@
 		<ul>
 			<?php foreach ($categories as $category) { ?>
 				<li>
-					<a href="<?php echo face_site_url($category['href'] . '--k'); ?>" target="_top"><?php echo $category['name']; ?></a>
+					<a href="<?php echo face_site_url($category['href'] . '--category'); ?>" target="_top"><?php echo $category['name']; ?></a>
 					<?php if ($category['children']) { ?>
 						<div>
 							<?php for ($i = 0; $i < count($category['children']);) { ?>
@@ -172,7 +172,7 @@
 									<?php for (; $i < $j; $i++) { ?>
 										<?php if (isset($category['children'][$i])) { ?>
 											<li>
-												<a href="<?php echo face_site_url($category['children'][$i]['href'] . '--k'); ?>" target="_top"><?php echo $category['children'][$i]['name']; ?></a>
+												<a href="<?php echo face_site_url($category['children'][$i]['href'] . '--category'); ?>" target="_top"><?php echo $category['children'][$i]['name']; ?></a>
 											</li>
 										<?php } ?>
 									<?php } ?>

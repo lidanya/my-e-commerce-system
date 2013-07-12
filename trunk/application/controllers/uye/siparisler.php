@@ -33,14 +33,7 @@ class siparisler extends Public_Controller
 			$this->template->write_view('content', tema() . 'uye/siparis/content', $content_data);
 
 			$this->template->add_css(APPPATH. 'views/' . tema_asset() . 'css/uyeislem.css');
-			
-		//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
-
+		
 			$this->template->render();
 		}
 	}
@@ -64,13 +57,7 @@ class siparisler extends Public_Controller
 				$this->template->add_region('content');
 				$this->template->write_view('content', tema() . 'uye/siparis/detay_content',$content_data);
 				$this->template->add_css(APPPATH. 'views/' . tema_asset() . 'css/uyeislem.css');
-	    //SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
-				
+	    
 				$this->output->enable_profiler(false);
 				$this->template->render();
 			} else {

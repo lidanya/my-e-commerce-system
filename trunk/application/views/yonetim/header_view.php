@@ -115,7 +115,7 @@
 <div id="container">
 	<?php if ($this->dx_auth->is_logged_in()) { ?>
 		<div id="header">
-			<div class="div1"><a href="<?php echo yonetim_url(); ?>"><img src="<?php echo yonetim_resim(); ?>logo/e_ticaret_logo.png"></a></div>
+			<!--<div class="div1"><a href="<?php echo yonetim_url(); ?>"><img src="<?php echo yonetim_resim(); ?>logo/e_ticaret_logo.png"></a></div>-->
 			<div id="doviz_bilgieri">
 				<span class="mavidoviz">Doviz</span><span class="gridoviz">Bilgileri</span>
 				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

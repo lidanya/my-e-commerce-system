@@ -32,13 +32,6 @@ class cagri extends Public_Controller {
 		$this->template->write_view('content', tema() . 'uye/cagri/content', $content_data);
 		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
 		
-			//SKOCH
-		$this->template->add_css(APPPATH . 'views/' . tema() . 'css/jquery.countdown.css');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown.js');
-		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/jquery.countdown-tr.js');
-	    $this->output->enable_profiler(false);
-		//SKOCH
-
 		$this->template->render();
 	}
 	

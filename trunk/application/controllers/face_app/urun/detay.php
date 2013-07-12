@@ -33,7 +33,7 @@ class detay extends Face_Controller {
 		$this->load->library('facebook_lib');
 		if ( ! $this->facebook_lib->user) {
 			$this->dx_auth->logout();
-			$this->session->set_userdata('face_redirect', $product_seo . '--u');
+			$this->session->set_userdata('face_redirect', $product_seo . '--product');
 			redirect(face_site_url('uye/giris/facebook'));
 		}
 		$product_info = $this->product_model->get_product_by_seo($product_seo);
