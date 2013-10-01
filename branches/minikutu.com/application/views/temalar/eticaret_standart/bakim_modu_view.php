@@ -21,7 +21,7 @@ if (config('site_ayar_ssl') == '1' && isset($_SERVER['HTTPS']) && (($_SERVER['HT
 	<meta name='robots' content='noindex, nofollow' />
 	<meta name="author" content="E-Ticaret Sistemim" />
 </head>
-<body>
+<body style="background: #202020;">
 <?php echo (config('site_ayar_bakim_sayfasi_detay')) ? config('site_ayar_bakim_sayfasi_detay') : '<p style="text-align: center; ">
 	<img alt="" height="256" src="'. base_url() .'upload/editor/data/bakim.png" width="256" /></p>
 <p style="text-align: center; ">
