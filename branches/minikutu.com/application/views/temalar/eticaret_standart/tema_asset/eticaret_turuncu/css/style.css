@@ -1,0 +1,438 @@
+/*
+Dosya Adi: style.css
+Yazan: E Ticaret Sistemim 
+Aciklamalar: 
+- genel stil sablonlarini icerir 
+- bu css tüm sayfalarda cagrilacagi icin, icindeki verilerin butun sayfalari etkileyecegini dusunerek duzenleme yapilmasi gerekir
+*/
+
+/*=========================Global Ayarlar===============================*/
+* {margin:0;padding:0;}
+div {overflow:hidden;}
+img {border:none;}
+a, a:link, a:visited {text-decoration:none;outline:none;}
+a:hover {cursor:pointer;color:#444;}
+body {color:#333;font-size:12px;font-family:Arial, Helvetica, sans-serif;}
+input, textarea, select {color:#e05f00;outline:none;font-weight:bold;font-size:13px;line-height:22px;}
+input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;}
+
+/*=========================Global Stiller===============================*/
+/*yapisal*/
+.saga {float:right;/*IE Fix*/display:inline;}
+.sola {float:left;/*IE Fix*/display:inline;}
+.clear {clear:both;height:0px;overflow:hidden !important;}
+/*urun_butonlari*/
+.buton_sepete_ekle, .buton_sepete_ekle:link, .buton_sepete_ekle:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #ff8100;border-right:1px solid #ff8100;padding:0 5px;}
+.buton_hizli_al, .buton_hizli_al:link, .buton_hizli_al:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#676b70;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}
+.buton_detay, .buton_detay:link, .buton_detay:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #ff8100;border-right:1px solid #ff8100;padding:0 5px;}
+.buton_takip_et, .buton_takip_et:link, .buton_takip_et:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #ff8100;border-right:1px solid #ff8100;padding:0 5px;}
+.buton_takip_cikar, .buton_takip_cikar:link, .buton_takip_cikar:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#676b70;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}
+.buton_detay:hover, .buton_hizli_al:hover, .buton_sepete_ekle:hover, .buton_takip_et:hover, .buton_takip_cikar:hover {background-position:bottom left;color:#fff;border-left:1px solid #000;border-right:1px solid #000;}
+.buton_stok_yok {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#333 !important;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}/*islevsiz buton*/
+/*genel_butonlar*/
+.urmercek {background:url(../images/urmercek.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
+.urstokyok {background:url(../images/urstokyok.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
+.ursepetat {background:url(../images/ursepetat.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
+.urhizlial {background:url(../images/urhizlial.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
+.cekk {background:url(../images/cekk.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
+.corpi {background:url(../images/corpi.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
+
+.buton, .buton:link, .buton:visited {font-size:12px;font-weight:normal;overflow:hidden;background:url(../images/buton_sol.png) no-repeat left top;display:inline-block;padding-left:8px;}
+.buton span {font-size:12px;font-weight:normal;background:url(../images/buton_sag.png) no-repeat right top;color:#656565;display:block;padding:7px 10px 7px 2px;}
+.buton:hover {font-weight:normal;background-position:left bottom;}
+.buton:hover span {font-weight:normal;background-position:right bottom;}
+.buton img {vertical-align:middle;}
+
+.siterenk {color:#e05f00;}
+
+.sitelink, .sitelink:link, .sitelink:hover {color:#333;}
+.sitelink:hover {color:#ff8100;}
+.sitelink2, .sitelink2:link, .sitelink2:hover {color:#ff8100;}
+.sitelink2:hover {color:#333;}
+
+/*sayfa baslik*/
+h1#sayfa_baslik, .baslik {margin:auto;width:95%;padding:8px 0 8px 23px;font-weight:bold;font-size:16px;color:#5f5f5f;text-align:left;border-bottom:solid 1px #dadada;background:url(../images/sayfa_baslik_bg.png) no-repeat 0 8px;}
+h1#sayfa_baslik a, h1#sayfa_baslik a:link, h1#sayfa_baslik a:visited {color:#5f5f5f;}
+h1#sayfa_baslik a:hover {color:#0099ff;}
+h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
+/*renkler*/
+
+/*page icin*/
+.page_ust {width:720px;height:5px;background:url(../images/page_ust.png) no-repeat 0 0;margin-top:10px;}
+.page_ic {width:700px;padding:9px;background-color:#fff;border-left:solid 1px #d7d7d7;border-right:solid 1px #d7d7d7;position:relative;}
+.page_alt {width:720px;height:5px;background:url(../images/page_alt.png) no-repeat 0 0;}
+
+/*=========================Global Yapi===============================*/
+#header {width:1000px;margin:auto;position:relative;z-index:599;overflow:visible;}
+#header div {overflow:visible;}
+.hesol {width:250px;}
+.hesag {width:750px;height:40px;}
+.hesag1 {width:750px;height:40px;}
+.hesag2 {width:750px;}
+.dil_alan {width:150px;}
+#h_ust_menu {height:30px;color:#ffffff;font-size:11px;margin-left:15px;margin-top:5px;}
+#h_ust_menu ul {list-style:none;}
+#h_ust_menu ul li {float:left;display:inline;}
+#h_ust_menu a,  #h_ust_menu a:link, #h_ust_menu a:visited {color:#a6a6a6;display:inline-block;margin:10px;font-size:11px;}
+#h_ust_menu a:hover {color:#e05f00;}
+
+
+
+#main {width:1000px;margin:auto;position:relative;}
+#sol {width:220px;overflow:visible;position:relative;z-index:96;}
+#sol div {overflow:visible;}
+#sag {display:none;}
+#orta {width:760px;margin:10px 0 0 5px;position:relative;z-index:95;float:right;}
+#footer {width:1000px;margin:10px auto;background:url(../images/footer_bg.png) top repeat-x;position:relative;}
+.footust {width:1000px;}
+.footalt {width:1000px;}
+.foustmenu {height:39px;}
+.foustmenu ul {list-style:none;}
+.foustmenu ul li {float:left;display:inline;margin-right:20px;}
+.foustmenu ul li a, .foustmenu ul li a:link, .foustmenu ul li a:visited {display:inline-block;height:39px;line-height:39px;padding:0 10px;color:#fff;background:url(../images/hmenubg.png) top repeat-x;}
+.foustmenu ul li a:hover {background-position:bottom;} 
+
+.fomenu {padding:10px;}
+.fomenu ul {list-style:none;}
+.fomenu ul li {}
+.fomenu ul li a, .fomenu ul li a, .fomenu ul li a:link {font-size:18px;height:22px;line-height:22px;font-size:12px;color:#86898d;}
+.fomenu ul li a:hover {color:#e05f00;}
+#footer_iletisim {display:block;background:url(../images/footer_telefon.png) no-repeat  0 0;width:183px;height:39px;line-height:39px;padding-left:35px;color:#fff;font-size:24px;font-weight:bold;}
+.fologo {width:155px;margin-top:10px;}
+.tree3 {width:450px;margin-top:25px;}
+.tree3 div {float:left;display:inline;margin-right:35px;}
+
+
+#fobildis {width:100%;background:url(../images/fobilgi.png) top repeat-x;height:35px;line-height:31px;}
+#footer_bilgi {width:1000px;margin:auto;color:#000 !important;font-size:12px;}
+#footer_bilgi a, #footer_bilgi a:link, #footer_bilgi a:visited {color:#515151 !important;}
+#footer_bilgi a:hover {color:#000 !important;}
+
+
+
+/*=========================Slider===============================*/
+.slides-box-little {width:750px;margin-left:auto;margin-right:auto;}
+.slides-box-big {width:980px;margin:auto;margin-top:10px;}
+.s_container-little {width:750px;height:240px;}
+.s_container-big {width:980px;height:314px;}
+.featured {position:relative;}
+.featured ul.ui-tabs-nav {position:absolute;bottom:0px;right:0px;list-style:none;z-index:100;background-color:#fff;width:110px;height:32px;}
+.featured ul.ui-tabs-nav li {width:26px; height:25px; overflow:hidden; margin-bottom:4px; margin-left:8px; margin-top:5px;background:url(../images/slider_tab_norm.png) no-repeat 0 0;font-size:0;line-height:0; float:left;/*IE Fix*/display:inline;}
+.featured ul.ui-tabs-nav li.ui-tabs-selected { background:url(../images/slider_tab_selected.png) no-repeat 0 0;}
+.featured ul.ui-tabs-nav li a {display:block;width:26px;height:25px;text-align:center;overflow:hidden;font-size:12px; line-height:23px; font-weight:bold; font-family:Verdana, Geneva, sans-serif;}
+.featured ul.ui-tabs-nav li.ui-tabs-nav-item a, #featured ul.ui-tabs-nav li.ui-tabs-selected a {text-decoration:none;}
+.featured ul.ui-tabs-nav li.ui-tabs-nav-item a { color:#ffffff;}
+.featured ul.ui-tabs-nav li.ui-tabs-selected a { color:#ffffff;}
+.featured .ui-tabs-hide {display:none;}
+
+/*=========================Header===============================*/
+#h_ust {width:1000px;margin:auto;height:40px;padding-top:6px;}
+/*uye paneli ve giris linkleri*/
+#h_uye_menu {margin-top:13px;height:27px;}
+#h_uye_menu ul {list-style:none;}
+#h_uye_menu ul li {float:left;display:inline;}
+#h_uye_menu ul li a,  #h_uye_menu ul li a:link, #h_uye_menu ul li a:visited {position:relative;text-indent:35px;background:url(../images/uye_menu.png); width:127px;height:34px;line-height:34px;color:#a6a6a6;display:inline-block;margin-right:5px;font-size:11px;font-weight:700;}
+#h_uye_menu ul li a:hover {background-position:bottom;color:#ff8100 !important;}
+#h_uye_menu ul li a.feys small {background:url(../images/faceicon.png) no-repeat;position:absolute;top:3px;right:3px;width:22px;height:21px;display:block;}
+
+#h_uye_menu em a, #h_uye_menu em a:link, #h_uye_menu em a:visited, #h_uye_panel {font-style:normal;display:inline-block;width:127px;height:34px;background:url(../images/uye_menu_bg.png);line-height:34px;text-align:center;color:#a6a6a6;font-weight:700;font-size:11px;}
+#h_uye_menu em a:hover, #h_uye_panel.hd_aktif {background-position:bottom left;color:#e05f00;}
+
+
+
+.facelogin, .facelogin:link, .facelogin:visited {margin-left:10px;width:192px;height:31px;display:block;background:url(../images/facelogin.png) no-repeat;color:#fff !important;line-height:26px;text-indent:35px;}
+.facelogin:hover {color:#f1f1f1;}
+
+
+
+#h_uye_panel {display:block;cursor:pointer;position:relative;top:13px;}
+#h_uye_panel ul {background:url(../images/kulmbg.png) top repeat-x; display:none;position:absolute;top:34px;left:0px;border:solid 1px #ffc69c;padding:5px 0 0 2px;width:150px;list-style-type:none;text-align:left;}
+#h_uye_panel ul li {width:140px;margin:0 0 3px 5px;}
+#h_uye_panel ul li a, #h_uye_panel ul li a:link, #h_uye_panel ul li a:visited {height:20px;line-height:20px;display:block;padding:0 5px;color:#e05f00;font-size:11px;background:url(../images/kulmenulink.png) repeat;font-weight:400;}
+#h_uye_panel ul li a:hover {color:#333;}
+/*header ust menu*/
+
+
+.busol {width:5px;height:30px;background:url(../images/busol.png) no-repeat;}
+.buor {height:22px;background:url(../images/buor.png) repeat-x;text-align:center;padding:4px 10px 4px 10px;}
+.busag {width:5px;height:30px;background:url(../images/busag.png) no-repeat;}
+
+
+
+
+
+/*Dil secimi v2*/
+
+.switcher {float:right;margin-top:3px;margin-left:10px;}
+.switcher a {text-decoration:none;display:block;}
+.switcher .selected {background:#FFFFFF url(../images/switcher.png) repeat-x;}
+.switcher .selected a {border:1px solid #CCCCCC;background:url(../images/arrow_down.png) 116px center no-repeat;color:#666666;padding:2px 5px 2px 5px;width:121px;}
+.switcher .selected a:hover {background:#F0F0F0 url(../images/arrow_down.png) 116px center no-repeat;}
+.switcher .option {position:absolute;z-index:11;border-left:1px solid #CCCCCC;border-right:1px solid #CCCCCC;border-bottom:1px solid #CCCCCC;background-color:#EEEEEE;display:none;width:131px;}
+.switcher .option a {color:#000;padding:3px 5px 3px 5px;}
+.switcher .option a:hover {background:#FFC;}
+.switcher img {position:relative;top:1px;}
+/*Dil ve para birimi Secimi*/
+#h_dil, #h_para {width:37px;border:solid 1px #0084ff;height:14px;padding:3px 0 0 3px;background:#fff url(../images/h_select_bg.png) no-repeat top right;cursor:pointer;position:relative;}
+#h_dil.hd_aktif, #h_para.hd_aktif {background-position:bottom right;}
+#h_dil ul, #h_para ul {display:none;position:absolute;top:16px;left:-1px;width:34px;border:solid 1px #0084ff;border-top:none;background-color:#fff;padding:3px 3px 0;list-style-type:none;}
+#h_dil ul li, #h_para ul li {margin-bottom:3px;}
+#h_para {width:100px;color:#767676;font-size:10px;margin-right:10px;}
+#h_para ul {width:97px;list-style-type:none;}
+#h_para a, #h_para a:link, #h_para a:visited {color:#767676;display:block;}
+#h_para a:hover {color:#ff6400;}
+/*logo*/
+#h_logo {margin-top:15px;}
+/*sepet*/
+#h_sepet, #h_sepet:link, #h_sepet:visited {position:relative;position:relative;top:-8px;right:5px;width:200px;height:42px;padding:0px 0 0 0px;}
+#h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:200px;height:42px;background:url(../images/h_sepet_bg.png) no-repeat 0 0;color:#e0e0e0;display:block;}
+#h_sepet p a:hover {background-position:bottom left;}
+#h_sepet span {display:inline-block;margin-top:20px;text-indent:10px;}
+.hizlisepet {width:498px;position:absolute;top:35px;right:-10px;overflow:hidden;display:none;}
+.hizlisepet div {overflow:hidden !important;}
+.sepust {width:498px;height:16px;background:url(../images/sepust.png) no-repeat;}
+.seport {width:498px;background:url(../images/seport.png) repeat-y;}
+.sepalt {width:498px;height:16px;background:url(../images/sepalt.png) no-repeat;}
+.seport big {text-indent:15px;width:458px;height:30px;background:url(../images/sepbaslik.png) no-repeat;font-size:14px;color:#fff;line-height:30px;display:block;margin:auto;}
+.seport small {font-style:normal;font-weight:bold;margin:5px auto;font-size:13px;width:459px;height:29px;line-height:29px;color:#000;background:url(../images/urlistbaslik.png) no-repeat;display:block;}
+.seport small strong {text-indent:10px;width:375px;display:inline-block;float:left;}
+.seport small em {font-style:normal;display:inline-block;float:left;}
+.seport ul {list-style:none;}
+.seport ul li {width:458px;margin:2px auto;border-top:1px solid #ddd;height:30px ;line-height:30px ;}
+.seport ul li:first-child {border-top:none;}
+.seport dl {padding:1px;clear:both;font-size:11px;color:#454545;}
+.seport dt {width:365px;float:left;display:inline;margin:auto 5px auto auto;color:#454545;}
+.seport dt i {font-weight:bold;}
+.seport dt a, .seport dt a:link, .seport dt a:visited {color:#454545 ;display:inline-block;margin-right:10px;}
+.seport dt a:hover {color:#08afe6 ;}
+.seport dd {float:left;display:inline;margin:auto auto auto 5px;}
+.seport u {display:inline-block;margin-right:63px;font-size:11px;text-decoration:none;font-weight:bold;}
+.seport u em {font-style:normal;margin-right:20px;}
+.seport u cite {font-style:normal;}
+.saltlinkler {margin:10px auto auto auto;width:458px;}
+.saltlinkler b {font-size:14px;}
+/*kucuk banner*/
+#h_banner {width:503px;height:76px;margin:20px 40px 0 0;overflow:hidden !important;}
+#h_banner ul {list-style-type:none;}
+#h_banner ul li {width:503px;height:76px;}
+/*urun arama*/
+#h_arama {width:407px;height:34px;background:url(../images/h_arama_bg.png) no-repeat 0 0;margin:13px 0px 0 0;}
+#h_a_kat {text-indent:3px;width:135px;height:30px;line-height:30px;padding-left:5px;;background:url(../images/h_arama_secim.png) no-repeat 115px 10px;position:relative;font-weight:700;font-size:12px;color:#fff;cursor:pointer;}
+/*#h_a_kat_txt {width:135px;height:30px;line-height:30px;}*/
+#h_a_kat.h_a_aktif {color:#fff;}
+#h_a_kat div {background:url(../images/katmenubg.png) top repeat-x #f27c16; display:none;position:absolute;top:29px;left:5px;width:165px;padding:1px 2px;list-style-type:none;border:1px solid #e05f00;}
+#h_a_kat ul {list-style:none;}
+#h_a_kat ul li {}
+#h_a_kat a, #h_a_kat a:link, #h_a_kat a:visited {background:url(../images/kathov.png) top repeat-x; height:20px;line-height:20px;margin:1px auto;display:block;width:155px;padding:0 5px;color:#fff;}
+#h_a_kat a:hover {background-position:bottom; color:#fff;}
+#h_a_text {width:235px;margin-left:7px;/*padding-top:3px;*/}
+#h_a_text input {height:32px;line-height:32px;width:235px;border:none;background-color:transparent;font-size:11px;color:#a6a6a6;font-weight:400;}
+#h_a_text input:focus {background-color:transparent !important;}
+#h_a_buton, #h_a_buton:link, #h_a_buton:visited {display:block;width:16px;height:32px;overflow:hidden;text-indent:-999px;background:url(../images/h_ara_buton.png) no-repeat 0 5px;}
+#h_a_buton:hover {background-position:0 -37px;}
+
+/*header alt menu*/
+#menubar {width:1000px;height:39px;background:url(../images/h_alt_menu_bg.png) no-repeat 0 0;margin:25px auto 0 auto;}
+#h_alt_menu {}
+#h_alt_menu ul {list-style-type:none;}
+#h_alt_menu ul li {float:left;/*IE Fix*/display:inline;}
+#h_alt_menu ul li a, #h_alt_menu ul li a:link, #h_alt_menu ul li a:visited {line-height:39px;background:url(../images/hmenubg.png) top repeat-x; display:block;font-size:12px;color:#efefef;padding:0 20px;font-weight:bold;/*text-transform:uppercase;*/}
+#h_alt_menu ul li a:hover, #h_alt_menu ul li a.h_aktif {background-position:bottom;}
+#h_alt_menu ul li a em {background:url(../images/menulibg.png) left center no-repeat;display:inline-block;font-style:normal;padding-left:20px;}
+
+/* açılır kategori menüsü */
+#menu {overflow:visible;margin:auto;width:990px;background: #585858;border-bottom: 1px solid #000000;height: 37px;margin-bottom: 0px;-webkit-border-radius: 5px 5px 5px 5px;-moz-border-radius: 2px 2px 2px 2px;-khtml-border-radius: 2px 2px 2px 2px;border-radius: 2px 2px 2px 2px;-webkit-box-shadow: 0px 2px 2px #DDDDDD;-moz-box-shadow: 0px 2px 2px #DDDDDD;box-shadow: 0px 2px 2px #DDDDDD;padding: 0px 5px;}
+#menu ul {list-style: none;margin: 0;padding: 0;}
+#menu > ul > li {position: relative;float: left;z-index: 888;}
+#menu > ul > li:hover {background: #000;}
+#menu > ul > li > a {font-size: 13px;color: #FFF;line-height: 14px;text-decoration: none;display: block;padding: 12px 15px 11px 15px;z-index: 6;position: relative;}
+#menu > ul > li > div {display: none;background: #FFFFFF;position: absolute;z-index: 5;padding: 5px;border: 1px solid #000000;-webkit-border-radius: 0px 0px 5px 5px;-moz-border-radius: 0px 0px 5px 5px;-khtml-border-radius: 0px 0px 5px 5px;border-radius: 0px 0px 5px 5px;background: url('../images/menu.png');}
+#menu > ul > li:hover > div {display: table;}
+#menu > ul > li > div > ul {display: table-cell;}
+#menu > ul > li ul + ul {padding-left: 20px;}
+#menu > ul > li ul > li > a {text-decoration: none;padding: 4px;color: #FFFFFF;display: block;white-space: nowrap;min-width: 120px;}
+#menu > ul > li ul > li > a:hover {background: #000000;}
+#menu > ul > li > div > ul > li > a {color: #FFFFFF;}
+/* açılır kategori menüsü */
+
+/*=========================Main===============================*/
+
+/*=========================Yan Global Classlar===============================*/
+/*tüm modullere stil vermek icin kullanılacak class*/
+.kutu {width:220px;margin-top:10px;overflow:visible}
+/*modul*/
+.modul_ust {color:#ffffff;width:185px;height:28px;padding:10px 0 0 35px;background:url(../images/modul_baslik.png) no-repeat 0 0;font-weight:bold;font-size:14px;}
+.modul_ust2 {color:#494949;width:185px;height:28px;padding:10px 0 0 35px;background:url(../images/modul_baslik2.png) no-repeat 0 0;font-weight:bold;font-size:14px;}
+.modul_ic {width:200px;padding:9px;background-color:#fff;border-left:solid 1px #dadada;border-right:solid 1px #dadada;overflow:visible;position:relative;}
+.modul_alt {width:218px;height:2px;background-color:#fff;border:solid 1px #dadada;border-top:none;}
+
+/*================================= Yan Marka ====================================*/
+#y_marka_cont {width:200px;margin:auto;}
+#y_marka_cont ul {list-style-type:none;}
+#y_marka_cont ul li {width:200px;height:35px;overflow:hidden !important;}
+#y_marka_cont ul li img {width:75px;height:35px;margin-right:10px;float:left;display:inline;}
+#y_marka_cont ul li a, #y_marka_cont ul li a:link, #y_marka_cont ul li a:visited {display:block;float:left;display:inline;width:103px;margin-top:3px;height:23px;font-size:13px;color:#888787;padding:7px 0 0 12px;background:url(../images/kategori_menu01_bg.png) no-repeat 0 0;}
+#y_marka_cont ul li a:hover {background:#eeeeee url(../images/kategori_menu01_bg.png) no-repeat 5px 0;}
+
+/*============================== Yan Ürün Arama ==================================*/
+#y_urun_arama_cont {width:200px;height:56px;margin:5px 0 10px 0;background:url(../images/arama_yan_bg.png) no-repeat 0 0;position:relative;}
+#y_urun_arama_cont input {border:none;}
+#y_urun_arama_cont input:focus {background-color:transparent !important;}
+#y_arama_text {position:absolute;width:155px;height:22px;top:5px;left:35px;}
+#y_arama_text input {width:155px;height:22px;font-size:12px;text-align:center;color:#b3b3b3;line-height:22px;font-weight:normal;background-color:transparent;}
+#y_arama_select_text {position:absolute;width:117px;height:14px;top:36px;left:28px;}
+#y_arama_select_text input {width:117px;height:14px;font-size:10px;text-align:center;color:#fff;line-height:20px;font-weight:normal;background-color:transparent;}
+#y_arama_kategoriler {position:absolute;top:13px;left:0px;width:117px;padding:3px 0 8px 0;background-color:#454545;display:none;}
+#y_arama_kategoriler ul {list-style-type:none;width:110px;margin:auto}
+#y_arama_kategoriler ul li a, #y_arama_kategoriler ul li a:link, #y_arama_kategoriler ul li a:visited {font-size:10px;display:block;width:106px;padding:2px;color:#fff;}
+#y_arama_kategoriler ul li a:hover {background-color:#000;}
+#y_arama_select, #y_arama_select:link, #y_arama_select:visited {display:block;position:absolute;top:34px;left:150px; width:11px;height:22px;background:url(../images/btn_yan_select_normal.png) no-repeat 0 0;}
+#y_arama_select:hover, .y_a_aktif {background:url(../images/btn_yan_select_hover.png) no-repeat 0 0 !important;}
+#y_arama_ara {position:absolute;width:39px;height:22px;top:34px;left:161px;}
+#y_arama_ara input {background-color:transparent;}
+
+/*=========================Yan Kategori Menu Tip 01===============================*/
+#kategori_menu01 {width:218px;}
+#kategori_menu01 ul {list-style-type:none;}
+#kategori_menu01 ul li {width:218px;}
+#kategori_menu01 ul li a, #kategori_menu01 ul li a:link, #kategori_menu01 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#4b4b4b;font-size:14px;}
+#kategori_menu01 ul li a:hover, #kategori_menu01 ul li a.k_aktif {color:#ff8100;}
+
+/*=========================Yan Kategori Menu Tip 02===============================*/
+#kategori_menu02 {width:218px;}
+#kategori_menu02 ul {list-style-type:none;}
+#kategori_menu02 ul li {width:218px;background:url(../images/katlinkbg.png) repeat-x;}
+#kategori_menu02 ul li a, #kategori_menu02 ul li a:link, #kategori_menu02 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#4b4b4b;font-size:14px;}
+#kategori_menu02 ul li a:hover, #kategori_menu02 ul li a.k_aktif {color:#ff8100;}
+#kategori_menu02 ul li a.k_aktif {color:#ff8100;}
+#kategori_menu02 ul li ul {list-style-type:none;width:215px}
+#kategori_menu02 ul li ul li {background:none #eee;border-top:1px solid #fff;}
+#kategori_menu02 ul li ul li a, #kategori_menu02 ul li ul li a:link, #kategori_menu02 ul li ul li a:visited {width:213px;background-color:transparent;}
+#kategori_menu02 ul li ul li a:hover, #kategori_menu02 ul li ul li a.k_aktif {background-color:#f7f7f7;color:#000;}
+
+/*=========================Yan Kategori Menu Tip 03===============================*/
+#kategori_menu03 {width:200px;}
+#kategori_menu03 ul {list-style-type:none;}
+#kategori_menu03 ul li {width:218px;background:url(../images/katlinkbg.png) repeat-x;}
+#kategori_menu03 ul li a, #kategori_menu03 ul li a:link, #kategori_menu03 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#494949;font-size:12px;}
+#kategori_menu03 ul li a:hover, #kategori_menu03 ul li.k_aktif {color:#ff8100;}
+#kategori_menu03 ul li a.k_aktif {color:#009BD9;}
+#kategori_menu03 ul li ul {list-style-type:none;width:220px;overflow:hidden;}
+#kategori_menu03 ul li ul li {border:none;width:auto;}
+#kategori_menu03 ul li ul li a, #kategori_menu03 ul li ul li a:link, #kategori_menu03 ul li ul li a:visited {background-color:#eeeeee;}
+#kategori_menu03 ul li ul li a:hover, #kategori_menu03 ul li ul li a.k_aktif {background-color:#f7f7f7;color:#000;}
+
+/*=========================Yan Kategori Menu Tip 04===============================*/
+#kategori_menu04 {width:200px;color:#4b4b4b;font-size:13px;}
+#kategori_menu04 a, #kategori_menu04 a:link, #kategori_menu04 a:visited {color:#4b4b4b}
+#kategori_menu04 a:hover {color:#ff8100}
+.treeview, .treeview ul {padding: 0;margin: 0;list-style: none;}
+.treeview ul {margin-top: 4px;}
+.treeview .hitarea {background: url(../images/treeview-default.gif) -64px -25px no-repeat;height: 16px;width: 16px;margin-left: -16px;float: left;cursor: pointer;}
+/* fix for IE6 */* html .hitarea {display: inline;float:none;}
+.treeview li { margin: 0;padding: 3px 0pt 3px 16px;}
+.treeview a.selected {background-color: #eee;}
+#treecontrol { margin: 1em 0; display: none; }
+.treeview .hover {cursor: pointer; }
+.treeview li { background: url(../images/treeview-default-line.gif) 0 0 no-repeat; }
+.treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
+.treeview .expandable-hitarea { background-position: -80px -3px; }
+.treeview li.last { background-position: 0 -1766px }
+.treeview li.lastCollapsable, .treeview li.lastExpandable { background-image: url(../images/treeview-default.gif); }  
+.treeview li.lastCollapsable { background-position: 0 -111px }
+.treeview li.lastExpandable { background-position: -32px -67px }
+.treeview div.lastCollapsable-hitarea, .treeview div.lastExpandable-hitarea { background-position: 0; }
+
+/*=========================Yan Kayan Urunler===============================*/
+.kayan_urun {width:200px;margin:auto;}
+.kayan_urun ul {list-style-type:none;}
+.kayan_urun ul li {width:200px;height:250px;text-align:center;}
+.k_image {width:200px;height:140px;text-align:center;}
+.k_image img {width:180px;}
+.k_urun_adi, .k_urun_adi:link, .k_urun_adi:visited {line-height:20px;height:35px;display:block;width:200px;padding:5px 0;text-align:center;font-size:12px;font-weight:bold;margin-bottom:10px;}
+.k_urun_adi:hover{}
+
+.k_fiyat {width:115px;height:53px;text-align:center;font-size:15px;color:#ff8100;background-color:#fcd3aa;border:1px solid #fdb164;}
+.k_fiyat small {font-size:9px;display:block;text-align:center;}
+.k_fiyat big {color:#ff8100;font-weight:bold;font-size:19px;display:block;text-align:center;padding-top:5px;}
+.k_fiyat em {font-style:normal;text-decoration:line-through;color:#ababab;font-size:10px;}
+.k_butonlar {width:auto;padding-top:17px;}
+.k_ileri, .k_geri {list-style-type:none;}
+.k_ileri a, .k_geri a {position:absolute;top:100px;left:193px;display:block;width:27px;height:41px;text-indent:-999px;}
+.k_geri a {left:0px;}
+.k_ileri a, .k_ileri a:link, .k_ileri a:visited {background:url(../images/buton_ileri_geri.png) top right no-repeat;}
+.k_ileri a:hover {background-position:bottom right;}
+.k_geri a, .k_geri a:link, .k_geri a:visited {background:url(../images/buton_ileri_geri.png) top left no-repeat;}
+.k_geri a:hover {background-position:bottom left;}
+
+/*=========================Yan Urun Listesi ===============================*/
+.yan_urun_liste {width:200px;margin:auto;}
+.yan_urun_liste ul {list-style-type:none;}
+.yan_urun_liste ul li {width:200px;margin:auto;border-bottom:1px solid #ebebeb;padding-bottom:5px;}
+.y_u_liste_image, .y_u_liste_image:link, .y_u_liste_image:visited {width:70px;height:66px;border:solid 1px #f2f2f2;margin-right:5px;background-color:#fff;overflow:hidden;}
+.y_u_liste_image:hover {border:solid 1px #ff6c00;}
+.y_u_liste_image img {width:70px;}
+.y_u_liste_urun_adi, .y_u_liste_urun_adi:link, .y_u_liste_urun_adi:visited {display:block;color:#7b7b7b;font-size:12px;font-weight:bold;margin-top:5px;}
+.y_u_liste_urun_adi:hover{color:#ff6c00;}
+.y_u_liste_fiyat {font-size:18px;color:#ff6c00;font-weight:bold;margin-top:5px;}
+.y_u_liste_fiyat span.y_birim {color:#636363;font-weight:normal;font-size:8px;}
+.y_u_liste_fiyat span.y_eski {color:#636363;font-weight:normal;font-size:15px;text-decoration:line-through;}
+
+/*=========================Yan Icerikler Listesi===============================*/
+.yan_icerik_liste {width:200px;margin:auto;}
+.yan_icerik_liste ul {list-style-type:none;}
+.yan_icerik_liste ul li {width:200px;margin:auto;border-bottom:1px solid #ebebeb;padding-bottom:5px;overflow:hidden;}
+.yan_icerik_liste ul li img {width:40px;height:40px;float:left;/*IE Fix*/display:inline;}
+.y_i_listebaslik, .y_i_listebaslik:link, .y_i_listebaslik:visited {display:block;font-size:12px;margin-top:5px;}
+.y_i_listebaslik:hover {}
+.yan_icerik_liste a, .yan_icerik_liste a:link, .yan_icerik_liste a:visited {font-weight:bold;text-decoration:none;}
+.yan_icerik_liste a:hover {}
+
+/*=========================Yan Icerik Kategori Listesi===============================*/
+.yan_kategori_liste {width:200px;}
+.yan_kategori_liste ul {list-style-type:none;}
+.yan_kategori_liste ul li {width:200px;}
+.yan_kategori_liste ul li a, .yan_kategori_liste ul li a:link, .yan_kategori_liste ul li a:visited {display:block;width:170px;height:23px;padding:7px 0 0 30px;color:#555555;font-size:14px;background:url(../images/kategori_ok.png) no-repeat 0px 6px;}
+.yan_kategori_liste ul li a:hover, .yan_kategori_liste ul li a.k_aktif {background:#efefef url(../images/kategori_ok.png) no-repeat 5px 6px}
+
+/*=========================Yan Alisveris Menu ===============================*/
+.sm_faturali {background:url(../images/sepet_faturali.png) no-repeat 0 0;}
+.sm_kargolu {background:url(../images/sepet_kargolu.png) no-repeat 0 0;}
+.sm_kredili {background:url(../images/sepet_kredili.png) no-repeat 0 0;}
+.sm_diger {background:url(../images/sepet_diger.png) no-repeat 0 0;}
+#alisveris_menu {width:220px;margin:auto;}
+#alisveris_menu ul {list-style-type:none;}
+#alisveris_menu ul li a, #alisveris_menu ul li a:link, #alisveris_menu ul li a:visited {display:block;width:218px;height:38px;border:solid 1px #ededed;background:url(../images/sepet_menu_bg.png) repeat-x 0 0}
+#alisveris_menu ul li a:hover, #alisveris_menu ul li a.sm_aktif {background-position:bottom;}
+#alisveris_menu ul li a span {display:block;width:185px;height:18px;padding:4px 0 0 33px;color:#5f5f5f;font-size:14px;font-weight:bold;margin:8px 0 0 7px;}
+
+
+/*=========================Hata Sonay Sayfalari===============================*/
+#onay_mesaj {width:720px;margin:auto;font-size:15px;margin-top:10px;}
+.onay_image {margin-left:30px;width:130px;}
+.onay_aciklama {margin-left:30px;width:500px;}
+.onay_aciklama a, .onay_aciklama a:link, .onay_aciklama a:visited {color:#ff6400;}
+.onay_aciklama a:hover {color:#000;}
+.onay_buton {text-align:right;margin-right:30px;}
+.hata_yazisi {color:#ff6400 !important;font-style:italic !important;}
+input.hata_yazisi, textarea.hata_yazisi, select.hata_yazisi  {font-style:normal !important; border:solid 1px #ff6400 !important;background-color: #ffffdf !important;}
+
+/*=========================Icerik Listeleme===============================*/
+#liste_wrapper {width:760px;margin:auto;}
+.icerik, .icerik:link, .icerik:visited {display:block;width:339px;height:184px;background:url(../images/liste_bg.png) no-repeat 0 0;margin:10px 0px 0 30px;text-decoration:none;}
+.icerik:hover {background-position:bottom center;text-decoration:none;}
+.icerik span.ic_baslik {display:block;width:299px;margin:30px auto 0;color:#414141;font-weight:bold;font-size:14px;}
+.icerik span.ic_kisa {display:block;width:299px;margin:20px auto 0;color:#515151;font-weight:normal;}
+
+.butonum, .butonum:link, .butonum:visited {height:27px;display:inline-block;color:#ffffff;}
+.butonum:hover {}
+.butonum:hover span {background-position:bottom;}
+.butonum span {float:left;display:inline-block;background-position:top;margin:auto !important;text-indent:0 !important;}
+.butsol {width:6px;height:27px;background:url(../images/butsol.png) no-repeat ;}
+.butor {height:27px;line-height:27px;background:url(../images/butor.png) repeat-x;padding:0px 10px;color:#ffffff;}
+.butsag {width:6px;height:27px;background:url(../images/butsag.png) no-repeat ;}
+
+.facelog, .facelog:link, .facelog:visited {padding:16px 0 0 55px;position:absolute;left:250px;top:-5px;font-weight:700;width:175px;height:26px;background:url(../images/facebook_login.png) top no-repeat;color:#fff;font-family:Calibri;font-size:15px;display:block;}
+.facelog:hover {background-position:bottom;}
+.kayitol {background:url(../images/kayitol.png) 0px 2px no-repeat;display:inline-block;height:22px;width:20px;line-height:30px;}
+.girisyap {background:url(../images/girisyap.png) 0px 2px no-repeat;display:inline-block;height:22px;width:20px;}

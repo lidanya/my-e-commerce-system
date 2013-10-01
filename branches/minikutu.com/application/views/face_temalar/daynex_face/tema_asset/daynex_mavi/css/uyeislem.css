@@ -1,0 +1,125 @@
+/*
+Dosya Adi: uyeislem.css
+Yazan: E Ticaret Sistemim 
+Aciklamalar: 
+- uyelerle etkilesim kuran sayfalar içerisindeki stil sablonlarini icerir 
+*/
+
+
+/*=========================Genell Uye Formlari===============================*/
+#uye_giris_container, .uye_giris_container {width:740px;padding:10px;margin:auto;background:url(../images/uye_islem_bg.png) no-repeat 500px 100px;}
+#uye_giris_container a, .uye_giris_container a, #uye_giris_container:link, .uye_giris_container a:link, #uye_giris_container:visited, .uye_giris_container a:visited {color:#0260FA;font-weight:bold;}
+#uye_giris_container a:hover, .uye_giris_container a:hover {color:#0099ff;}
+#uye_not {width:500px;padding:10px;margin: 20px auto 10px 20px;font-size:13px;color:#737373;}
+#uye_form {width:500px;padding:10px;margin:auto auto auto 20px;}
+
+.uye_text {width:140px;height:30px;padding-top:5px;font-size:13px;color:#737373;	}
+.uye_box {width:190px;height:25px;border: 1px solid #dadada;padding: 0px 5px 0px 5px;}
+.uye_box_multiline {width:300px;height:100px;border: 1px solid #dadada;padding: 0px 5px 0px 5px;margin-bottom:10px;}
+.uye_box_sifre {width:89px;height:25px;border:1px solid #dadada;padding: 0px 5px 0px 5px;}
+.uye_checkbox {font-family:arial;font-size:13px;font-weight:bold;color:#737373;}
+.uye_captcha {margin-left:10px;margin-top:1px;}
+
+/*============================Iletisim=================================*/
+#iletisim {width:720px;margin:auto;}
+.i_google {width:300px;position:absolute;z-index:99;top:50px;left:350px;}
+.i_logo {top:50px;left:420px;position:absolute;width:199px;}
+.i_logo img {width:199px;}
+.i_adres {background:url(../images/iletisim_adres.png) no-repeat  0 0;}
+.i_mail {background:url(../images/iletisim_mail.png) no-repeat  0 0;}
+.i_telefon {background:url(../images/iletisim_telefon.png) no-repeat  0 0;}
+.i_fax {background:url(../images/iletisim_fax.png) no-repeat  0 0;}
+.ib_baslik, .ib_yazi {margin-left:40px;display:block;color:#7b7b7b;font-weight:bold;width:100px;height:23px;padding:7px 0 0 35px;font-size:12px;}
+.ib_yazi {font-weight:normal;width:auto;margin:0;}
+.ib_yazi a, .ib_yazi a:link, .ib_yazi a:visited {color:#2096C6;}
+.ib_yazi a:hover {color:#000;}
+.i_text, .i_box {display:block;margin-top:5px;}
+.i_text {height:25px;padding-top:5px;width:150px;color:#7b7b7b;font-weight:bold;text-align:right;}
+.i_box {margin-left:10px;}
+.i_box input {border:1px solid #dadada;width:300px;height:25px;}
+.i_box textarea {border:1px solid #dadada;width:300px;height:150px;}
+
+/*==============================Ticket==================================*/
+#t_navigasyon {width:720px;margin:10px auto 0;}
+/*sayfalama*/
+.liste_sag {height:30px;}
+.liste_sag ul {list-style-type:none;}
+.liste_sag ul li {float:left;margin-left:5px;/*IE Fix*/display:inline;height:30px;}
+.liste_sag ul li a.l_sayfa, .liste_sag ul li a.l_sayfa:link, .liste_sag ul li a.l_sayfa:visited {line-height:32px;padding:0 3px;color:#565656;font-weight:bold;font-size:18px;}
+.liste_sag ul li a.l_sayfa:hover, .liste_sag ul li.l_aktif a.l_sayfa {color:#ff6300;text-decoration:underline;}
+/*listele*/
+.t_oge {width:720px;margin:auto;font-size:13px !important;color:#414141;clear:both;}
+.t_tablo01, .t_tablo02, .t_tablo03, .t_tablo04 {height:27px;text-align:center;padding-top:7px;}
+.t_tablo01 {width:120px;}
+.t_tablo02 {width:400px;text-align:left;padding-left:10px;}
+.t_tablo03 {width:115px;font-size:10px;text-align:left;padding-left:5px;}
+.t_tablo04 {width:70px;}
+/*goster*/
+.t_ara_baslik {width:710px;margin:5px auto;font-size:14px;text-align:center;font-weight:bold;border-top:1px solid #dedede;border-bottom:1px solid #dedede;padding:5px;}
+#t_yazismalar {width:720px;margin:auto;}
+.ty_baslik {display:block;width:150px;text-align:left;color:#414141;font-weight:bold;text-align:right;height:23px;padding-top:7px;margin-top:2px}
+.ty_mesaj {display:block;width:550px;margin-left:10px;padding-top:11px;padding-bottom:3px;}
+.ib_yazi textarea {border:solid 1px #dedede;width:499px;height:150px;}
+#t_mesaj_yaz {color:#41414;font-weight:bold;font-size:14px;margin-top:10px;}
+
+/**============================Fatura Secimi=================================*/
+#fatura {width:720px;padding:10px;margin:10px auto;}
+/*listele*/
+.f_gri {background-color:#efefef;}
+.f_oge_baslik {background:url(../images/fatura_liste_bg.png) repeat-x 0 0;font-weight:bold;color:#fff !important;}
+.f_oge {width:700px;margin:auto;font-size:13px;color:#737373;clear:both;}
+.f_tablo01, .f_tablo02, .f_tablo03 {height:27px;text-align:center;padding-top:7px;width:100px;}
+.f_tablo02 {width:440px;text-align:left;padding-left:10px}
+.f_tablo03 {width:150px;}
+ /*duzenle - kaydet*/
+.f_form {width:700px;margin:10px auto 0;}
+.f_form span {display:block;margin-top:7px;}
+.f_form input, .f_form textarea {border:solid 1px #d4d4d4;}
+.f_form input {width:250px;height:25px;}
+.f_form select {width:90px;height:25px;}
+.f_form textarea {width:520px;height:80px;}
+.f_form a, .f_form a:link, .f_form a:visited {color:#ff6400;} 
+.f_form a:hover {color:#000;}
+.f_text, .f_text_kucuk {display:block;width:150px;height:20px;padding-top:5px;color:#737373;font-size:13px;font-weight:bold;}
+.f_text_kucuk {width:auto;margin-left:5px;}
+.f_box {margin-left:5px;}
+/*goster*/
+.fg_text, .fg_text_kucuk {display:block;width:150px;height:25px;padding-top:0px;color:#000;font-size:13px;font-weight:bold;}
+.fg_text_kucuk {width:auto;margin-left:5px;}
+.fg_box {margin-left:5px;font-size:12px;}
+
+/*============================Sipariş Listesi=================================*/
+#siparis {width:720px;padding:10px;margin:10px auto;}
+/*listele*/
+.s_oge {width:720px;margin:auto;font-size:13px;color:#737373;clear:both;}
+.s_tablo01, .s_tablo02, .s_tablo03, .s_tablo04 {display:block;height:23px;padding-top:7px;text-align:center;}
+.s_tablo01 {width:100px;}
+.s_tablo02 {width:170px;text-align:left;padding-left:10px;}
+.s_tablo03 {width:280px;text-align:left;padding-left:10px;height:auto;font-size:11px;font-style:italic;padding-bottom:6px;}
+.s_tablo04 {width:150px;}
+.s_oge a, .s_oge a:link, .s_oge a:visited {color:#0099ff;}
+.s_oge a:hover {color:#000;}
+
+/*goster*/
+.sg_baslik {margin:auto;width:697px;padding:0 0 8px 23px;font-weight:bold;font-size:16px;color:#5f5f5f;text-align:left;border-bottom:solid 1px #dadada;background:url(../images/sepet_fatura_baslik.png) no-repeat 0 5px;}
+.sg_baslik i {font-size:12px;font-weight:normal;}
+.sg_tablo01, .sg_tablo02, .sg_tablo03, .sg_tablo04 {display:block;height:23px;padding-top:7px;margin-left:5px;text-align:center;}
+.sg_tablo01 {width:405px;padding-left:10px;text-align:left;}
+.sg_tablo02 {width:35px;}
+.sg_tablo03 {width:125px;}
+.sg_tablo04 {width:125px;font-weight:bold;}
+.sg_alt {width:720px;margin:auto;border-top:solid 1px #dadada;}
+.sg_text {display:block;color:#737373;font-weight:bold;text-align:right;font-size:13px;width:130px;margin-top:3px;}
+.sg_fiyat {display:block;text-align:right;width:120px;margin-top:3px;}
+
+
+/*============================Takip Listesi=================================*/
+#takip {width:720px;padding:10px;margin:10px auto;}
+.ta_link, .ta_link:link, .ta_link:visited {text-decoration:none;color:#2096c6}
+.ta_link:hover {text-decoration:none;cursor:pointer;color:#000;}
+.ta_aciklama {width:680px;padding:10px;font-size:12px;color:#666666;margin:10px auto;text-align:justify;}
+.ta_oge {width:700px;margin:auto;padding-bottom:3px;border-bottom:solid 1px #dedede;margin-bottom:5px;}
+.ta_tablo01, .ta_tablo02 {width:490px;text-align:left;padding:7px 0 0 10px;height:27px;}
+.ta_tablo02 {width:200px;text-align:center;padding:0;height:34px;}
+.ta_onay {width:678px;margin:10px auto;padding:10px;text-align:center;font-size:14px;font-weight:bold;color:#000;background-color:#deffa4;border:solid 1px #98d504}
+.ta_hata {width:678px;margin:10px auto;padding:10px;text-align:center;font-size:14px;font-weight:bold;color:#000;background-color:#ffbdbd;border:solid 1px #ff6868}
