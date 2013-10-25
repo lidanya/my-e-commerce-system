@@ -38,7 +38,7 @@ class site extends Public_Controller
 		$data['baslik'] = lang('messages_page_not_found_title');
 
 		$this->load->view(tema() . 'header', $data);
-		$this->load->view(tema() . 'left');
+		//$this->load->view(tema() . 'left');
 		$this->load->view(tema() . 'index/page_not_found_content');
 		$this->load->view(tema() . 'right');
 		$this->load->view(tema() . 'footer');
@@ -74,7 +74,6 @@ class site extends Public_Controller
 
 		ob_start();
 		$im = imagecreatefrompng(APPPATH . 'views/' . tema_asset() . 'images/' . 'chapta.png');
-		//echo $im; return false;
 		$color = imagecolorallocate($im, 255, 255, 255);
 		$font = APPPATH . 'fonts/arialbi.ttf';
 		$fontsize = 11;

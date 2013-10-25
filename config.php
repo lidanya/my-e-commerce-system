@@ -48,7 +48,7 @@
 	define('database_hostname', 'localhost');
 	define('database_username', 'root');
 	define('database_password', '');
-	define('database_database', 'duzenleme');
+	define('database_database', 'minikutu_db');
 	define('database_dbdriver', 'mysql');
 	define('database_dbprefix', 'e_'); 
 	define('database_pconnect', FALSE);
