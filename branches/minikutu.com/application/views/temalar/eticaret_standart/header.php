@@ -20,6 +20,7 @@
 	</script>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>style.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>minikutu.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>anasayfa.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>jquery.countdown.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>custom.css"/>
@@ -76,75 +77,59 @@
 </head>
 
 <body>
-<div id="header">
-	<div class="hesol sola">
-		<div id="h_logo" class="sola">
-			<a href="<?php echo site_url('site/index'); ?>">
-				<img src="<?php echo base_url(ssl_status()); ?>upload/editor/<?php echo config('site_ayar_logo'); ?>" alt="<?php echo config('site_ayar_baslik'); ?>" title="<?php echo config('site_ayar_baslik'); ?>" />
-			</a>
-		</div>
-	</div>
-	<!--hesol SON -->
-	<div class="hesag saga">
-		<div class="hesag1">
-			<div class="dil_alan saga">
-				<?php
-					$language_code = get_language('code');
-					$languages = $this->fonksiyonlar->get_languages();
-				?>
-				<div class="saga" style="width:121px;margin-left:20px;margin-top:8px;">
-					<?php if ($languages) { ?>
-						<?php if(count($languages) > 1) { ?>
-						<div class="switcher">
-							<?php foreach ($languages as $language) { ?>
-								<?php if ($language['code'] == $language_code) { ?>
-									<div class="selected">
-										<a href="javascript:;" title="<?php echo $language['name']; ?>">
-											<img src="<?php echo site_resim(TRUE) . 'flags/' . $language['image']; ?>" alt="<?php echo $language['name']; ?>" />
-											&nbsp;&nbsp;<?php echo $language['name']; ?>
-										</a>
-									</div>
-								<?php } ?>
-							<?php } ?>
-							<div class="option">
-							<?php foreach ($languages as $language) { ?>
-								<?php if ($language['code'] == $language_code) { ?>
-								<a href="javascript:;" title="<?php echo $language['name']; ?>">
-								<?php } else { ?>
-								<a href="<?php echo site_url($this->lang->switch_uri($language['code'])); ?>" title="<?php echo $language['name']; ?>">
-								<?php } ?>
-									<img src="<?php echo site_resim(TRUE) . 'flags/' . $language['image']; ?>" alt="<?php echo $language['name']; ?>" />
-									&nbsp;&nbsp;<?php echo $language['name']; ?>
-								</a>
-							<?php } ?>
-							</div>
-						</div>
-						<div class="clear"></div>
-						<?php } ?>
-					<?php } ?>
+<div id="Full" class="topmenubg">
+	<div id="Top">
+		<a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('header_top_menu_contact_us'); ?>"><span class="buton-iletisim"></span></a>
+		<a href="<?php echo site_url('site/musteri_hizmetleri'); ?>" title="<?php echo lang('header_top_menu_customer_services'); ?>"><span class="buton-sss"></span></a>
+		<a href="/tr/hakkimizda--information" title="Hakkımızda"><span class="buton-hakkimizda"></span></a>
+		<a href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_top_menu_mainpage'); ?>"><span class="buton-anasayfa"></span></a>
+		<!--<a href="#"><span class="buton-uyegirisi"></span></a></div>-->
+</div>
+
+
+	<div id="Slider">
+       	<div id="Logo"><a href="index.htm"><img src="<?php echo site_resim(); ?>logo.png" width="288" height="78" /></a></div>
+        <div id="Arama">
+			<form action="<?php echo site_url('urun/arama/index'); ?>" id="form_h_arama" method="get">
+				<div id="h_a_text" style="padding-top:0;" class="sola">
+					<input type="text" name="aranan" value="<?php echo _get('aranan', lang('header_search_input')); ?>" onclick="if(this.value==this.defaultValue){this.value=''}" onblur="if(this.value==''){this.value=this.defaultValue}" />
 				</div>
-			</div>
-			<!--dil_alan SON -->
-			<div id="h_ust_menu" class="saga">
-				<a href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_top_menu_mainpage'); ?>"><?php echo lang('header_top_menu_mainpage'); ?></a>
-				
-				<?php echo show_page('1', '', '', ''); ?> 
-
-				<a href="<?php echo site_url('site/musteri_hizmetleri'); ?>" title="<?php echo lang('header_top_menu_customer_services'); ?>">
-					<?php echo lang('header_top_menu_customer_services'); ?>
-				</a> 
-
-				<a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('header_top_menu_contact_us'); ?>">
-					<?php echo lang('header_top_menu_contact_us'); ?>
-				</a>
-			</div>
-			<!--h_ust_menu SON -->
+				<a id="h_a_buton" href="javascript:;" onclick="if($('#arama_box').val() == '<?php echo lang('header_search_input'); ?>'){return false;} else {$('#form_h_arama').submit();}"><?php echo lang('header_search_button'); ?></a>
+				<div class="clear"></div>
+			</form>
 		</div>
-		<!--hesag1 SON -->
-		<div class="hesag2" style="position:relative;z-index:1000;">
-			<?php if($this->dx_auth->is_logged_in()) { ?>
+        <img src="<?php echo site_resim(); ?>slider.png" width="960" height="315" />
+    </div>
+
+	
+<div class="menubg">
+	<?php
+		$kategoriler = $this->eklentiler_kategori_model->kategori_listele(0);
+		if($kategoriler) {
+	?>
+	<div id="Menu">
+	<?php foreach($kategoriler as $kategori) { ?>
+	<?php
+		$kategori_seo_name = str_replace('--category', '', $this->uri->segment(2));
+		$aktif = NULL;
+		$parts = explode('---', $kategori_seo_name);
+		if($parts[0] == $kategori->seo) {
+			$aktif = 'class="k_aktif"';
+		} else {
+			$aktif = NULL;
+		}
+	?>
+    	<a href="<?php echo site_url($kategori->seo . '--category'); ?>" title="<?php echo $kategori->name; ?>"><?php echo character_limiter($kategori->name, 28); ?></a><span class="kat-seperator"></span>
+       <?php } ?>
+	</div>
+	<?php } ?>
+</div> 
+
+	<?php if($this->dx_auth->is_logged_in()) { ?>
 			<div id="h_uye_panel" class="sola">
 				<span><?php echo lang('header_user_account'); ?></span>
+			</div>
+			<div class="panel-acik">
 				<ul>
 					<li><a href="<?php echo ssl_url('uye/bilgi'); ?>" rel="nofollow" title="<?php echo lang('header_user_information'); ?>"><?php echo lang('header_user_information'); ?></a></li>
 					<li><a href="<?php echo ssl_url('uye/cagri'); ?>" rel="nofollow" title="<?php echo lang('header_user_ticket'); ?>"><?php echo lang('header_user_ticket'); ?></a></li>
@@ -153,10 +138,7 @@
 					<li><a href="<?php echo ssl_url('uye/fatura'); ?>" rel="nofollow" title="<?php echo lang('header_user_billing'); ?>"><?php echo lang('header_user_billing'); ?></a></li>
 					<li><a href="<?php echo ssl_url('uye/cikis'); ?>" rel="nofollow" class="h_cikis" title="<?php echo lang('header_user_logout'); ?>"><?php echo lang('header_user_logout'); ?></a></li>
 				</ul>
-			</div>	
-			<?php if (config('facebook_app_status') AND config('site_ayar_facebook_url')) { ?>
 			</div>
-			<?php } ?>
 			<?php } else { ?>
 			<div id="h_uye_menu" class="sola">
 				<ul>
@@ -175,60 +157,8 @@
 					</li>
 				</ul>
 			</div>
-			<div class="sola" style="padding-left:10px;padding-top:13px;"> 
-			<a href="https://apps.facebook.com/eticaret/" target="_blank" title="<?php echo 
-					
-					lang('header_top_facebook_application'); ?>">
-					
-						<img src="<?php echo site_resim(TRUE); ?>face.png" style="height:32px;" />
-					</a></div>
-			
-		<?php if (config('facebook_app_status') AND config('site_ayar_facebook_url')) { ?> 
-				
 			<?php } ?>
-			<?php } ?>
-			
-			<div id="h_arama" class="saga">
-				<form action="<?php echo site_url('urun/arama/index'); ?>" id="form_h_arama" method="get">
-					<input type="hidden" value="0" id="kategori_kriter" name="kategori" />
-					<div id="h_a_kat" class="sola">
-						<span id="h_a_kat_txt"><?php echo lang('header_search_category_select'); ?></span>
-						<div>
-							<a href="javascript:;" dyn="0"><?php echo lang('header_search_category_select'); ?></a>
-							<?php 
-								$urun_kategori = urun_ana_kategori();
-								if($urun_kategori) {
-									foreach($urun_kategori as $kategori) {
-							?>
-								<a href="javascript:;" dyn="<?php echo $kategori['urun_kat_id']; ?>"><?php echo $kategori['urun_kat_adi'];?></a>
-							<?php 
-									}
-								}
-							?>	
-						</div>
-					</div>
-					<div id="h_a_text" style="padding-top:0;" class="sola">
-						<input type="text" name="aranan" value="<?php echo _get('aranan', lang('header_search_input')); ?>" onclick="if(this.value==this.defaultValue){this.value=''}" onblur="if(this.value==''){this.value=this.defaultValue}" />
-					</div>
-					<a id="h_a_buton" href="javascript:;" onclick="if($('#arama_box').val() == '<?php echo lang('header_search_input'); ?>'){return false;} else {$('#form_h_arama').submit();}"><?php echo lang('header_search_button'); ?></a>
-					<div class="clear"></div>
-				</form>	
-			</div>
-			<!--arama SON -->
-		</div>
-		<!--hesag2 SON -->
-	</div>
-	<!--hesag SON -->
-	<div class="clear"></div>
-	<div id="menubar">
-		<div id="h_alt_menu" class="sola">
-			<ul class="sola">
-				<li><a class="h_ilk<?php $this->menu->menu_class(2,3,'site','index',' h_aktif',3);?>" href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_middle_menu_mainpage'); ?>"><em><?php echo mb_strtoupper(lang('header_middle_menu_mainpage')); ?></em></a></li>
-				<li><a class="<?php $this->menu->menu_class(2,3,'urun','yeni','h_aktif',3);?>" href="<?php echo site_url('urun/yeni'); ?>" title="<?php echo lang('header_middle_menu_new_products'); ?>"><em><?php echo mb_strtoupper(lang('header_middle_menu_new_products')); ?></em></a></li>
-				<li><a class="<?php $this->menu->menu_class(2,3,'urun','kampanyali','h_aktif',3);?>" href="<?php echo site_url('urun/kampanyali'); ?>" title="<?php echo lang('header_middle_menu_campaign_products'); ?>"><em><?php echo mb_strtoupper(lang('header_middle_menu_campaign_products')); ?></em></a></li>
-				<li><a class="h_son<?php $this->menu->menu_class(2,3,'urun','indirimli',' h_aktif',3);?>" href="<?php echo site_url('urun/indirimli'); ?>" title="<?php echo lang('header_middle_menu_discount_products'); ?>"><em><?php echo mb_strtoupper(lang('header_middle_menu_discount_products')); ?></em></a></li>
-			</ul>
-		</div>
+	
 		<!--h_alt_menu SON -->
 		<script type="text/javascript" charset="utf-8">
 			$(document).ready(function(){
@@ -256,7 +186,9 @@
 					<span id="cart_total"><?php echo strtr(lang('header_cart_items'), array('{product_count}' => $cart_item)); ?></span>
 				</a>
 			</p>
-			<div class="hizlisepet" id="ust_hizlisepet">
+
+		</div>
+		<div class="hizlisepet" id="ust_hizlisepet">
 				<div class="sepust"></div>
 				<div class="seport">
 					<?php $cart_item = ($this->cart->total_items()) ? $this->cart->total_items() : 0; ?>
@@ -311,11 +243,6 @@
 				<!--seport SON -->
 				<div class="sepalt"></div>
 			</div>
-			<!--hizlisepet SON -->
-		</div>
-	</div>
-	<!--menuar SON -->
-	<div class="clear"></div>
 
 	<?php $categories = $this->category_model->get_categories_by_menu(0); ?>
 	<?php if ($categories) { ?>
@@ -346,9 +273,8 @@
 	</div>
 	<?php } ?>
 
-</div>
 <div class="clear"></div>
-
+</div>
 <!-- main -->
 <div id="main">
 

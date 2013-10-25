@@ -11,13 +11,13 @@
 
 	$(document).ready(function() {
 		//uye paneli
-		$("#h_uye_panel").hover(function(){
+		$("#h_uye_panel,.panel-acik ul").hover(function(){
 			$(this).addClass("hd_aktif");
-			$("ul",$(this)).stop(true,true).slideDown("fast");
+			$(".panel-acik ul").slideDown("fast");
 		},
 		function(){
 			$(this).removeClass("hd_aktif");
-			$("ul",$(this)).stop(true,true).slideUp(50);
+			$(".panel-acik ul").slideUp(50);
 		});
 		//dil secimi ve para birimi secimi
 		$("#h_dil, #h_para").hover(function(){

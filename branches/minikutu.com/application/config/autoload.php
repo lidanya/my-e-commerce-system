@@ -147,6 +147,7 @@ $autoload['model'] = array(
 	'site_model',
 	'image/image_model',
 	'eklentiler/eklentiler_model',
+	'eklentiler/eklentiler_kategori_model',
 	'mail_sablon_model',
 	'site/product_model',
 	'site/checkout_model',
