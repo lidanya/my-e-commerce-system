@@ -15,7 +15,7 @@ div					 { border:0px solid red;  overflow: hidden;}
 #Full				 { width:100%; float:left; }
 #Top				 { width:940px; height:30px; margin:auto auto auto auto; padding:5px 10px 5px 10px; text-align:right; font-size:11px; letter-spacing:1px; position:relative; z-index:9999;}
 #Logo				 { width:350px; padding:5px; float:left; position:absolute; margin-top:-30px; }
-#Arama				 { width:590px; padding:0px; float:left; text-align:right; position:absolute; right: -120px;}
+#Arama				 { width:267px; padding:0px; float:left; text-align:right; position:absolute; right: 200px;}
 #Slider				 { width:960px; height:auto; margin:auto auto 5px auto; padding-top:30px;}
 #NoSlider			 { width:960px; height:60px; margin:auto auto auto auto; padding-top:30px; }
 #Menu				 { width:940px; height:66px; margin:auto auto auto auto; padding:0px 10px 0px 10px; }
