@@ -15,13 +15,12 @@ div					 { border:0px solid red;  overflow: hidden;}
 #Full				 { width:100%; float:left; }
 #Top				 { width:940px; height:30px; margin:auto auto auto auto; padding:5px 10px 5px 10px; text-align:right; font-size:11px; letter-spacing:1px; position:relative; z-index:9999;}
 #Logo				 { width:350px; padding:5px; float:left; position:absolute; margin-top:-30px; }
-#Arama				 { width:267px; padding:0px; float:left; text-align:right; position:absolute; right: 200px;}
+#Arama				 { width:267px; padding:0px; float:left; text-align:right; position:absolute; right: 225px;}
 #Slider				 { width:960px; height:auto; margin:auto auto 5px auto; padding-top:30px;}
 #NoSlider			 { width:960px; height:60px; margin:auto auto auto auto; padding-top:30px; }
 #Menu				 { width:940px; height:66px; margin:auto auto auto auto; padding:0px 10px 0px 10px; }
-#Menu a				 { float:left; color: #ccc;
-padding-top: 20px;
-font-size: 18px;}
+#Menu a				 { float:left; color: #ccc;padding-top: 22px;font-size: 18px;}
+#Menu a:hover			 { color: #999;}
 #InfoBar			 { width:960px; height:100px; padding-top:10px; margin:auto auto auto auto;}
 #Govde				 { width:960px; height:auto; margin:auto auto auto auto; padding:10px 0px 10px 0px;}
 #Footer				 { width:940px; height:300px; margin:auto auto auto auto; padding:10px; letter-spacing:1px;}
@@ -54,7 +53,7 @@ img					 { border:0px; }
 .buton-sss:hover		{ background-image:url(../images/buttons/sss1.png);}
 .buton-iletisim			{ width:64px; height:26px; display:inline-block; background-image:url(../images/buttons/iletisim0.png); background-repeat:no-repeat; border:0px; float:right;}
 .buton-iletisim:hover	{ background-image:url(../images/buttons/iletisim1.png);}
-.kat-seperator			{ width:13px; height:66px; display:inline-block; background-image:url(../images/buttons/kat-seperator.png); background-repeat:no-repeat; background-position:top center; border:0px; float:left; }
+.kat-seperator			{ width:13px; height:66px; display:inline-block; margin: 0 5px; background-image:url(../images/buttons/kat-seperator.png); background-repeat:no-repeat; background-position:top center; border:0px; float:left; }
 .kat-teknoloji			{ width:113px; height:66px; display:inline-block; background-image:url(../images/buttons/katteknoloji0.png); background-repeat:no-repeat; border:0px; float:left; }
 .kat-teknoloji:hover	{ background-image:url(../images/buttons/katteknoloji1.png);}
 .kat-dekorasyon			{ width:153px; height:66px; display:inline-block; background-image:url(../images/buttons/katdekorasyon0.png); background-repeat:no-repeat; border:0px; float:left; }
@@ -84,6 +83,5 @@ img					 { border:0px; }
 #urunbox .eskifiyat			{ width:90px; height:30px; font-size:25px; float:left; text-align:right; padding:5px 10px 5px 5px; font-size:22px; text-decoration:line-through; color:#555; }
 a #urunbox			 		{ color:#eee; text-decoration:none;  }
 .indirim 					{ width:138px; height:26px; padding:3px 0px 0px 9px; display:inline-block; background-image:url(../images/bant-indirim.png); background-repeat:no-repeat; position:absolute; z-index:2; margin-top:5px; margin-left:-3px; font-size:14px; float:left; }
-.yeni	 					{ width:138px; height:26px; padding:4px 0px 0px 9px; display:inline-block; background-image:url(../images/bant-yeni.png); background-repeat:no-repeat; position:absolute; z-index:2; margin-top:5px; margin-left:-3px; font-size:14px; float:left; }
 /* URUN KUTUSU BITIS */
 
