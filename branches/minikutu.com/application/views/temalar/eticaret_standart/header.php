@@ -60,7 +60,6 @@
 	
 	setInterval("batch()",30000);
 	
-	
     </script>
 	<!--[if IE 7]>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>style_ie7.css" />
@@ -68,8 +67,7 @@
 	<!--[if lt IE 7]>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>style_ie6.css" />
 	<![endif]-->
-   
-
+	
 	<meta name="description" content="<?php echo $ek_description; ?>" />
 	<meta name="keywords" content="<?php echo $ek_keywords; ?>" />
 	<meta name='robots' content='index, follow' />
@@ -88,7 +86,7 @@
 
 
 	<div id="Slider">
-       	<div id="Logo"><a href="index.htm"><img src="<?php echo site_resim(); ?>logo.png" width="288" height="78" /></a></div>
+       	<div id="Logo"><a href="/"><img src="<?php echo site_resim(); ?>logo.png" width="288" height="78" /></a></div>
         <div id="Arama">
 			<form action="<?php echo site_url('urun/arama/index'); ?>" id="form_h_arama" method="get">
 				<div id="h_a_text" style="padding-top:0;" class="sola">
@@ -108,7 +106,7 @@
 		if($kategoriler) {
 	?>
 	<div id="Menu">
-	<?php foreach($kategoriler as $kategori) { ?>
+	<?php foreach($kategoriler as $key=>$kategori) { $separator_if = count($kategoriler)-1 == $key ? false : true;  ?>
 	<?php
 		$kategori_seo_name = str_replace('--category', '', $this->uri->segment(2));
 		$aktif = NULL;
@@ -119,7 +117,7 @@
 			$aktif = NULL;
 		}
 	?>
-    	<a href="<?php echo site_url($kategori->seo . '--category'); ?>" title="<?php echo $kategori->name; ?>"><?php echo character_limiter($kategori->name, 28); ?></a><span class="kat-seperator"></span>
+    	<a href="<?php echo site_url($kategori->seo . '--category'); ?>" title="<?php echo $kategori->name; ?>"><?php echo character_limiter($kategori->name, 28); ?></a><?php if($separator_if): ?><span class="kat-seperator"></span><?php endif; ?>
        <?php } ?>
 	</div>
 	<?php } ?>
