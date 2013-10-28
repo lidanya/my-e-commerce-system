@@ -72,10 +72,10 @@
 				</a>
 			</div>
 	<?php
-			if($i == '3') {
-				$i = 0;
-				echo '<div class="clear"></div>';
-			}
+//			if($i == '3') {
+//				$i = 0;
+//				echo '<div class="clear"></div>';
+//			}
 		}
 	?>
 	</div>
