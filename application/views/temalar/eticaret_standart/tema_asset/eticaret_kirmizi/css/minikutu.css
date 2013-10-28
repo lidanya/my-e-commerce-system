@@ -1,12 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-
-/* @import url(http://fonts.googleapis.com/css?family=News+Cycle:400,700&subset=latin,latin-ext); */
-
-
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,latin-ext);
-
-
+@import url("http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,latin-ext");
 /* HTML ANA KODLAR BASLANGIC */
 *			 { padding:0px; margin:0px; }
 body				 { font-size: 14px; background-color:#EEE; font-family: 'Ubuntu Condensed', sans-serif; color:#333; }
@@ -29,10 +23,7 @@ div					 { border:0px solid red;  overflow: hidden;}
 #AltKatBar a:hover	 { background-color:#aaa;  }
 
 /* HTML ANA KODLAR BITIS */
-
-
 /* STIL TANIMLAMALAR BASLANGIC */
-
 .Temizle { clear:both; }
 
 .maincolor			 { background-color:#434343; }
@@ -40,8 +31,6 @@ div					 { border:0px solid red;  overflow: hidden;}
 .menubg				 { background-image:url(../images/menubg.png); background-repeat:no-repeat; background-position:center; }
 img					 { border:0px; }
 /* STIL TANIMLAMALAR BITIS */
-
-
 /* BUTONLAR BASLANGIC */
 .buton-uyegirisi		{ width:112px; height:38px; display:inline-block; background-image:url(../images/buttons/uyegirisi0.png); background-repeat:no-repeat; border:0px; float:right;}
 .buton-uyegirisi:hover	{ background-image:url(../images/buttons/uyegirisi1.png);}
@@ -72,8 +61,6 @@ img					 { border:0px; }
 .kat-outdoor:hover		{ background-image:url(../images/buttons/katoutdoor1.png);}
 /* BUTONLAR BITIS */
 
-
-
 /* URUN KUTUSU BASLANGIC */
 #urunbox					{ width:220px; height:305px; display:inline-block; background-color:#222; border:1px solid #CCC; opacity:0.9; margin:3px 9px 10px 5px; z-index:1; float:left; }
 #urunbox:hover				{ border:1px solid #999; opacity:1; }
@@ -84,4 +71,3 @@ img					 { border:0px; }
 a #urunbox			 		{ color:#eee; text-decoration:none;  }
 .indirim 					{ width:138px; height:26px; padding:3px 0px 0px 9px; display:inline-block; background-image:url(../images/bant-indirim.png); background-repeat:no-repeat; position:absolute; z-index:2; margin-top:5px; margin-left:-3px; font-size:14px; float:left; }
 /* URUN KUTUSU BITIS */
-
