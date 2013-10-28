@@ -6,7 +6,7 @@ Aciklamalar:
 
 
 /*=========================Genell Uye Formlari===============================*/
-#uye_giris_container, .uye_giris_container {width:740px;padding:10px;margin:auto;background:url(../images/uye_islem_bg.png) no-repeat 500px 100px;}
+#uye_giris_container, .uye_giris_container {width:740px;padding:10px;background:url(../images/uye_islem_bg.png) no-repeat 500px 100px;}
 #uye_giris_container a, .uye_giris_container a, #uye_giris_container:link, .uye_giris_container a:link, #uye_giris_container:visited, .uye_giris_container a:visited {color:#0260FA;font-weight:bold;}
 #uye_giris_container a:hover, .uye_giris_container a:hover {color:#0099ff;}
 #uye_not {width:500px;padding:10px;margin: 20px auto 10px 20px;font-size:13px;color:#737373;}
@@ -20,7 +20,7 @@ Aciklamalar:
 .uye_captcha {margin-left:10px;margin-top:1px;}
 
 /*============================Iletisim=================================*/
-#iletisim {width:720px;margin:auto;}
+#iletisim {width:720px;}
 .i_google {width:300px;position:absolute;z-index:99;top:50px;left:350px;}
 .i_logo {top:50px;left:420px;position:absolute;width:199px;}
 .i_logo img {width:199px;}

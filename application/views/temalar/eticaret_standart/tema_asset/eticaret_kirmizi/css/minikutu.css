@@ -9,7 +9,7 @@
 
 /* HTML ANA KODLAR BASLANGIC */
 *			 { padding:0px; margin:0px; }
-body				 { font-size: 12px; background-color:#EEE; font-family: 'Ubuntu Condensed', sans-serif; color:#333; }
+body				 { font-size: 14px; background-color:#EEE; font-family: 'Ubuntu Condensed', sans-serif; color:#333; }
 a, a:link, a:visited {text-decoration: none;outline: none;}
 div					 { border:0px solid red;  overflow: hidden;}
 #Full				 { width:100%; float:left; }

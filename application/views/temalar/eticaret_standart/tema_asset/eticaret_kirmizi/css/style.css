@@ -8,8 +8,8 @@ Aciklamalar:
 /*=========================Global Ayarlar===============================*/
 div {overflow:hidden;}
 img {border:none;}
-a, a:link, a:visited {text-decoration:none;outline:none;color:#cc0000;}
-a:hover {cursor:pointer;color:#ff0000;}
+a, a:link, a:visited {text-decoration:none;outline:none;color:#333;}
+a:hover {cursor:pointer;color:#eb416d;}
 input, textarea, select {color:#333;outline:none;font-weight:bold;font-size:13px;line-height:22px;}
 input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;}
 
