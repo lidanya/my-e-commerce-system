@@ -9,10 +9,10 @@ Aciklamalar:
 .liste_sol select {border:solid 1px #d7d7d7;color:#656565;font-size:12px;width:200px;height:28px;}
 
 /*sayfalama*/
-.liste_sag {margin:5px 11px 0 0;height:30px;}
+.liste_sag {margin:10px 22px 0 0;height:30px;}
 .liste_sag ul {list-style-type:none;}
 .liste_sag ul li {float:left;margin-left:5px;/*IE Fix*/display:inline;height:30px;}
-.liste_sag ul li a.l_sayfa, .liste_sag ul li a.l_sayfa:link, .liste_sag ul li a.l_sayfa:visited {line-height:32px;padding:0 3px;color:#565656;font-weight:bold;font-size:18px;}
+.liste_sag ul li a.l_sayfa, .liste_sag ul li a.l_sayfa:link, .liste_sag ul li a.l_sayfa:visited {line-height:15px;padding:0 3px;color:#565656;font-weight:bold;font-size:18px;}
 .liste_sag ul li a.l_sayfa:hover, .liste_sag ul li.l_aktif a.l_sayfa {color:#ff6300;text-decoration:underline;}
 
 /*=========================Urun listeleme===============================*/
