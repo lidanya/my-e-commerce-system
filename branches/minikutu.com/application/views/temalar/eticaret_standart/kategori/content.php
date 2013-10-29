@@ -5,7 +5,7 @@
 		<?php } ?>
 	</h1>
 	<p style="margin:10px 0px 0px 10px;"><?php  echo $category_info->description;?></p>
-	<div style="float:right;display:inline;margin-top:15px;">
+	<div style="float:left;display:inline;margin:10px 0 10px 16px;">
 		<?php
 			$_option_array = array(
 				'price-desc' => lang('messages_select_stok_fiyat-desc'),
@@ -24,7 +24,7 @@
 			}
 		?>
 	</div>
-	<div class="clear"></div>
+	
 	<?php
 		if($sub_category) {
 			$i = 0;
@@ -83,7 +83,7 @@
 	} else if($category_products) {
 		$i = 0;
 ?>
-	<div class="clear"></div>
+	
 	<?php
 		if($category_products_pagination) {
 			echo $category_products_pagination['links'];
@@ -102,10 +102,10 @@
 				$sablon_gonder->seo				= $kategori_urunler->seo;
 				$sablon_gonder->image			= $kategori_urunler->image;
 				$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
-			if($i == '3') {
-				$i = 0;
-				echo '<div class="clear"></div>';
-			}
+//			if($i == '3') {
+//				$i = 0;
+//				echo '<div class="clear"></div>';
+//			}
 		?>
 	<?php } ?>
 	</div>

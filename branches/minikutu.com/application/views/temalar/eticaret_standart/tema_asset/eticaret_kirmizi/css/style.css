@@ -10,7 +10,7 @@ div {overflow:hidden;}
 img {border:none;}
 a, a:link, a:visited {text-decoration:none;outline:none;color:#333;}
 a:hover {cursor:pointer;color:#eb416d;}
-input, textarea, select {color:#333;outline:none;font-weight:bold;font-size:13px;line-height:22px;}
+input, textarea, select {color:#333;outline:none;font-weight:bold;font-size:13px;line-height:22px; padding: 5px; border:1px solid #ccc;}
 input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;}
 
 /*=========================Global Stiller===============================*/
@@ -19,12 +19,12 @@ input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;
 .sola {float:left;/*IE Fix*/display:inline;}
 .clear {clear:both;height:0px;overflow:hidden !important;}
 /*urun_butonlari*/
-.buton_sepete_ekle, .buton_sepete_ekle:link, .buton_sepete_ekle:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #990000;border-right:1px solid #990000;padding:0 5px;}
+.buton_sepete_ekle, .buton_sepete_ekle:link, .buton_sepete_ekle:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:#212121;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #212121;border-right:1px solid #212121;padding:0 5px;}
 .buton_hizli_al, .buton_hizli_al:link, .buton_hizli_al:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#676b70;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}
-.buton_detay, .buton_detay:link, .buton_detay:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #990000;border-right:1px solid #990000;padding:0 5px;}
+.buton_detay, .buton_detay:link, .buton_detay:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:#212121;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #212121;border-right:1px solid #212121;padding:0 5px;}
 .buton_takip_et, .buton_takip_et:link, .buton_takip_et:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #990000;border-right:1px solid #990000;padding:0 5px;}
 .buton_takip_cikar, .buton_takip_cikar:link, .buton_takip_cikar:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#676b70;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}
-.buton_detay:hover, .buton_hizli_al:hover, .buton_sepete_ekle:hover, .buton_takip_et:hover, .buton_takip_cikar:hover {background-position:bottom left;color:#fff;border-left:1px solid #000;border-right:1px solid #000;}
+.buton_detay:hover, .buton_hizli_al:hover, .buton_sepete_ekle:hover, .buton_takip_et:hover, .buton_takip_cikar:hover {color:#fff;border-left:1px solid #eb416d;border-right:1px solid #eb416d; background: #eb416d;}
 .buton_stok_yok {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#333 !important;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}/*islevsiz buton*/
 /*genel_butonlar*/
 .urmercek {background:url(../images/urmercek.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}

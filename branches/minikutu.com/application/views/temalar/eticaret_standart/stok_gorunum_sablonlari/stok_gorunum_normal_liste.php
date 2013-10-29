@@ -107,7 +107,7 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1' and isset($degerler->d
 	<div class="urun_liste_oge sola">
 		{yeni_urun}
 		{kampanya}
-		<div class="urun_liste_resim"><a href="{urun_liste_resim_a}"><img src="{urun_liste_resim_img_src}" alt="{urun_liste_resim_img_alt}" title="{urun_liste_resim_img_title}" /></a></div>
+		<div class="urun_liste_resim"><a href="{urun_liste_resim_a}"><img src="{urun_default_img}" data-original="{urun_liste_resim_img_src}" alt="{urun_liste_resim_img_alt}" title="{urun_liste_resim_img_title}" /></a></div>
 		<a class="urun_liste_baslik sitelink2" href="{urun_liste_baslik_a}">{urun_liste_baslik_deger}</a>
 		{fiyat}
  
@@ -136,7 +136,7 @@ else:
 	<div class="urun_liste_oge sola">
 		{yeni_urun}
 		{kampanya}
-		<div class="urun_liste_resim"><a href="{urun_liste_resim_a}"><img src="{urun_liste_resim_img_src}" alt="{urun_liste_resim_img_alt}" title="{urun_liste_resim_img_title}" /></a></div>
+		<div class="urun_liste_resim"><a href="{urun_liste_resim_a}"><img src="{urun_default_img}" data-original="{urun_liste_resim_img_src}" alt="{urun_liste_resim_img_alt}" title="{urun_liste_resim_img_title}" /></a></div>
 		<a class="urun_liste_baslik sitelink2" href="{urun_liste_baslik_a}">{urun_liste_baslik_deger}</a>
 		{fiyat}
  
@@ -371,5 +371,5 @@ $("#{form_sepet_ekle_id}").submit(function(e){
 		$stok = strtr($secenek_var_buton_tanimi, array('{url}' => site_url($degerler->seo . '--product')));
 	}
 
-	echo strtr($urun_liste_detay_tanimi, array('{yeni_urun}' => $yeni_urun, '{kampanya}' => $kampanya, '{urun_liste_resim_a}' => site_url($degerler->seo . '--product'), '{urun_liste_resim_img_src}' => $resim, '{urun_liste_resim_img_alt}' => $degerler->name, '{urun_liste_resim_img_title}' => $degerler->name, '{urun_liste_baslik_a}' => site_url($degerler->seo . '--product'), '{urun_liste_baslik_deger}' => character_limiter($degerler->name, 50), '{fiyat}' => $fiyat, '{hizli_al}' => $hizli_al, '{stok}' => $stok, '{form_sepet_ekle_url}' => ssl_url('sepet/ekle/urun_ekle/index'), '{form_sepet_ekle_name}' => $key, '{form_sepet_ekle_id}' => $key, '{form_sepet_model_value}' => $degerler->model, '{form_sepet_stok_id_value}' => $degerler->product_id, '{form_sepet_stok_adet_value}' => '1', '{form_sepet_redirect_url_value}' => current_url(ssl_status())));
+	echo strtr($urun_liste_detay_tanimi, array('{yeni_urun}' => $yeni_urun, '{kampanya}' => $kampanya, '{urun_liste_resim_a}' => site_url($degerler->seo . '--product'),'{urun_default_img}'=>  site_resim().'/urun_default.png', '{urun_liste_resim_img_src}' => $resim, '{urun_liste_resim_img_alt}' => $degerler->name, '{urun_liste_resim_img_title}' => $degerler->name, '{urun_liste_baslik_a}' => site_url($degerler->seo . '--product'), '{urun_liste_baslik_deger}' => character_limiter($degerler->name, 50), '{fiyat}' => $fiyat, '{hizli_al}' => $hizli_al, '{stok}' => $stok, '{form_sepet_ekle_url}' => ssl_url('sepet/ekle/urun_ekle/index'), '{form_sepet_ekle_name}' => $key, '{form_sepet_ekle_id}' => $key, '{form_sepet_model_value}' => $degerler->model, '{form_sepet_stok_id_value}' => $degerler->product_id, '{form_sepet_stok_adet_value}' => '1', '{form_sepet_redirect_url_value}' => current_url(ssl_status())));
 	?>

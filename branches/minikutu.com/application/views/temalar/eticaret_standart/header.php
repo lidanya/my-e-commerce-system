@@ -44,11 +44,15 @@
 	
 	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.countdown.js"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.countdown-tr.js"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.lazyload.min.js"></script>
 	
 	<?php echo (!empty($_scripts)) ? $_scripts:NULL; ?>
 	<?php echo (config('site_google_analytics_durum') == 1) ? config('site_google_analytics_kodu'):NULL;?>
     
     <script type="text/javascript">
+		$(function() {
+			$(".urun_liste_resim img").lazyload({effect : "fadeIn"});
+		});
     //SKOCH product batch processing
     // kampanyalı veya indirimli ürünleri tarihi geçince otomatik kaldırır.
 	function batch(){
