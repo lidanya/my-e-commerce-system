@@ -183,9 +183,7 @@
 			?>
 			<div id="k_buton">
 				<a href="javascript:;" class="butonum" onclick="$('#kargo_form').submit();">
-					<span class="butsol"></span>
 					<span class="butor"><?php echo lang('messages_checkout_2_form_button_text'); ?></span>
-					<span class="butsag"></span>
 				</a>
 			</div>
 		<?php echo form_close(); ?>

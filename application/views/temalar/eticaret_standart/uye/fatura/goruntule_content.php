@@ -55,9 +55,7 @@
 			</div>
 			<p style="text-align:right;width:480px;margin-top:10px;">
 				<a class="butonum" onclick="history.back();">
-		 			<span class="butsol"></span>
 		 			<span class="butor"><img src="<?php echo site_resim(); ?>btn_img_geri.png" alt="<?php echo lang('messages_button_back'); ?>"> <?php echo lang('messages_button_back'); ?></span>
-		 			<span class="butsag"></span>
 		 		</a>
 			</p>
 			<!-- Göster SON-->

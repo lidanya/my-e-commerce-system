@@ -493,9 +493,7 @@
 					<span class="uy_box sola" style="margin:10px 0 0 20px;"><input type="text" name="review_security_code" style="width:100px;"></span>
 					
 					 <a id="yorum_ekle_buton" onclick="urun_yorum_yolla();" class="butonum" title="<?php echo lang('messages_product_detail_comments_form_add_comment'); ?>" style="margin-top:5px;">
-					 	<span class="butsol"></span>
 						<span class="butor"><?php echo lang('messages_product_detail_comments_form_add_comment'); ?></span>
-						<span class="butsag"></span>
 					</a>
 					<div class="clear"></div>
 				</div>

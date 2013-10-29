@@ -22,7 +22,7 @@ input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;
 .buton_sepete_ekle, .buton_sepete_ekle:link, .buton_sepete_ekle:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:#212121;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #212121;border-right:1px solid #212121;padding:0 5px;}
 .buton_hizli_al, .buton_hizli_al:link, .buton_hizli_al:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#676b70;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}
 .buton_detay, .buton_detay:link, .buton_detay:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:#212121;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #212121;border-right:1px solid #212121;padding:0 5px;}
-.buton_takip_et, .buton_takip_et:link, .buton_takip_et:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #990000;border-right:1px solid #990000;padding:0 5px;}
+.buton_takip_et, .buton_takip_et:link, .buton_takip_et:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:#212121;;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #212121;border-right:1px solid #212121;padding:0 5px;}
 .buton_takip_cikar, .buton_takip_cikar:link, .buton_takip_cikar:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#676b70;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}
 .buton_detay:hover, .buton_hizli_al:hover, .buton_sepete_ekle:hover, .buton_takip_et:hover, .buton_takip_cikar:hover {color:#fff;border-left:1px solid #eb416d;border-right:1px solid #eb416d; background: #eb416d;}
 .buton_stok_yok {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#333 !important;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}/*islevsiz buton*/
@@ -34,10 +34,10 @@ input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;
 .cekk {background:url(../images/cekk.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
 .corpi {background:url(../images/corpi.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
 
-.siterenk {color:#cc0000;}
+.siterenk {color:#eb416d;}
 .sitelink, .sitelink:link, .sitelink:hover {color:#333;}
 .sitelink:hover {color:#cc0000;}
-.sitelink2, .sitelink2:link, .sitelink2:hover {color:#990000;}
+.sitelink2, .sitelink2:link, .sitelink2:hover {color:#eb416d;}
 .sitelink2:hover {color:#cc0000;}
 
 /*sayfa baslik*/
@@ -159,11 +159,11 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*logo*/
 #h_logo {margin-top:15px;}
 /*sepet*/
-#h_sepet, #h_sepet:link, #h_sepet:visited {position:absolute;top:18px;right:0px;width:200px;height:42px;padding:0px 0 0 0px;}
+#h_sepet, #h_sepet:link, #h_sepet:visited {position:absolute;top:18px;right:11px;width:200px;height:42px;padding:0px 0 0 0px;}
 #h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:200px;height:42px;background:url(../images/h_sepet_bg.png) no-repeat 0 0;color:#e0e0e0;display:block;}
 #h_sepet p a:hover {background-position:bottom left;}
 #h_sepet span {display:inline-block;margin-top:20px;text-indent:10px;}
-.hizlisepet {width:498px;position:absolute;top:52px;right:-10px;overflow:hidden;display:none;}
+.hizlisepet {width:498px;position:absolute;top:52px;right:0px;overflow:hidden;display:none;}
 .hizlisepet div {overflow:hidden !important;}
 .sepust {width:498px;height:16px;background:url(../images/sepust.png) no-repeat;}
 .seport {width:498px;background:url(../images/seport.png) repeat-y;}
@@ -200,9 +200,9 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_a_kat ul li {}
 #h_a_kat a, #h_a_kat a:link, #h_a_kat a:visited {background:url(../images/kathov.png) top repeat-x; height:20px;line-height:20px;margin:1px auto;display:block;width:155px;padding:0 5px;color:#fff;}
 #h_a_kat a:hover {background-position:bottom; color:#fff;}
-#h_a_text {width:235px;margin-left:7px;/*padding-top:3px;*/}
-#h_a_text input {height:32px;line-height:32px;width:235px;border:none;font-size:11px;color:#a6a6a6;font-weight:400;}
-#h_a_buton, #h_a_buton:link, #h_a_buton:visited {display:block;width:16px;height:32px;overflow:hidden;text-indent:999px;background:url(../images/h_ara_buton.png) no-repeat 0 5px; position: relative; right: 27px;}
+#h_a_text {width:235px;margin-left:7px; border: 1px solid #ccc;/*padding-top:3px;*/}
+#h_a_text input {height:32px;line-height:32px;width:235px;border:none;color:#a6a6a6;font-weight:400; padding: 2px;}
+#h_a_buton, #h_a_buton:link, #h_a_buton:visited {display:block;width:16px;height:32px;overflow:hidden;text-indent:999px;background:url(../images/h_ara_buton.png) no-repeat 0 5px; position: relative; right: 27px; top: 2px;}
 #h_a_buton:hover {background-position:0 -37px;}
 
 /*header alt menu*/
@@ -403,7 +403,8 @@ input.hata_yazisi, textarea.hata_yazisi, select.hata_yazisi  {font-style:normal 
 .butonum:hover span {background-position:bottom;}
 .butonum span {float:left;display:inline-block;background-position:top;margin:auto !important;text-indent:0 !important;}
 .butsol {width:6px;height:26px;background:url(../images/butsol.png) no-repeat ;}
-.butor {height:21px;background:url(../images/butor.png) repeat-x;padding:5px 10px 0 10px;color:#ffffff;}
+.butor {height:21px;background:#212121;padding:5px 10px 0 10px;color:#ffffff;}
+.butor:hover {background:#eb416d;}
 .butsag {width:6px;height:26px;background:url(../images/butsag.png) no-repeat ;}
 
 .facelog, .facelog:link, .facelog:visited {padding:16px 0 0 55px;position:absolute;left:250px;top:-5px;font-weight:700;width:175px;height:26px;background:url(../images/facebook_login.png) top no-repeat;color:#fff;font-family:Calibri;font-size:15px;display:block;}

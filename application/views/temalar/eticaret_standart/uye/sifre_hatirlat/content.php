@@ -31,9 +31,7 @@
 				<div class="sola uye_text">&nbsp;</div> 
 				<div class="sola uye_checkbox">
 					<a class="butonum" href="javascript:;" onclick="$('#sifre_hatirlat').submit();">
-						<span class="butsol"></span>
 						<span class="butor"><?php echo lang('messages_member_forget_password_send_password'); ?></span>
-						<span class="butsag"></span>
 					</a>
 				</div>
 				<div class="clear"></div>

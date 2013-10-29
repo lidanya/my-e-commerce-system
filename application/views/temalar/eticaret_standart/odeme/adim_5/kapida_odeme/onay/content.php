@@ -13,9 +13,7 @@
 	</div>
 	<div class="oo_buton">
 		<a href="javascript:;" onclick="redirect('<?php echo site_url('site/index'); ?>');" class="butonum">
-			<span class="butsol"></span>
 			<span class="butor"><?php echo lang('messages_button_back_home'); ?></span>
-			<span class="butsag"></span>
 		</a>
 	</div>
 

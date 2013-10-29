@@ -235,9 +235,7 @@
 					<div class="saltlinkler">
 						<a title="<?php echo lang('header_large_cart_close'); ?>" href="javascript:;" id="sepetkapa" onclick="sepet_kapa();" style="position:relative;bottom:-10px;" class="sitelink sola"><b>x</b> <?php echo lang('header_large_cart_close'); ?></a>
 						<a href="javascript:;" onclick="redirect('<?php echo ssl_url('sepet/goster'); ?>');" class="butonum saga">
-							<span class="butsol"></span>
 							<span class="butor"><?php echo lang('header_large_cart_go_cart'); ?></span>
-							<span class="butsag"></span>
 						</a>
 					</div>
 					<!--saltlinkler SON -->

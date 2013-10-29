@@ -257,9 +257,7 @@ class ekle extends Public_Controller {
 					$output .="<div class='saltlinkler'>";
 						$output .="<a title=".lang('header_large_cart_close')." href='javascript:;' onclick='sepet_kapa();' id='sepetkapa' style='position:relative;bottom:-10px;' class='sitelink sola'><b>x</b>".lang('header_large_cart_close')."</a>";
 						$output .="<a href='javascript:;' onclick='redirect(\"".ssl_url("sepet/goster")."\");' class='butonum saga'>";
-							$output .="<span class='butsol'></span>";
 							$output .="<span class='butor'>".lang('header_large_cart_go_cart')."</span>";
-							$output .="<span class='butsag'></span>";
 						$output .="</a>";
 					$output .="</div>";
 					//salt linkler son

@@ -170,9 +170,7 @@
 			<div class="sg_alt">
 				<div class="sola" style="margin-top:25px;">
 					<a rel="nofollow" href="javascript:;" onclick="location = '<?php echo ssl_url('uye/siparisler'); ?>';" class="butonum">
-						<span class="butsol"></span>
 						<span class="butor"><img src="<?php echo site_resim(); ?>btn_img_geri.png" alt="" /> <?php echo lang('messages_button_back_list'); ?></span>
-						<span class="butsag"></span>
 					</a>
 					
 				</div>

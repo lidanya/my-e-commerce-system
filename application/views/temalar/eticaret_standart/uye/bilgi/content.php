@@ -202,9 +202,9 @@
 
 				<div class="sola uye_text">&nbsp;</div> <div class="saga">
 					<a class="butonum" href="javascript:;" onclick="$('#uye_bilgi').submit();">
-						<span class="butsol"></span>
+						
 						<span class="butor"><?php echo lang('messages_button_save'); ?></span>
-						<span class="butsag"></span>
+						
 					</a>
 				</div>
 				<div class="clear"></div>
