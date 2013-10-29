@@ -17,9 +17,7 @@
 						<span class="ta_tablo01 sola"><a class="ta_link" href="'. site_url($urun->seo .'--product') .'" target="_blank" title="'. $urun->name .'">'. character_limiter($urun->name, 50) .'</a></span>
 						<span class="ta_tablo02 sola">
 						<a class="butonum" href="javascript:;" onclick="redirect(\''. ssl_url('uye/urun_takip/listeden_cik/' . $urun->follow_id) .'\');">
-						<span class="butsol"></span>
 						<span class="butor">'. lang('messages_member_product_delete_product') .'</span>
-						<span class="butsag"></span>
 						</a>
 						</span>
 					<div class="clear"></div>

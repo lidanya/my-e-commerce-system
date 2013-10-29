@@ -41,9 +41,7 @@
 				<b>&nbsp;</b>
 				<p class="of_aciklama" id="uye_kayit_form_buton">
 					<a href="javascript:;" onclick="uye_ol_form_gonder();" class="butonum">
-						<span class="butsol"></span>
 						<span class="butor"><?php echo lang('messages_checkout_user_check_fast_buy_form_button_text'); ?></span>
-						<span class="butsag"></span>
 					</a>
 				</p>
 				<div class="clear"></div>
@@ -82,17 +80,13 @@
 				<b>&nbsp;</b>
 				<p class="of_aciklama" id="uye_giris_form_buton">
 					<a href="javascript:;" onclick="uye_giris_form_gonder();" class="butonum">
-						<span class="butsol"></span>
 						<span class="butor"><?php echo lang('messages_checkout_user_check_login_form_button_text'); ?></span>
-						<span class="butsag"></span>
 					</a>
 				</p><br/>
 				<div class="sifremut">
 				<p class="of_aciklama" id="uye_kayit_form_buton">
 					<a href="<?php echo ssl_url('uye/sifre_hatirlat'); ?>" onclick="" class="butonum">
-						<span class="butsol"></span>
 						<span class="butor"><?php echo 'Şifremi Unuttum';?> </span>
-						<span class="butsag"></span>
 					</a>
 				</p>
 				</div>
@@ -126,7 +120,7 @@
 				if (aksiyon_islem_sonuclari.basarisiz != '') {
 					$('#uye_kayit_form_guvenlik_kodu').html('<img style="margin-left:40px;margin-top:10px;" src="'+ resim_url +'loader.gif" alt="" />');
 					setTimeout("$('#uye_kayit_form_guvenlik_kodu').html('<img style=\"margin-top:5px;\" src=\"' + site_url('site/img_kontrol/uye_kayit?' + (new Date).getTime()) + '\" alt=\"\" />')", 1500);
-					setTimeout("$('#uye_kayit_form_buton').html('<a href=\"javascript:;\" onclick=\"uye_ol_form_gonder();\" class=\"butonum\"><span class=\"butsol\"></span><span class=\"butor\"><?php echo lang('messages_checkout_user_check_fast_buy_form_button_text'); ?></span><span class=\"butsag\"></span></a>')", 1500);
+					setTimeout("$('#uye_kayit_form_buton').html('<a href=\"javascript:;\" onclick=\"uye_ol_form_gonder();\" class=\"butonum\"><span class=\"butor\"><?php echo lang('messages_checkout_user_check_fast_buy_form_button_text'); ?></span></a>')", 1500);
 	
 					$.each(aksiyon_islem_sonuclari, function(e_key, e_value) {
 						if(e_key.search('_error') != -1) {
@@ -160,7 +154,7 @@
 				$('.mesaj_silme_toplu').html('').hide();
 
 				if (aksiyon_islem_sonuclari.basarisiz != '') {
-					setTimeout("$('#uye_giris_form_buton').html('<a href=\"javascript:;\" onclick=\"uye_giris_form_gonder();\" class=\"butonum\"><span class=\"butsol\"></span><span class=\"butor\"><?php echo lang('messages_checkout_user_check_login_form_button_text'); ?></span><span class=\"butsag\"></span></a>');", 1500);
+					setTimeout("$('#uye_giris_form_buton').html('<a href=\"javascript:;\" onclick=\"uye_giris_form_gonder();\" class=\"butonum\"><span class=\"butor\"><?php echo lang('messages_checkout_user_check_login_form_button_text'); ?></span></a>');", 1500);
 
 					$.each(aksiyon_islem_sonuclari, function(e_key, e_value) {
 						if(e_key.search('_error') != -1) {

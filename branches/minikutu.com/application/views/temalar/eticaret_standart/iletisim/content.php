@@ -226,9 +226,7 @@ if($bayiler->num_rows() > 0)
 				<span class="i_text sola">&nbsp;</span>
 				<span class="i_box sola">
 					<a href="javascript:;" onclick="$('#iletisim_form').submit();" class="butonum">
-						<span class="butsol"></span>
 						<span class="butor"><?php echo lang('messages_static_page_contact_form_button'); ?></span>
-						<span class="butsag"></span>
 					</a>
 					
 				</span>

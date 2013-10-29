@@ -5,9 +5,7 @@
 		<div id="t_navigasyon">
 			<div class="sola">
 				<a href="<?php echo site_url('site/iletisim'); ?>#iletisim_form" class="butonum">
-					<span class="butsol"></span>
 					<span class="butor"><?php echo lang('messages_member_tickets_send'); ?></span>
-					<span class="butsag"></span>
 				</a>	
 			</div>
 			<div class="liste_sag saga">

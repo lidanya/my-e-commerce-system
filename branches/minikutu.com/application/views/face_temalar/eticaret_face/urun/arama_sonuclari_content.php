@@ -67,9 +67,7 @@
 				<?php echo form_dropdown('limit', $per_page, _get('limit', '20')) ?>
 			</span>
 			<a class="butonum" href="javascript:;" onclick="form_submit();">
-				<span class="butsol"></span>
 				<span class="butor"><?php echo lang('messages_product_search_button'); ?></span>
-				<span class="butsag"></span>
 			</a>
 			<div class="clear"></div>
 		</div>

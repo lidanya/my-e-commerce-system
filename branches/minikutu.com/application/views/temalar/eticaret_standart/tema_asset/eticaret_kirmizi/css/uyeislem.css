@@ -63,7 +63,7 @@ Aciklamalar:
 #fatura {width:720px;padding:10px;margin:10px auto;}
 /*listele*/
 .f_gri {background-color:#efefef;}
-.f_oge_baslik {background:url(../images/fatura_liste_bg.png) repeat-x 0 0;font-weight:bold;color:#fff !important;}
+.f_oge_baslik {background:#2c2c2c;font-weight:bold;color:#fff !important;}
 .f_oge {width:700px;margin:auto;font-size:13px;color:#737373;clear:both;}
 .f_tablo01, .f_tablo02, .f_tablo03 {height:27px;text-align:center;padding-top:7px;width:100px;}
 .f_tablo02 {width:440px;text-align:left;padding-left:10px}

@@ -67,7 +67,7 @@ Aciklamalar:
 .s_gri {background-color:#f4f4f4 !important;}
 .sepet_tablo_baslik {color:#434343 !important;height:35px;width:738px;border:solid 1px #e2e2e2;background:url(../images/sepet_menu_bg.png) repeat-x 0 0;margin-top:5px !important;font-size:14px !important;padding-top:3px !important;font-weight:bold;text-align:center;}
 .sepet_oge {width:738px;border-left:solid 1px #e2e2e2;border-right:solid 1px #e2e2e2;margin:auto;color:#3c3c3c;}
-.sepet_oge input {border:solid 1px #979797;text-align:center;width:33px;height:21px;background-color:#fff;margin-top:-3px;}
+.sepet_oge input {border:solid 1px #979797;text-align:center;width:33px;height:21px;background-color:#fff;margin-top:-3px; padding: 0;}
 .s_tablo01, .s_tablo02, .s_tablo03, .s_tablo04, .s_tablo05 {display:block;height:23px;padding-top:7px;margin-left:5px;text-align:center;}
 .s_tablo01 {width:395px;padding-left:10px;text-align:left;}
 .s_tablo02 {width:45px;}
