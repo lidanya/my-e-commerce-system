@@ -6,19 +6,19 @@
 body				 { font-size: 14px; background-color:#EEE; font-family: 'Ubuntu Condensed', sans-serif; color:#333; }
 a, a:link, a:visited {text-decoration: none;outline: none;}
 div					 { border:0px solid red;  overflow: hidden;}
-#Full				 { width:100%; float:left; }
-#Top				 { width:940px; height:30px; margin:auto auto auto auto; padding:5px 10px 5px 10px; text-align:right; font-size:11px; letter-spacing:1px; position:relative; z-index:9999;}
+#Full				 { width:100%;}
+#Top				 { width:960px; height:30px; margin:auto auto auto auto; padding:5px 10px 5px 10px; text-align:right; font-size:11px; letter-spacing:1px;}
 #Logo				 { width:350px; padding:5px; float:left; }
 #Arama				 { width:267px; padding:0px; float:right; text-align:right; margin-top: 20px; }
 #Slider				 { width:960px; height: 323px;  margin:10px auto;}
 #NoSlider			 { width:960px; height:60px; margin:auto auto auto auto; padding-top:30px; }
-#Menu				 { width:940px; height:66px; margin:auto auto auto auto; padding:0px 10px 0px 10px; }
+#Menu				 { width:960px; height:66px; margin:10px auto; padding:0px 10px 0px 10px; }
 #Menu a				 { float:left; color: #ccc;padding-top: 22px;font-size: 18px;}
 #Menu a:hover			 { color: #999;}
 #InfoBar			 { width:960px; height:100px; padding-top:10px; margin:auto auto auto auto;}
 #Govde				 { width:960px; height:auto; margin:auto auto auto auto; padding:10px 0px 10px 0px;}
 #Footer				 { width:940px; height:300px; margin:auto auto auto auto; padding:10px; letter-spacing:1px;}
-#AltKatBar			 { width:940px; padding:10px 10px 10px 10px; margin:auto auto 20px auto; float:left;}
+#AltKatBar			 { width:960px; padding:10px 10px 10px 10px; margin:auto auto 20px auto; float:left;}
 #AltKatBar a		 { background-color:#bbb; border-radius:5px; padding:5px 10px 5px 10px; margin:2px; color:#FFF; text-decoration:none; float:left; }
 #AltKatBar a:hover	 { background-color:#aaa;  }
 
@@ -32,15 +32,15 @@ div					 { border:0px solid red;  overflow: hidden;}
 img					 { border:0px; }
 /* STIL TANIMLAMALAR BITIS */
 /* BUTONLAR BASLANGIC */
-.buton-uyegirisi		{ width:112px; height:38px; display:inline-block; background-image:url(../images/buttons/uyegirisi0.png); background-repeat:no-repeat; border:0px; float:right;}
+.buton-uyegirisi		{ width:112px; height:38px; display:inline-block; background-image:url(../images/buttons/uyegirisi0.png); background-repeat:no-repeat; border:0px; float:left;}
 .buton-uyegirisi:hover	{ background-image:url(../images/buttons/uyegirisi1.png);}
-.buton-anasayfa			{ width:75px; height:26px; display:inline-block; background-image:url(../images/buttons/anasayfa0.png); background-repeat:no-repeat; border:0px; float:right;}
+.buton-anasayfa			{ width:75px; height:26px; display:inline-block; background-image:url(../images/buttons/anasayfa0.png); background-repeat:no-repeat; border:0px; float:left;}
 .buton-anasayfa:hover	{ background-image:url(../images/buttons/anasayfa1.png);}
-.buton-hakkimizda		{ width:85px; height:26px; display:inline-block; background-image:url(../images/buttons/hakkimizda0.png); background-repeat:no-repeat; border:0px; float:right;}
+.buton-hakkimizda		{ width:85px; height:26px; display:inline-block; background-image:url(../images/buttons/hakkimizda0.png); background-repeat:no-repeat; border:0px; float:left;}
 .buton-hakkimizda:hover	{ background-image:url(../images/buttons/hakkimizda1.png);}
-.buton-sss				{ width:45px; height:26px; display:inline-block; background-image:url(../images/buttons/sss0.png); background-repeat:no-repeat; border:0px; float:right;}
+.buton-sss				{ width:45px; height:26px; display:inline-block; background-image:url(../images/buttons/sss0.png); background-repeat:no-repeat; border:0px; float:left;}
 .buton-sss:hover		{ background-image:url(../images/buttons/sss1.png);}
-.buton-iletisim			{ width:64px; height:26px; display:inline-block; background-image:url(../images/buttons/iletisim0.png); background-repeat:no-repeat; border:0px; float:right;}
+.buton-iletisim			{ width:64px; height:26px; display:inline-block; background-image:url(../images/buttons/iletisim0.png); background-repeat:no-repeat; border:0px; float:left;}
 .buton-iletisim:hover	{ background-image:url(../images/buttons/iletisim1.png);}
 .kat-seperator			{ width:13px; height:66px; display:inline-block; margin: 0 5px; background-image:url(../images/buttons/kat-seperator.png); background-repeat:no-repeat; background-position:top center; border:0px; float:left; }
 .kat-teknoloji			{ width:113px; height:66px; display:inline-block; background-image:url(../images/buttons/katteknoloji0.png); background-repeat:no-repeat; border:0px; float:left; }

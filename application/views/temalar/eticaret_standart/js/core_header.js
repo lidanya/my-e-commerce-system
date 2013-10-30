@@ -11,7 +11,7 @@
 
 	$(document).ready(function() {
 		//uye paneli
-		$("#h_uye_panel,.panel-acik ul").hover(function(){
+		$("#h_uye_panel").hover(function(){
 			$(this).addClass("hd_aktif");
 			$(".panel-acik ul").slideDown("fast");
 		},
