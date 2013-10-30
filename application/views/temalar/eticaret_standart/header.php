@@ -87,11 +87,10 @@
 		<a href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_top_menu_mainpage'); ?>"><span class="buton-anasayfa"></span></a>
 		<!--<a href="#"><span class="buton-uyegirisi"></span></a></div>-->
 </div>
-
-
-	<div id="Slider">
-       	<div id="Logo"><a href="/"><img src="<?php echo site_resim(); ?>logo.png" width="288" height="78" /></a></div>
-        <div id="Arama">
+	<div class="clear"></div>
+	<div class="Top_alt">
+		<div id="Logo"><a href="/"><img src="<?php echo site_resim(); ?>logo.png" width="288" height="78" /></a></div>
+		 <div id="Arama">
 			<form action="<?php echo site_url('urun/arama/index'); ?>" id="form_h_arama" method="get">
 				<div id="h_a_text" style="padding-top:0;" class="sola">
 					<input type="text" name="aranan" value="<?php echo _get('aranan', lang('header_search_input')); ?>" onclick="if(this.value==this.defaultValue){this.value=''}" onblur="if(this.value==''){this.value=this.defaultValue}" />
@@ -100,32 +99,8 @@
 				<div class="clear"></div>
 			</form>
 		</div>
-        <img src="<?php echo site_resim(); ?>slider.png" width="960" height="315" />
-    </div>
-
-	
-<div class="menubg">
-	<?php
-		$kategoriler = $this->eklentiler_kategori_model->kategori_listele(0);
-		if($kategoriler) {
-	?>
-	<div id="Menu">
-	<?php foreach($kategoriler as $key=>$kategori) { $separator_if = count($kategoriler)-1 == $key ? false : true;  ?>
-	<?php
-		$kategori_seo_name = str_replace('--category', '', $this->uri->segment(2));
-		$aktif = NULL;
-		$parts = explode('---', $kategori_seo_name);
-		if($parts[0] == $kategori->seo) {
-			$aktif = 'class="k_aktif"';
-		} else {
-			$aktif = NULL;
-		}
-	?>
-    	<a href="<?php echo site_url($kategori->seo . '--category'); ?>" title="<?php echo $kategori->name; ?>"><?php echo character_limiter($kategori->name, 28); ?></a><?php if($separator_if): ?><span class="kat-seperator"></span><?php endif; ?>
-       <?php } ?>
 	</div>
-	<?php } ?>
-</div> 
+
 
 	<?php if($this->dx_auth->is_logged_in()) { ?>
 			<div id="h_uye_panel" class="sola">
