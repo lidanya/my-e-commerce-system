@@ -55,14 +55,14 @@
 		});
     //SKOCH product batch processing
     // kampanyalı veya indirimli ürünleri tarihi geçince otomatik kaldırır.
-	function batch(){
-	var url = "<?php echo site_url('yonetim/urunler/product_batch'); ?>";
-	var data = 'xaRwdQ42'; 
-	
-	$.post(url,{data:data},function(response){});
-	}
-	
-	setInterval("batch()",30000);
+//	function batch(){
+//	var url = "<?php //echo site_url('yonetim/urunler/product_batch'); ?>";
+//	var data = 'xaRwdQ42'; 
+//	
+//	$.post(url,{data:data},function(response){});
+//	}
+//	
+//	setInterval("batch()",30000);
 	
     </script>
 	<!--[if IE 7]>
