@@ -20,3 +20,16 @@
 	</div>
 	<?php } ?>
 </div> 
+
+<!-- main -->
+<div id="main">
+
+<?php
+	if(
+		($this->uri->segment(2) == 'site' AND ($this->uri->segment(3) == '' OR $this->uri->segment(3) == 'index')) OR
+		($this->uri->segment(2) == '') OR
+		($this->uri->segment(1) == '')
+	) {
+		$this->moduller->modul_cagir('ust');
+	}
+?>

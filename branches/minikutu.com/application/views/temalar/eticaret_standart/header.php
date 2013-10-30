@@ -81,13 +81,43 @@
 <body>
 <div id="Full" class="topmenubg">
 	<div id="Top">
-		<a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('header_top_menu_contact_us'); ?>"><span class="buton-iletisim"></span></a>
-		<a href="<?php echo site_url('site/musteri_hizmetleri'); ?>" title="<?php echo lang('header_top_menu_customer_services'); ?>"><span class="buton-sss"></span></a>
-		<a href="/tr/hakkimizda--information" title="Hakkımızda"><span class="buton-hakkimizda"></span></a>
 		<a href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_top_menu_mainpage'); ?>"><span class="buton-anasayfa"></span></a>
-		<!--<a href="#"><span class="buton-uyegirisi"></span></a></div>-->
-</div>
-	<div class="clear"></div>
+		<a href="/tr/hakkimizda--information" title="Hakkımızda"><span class="buton-hakkimizda"></span></a>
+		<a href="<?php echo site_url('site/musteri_hizmetleri'); ?>" title="<?php echo lang('header_top_menu_customer_services'); ?>"><span class="buton-sss"></span></a>
+		<a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('header_top_menu_contact_us'); ?>"><span class="buton-iletisim"></span></a>
+		
+		<?php if($this->dx_auth->is_logged_in()) { ?>
+			<div id="h_uye_panel" class="sola">
+				<div class="panel-acik">
+				<ul>
+					<li><a href="<?php echo ssl_url('uye/bilgi'); ?>" rel="nofollow" title="<?php echo lang('header_user_information'); ?>"><?php echo lang('header_user_information'); ?></a></li>
+					<li><a href="<?php echo ssl_url('uye/cagri'); ?>" rel="nofollow" title="<?php echo lang('header_user_ticket'); ?>"><?php echo lang('header_user_ticket'); ?></a></li>
+					<li><a href="<?php echo ssl_url('uye/siparisler'); ?>" rel="nofollow" title="<?php echo lang('header_user_order'); ?>"><?php echo lang('header_user_order'); ?></a></li>
+					<li><a href="<?php echo ssl_url('uye/urun_takip'); ?>" rel="nofollow" title="<?php echo lang('header_user_product'); ?>"><?php echo lang('header_user_product'); ?></a></li>
+					<li><a href="<?php echo ssl_url('uye/fatura'); ?>" rel="nofollow" title="<?php echo lang('header_user_billing'); ?>"><?php echo lang('header_user_billing'); ?></a></li>
+					<li><a href="<?php echo ssl_url('uye/cikis'); ?>" rel="nofollow" class="h_cikis" title="<?php echo lang('header_user_logout'); ?>"><?php echo lang('header_user_logout'); ?></a></li>
+				</ul>
+				</div>
+			</div>
+			
+			<?php } else { ?>
+			<div id="h_uye_menu" class="sola">
+				<ul>
+					<li>
+						<a class="uye-kayit" href="<?php echo ssl_url('uye/kayit'); ?>" rel="nofollow" title="<?php echo lang('header_user_reg'); ?>">
+							<?php echo lang('header_user_reg'); ?>
+						</a>
+					</li>
+					<li>
+						<a class="feys" href="<?php echo ssl_url('uye/giris'); ?>" rel="nofollow" title="<?php echo lang('header_user_login'); ?>">
+							<?php echo lang('header_user_login'); ?>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<?php } ?>
+	</div>
+	
 	<div class="Top_alt">
 		<div id="Logo"><a href="/"><img src="<?php echo site_resim(); ?>logo.png" width="288" height="78" /></a></div>
 		 <div id="Arama">
@@ -102,39 +132,7 @@
 	</div>
 
 
-	<?php if($this->dx_auth->is_logged_in()) { ?>
-			<div id="h_uye_panel" class="sola">
-				<span><?php echo lang('header_user_account'); ?></span>
-			</div>
-			<div class="panel-acik">
-				<ul>
-					<li><a href="<?php echo ssl_url('uye/bilgi'); ?>" rel="nofollow" title="<?php echo lang('header_user_information'); ?>"><?php echo lang('header_user_information'); ?></a></li>
-					<li><a href="<?php echo ssl_url('uye/cagri'); ?>" rel="nofollow" title="<?php echo lang('header_user_ticket'); ?>"><?php echo lang('header_user_ticket'); ?></a></li>
-					<li><a href="<?php echo ssl_url('uye/siparisler'); ?>" rel="nofollow" title="<?php echo lang('header_user_order'); ?>"><?php echo lang('header_user_order'); ?></a></li>
-					<li><a href="<?php echo ssl_url('uye/urun_takip'); ?>" rel="nofollow" title="<?php echo lang('header_user_product'); ?>"><?php echo lang('header_user_product'); ?></a></li>
-					<li><a href="<?php echo ssl_url('uye/fatura'); ?>" rel="nofollow" title="<?php echo lang('header_user_billing'); ?>"><?php echo lang('header_user_billing'); ?></a></li>
-					<li><a href="<?php echo ssl_url('uye/cikis'); ?>" rel="nofollow" class="h_cikis" title="<?php echo lang('header_user_logout'); ?>"><?php echo lang('header_user_logout'); ?></a></li>
-				</ul>
-			</div>
-			<?php } else { ?>
-			<div id="h_uye_menu" class="sola">
-				<ul>
-					<li>
-						<a href="<?php echo ssl_url('uye/kayit'); ?>" rel="nofollow" title="<?php echo lang('header_user_reg'); ?>">
-							<?php echo lang('header_user_reg'); ?>
-						</a>
-					</li>
-					<li>
-						<a class="feys" href="<?php echo ssl_url('uye/giris'); ?>" rel="nofollow" title="<?php echo lang('header_user_login'); ?>">
-							<?php echo lang('header_user_login'); ?>
-							<?php if (config('site_ayar_facebook_status')) { ?>
-								<small></small>
-							<?php } ?>
-						</a>
-					</li>
-				</ul>
-			</div>
-			<?php } ?>
+	
 	
 		<!--h_alt_menu SON -->
 		<script type="text/javascript" charset="utf-8">
@@ -250,16 +248,4 @@
 
 <div class="clear"></div>
 </div>
-    <div class="clear"></div>
-<!-- main -->
-<div id="main">
-
-<?php
-	if(
-		($this->uri->segment(2) == 'site' AND ($this->uri->segment(3) == '' OR $this->uri->segment(3) == 'index')) OR
-		($this->uri->segment(2) == '') OR
-		($this->uri->segment(1) == '')
-	) {
-		$this->moduller->modul_cagir('ust');
-	}
-?>
+	
