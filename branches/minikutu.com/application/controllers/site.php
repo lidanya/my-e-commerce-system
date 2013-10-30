@@ -18,6 +18,7 @@ class site extends Public_Controller
 		$this->load->library('encrypt');
 		$this->load->library('menu');
 		$this->load->model('site_model');
+		$this->load->model('eklentiler/eklentiler_slider_model');
 	}
 
 	/**

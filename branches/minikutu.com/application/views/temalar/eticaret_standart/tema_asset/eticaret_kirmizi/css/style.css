@@ -13,6 +13,8 @@ a:hover {cursor:pointer;color:#eb416d;}
 input, textarea, select {color:#333;outline:none;font-weight:bold;font-size:13px;line-height:22px; padding: 5px; border:1px solid #ccc;}
 input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;}
 
+.liste_container { background: #eee;}
+.Top_alt { width: 960px; margin: auto; height: 85px;}
 /*=========================Global Stiller===============================*/
 /*yapisal*/
 .saga {float:right;/*IE Fix*/display:inline;}
@@ -68,7 +70,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #sol {width:220px;overflow:visible;position:relative;z-index:96;}
 #sol div {overflow:visible;}
 #sag {display:none;}
-#orta {width:1000px;margin:0px auto;position:relative;z-index:95;float:right; background: #fff;}
+#orta {width:1000px;margin:0px auto;position:relative;z-index:95;float:right; }
 #footer {width:1000px;margin:10px auto;background:url(../images/footer_bg.png) top repeat-x;position:relative;}
 .footust {width:1000px;}
 .footalt {width:1000px;}
