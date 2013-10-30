@@ -92,7 +92,7 @@ if(config('site_ayar_ssl_kod') != '')
 	<div id="footer_bilgi">
 		<div class="sola"><?php echo anchor(site_url(), config('site_ayar_copyright')); ?></div>
 		<div class="saga">
-			<a href="#" target="_blank" title="<?php echo lang('footer_system_name'); ?>">
+			<a href="//marsma.com" target="_blank" title="<?php echo lang('footer_system_name'); ?>">
 				<?php echo strtr(lang('footer_copyright_text'), array('{version}' => ETICARET_VERSION)); ?>
 			</a>
 		</div>
