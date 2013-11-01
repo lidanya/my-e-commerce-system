@@ -32,10 +32,7 @@ class adim_2 extends Public_Controller {
 	/* Ödeme Sayfaları */
 	function index($siparis_id, $fatura_id)
 	{
-		//print_r($this->session->userdata('adim_1')); return;
-		if (!$this->session->userdata('adim_1')) {
-			redirect(''); // serkan koch tarafından kapatıldı.
-		}
+		
 		$this->session->set_userdata('adim_2',FALSE);
 
 		

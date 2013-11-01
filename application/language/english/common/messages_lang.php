@@ -268,6 +268,7 @@ $lang['messages_static_page_customer_services_order_contact_suggest'] = 'Opinion
 // Normal
 $lang['messages_product_shema_normal_new_product_text'] = '<span>Ne</span>w Product';
 $lang['messages_product_shema_normal_campaign_text'] = '<span>Ca</span>mpaign';
+$lang['messages_product_shema_normal_discount_text'] = '<span>Di</span>scount';
 $lang['messages_product_shema_normal_vat_text'] = 'VAT';
 $lang['messages_product_shema_normal_campaign_product_piece'] = '<div class="urun_liste_fiyat saga" style="font-size: 12px;">{adet} pieces of this product is
 <br /><span class="k_fiyat" style="margin:0;padding:0;font-size: 12px;">{fiyat}</span> <span class="u_birim">{tur}{kdv}</span></div>';

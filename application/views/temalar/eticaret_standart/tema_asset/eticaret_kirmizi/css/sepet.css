@@ -7,7 +7,7 @@ Aciklamalar:
 /*============================genel=================================*/
 #odeme_cont {width:990px;margin:auto;}
 .odeme_baslik {background:url(../images/adim_baslik_bg.png) no-repeat 10px 5px;width:100%;color:#2e2e2e;font-size:15px;font-weight:700;padding:3px 0 5px 30px;border-bottom:solid 1px #e5e5e5;margin:0 auto 10px;}
-#o_sol {width:560px;margin-top:10px;}
+#o_sol {width:560px;margin-top:10px; }
 #o_sag {width:390px;margin-top:10px;}
 /*stepler*/
 #stepler {width:990px;height:46px;margin:5px auto;background:url(../images/adim_bg.png) no-repeat 0 0}
@@ -131,7 +131,7 @@ a#ft_teslimat {background-position:58px -243px}
 .os_h_oge u {float:left;display:inline;width:120px;}
 .os_h_oge b {float:left;display:inline;color:#4d4d4d;padding-top:7px;width:280px;font-size:14px;}
 .os_h_oge span {float:left;display:inline;width:75px;padding-top:5px;}
-.os_h_oge span select {width:75px;height:24px;}
+.os_h_oge span select {width:85px;height:30px;}
 .os_h_oge p {float:left;display:inline;width:65px;text-align:right;padding-top:7px}
 #os_diger {font-weight:700;}
 

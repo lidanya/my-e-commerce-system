@@ -35,7 +35,6 @@ class adim_1 extends Public_Controller {
 		$this->session->set_userdata('adim_1',FALSE);
 		
 		$sepet_verileri = $this->cart->contents();
-		//exit(var_export($sepet_verileri));
 
 		$sepet_toplam = 0;
 
