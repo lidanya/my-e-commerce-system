@@ -45,10 +45,10 @@
 				
 				$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
 				
-//				if($i == '3') {
-//					$i = 0;
-//					echo '<div class="clear"></div>';
-//				}
+				if($i == '4') {
+					$i = 0;
+					echo '<div class="clear"></div>';
+				}
 			}
 		?>
 		</div>

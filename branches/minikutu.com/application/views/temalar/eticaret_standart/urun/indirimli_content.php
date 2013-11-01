@@ -1,7 +1,7 @@
     <!--orta -->
     <div id="orta" class="sola">
 	<h1 id="sayfa_baslik"><?php echo lang('messages_discount_products_title'); ?></h1>
-	<div style="float:right;display:inline;margin-top:15px;">
+	<div style="float:left;display:inline;margin:10px 0 10px 16px;">
 		<?php
 			$_option_array = array(
 				'price-desc' => lang('messages_select_stok_fiyat-desc'),
@@ -35,6 +35,7 @@
 		<!--Ürün Listele-->
 		<div class="liste_container">
 		<?php
+			$sablon_gonder = new stdClass();
 			foreach($urunler['query'] as $indirimli) {
 				$i = $i+1;
 				$sablon_gonder->product_id		= $indirimli->product_id;
@@ -50,7 +51,7 @@
 				$sablon_gonder->durum		= 'indirimli';
 				
 				$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
-				if($i == '3') {
+				if($i == '4') {
 					$i = 0;
 					echo '<div class="clear"></div>';
 				}

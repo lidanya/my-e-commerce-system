@@ -25,6 +25,16 @@ if(!defined('BASEPATH'))
 			return $_ci->fonksiyonlar->rewrite_url($_id, $_type);
 		}
 	}
+	
+	if ( ! function_exists('p'))
+	{
+		function p($data)
+		{
+			echo "<pre>";
+			print_r($data);
+			echo "</pre>";
+		}
+	}
 
 	if ( ! function_exists('get_fields_from_table') )
 	{
@@ -408,17 +418,7 @@ if(!defined('BASEPATH'))
 	{
 		function site_resim($base = FALSE)
 		{
-			$_ci =& get_instance();
-
-			if (config('site_ayar_ssl') == '1' && isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS'] == '1'))) {
-				$base_url = $_ci->config->item('ssl_url');
-			} else {
-				$base_url = $_ci->config->item('base_url');
-			}
-
 			$tema_asset = tema_asset($base);
-
-			//return $base_url . APPPATH . 'views/' . tema_asset() .  'images/';
 			return APPPATH . 'views/' . $tema_asset .  'images/';
 		}
 	}
@@ -427,17 +427,7 @@ if(!defined('BASEPATH'))
 	{
 		function site_css($base = FALSE)
 		{
-			$_ci =& get_instance();
-
-			if (config('site_ayar_ssl') == '1' && isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS'] == '1'))) {
-				$base_url = $_ci->config->item('ssl_url');
-			} else {
-				$base_url = $_ci->config->item('base_url');
-			}
-
 			$tema_asset = tema_asset($base);
-
-			//return $base_url . APPPATH . 'views/' . tema_asset() . 'css/';
 			return APPPATH . 'views/' . $tema_asset . 'css/';
 		}
 	}
@@ -446,15 +436,6 @@ if(!defined('BASEPATH'))
 	{
 		function site_js()
 		{
-			$_ci =& get_instance();
-
-			if (config('site_ayar_ssl') == '1' && isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS'] == '1'))) {
-				$base_url = $_ci->config->item('ssl_url');
-			} else {
-				$base_url = $_ci->config->item('base_url');
-			}
-
-			//return $base_url . APPPATH . 'views/' . tema() . 'js/';
 			return APPPATH . 'views/' . tema() . 'js/';
 		}
 	}
@@ -463,15 +444,6 @@ if(!defined('BASEPATH'))
 	{
 		function site_flash()
 		{
-			$_ci =& get_instance();
-
-			if (config('site_ayar_ssl') == '1' && isset($_SERVER['HTTPS']) && (($_SERVER['HTTPS'] == 'on') || ($_SERVER['HTTPS'] == '1'))) {
-				$base_url = $_ci->config->item('ssl_url');
-			} else {
-				$base_url = $_ci->config->item('base_url');
-			}
-
-			//return $base_url . APPPATH . 'views/' . tema() . 'flash/';
 			return APPPATH . 'views/' . tema() . 'flash/';
 		}
 	}
