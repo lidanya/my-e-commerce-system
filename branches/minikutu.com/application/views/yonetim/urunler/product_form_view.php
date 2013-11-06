@@ -389,11 +389,11 @@
 								<div class="scrollbox" id="scrollbox_0" style="width:725px;height:200px;">
 								<?php $class = 'odd'; ?>
 								<?php foreach ($categories as $category) {
-                                                                    $this->db->select('parent_id', FALSE);
-		                                                    $this->db->from('e_category');
-		                                                    $this->db->where('parent_id', $category['category_id']);
-	                                                            $query = $this->db->get();
-		                                                    if(!$query->num_rows()){
+//                                                                    $this->db->select('parent_id', FALSE);
+//		                                                    $this->db->from('e_category');
+//		                                                    $this->db->where('parent_id', $category['category_id']);
+//	                                                            $query = $this->db->get();
+//		                                                    if(!$query->num_rows()){ Top categoriler de görünsün diye commentlendi.
 
                                                                     ?>
 									<?php $class = ($class == 'even' ? 'odd' : 'even'); ?>
@@ -406,7 +406,7 @@
 										<?php echo $category['name']; ?>
 									<?php } ?>
 									</div>
-								<?php }
+								<?php //}
 
                                                                 }
                                                                 ?>
