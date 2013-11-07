@@ -58,12 +58,13 @@
 	
 		<?php else: ?>
 	
-	<div style="width: 960px; margin: auto;">
-		<div id="AltKatBar">
+	
+		<div class="altKatBar">
 			<a href="<?php echo site_url($category_url); ?>"><?php echo $sub_categories->name . $stok_say; ?></a>
 		</div>
-	</div>
+	
 		<?php endif; } } ?>
+		<div class="clear"></div>
 	</div>
 	<?php if($category_products): ?>
 	<div style="float:left;display:inline;margin:10px 0 10px 16px;">
