@@ -17,9 +17,9 @@ a, a:link, a:visited {text-decoration: none;outline: none;}
 #InfoBar			 { width:960px; height:100px; padding-top:10px; margin:auto auto auto auto;}
 #Govde				 { width:960px; height:auto; margin:auto auto auto auto; padding:10px 0px 10px 0px;}
 #Footer				 { width:940px; height:300px; margin:auto auto auto auto; padding:10px; letter-spacing:1px;}
-#AltKatBar			 { width:960px; padding:10px 10px 10px 10px; margin:auto;}
-#AltKatBar a		 { background-color:#bbb; border-radius:5px; padding:5px 10px 5px 10px; margin:2px; color:#FFF; text-decoration:none; float:left; }
-#AltKatBar a:hover	 { background-color:#aaa;  }
+.altKatBar			 { padding:5px; margin:auto; float:left;}
+.altKatBar a		 { background-color:#bbb; border-radius:5px; padding:5px 10px 5px 10px; margin:2px; color:#FFF; text-decoration:none; float:left; }
+.altKatBar a:hover	 { background-color:#aaa;  }
 
 /* HTML ANA KODLAR BITIS */
 /* STIL TANIMLAMALAR BASLANGIC */
