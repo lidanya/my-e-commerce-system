@@ -35,7 +35,7 @@ class product_category_model extends CI_Model
 				$data2 = array("category_id" => $id,
 					"language_id" => 1,
 					"name" => mysql_real_escape_string($name),
-					"seo" => url_title($name, "dash", TRUE)
+					"seo" => $this->check_seo(url_title($name, "dash", TRUE),1)
 				);
 				
 				$this->db->insert("category_description", $data2);
