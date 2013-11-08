@@ -25,7 +25,7 @@ Aciklamalar:
 .urun_liste_oge:hover {border:1px solid #999; opacity: 1; }
 .urun_liste_resim {display:block;width:220px;height:220px;text-align:center;margin:30px auto 0;}
 .urun_liste_resim img {width:210px;}
-.urun_liste_baslik, .urun_liste_baslik:link, .urun_liste_baslik:visited {height:35px;display:block;text-align:center;width:235px;padding-bottom:5px;margin:auto;font-size:14px;font-weight:bold;color:#333;}
+.urun_liste_baslik, .urun_liste_baslik:link, .urun_liste_baslik:visited {height:35px;display:block;text-align:center;width:220px;padding-bottom:5px;margin:auto;font-size:14px;font-weight:bold;color:#333;}
 .urun_liste_baslik:hover {color:#dd0000;}
 .urun_liste_fiyat {display:block;width:95px;height:53px;margin:10px 3px 0 auto;text-align:center;font-size:30px;color:#f90;font-weight:bold;background-color:#fcdfe0;border:1px solid #ffb6b9;}
 .urun_liste_fiyat small {color:#f90;font-weight:normal;font-size:9px;display:block;text-align:center;}
