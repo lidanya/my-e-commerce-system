@@ -11,7 +11,7 @@ if(!defined('BASEPATH'))
 
 class facebook_lib
 {
-	var $ci, $fb, $user, $message;
+	public $ci, $fb, $user, $message;
 
 	function __construct()
 	{
@@ -32,11 +32,10 @@ class facebook_lib
 			$this->fb = new Facebook(array(
 				'appId' => $facebook_app_id,
 				'secret' => $facebook_secret,
-				'cookie' => true,
+				'cookie' => true
 			));
-
 			// Check for Facebook session
-			if ($this->fb->getSession()) {
+			if ($this->fb->getUser()) {
 				try {
 					// Check for expired session by making a api call
 					$this->user = $this->fb->api('/me');

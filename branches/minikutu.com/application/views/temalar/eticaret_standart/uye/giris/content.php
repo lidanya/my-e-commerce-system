@@ -37,7 +37,7 @@
 						<span class="butor"><?php echo lang('messages_member_login_button'); ?></span>
 					</a>
 					<?php if (config('site_ayar_facebook_status')) { ?>
-						<a href="javascript:;" class="facelogin sola" onclick="redirect('<?php echo ssl_url('uye/giris/facebook'); ?>');" title="<?php echo lang('messages_member_login_facebook'); ?>" >
+						<a href="javascript:;" class="facelogin sola" onclick="FBLogin();" title="<?php echo lang('messages_member_login_facebook'); ?>" >
 							<?php echo lang('messages_member_login_facebook'); ?>
 						</a>
 					<?php } ?>
