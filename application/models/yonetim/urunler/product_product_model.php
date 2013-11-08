@@ -1369,6 +1369,15 @@ Toplam '. $toplam_sayfa .' sayfa içinde '. $mevcut_sayfa .'. sayfadasın, topla
 
 		return TRUE;
 	}
+	
+	public function xml_product_control($model) {
+		$query = $this->db->select("model")
+				->from("product p")
+				->where("p.model",$model)
+				->limit(1)
+				->get();
+		return $query->row() ? true : false;
+	}
 
 	public function get_product_uuid($prefix = '')
 	{
