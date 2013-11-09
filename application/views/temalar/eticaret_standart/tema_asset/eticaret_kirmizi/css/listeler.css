@@ -11,9 +11,9 @@ Aciklamalar:
 /*sayfalama*/
 .liste_sag {margin:10px 22px 0 0;height:30px;}
 .liste_sag ul {list-style-type:none;}
-.liste_sag ul li {float:left;margin-left:5px;/*IE Fix*/display:inline;height:30px;}
+.liste_sag ul li {float:left;margin-left:5px;/*IE Fix*/display:inline;height:15px; background: #eee;}
 .liste_sag ul li a.l_sayfa, .liste_sag ul li a.l_sayfa:link, .liste_sag ul li a.l_sayfa:visited {line-height:15px;padding:0 3px;color:#565656;font-weight:bold;font-size:18px;}
-.liste_sag ul li a.l_sayfa:hover, .liste_sag ul li.l_aktif a.l_sayfa {color:#eb416d;text-decoration:underline;}
+.liste_sag ul li a.l_sayfa:hover, .liste_sag ul li.l_aktif a.l_sayfa {color:#f5215b;}
 
 /*=========================Urun listeleme===============================*/
 .yeni, .kampanya,.indirim {position:absolute;height:19px;padding:3px 0 0 5px;z-index:99;color:#ff7777;font-weight:bold;}
@@ -27,15 +27,15 @@ Aciklamalar:
 .urun_liste_resim img {width:210px;}
 .urun_liste_baslik, .urun_liste_baslik:link, .urun_liste_baslik:visited {height:35px;display:block;text-align:center;width:220px;padding-bottom:5px;margin:auto;font-size:14px;font-weight:bold;color:#333;}
 .urun_liste_baslik:hover {color:#dd0000;}
-.urun_liste_fiyat {display:block;width:95px;height:53px;margin:10px 3px 0 auto;text-align:center;font-size:30px;color:#f90;font-weight:bold;background-color:#fcdfe0;border:1px solid #ffb6b9;}
-.urun_liste_fiyat small {color:#f90;font-weight:normal;font-size:9px;display:block;text-align:center;}
+.urun_liste_fiyat {display:block;width:95px;height:53px;margin:10px 3px 0 auto;text-align:center;font-size:30px;color:#f90;font-weight:bold;background-color:#dedede;border:1px solid #ccc;}
+.urun_liste_fiyat small {color:#f90;font-weight:normal;font-size:18px;display:block;text-align:center; font-weight: bold;}
 .urun_liste_fiyat big {font-size:21px;display:block;text-align:center;}
 .urun_liste_fiyat em {display:block;text-align:center;font-style:normal;text-decoration:line-through;font-size:11px;color:#ababab;}
 .urun_liste_butonlar {display:block;width:115px;margin:10px auto 0 3px;}
 
 /*=========================Kategori listeleme===============================*/
 .kategori_liste_oge {position:relative;display:block;margin:7px 0 0 4px;width:243px;height:240px;border:1px solid #f1f1f1; background: #fff;}
-.kategori_liste_oge:hover {cursor:auto;border:1px solid #eb416d}
+.kategori_liste_oge:hover {cursor:auto;border:1px solid #f5215b}
 .kategori_liste_resim {display:block;width:235px;height:170px;text-align:center;margin:30px auto 0;}
 .kategori_liste_resim img {width:210px;}
 .kategori_liste_baslik, .kategori_liste_baslik:link, .kategori_liste_baslik:visited {height:35px;display:block;text-align:center;width:235px;padding-bottom:5px;margin:auto;font-size:14px;font-weight:bold;}
@@ -55,10 +55,10 @@ Aciklamalar:
 #ara_marka div, #ara_kategori div {width:705px;}
 #ara_fiyat {width:735px;height:45px;padding-bottom:5px;border-top:solid 1px #fbfbfb;border-bottom:solid 1px #e0e0e0;position:relative;color:#878787;}
 #af_sol {width:320px;height:45px;}
-#af_sol b {font-size:18px;color:#eb416d;}
+#af_sol b {font-size:18px;color:#f5215b;}
 #af_sol i {font-style:normal;color:#878787;font-size:12px;width:75px;float:left;display:inline;padding-top:4px;margin-top:18px;}
 #af_fiyatlar {width:240px;margin-left:5px;padding-top:18px;}
-#af_min, #af_max {font-weight:700;color:#eb416d;font-size:14px;}
+#af_min, #af_max {font-weight:700;color:#f5215b;font-size:14px;}
 #af_min span, #af_max span {font-size:18px;}
 #af_sag {width:410px;height:45px;}
 #af_bar {position:relative;width:410px;height:22px;margin:17px auto 0;background:url(../images/ara_fiyat_bar.png) repeat-x 0 13px;}

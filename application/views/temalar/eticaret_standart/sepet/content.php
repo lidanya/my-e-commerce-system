@@ -623,7 +623,7 @@
 					<a href="<?php echo site_url(); ?>" class="butonum">
 						<span class="butor"><?php echo lang('messages_cart_continue_shopping'); ?></span>
 					</a>
-					<a href="javascript:;" rel="nofollow" onclick="next_step();" class="butonum">
+					<a style="margin-left:5px;" href="javascript:;" rel="nofollow" onclick="next_step();" class="butonum">
 						<span class="butor"><?php echo lang('messages_cart_checkout'); ?></span>
 					</a>
 					<span id="submit_wait" style="display:none;"></span>
