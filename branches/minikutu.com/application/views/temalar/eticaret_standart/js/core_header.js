@@ -47,6 +47,7 @@ $(document).ready(function() {
 		$(this).removeClass("hd_aktif");
 		$(".panel-acik ul").slideUp(50);
 	});
+	
 	//dil secimi ve para birimi secimi
 	$("#h_dil, #h_para").hover(function(){
 		$(this).addClass("hd_aktif");

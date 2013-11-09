@@ -88,7 +88,7 @@
 		<a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('header_top_menu_contact_us'); ?>"><span class="buton-iletisim"></span></a>
 		
 		<?php if($this->dx_auth->is_logged_in()) { ?>
-			<div id="h_uye_panel" class="sola">
+			<div id="h_uye_panel" class="saga">
 				<div class="panel-acik">
 				<ul>
 					<li><a href="<?php echo ssl_url('uye/bilgi'); ?>" rel="nofollow" title="<?php echo lang('header_user_information'); ?>"><?php echo lang('header_user_information'); ?></a></li>
@@ -102,7 +102,7 @@
 			</div>
 			
 			<?php } else { ?>
-			<div id="h_uye_menu" class="sola">
+			<div id="h_uye_menu" class="saga">
 				<ul>
 					<li>
 						<a class="uye-kayit" href="<?php echo ssl_url('uye/kayit'); ?>" rel="nofollow" title="<?php echo lang('header_user_reg'); ?>">

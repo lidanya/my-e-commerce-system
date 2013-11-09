@@ -28,7 +28,7 @@ Aciklamalar:
 .i_mail {background:url(../images/iletisim_mail.png) no-repeat  0 0;}
 .i_telefon {background:url(../images/iletisim_telefon.png) no-repeat  0 0;}
 .i_fax {background:url(../images/iletisim_fax.png) no-repeat  0 0;}
-.ib_baslik, .ib_yazi {margin-left:40px;display:block;color:#7b7b7b;font-weight:bold;width:100px;height:23px;padding:7px 0 0 35px;font-size:12px;}
+.ib_baslik, .ib_yazi {margin-left:40px;display:block;color:#7b7b7b;font-weight:bold;width:100px;height:23px;padding:7px 0 0 35px;font-size:13px;}
 .ib_yazi {font-weight:normal;width:auto;margin:0;}
 .i_text, .i_box {display:block;margin-top:5px;}
 .i_text {height:25px;padding-top:5px;width:150px;color:#7b7b7b;font-weight:bold;text-align:right;}
@@ -83,7 +83,7 @@ Aciklamalar:
 /*goster*/
 .fg_text, .fg_text_kucuk {display:block;width:150px;height:25px;padding-top:0px;color:#000;font-size:13px;font-weight:bold;}
 .fg_text_kucuk {width:auto;margin-left:5px;}
-.fg_box {margin-left:5px;font-size:12px;}
+.fg_box {margin-left:5px;font-size:13px;}
 
 /*============================Sipariş Listesi=================================*/
 #siparis {width:720px;padding:10px;margin:10px auto;}
