@@ -27,17 +27,20 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>anasayfa.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>jquery.countdown.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>custom.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>ui.totop.css"/>
 	<!--<link rel="shortcut icon" href="<?php echo site_resim(); ?>favicon.ico" />-->
     <link rel="shortcut icon" href="<?php echo base_url(ssl_status()); ?>upload/editor/<?php echo config('site_ayar_favicon'); ?>" />
 
 	<?php echo (!empty($_styles)) ? $_styles:NULL; ?>
 
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-1.6.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-migrate-1.2.1.min.jss"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>easySlider1.7.5.js"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-ui.min.js"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.cookie.js"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>bookmark.js"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>core_header.js"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.ui.totop.js"></script>
 
 	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip02.js"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip03.js"></script>
@@ -55,6 +58,15 @@
     <script type="text/javascript">
 		$(function() {
 			$(".urun_liste_resim img").lazyload({effect : "fadeIn"});
+			/*var defaults = {
+	  			containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+	 		};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
 		
 	});
     //SKOCH product batch processing
