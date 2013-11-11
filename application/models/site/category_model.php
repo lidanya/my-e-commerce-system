@@ -161,6 +161,17 @@ class category_model extends CI_Model
 			return FALSE;
 		}
 	}
+	public $arr_list = array();
+	public function get_parent_categories_by_category_id($category_id,$top_id) {
+		//$parent_cat_array();
+		$query = $this->db->select("parent_id")
+				->from("category")
+				->where("category_id",$category_id)
+				->limit(1)
+				->get();
+		
+		return $query->row()->parent_id;
+	}
 
 	public function save_category($category_id)
 	{
