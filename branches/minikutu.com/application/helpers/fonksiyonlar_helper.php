@@ -200,6 +200,19 @@ if(!defined('BASEPATH'))
 		}
 	}
 	
+	if ( ! function_exists('kategori_ust_kategori'))
+	{
+		function kategori_ust_kategori($kategori_id,$top_id = 0)
+		{
+			$ci =& get_instance();
+
+			$ci->load->model('category_model');
+			$categoriesIdlist = $ci->category_model->get_parent_categories_by_category_id($kategori_id,$top_id);
+
+			return $categoriesIdlist;
+		}
+	}
+	
  	if ( ! function_exists('eklenti_ayar'))
 	{
 		function eklenti_ayar($key, $config, $item = 'ayar_deger')
