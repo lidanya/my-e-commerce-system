@@ -55,7 +55,7 @@ class api extends Admin_Controller
 		$products = @simplexml_load_file($this->file['products']);
 		if ($products) {
 			foreach ($products->children() as $product) {
-
+				
 				$urun_control = $this->product_product_model->xml_product_control((string) $product->id);
 
 				if (!$urun_control) {
@@ -124,7 +124,6 @@ class api extends Admin_Controller
 					// diğer image son
 					// category işlemleri
 					if ($product->categories->children()->count() > 0) {
-
 						// rc model ile ilişkilendirme
 						$urunProductToCategoryData = array(
 							"product_id" => $inserted_id,
@@ -132,6 +131,7 @@ class api extends Admin_Controller
 						);
 						$this->product_product_model->Ekle($urunProductToCategoryData, "product_to_category");
 						foreach ($product->categories->children() as $category) {
+						$parentIDList = kategori_ust_kategori($category,177);
 							$urunProductToCategoryData = array(
 								"product_id" => $inserted_id,
 								"category_id" => (int) $category
@@ -139,6 +139,7 @@ class api extends Admin_Controller
 							$this->product_product_model->Ekle($urunProductToCategoryData, "product_to_category");
 						}
 					}
+					// category işlemleri son
 
 					echo "başarılı";
 					//exit;
