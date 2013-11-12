@@ -134,11 +134,19 @@ class api extends Admin_Controller
 							$parentIDList = kategori_ust_kategori($category, 177);
 							if ($parentIDList) {
 								foreach ($parentIDList as $parent_id) {
-									$urunProductToCategoryData = array(
-										"product_id" => $inserted_id,
-										"category_id" => (int) $parent_id
-									);
-									$this->product_product_model->Ekle($urunProductToCategoryData, "product_to_category");
+									$cQuery = $this->db->select("category_id")
+											->from("product_to_category")
+											->where("category_id", $parent_id)
+											->where("product_id", $inserted_id)
+											->limit(1)
+											->get();
+									if ($cQuery->num_rows() < 1) {
+										$urunProductToCategoryData = array(
+											"product_id" => $inserted_id,
+											"category_id" => (int) $parent_id
+										);
+										$this->product_product_model->Ekle($urunProductToCategoryData, "product_to_category");
+									}
 								}
 							}
 							$urunProductToCategoryData = array(
@@ -150,7 +158,8 @@ class api extends Admin_Controller
 					}
 					// category işlemleri son
 
-					echo "başarılı"; exit;
+					echo "başarılı";
+					exit;
 					//exit;
 				} else {
 					echo "urun onceden eklenmis <br/>";
