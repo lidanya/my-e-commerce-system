@@ -55,7 +55,7 @@ class api extends Admin_Controller
 		$products = @simplexml_load_file($this->file['products']);
 		if ($products) {
 			foreach ($products->children() as $product) {
-				
+				//p($parentIDList = kategori_ust_kategori(316, 177)); exit;
 				$urun_control = $this->product_product_model->xml_product_control((string) $product->id);
 
 				if (!$urun_control) {
@@ -131,7 +131,16 @@ class api extends Admin_Controller
 						);
 						$this->product_product_model->Ekle($urunProductToCategoryData, "product_to_category");
 						foreach ($product->categories->children() as $category) {
-						$parentIDList = kategori_ust_kategori($category,177);
+							$parentIDList = kategori_ust_kategori($category, 177);
+							if ($parentIDList) {
+								foreach ($parentIDList as $parent_id) {
+									$urunProductToCategoryData = array(
+										"product_id" => $inserted_id,
+										"category_id" => (int) $parent_id
+									);
+									$this->product_product_model->Ekle($urunProductToCategoryData, "product_to_category");
+								}
+							}
 							$urunProductToCategoryData = array(
 								"product_id" => $inserted_id,
 								"category_id" => (int) $category
@@ -141,8 +150,10 @@ class api extends Admin_Controller
 					}
 					// category işlemleri son
 
-					echo "başarılı";
+					echo "başarılı"; exit;
 					//exit;
+				} else {
+					echo "urun onceden eklenmis <br/>";
 				}
 			}
 		}
@@ -153,7 +164,7 @@ class api extends Admin_Controller
 		if ($headers["Content-Type"] != "image/jpeg") {
 			return "no-image.jpg";
 		}
-		@file_get_contents($_im_url);
+		$img = @file_get_contents($_im_url);
 		$new_image_name = "data/xml_resimleri/" . url_title($name) . ".jpg";
 		@file_put_contents(DIR_IMAGE . $new_image_name, $img);
 
