@@ -39,6 +39,7 @@
 				}
 		?>
 		<?php if(!$category_products): ?>
+			<?php if($total_products > 0): ?>
 			<div class="kategori_liste_oge sola">
 				<div class="kategori_liste_resim">
 					<a href="<?php echo site_url($category_url); ?>">
@@ -49,6 +50,7 @@
 					<?php echo character_limiter($sub_categories->name, 50) . $stok_say; ?>
 				</a>
 			</div>
+		<?php endif; ?>
 		<?php
 			if($i == '4') {
 				$i = 0;
@@ -58,10 +60,11 @@
 	
 		<?php else: ?>
 	
-	
+		<?php if($total_products > 0): ?>
 		<div class="altKatBar">
 			<a href="<?php echo site_url($category_url); ?>"><?php echo $sub_categories->name . $stok_say; ?></a>
 		</div>
+		<?php endif; ?>
 	
 		<?php endif; } } ?>
 		<div class="clear"></div>
