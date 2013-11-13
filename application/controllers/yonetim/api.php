@@ -23,6 +23,35 @@ class api extends Admin_Controller
 		$this->load->model('yonetim/urunler/product_category_model');
 		$this->load->model('yonetim/urunler/product_product_model');
 	}
+	
+	public function aktar() {
+		//echo "adad"; exit;
+		$livedb = $this->load->database("live",TRUE);
+		//p($livedb); exit;
+		$query = $this->db->select("*")->from("product_to_category")->where("category_id",167)->get();
+		foreach($query->result() as $p) {
+			$productIDList[] = $p->product_id; 
+		}
+		
+		foreach($productIDList as $pa) {
+			$q = $livedb->select("product_id")->from("product")->where("product_id",$pa)->get();
+		
+			if($q->row()) {
+				// pd
+				$q = $livedb->select("*")->from("product_to_category")->where("product_id",$pa)->where("category_id",167)->get();
+				//$query = $this->db->select("category_id")->from("product_to_category")->where("product_id",$pa)->get();
+				if(!$q->row()) {
+				$arr = array("product_id"=>$pa,"category_id"=>167);
+				//$livedb->where('product_id', $pa);
+				$livedb->insert('product_to_category', $arr);
+				echo "3-";
+				}
+				// 
+				//p($query->row_array());
+			}
+		}
+		//p($productIDList); 
+	}
 
 	public function addCategories() {
 

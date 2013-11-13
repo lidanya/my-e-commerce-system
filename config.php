@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /**
  * Ayar Dosyası
@@ -45,12 +45,13 @@
 		database_database = veritabanı adı
 		database_dbdriver = veritabanı tipi
 	*/
-	define('database_hostname', 'localhost');
-	define('database_username', 'root');
-	define('database_password', '');
-	define('database_database', 'minikutu_db');
-	define('database_dbdriver', 'mysql');
-	define('database_dbprefix', 'e_'); 
-	define('database_pconnect', FALSE);
-	define('database_db_debug', TRUE);
+	
+	 define('database_hostname', 'localhost');
+	 define('database_username', 'demouser');
+	 define('database_password', '323232');
+	 define('database_database', 'webs_demo');
+	 define('database_dbdriver', 'mysql');
+	 define('database_dbprefix', 'e_'); 
+	 define('database_pconnect', FALSE);
+	 define('database_db_debug', TRUE);
 ?>

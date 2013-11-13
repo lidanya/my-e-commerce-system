@@ -57,21 +57,21 @@
 	$db['e']['autoinit'] = database_autoinit;
 	$db['e']['stricton'] = database_stricton;
 
-	$db['group_two']['hostname'] = database_hostname;
-	$db['group_two']['username'] = database_username;
-	$db['group_two']['password'] = database_password;
-	$db['group_two']['database'] = 'eticaret_gozluk3d';
-	$db['group_two']['dbdriver'] = "mysql";
-	$db['group_two']['dbprefix'] = database_dbprefix;
-	$db['group_two']['pconnect'] = TRUE;
-	$db['group_two']['db_debug'] = TRUE;
-	$db['group_two']['cache_on'] = FALSE;
-	$db['group_two']['cachedir'] = "";
-	$db['group_two']['char_set'] = "utf8";
-	$db['group_two']['dbcollat'] = "utf8_general_ci";
-	$db['group_two']['swap_pre'] = "";
-	$db['group_two']['autoinit'] = FALSE;
-	$db['group_two']['stricton'] = FALSE;
+	$db['live']['hostname'] = database_hostname;
+	$db['live']['username'] = "miniuser";
+	$db['live']['password'] = "323232";
+	$db['live']['database'] = 'webs_minikutudb';
+	$db['live']['dbdriver'] = "mysql";
+	$db['live']['dbprefix'] = database_dbprefix;
+	$db['live']['pconnect'] = FALSE;
+	$db['live']['db_debug'] = TRUE;
+	$db['live']['cache_on'] = FALSE;
+	$db['live']['cachedir'] = "";
+	$db['live']['char_set'] = "utf8";
+	$db['live']['dbcollat'] = "utf8_general_ci";
+	$db['live']['swap_pre'] = "";
+	$db['live']['autoinit'] = FALSE;
+	$db['live']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
