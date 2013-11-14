@@ -160,24 +160,24 @@ class api extends Admin_Controller
 						);
 						$this->product_product_model->Ekle($urunProductToCategoryData, "product_to_category");
 						foreach ($product->categories->children() as $category) {
-							$parentIDList = kategori_ust_kategori($category, 177);
-							if ($parentIDList) {
-								foreach ($parentIDList as $parent_id) {
-									$cQuery = $this->db->select("category_id")
-											->from("product_to_category")
-											->where("category_id", $parent_id)
-											->where("product_id", $inserted_id)
-											->limit(1)
-											->get();
-									if ($cQuery->num_rows() < 1) {
-										$urunProductToCategoryData = array(
-											"product_id" => $inserted_id,
-											"category_id" => (int) $parent_id
-										);
-										$this->product_product_model->Ekle($urunProductToCategoryData, "product_to_category");
-									}
-								}
-							}
+//							$parentIDList = kategori_ust_kategori($category, 177);
+//							if ($parentIDList) {
+//								foreach ($parentIDList as $parent_id) {
+//									$cQuery = $this->db->select("category_id")
+//											->from("product_to_category")
+//											->where("category_id", $parent_id)
+//											->where("product_id", $inserted_id)
+//											->limit(1)
+//											->get();
+//									if ($cQuery->num_rows() < 1) {
+//										$urunProductToCategoryData = array(
+//											"product_id" => $inserted_id,
+//											"category_id" => (int) $parent_id
+//										);
+//										$this->product_product_model->Ekle($urunProductToCategoryData, "product_to_category");
+//									}
+//								}
+//							}
 							$urunProductToCategoryData = array(
 								"product_id" => $inserted_id,
 								"category_id" => (int) $category
@@ -198,11 +198,12 @@ class api extends Admin_Controller
 
 	public function downloadImages($_im_url = "http://demo.minikutu.com", $name = "no-name") {
 		$headers = @get_headers($_im_url, 1);
-		if ($headers["Content-Type"] != "image/jpeg") {
+		if ($headers["Content-Type"] != "image/jpeg" || $headers["Content-Type"] != "image/png") {
 			return "no-image.jpg";
 		}
+		$ext = $headers["Content-Type"] == "image/jpeg" ? ".jpg" : ".png";
 		$img = @file_get_contents($_im_url);
-		$new_image_name = "data/xml_resimleri/" . url_title($name) . ".jpg";
+		$new_image_name = "data/xml_resimleri/" . url_title($name) . $ext;
 		@file_put_contents(DIR_IMAGE . $new_image_name, $img);
 
 		return $new_image_name;
