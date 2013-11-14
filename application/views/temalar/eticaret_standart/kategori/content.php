@@ -50,14 +50,14 @@
 					<?php echo character_limiter($sub_categories->name, 50) . $stok_say; ?>
 				</a>
 			</div>
-		<?php endif; ?>
+		
 		<?php
 			if($i == '4') {
 				$i = 0;
 				echo '<div class="clear"></div>';
 			}
 	?>
-	
+	<?php endif; ?>
 		<?php else: ?>
 	
 		<?php if($total_products > 0): ?>
