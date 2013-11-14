@@ -23,28 +23,28 @@ class api extends Admin_Controller
 		$this->load->model('yonetim/urunler/product_category_model');
 		$this->load->model('yonetim/urunler/product_product_model');
 	}
-	
+
 	public function aktar() {
 		//echo "adad"; exit;
-		$livedb = $this->load->database("live",TRUE);
+		$livedb = $this->load->database("live", TRUE);
 		//p($livedb); exit;
-		$query = $this->db->select("*")->from("product_to_category")->where("category_id",167)->get();
-		foreach($query->result() as $p) {
-			$productIDList[] = $p->product_id; 
+		$query = $this->db->select("*")->from("product_to_category")->where("category_id", 167)->get();
+		foreach ($query->result() as $p) {
+			$productIDList[] = $p->product_id;
 		}
-		
-		foreach($productIDList as $pa) {
-			$q = $livedb->select("product_id")->from("product")->where("product_id",$pa)->get();
-		
-			if($q->row()) {
+
+		foreach ($productIDList as $pa) {
+			$q = $livedb->select("product_id")->from("product")->where("product_id", $pa)->get();
+
+			if ($q->row()) {
 				// pd
-				$q = $livedb->select("*")->from("product_to_category")->where("product_id",$pa)->where("category_id",167)->get();
+				$q = $livedb->select("*")->from("product_to_category")->where("product_id", $pa)->where("category_id", 167)->get();
 				//$query = $this->db->select("category_id")->from("product_to_category")->where("product_id",$pa)->get();
-				if(!$q->row()) {
-				$arr = array("product_id"=>$pa,"category_id"=>167);
-				//$livedb->where('product_id', $pa);
-				$livedb->insert('product_to_category', $arr);
-				echo "3-";
+				if (!$q->row()) {
+					$arr = array("product_id" => $pa, "category_id" => 167);
+					//$livedb->where('product_id', $pa);
+					$livedb->insert('product_to_category', $arr);
+					echo "3-";
 				}
 				// 
 				//p($query->row_array());
@@ -125,7 +125,7 @@ class api extends Admin_Controller
 					$urunDescData = array(
 						"product_id" => $inserted_id,
 						"language_id" => 1,
-						"seo" => $this->product_product_model->check_seo(url_title($product->name, "dash", TRUE),1,TRUE),
+						"seo" => $this->product_product_model->check_seo(url_title($product->name, "dash", TRUE), 1, TRUE),
 						"name" => (string) $product->name,
 						"description" => (string) $product->description
 					);
@@ -201,7 +201,7 @@ class api extends Admin_Controller
 		if ($headers["Content-Type"] != "image/jpeg" && $headers["Content-Type"] != "image/png") {
 			return "no-image.jpg";
 		}
-		
+
 		$ext = $headers["Content-Type"] == "image/jpeg" ? ".jpg" : ".png";
 		$img = @file_get_contents($_im_url);
 		$new_image_name = "data/xml_resimleri/" . url_title($name) . $ext;
@@ -210,4 +210,41 @@ class api extends Admin_Controller
 		return $new_image_name;
 	}
 
+	public function relateParents() {
+		$query = $this->db->select("product_id")->from("product")->where("status",1)->get();
+		if ($query->result()) {
+			foreach ($query->result() as $product) {
+				//$product->product_id = 909;
+				$query = $this->db->select("category_id")->from("product_to_category")->where("product_id", $product->product_id)->get();
+				if ($query->num_rows()) {
+					//foreach($r)
+					$rows = $query->result();
+					//p($rows); exit;
+					foreach ($rows as $row) {
+						$parentIDList = array();
+						//echo $row->category_id;
+						$parentIDList = kategori_ust_kategori($row->category_id);
+						//p($parentIDList); continue; exit;
+						if ($parentIDList) {
+							foreach ($parentIDList as $p) {
+								if ($p != 0) {
+									$query = $this->db->select("*")->from("product_to_category")->where("product_id", $product->product_id)->where("category_id", $p)->get();
+									if ($query->num_rows() < 1) {
+										echo "yok";
+										$arr = array("product_id" => $product->product_id, "category_id" => $p);
+										$this->db->insert("product_to_category", $arr);
+									}
+									//echo $p."-".$product->product_id;
+								}
+							}
+						}
+						//p($parentIDList); 
+					}
+				}
+				//exit;
+			}
+		}
+	}
+
+	//$parentIDList = kategori_ust_kategori($category, 177);
 }
