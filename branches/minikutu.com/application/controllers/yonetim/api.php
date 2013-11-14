@@ -198,11 +198,15 @@ class api extends Admin_Controller
 
 	public function downloadImages($_im_url = "http://www.technomodel.com/data/images/4/5/45dcfaf60f0418b39e94ac58da80b9f7s.png", $name = "no-name") {
 		$headers = @get_headers($_im_url, 1);
-		if ($headers["Content-Type"] != "image/jpeg" && $headers["Content-Type"] != "image/png") {
+		if ($headers["Content-Type"] != "image/jpeg" && $headers["Content-Type"] != "image/png" && $headers["Content-Type"] != "image/gif") {
 			return "no-image.jpg";
 		}
+		$ext = ".jpg";
+		if ($headers["Content-Type"] == "image/png")
+			$ext = ".png";
+		else if ($headers["Content-Type"] == "image/gif")
+			$ext = ".gif";
 
-		$ext = $headers["Content-Type"] == "image/jpeg" ? ".jpg" : ".png";
 		$img = @file_get_contents($_im_url);
 		$new_image_name = "data/xml_resimleri/" . url_title($name) . $ext;
 		@file_put_contents(DIR_IMAGE . $new_image_name, $img);
@@ -211,7 +215,7 @@ class api extends Admin_Controller
 	}
 
 	public function relateParents() {
-		$query = $this->db->select("product_id")->from("product")->where("status",1)->get();
+		$query = $this->db->select("product_id")->from("product")->where("status", 1)->get();
 		if ($query->result()) {
 			foreach ($query->result() as $product) {
 				//$product->product_id = 909;

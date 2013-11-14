@@ -442,7 +442,7 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 			<?php } ?>
 			
 			<?php if( config('site_ayar_urun_info_goster') == '1' and !empty($product_info->info) ) { ?>
-			<div class="urun_detay_oge">
+			<div class="urun_detay_oge" style="height:auto;">
 				<?php echo $product_info->info; ?>
 			</div>
 			<?php } ?>			
