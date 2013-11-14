@@ -125,7 +125,7 @@ class api extends Admin_Controller
 					$urunDescData = array(
 						"product_id" => $inserted_id,
 						"language_id" => 1,
-						"seo" => url_title($product->name, "dash", TRUE),
+						"seo" => $this->product_product_model->check_seo(url_title($product->name, "dash", TRUE),1,TRUE),
 						"name" => (string) $product->name,
 						"description" => (string) $product->description
 					);
@@ -187,8 +187,7 @@ class api extends Admin_Controller
 					}
 					// category işlemleri son
 
-					echo "başarılı";
-					exit;
+					echo "basarili<br/>";
 					//exit;
 				} else {
 					echo "urun onceden eklenmis <br/>";
