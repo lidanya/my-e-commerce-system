@@ -56,6 +56,8 @@
 				$i = 0;
 				echo '<div class="clear"></div>';
 			}
+		} else {
+			--$i;
 		}
 		?>
 		<?php } else { ?>
