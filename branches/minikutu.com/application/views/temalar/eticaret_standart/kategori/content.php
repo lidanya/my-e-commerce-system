@@ -38,8 +38,8 @@
 					$category_url = str_replace('--category', '', $this->uri->segment(2)) . '---' . $sub_categories->seo . '--category';
 				}
 		?>
-		<?php if(!$category_products): ?>
-			<?php if($total_products > 0): ?>
+		<?php if(!$category_products){ ?>
+			<?php if($total_products > 0){ ?>
 			<div class="kategori_liste_oge sola">
 				<div class="kategori_liste_resim">
 					<a href="<?php echo site_url($category_url); ?>">
@@ -56,17 +56,22 @@
 				$i = 0;
 				echo '<div class="clear"></div>';
 			}
+		}
+		?>
+		<?php } else { ?>
+	
+			<?php if($total_products > 0){ ?>
+			<div class="altKatBar">
+				<a href="<?php echo site_url($category_url); ?>"><?php echo $sub_categories->name . $stok_say; ?></a>
+			</div>
+			<?php } ?>
+	
+		<?php }
+		
+			} 
+		
+		} 
 	?>
-	<?php endif; ?>
-		<?php else: ?>
-	
-		<?php if($total_products > 0): ?>
-		<div class="altKatBar">
-			<a href="<?php echo site_url($category_url); ?>"><?php echo $sub_categories->name . $stok_say; ?></a>
-		</div>
-		<?php endif; ?>
-	
-		<?php endif; } } ?>
 		<div class="clear"></div>
 	</div>
 	<?php if($category_products): ?>
