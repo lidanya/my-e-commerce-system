@@ -162,20 +162,32 @@ class dx_auth
 
 	function _email($to, $from, $subject, $message)
 	{
-		$this->ci->load->library('Email');
-		$email = $this->ci->email;
-
-		$config['mailtype'] = 'html';
-		$config['wordwrap'] = false;
-
-		$email->initialize($config);
-
-		$email->from($from, $this->ci->config->item('site_ayar_email_baslik'));
-		$email->to($to);
-		$email->subject($subject);
-		$email->message($message);
-
-		return $email->send();
+		require_once 'phpmailer/class.phpmailer.php';
+		$mail = new PHPMailer();
+		
+		//$from = "noreply@minikutu.com";
+		if($from == "noreply@minikutu.com" || $from == "sistem@minikutu.com" ) {
+			$pass = "321456Mi";
+		}
+		$mail->isSMTP();
+		$mail->SMTPAuth = true;
+		$mail->CharSet = "utf-8";
+		$mail->Hostname = "minikutu.com";
+		$mail->Host = 'mail.minikutu.com';
+		$mail->Username = $from;
+		$mail->Password = $pass;
+		$mail->Sender = $from;
+		$mail->From = $from;
+		$mail->FromName = $this->ci->config->item('site_ayar_email_baslik');
+		$mail->WordWrap = 60;
+		$mail->Subject = $subject;
+		$mail->Port = 587;
+		$mail->Body = $message;
+		
+		$mail->IsHTML(true);
+		$mail->AddAddress($to);
+		//$mail->ClearAddresses();
+		return $mail->Send();
 	}
 
 	// Set last ip and last login function when user login
