@@ -166,6 +166,7 @@ class dx_auth
 		$mail = new PHPMailer();
 		
 		//$from = "noreply@minikutu.com";
+		$pass = "321456Mi";
 		if($from == "noreply@minikutu.com" || $from == "sistem@minikutu.com" ) {
 			$pass = "321456Mi";
 		}
