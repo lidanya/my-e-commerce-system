@@ -41,7 +41,7 @@ img					 { border:0px; }
 .buton-sss:hover		{ background-image:url(../images/buttons/sss1.png);}
 .buton-iletisim			{ width:64px; height:26px; display:inline-block; background-image:url(../images/buttons/iletisim0.png); background-repeat:no-repeat; border:0px; float:left;}
 .buton-iletisim:hover	{ background-image:url(../images/buttons/iletisim1.png);}
-.kat-seperator			{ width:13px; height:66px; display:inline-block; margin: 0 5px; background-image:url(../images/buttons/kat-seperator.png); background-repeat:no-repeat; background-position:top center; border:0px; float:left; }
+.kat-seperator			{ width:13px; height:66px; display:inline-block; margin: 0 15px; background-image:url(../images/buttons/kat-seperator.png); background-repeat:no-repeat; background-position:top center; border:0px; float:left; }
 .kat-teknoloji			{ width:113px; height:66px; display:inline-block; background-image:url(../images/buttons/katteknoloji0.png); background-repeat:no-repeat; border:0px; float:left; }
 .kat-teknoloji:hover	{ background-image:url(../images/buttons/katteknoloji1.png);}
 .kat-dekorasyon			{ width:153px; height:66px; display:inline-block; background-image:url(../images/buttons/katdekorasyon0.png); background-repeat:no-repeat; border:0px; float:left; }
