@@ -63,6 +63,28 @@ class api extends Admin_Controller
 		}
 	}
 
+	public function clearImgTags() {
+		$query = $this->db->select("pd.description,p.product_id")->from("product_description pd")
+				->join("product p", "p.product_id = pd.product_id")
+				->where("p.status", 1)
+				->get();
+		//echo "ad"; Exit;
+		//p($query->row()->description); exit;
+		foreach ($query->result() as $row) {
+			preg_match_all('/<img src=".*" \/>/', $row->description, $output_array);
+			//p($output_array[0]);
+			foreach ($output_array[0] as $desc) {
+				if (strpos($desc, "technomodel")) {
+					preg_replace('/<img src=".*" \/>/', "", $desc);
+					echo $desc;
+					//p($output_array);
+				}
+			}
+			//p($output_array);
+		}
+		//p($query->result()); exit;
+	}
+
 	/**
 	 * 
 	 * @param type $category
