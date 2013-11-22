@@ -905,7 +905,8 @@ CKEDITOR.config.height = 400;
 $('#tabs a').tabs();
 $('#languages a').tabs();
 jQuery(function($){
-   $("#config_telephone,#config_telephone2,#config_telephone3,#config_telephone4,#config_telephone5, #config_fax,#config_fax2,#config_fax3").mask("(9999) 999 99 99");
+   $("#config_telephone2,#config_telephone3,#config_telephone4,#config_telephone5, #config_fax,#config_fax2,#config_fax3").mask("(9999) 999 99 99");
+   $("#config_telephone").mask("(9999) 999 9 999");
 });
 
 //--></script>
