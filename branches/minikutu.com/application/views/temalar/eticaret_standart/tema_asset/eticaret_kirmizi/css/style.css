@@ -113,7 +113,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*=========================Header===============================*/
 #h_ust {width:1000px;margin:auto;height:40px;padding-top:6px;}
 /*uye paneli ve giris linkleri*/
-#h_uye_menu { height:27px;}
+#h_uye_menu { height:27px; margin-left: 150px;}
 #h_uye_menu .uye-kayit { background: url(../images/kayitol_1.png) no-repeat;}
 #h_uye_menu .feys { background: url(../images/uyegirisi1.png) no-repeat;}
 #h_uye_menu ul {list-style:none;}
@@ -127,7 +127,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 .facelogin, .facelogin:link, .facelogin:visited {margin-left:10px;width:192px;height:31px;display:block;background:url(../images/facelogin.png) no-repeat;color:#fff !important;line-height:26px;text-indent:35px;}
 .facelogin:hover {color:#f1f1f1;}
  
-#h_uye_panel {display:block;cursor:pointer;}
+#h_uye_panel {display:block;cursor:pointer; margin-left: 150px;}
 #Full .panel-acik { position: absolute;top: 31px;width: 154px;z-index: 99999;height: 179px;}
 #Full .panel-acik ul {background:#fff; display:none; z-index: 9999;position:absolute;left:0px;padding:5px 0 0 2px;width:150px;list-style-type:none;text-align:left;}
 #Full .panel-acik ul li {width:140px;margin:0 0 3px 5px;}
@@ -162,11 +162,11 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*logo*/
 #h_logo {margin-top:15px;}
 /*sepet*/
-#h_sepet, #h_sepet:link, #h_sepet:visited {position:absolute;top:18px;right:11px;width:200px;height:42px;padding:0px 0 0 0px;}
-#h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:200px;height:42px;background:url(../images/h_sepet_bg.png) no-repeat 0 0;color:#e0e0e0;display:block;}
+#h_sepet, #h_sepet:link, #h_sepet:visited {position:absolute;top:1px;right:11px;width:200px;height:42px;padding:0px 0 0 0px;}
+#h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:200px;height:30px;background:url(../images/h_sepet_bg.jpg) no-repeat 0 0;color:#e0e0e0;display:block;}
 #h_sepet p a:hover {background-position:bottom left;}
-#h_sepet span {display:inline-block;margin-top:20px;text-indent:10px;}
-.hizlisepet {width:498px;position:absolute;top:52px;right:0px;overflow:hidden;display:none; z-index: 9999;}
+#h_sepet span {display:inline-block;margin-top:8px;text-indent:10px;}
+.hizlisepet {width:498px;position:absolute;top:22px;right:0px;overflow:hidden;display:none; z-index: 9999;}
 .hizlisepet div {overflow:hidden !important;}
 .sepust {width:498px;height:16px;background:url(../images/sepust.png) no-repeat;}
 .seport {width:498px;background:url(../images/seport.png) repeat-y;}

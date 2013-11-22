@@ -33,7 +33,7 @@ $this->load->view('yonetim/header_view');
           	<textarea onkeyup="metni_yaz(this,'#metin')" name="reklam_metni" style="width:400px; height:120px;"><?php echo ($val->reklam_metni) ? $val->reklam_metni : NULL ;?></textarea>
           	<?php echo ($val->reklam_metni_error) ? '<span class="error">'.$val->reklam_metni_error.'</span>' : NULL ;?>
 		  </td>
-		  <td style="text-align:center;"><p style="font-weight:bold:color:#000;margin:0px auto 5px; text-align:center;width:400px;">Reklam Metni Gönderilen E-Postada Aşağıdaki Gibi Görüntülenecektir:</p>
+		  <td style="text-align:center;"><p style="font-weight:bold;color:#000;margin:0px auto 5px; text-align:center;width:400px;">Reklam Metni Gönderilen E-Postada Aşağıdaki Gibi Görüntülenecektir:</p>
 		  	<div id="metin" style="width:400px;margin:auto;height:45px;background-color:#f1f1f1;text-align:center;padding-top:15px;font-size:16px;color:#008fff;overflow:hidden;"><?php echo ($val->reklam_metni) ? $val->reklam_metni : NULL; ?></div>
 		  </td>
         </tr>

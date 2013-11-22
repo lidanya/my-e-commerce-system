@@ -22,35 +22,35 @@
 		var fbAppSecret = "<?php echo config('site_ayar_facebook_secret'); ?>";
 	</script>
 
-	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>style.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>minikutu.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>anasayfa.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>jquery.countdown.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>custom.css"/>
-	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>ui.totop.css"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>style.css?v=<?php echo APP_VER; ?>"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>minikutu.css?v=<?php echo APP_VER; ?>"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>anasayfa.css?v=<?php echo APP_VER; ?>"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>jquery.countdown.css?v=<?php echo APP_VER; ?>"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>custom.css?v=<?php echo APP_VER; ?>"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>ui.totop.css?v=<?php echo APP_VER; ?>"/>
 	<!--<link rel="shortcut icon" href="<?php echo site_resim(); ?>favicon.ico" />-->
     <link rel="shortcut icon" href="<?php echo base_url(ssl_status()); ?>upload/editor/<?php echo config('site_ayar_favicon'); ?>" />
 
 	<?php echo (!empty($_styles)) ? $_styles:NULL; ?>
 
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-2.0.3.min.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-migrate-1.2.1.min.jss"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>easySlider1.7.5.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-ui.min.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.cookie.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>bookmark.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>core_header.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.ui.totop.js"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-2.0.3.min.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-migrate-1.2.1.min.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>easySlider1.7.5.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-ui.min.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.cookie.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>bookmark.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>core_header.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.ui.totop.js?v=<?php echo APP_VER; ?>"></script>
 
-	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip02.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip03.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip04.js"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip02.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip03.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip04.js?v=<?php echo APP_VER; ?>"></script>
 
-	<script type="text/javascript" src="<?php echo site_js(); ?>ajax_post.js"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>ajax_post.js?v=<?php echo APP_VER; ?>"></script>
 	
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.countdown.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.countdown-tr.js"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.lazyload.min.js"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.countdown.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.countdown-tr.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.lazyload.min.js?v=<?php echo APP_VER; ?>"></script>
 	
 	<?php echo (!empty($_scripts)) ? $_scripts:NULL; ?>
 	<?php echo (config('site_google_analytics_durum') == 1) ? config('site_google_analytics_kodu'):NULL;?>
@@ -100,7 +100,7 @@
 		<a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('header_top_menu_contact_us'); ?>"><span class="buton-iletisim"></span></a>
 		
 		<?php if($this->dx_auth->is_logged_in()) { ?>
-			<div id="h_uye_panel" class="saga">
+			<div id="h_uye_panel" class="sola">
 				<div class="panel-acik">
 				<ul>
 					<li><a href="<?php echo ssl_url('uye/bilgi'); ?>" rel="nofollow" title="<?php echo lang('header_user_information'); ?>"><?php echo lang('header_user_information'); ?></a></li>
@@ -114,7 +114,7 @@
 			</div>
 			
 			<?php } else { ?>
-			<div id="h_uye_menu" class="saga">
+			<div id="h_uye_menu" class="sola">
 				<ul>
 					<li>
 						<a class="uye-kayit" href="<?php echo ssl_url('uye/kayit'); ?>" rel="nofollow" title="<?php echo lang('header_user_reg'); ?>">
@@ -132,7 +132,7 @@
 	</div>
 	
 	<div class="Top_alt">
-		<div id="Logo"><a href="/"><img src="<?php echo site_resim(); ?>logo.png" width="288" height="78" /></a></div>
+		<div id="Logo"><a href="/"><img src="<?php echo site_resim(); ?>logo.png?v=<?php echo APP_VER; ?>" width="288" height="78" /></a></div>
 		 <div id="Arama">
 			<form action="<?php echo site_url('urun/arama/index'); ?>" id="form_h_arama" method="get">
 				<div id="h_a_text" style="padding-top:0;" class="sola">
