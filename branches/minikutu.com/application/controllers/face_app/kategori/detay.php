@@ -124,7 +124,7 @@ class detay extends Face_Controller {
 
 		$this->template->add_region('content');
 		$this->template->write_view('content', face_tema() . 'kategori/content', $content_data);
-		$this->template->add_css(APPPATH . 'views/' . face_tema_asset() . 'css/listeler.css');
+		$this->template->add_css(APPPATH . 'views/' . face_tema_asset() . 'css/listeler.css?v='.APP_VER);
 
 		$this->template->render();
 	}
