@@ -11,14 +11,14 @@ Aciklamalar:
 /*sayfalama*/
 .liste_sag {margin:10px 22px 0 0;height:30px;}
 .liste_sag ul {list-style-type:none;}
-.liste_sag ul li {float:left;margin-left:5px;/*IE Fix*/display:inline;height:15px; background: #eee;}
-.liste_sag ul li a.l_sayfa, .liste_sag ul li a.l_sayfa:link, .liste_sag ul li a.l_sayfa:visited {line-height:15px;padding:0 3px;color:#565656;font-weight:bold;font-size:18px;}
+.liste_sag ul li {float:left;margin-left:5px;/*IE Fix*/display:inline;height:15px;}
+.liste_sag ul li a.l_sayfa, .liste_sag ul li a.l_sayfa:link, .liste_sag ul li a.l_sayfa:visited {background: #e1e1e1; padding: 6px 12px; border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; line-height:15px;color:#565656;font-weight:bold;font-size:18px; display: inline-block;}
 .liste_sag ul li a.l_sayfa:hover, .liste_sag ul li.l_aktif a.l_sayfa {color:#f5215b;}
 
 /*=========================Urun listeleme===============================*/
 .yeni, .kampanya,.indirim {position:absolute;height:19px;padding:3px 0 0 5px;z-index:99;color:#ff7777;font-weight:bold;}
 .yeni span, .kampanya span, .indirim span {color:#ffffff;letter-spacing:1px; font-size: 14px;}
-.yeni {top:5px;left:-1px;background:url(../images/bant-yeni.png) no-repeat 0 0; width: 138px; height: 26px;}
+.yeni {top:5px;left:-1px;background:url(../images/bant-yeni.png) no-repeat 0 0; width: 180px; height: 26px;}
 .kampanya {top:7px;left:141px;background:url(../images/kampanya_bg.png) no-repeat 0 0;}
 .indirim {top:2px;left:141px;background:url(../images/kampanya_bg.png) no-repeat 0 0;}
 .urun_liste_oge {position:relative; background: #fff;display:block;margin: 3px 9px 10px 17px;width:220px;height:358px;border:1px solid #ccc;}

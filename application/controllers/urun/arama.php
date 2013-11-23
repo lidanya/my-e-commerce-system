@@ -118,7 +118,7 @@ class Arama extends Public_Controller
 
 		$this->template->add_region('content');
 		$this->template->write_view('content', tema() . 'urun/arama_sonuclari_content',$data);
-		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/listeler.css');
+		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/listeler.css?v='.APP_VER);
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/arama_sonuc.js');
 		$this->template->add_js(APPPATH . 'views/' . tema() . 'js/arama_sonuclari.js');
 		
