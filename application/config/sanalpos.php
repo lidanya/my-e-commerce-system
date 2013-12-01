@@ -110,6 +110,11 @@
 			'host'				=> array('host' => 'sanalpos.ziraatbank.com.tr', 'test' => 'sanalpos-test.ziraatbank.com.tr'),
 			'ccpay'				=> '/?WSDL'
 		),
+                'turkiyefinans'			=> array(
+			'host'				=> array('host' => 'e-tahsildar.com.tr', 
+                                                                  'test' => 'e-tahsildar.com.tr'),
+			'ccpay'				=> '/V2/NetProvOrtakOdeme/NetProvPost.aspx'
+		)
 	);
 
 	$config['banka_pos_gonderim_adres_basarili'] = 'odeme/adim_5/kredi_karti/{siparis_id}/{fatura_id}/{banka}/{tip}';

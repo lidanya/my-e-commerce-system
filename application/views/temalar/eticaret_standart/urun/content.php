@@ -491,6 +491,12 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 				<?php } ?>
 				<div class="clear"></div>
 			</div>
+                        
+                        <?php if($product_info->quantity) { ?>
+                        <div style="margin-top: 10px;">
+                            <img src="<?php echo site_resim(false)."hizligonderi.png"; ?>" />
+                        </div>
+                        <?php } ?>
 			
 			<div id="takip_sonuc"></div>
 			<!--
