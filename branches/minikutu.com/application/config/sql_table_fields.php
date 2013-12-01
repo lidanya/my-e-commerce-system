@@ -87,7 +87,7 @@
         /* Permissions */
             'permissions' => 'id, role_id, data',
         /* Product */
-            'product' => 'product_id, model, quantity, stock_status_id, image, manufacturer_id, price, price_type, stock_type, tax, date_available, status, show_homepage, new_product, feature_status, cargo_required, cargo_multiply_required, date_added, date_modified, viewed, sort_order, minimum, cost, length, width, height, length_class_id, weight, weight_class_id, subtract',
+            'product' => 'product_id, model, quantity, stock_status_id, image, manufacturer_id, price, price_type, stock_type, tax, date_available, status, show_homepage, new_product, feature_status, cargo_required, cargo_multiply_required, date_added, date_modified, viewed, sort_order, minimum, cost, length, width, height, length_class_id, weight, weight_class_id, subtract,hizli_gonder',
         /* Product Description */
             'product_description' => 'product_id, language_id, seo, name, info, meta_keywords, meta_description, description, video',
         /* Product Discount */

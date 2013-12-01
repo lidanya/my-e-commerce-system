@@ -110,7 +110,8 @@ class product_product_model extends CI_Model
 			'length_class_id'			=> $get_values['length_class_id'],
 			'weight'					=> $get_values['weight'],
 			'weight_class_id'			=> $get_values['weight_class_id'],
-			'subtract'					=> $get_values['subtract']
+			'subtract'					=> $get_values['subtract'],
+			'hizli_gonder'					=> $get_values['hizli']
 		);
 		$this->db->insert('product', $product_insert_data);
 		$product_id = $this->db->insert_id();
@@ -520,7 +521,8 @@ class product_product_model extends CI_Model
 			'length_class_id'			=> $get_values['length_class_id'],
 			'weight'					=> $get_values['weight'],
 			'weight_class_id'			=> $get_values['weight_class_id'],
-			'subtract'					=> $get_values['subtract']
+			'subtract'					=> $get_values['subtract'],
+			'hizli_gonder'					=> $get_values['hizli']
 		);
 		$this->db->update('product', $product_insert_data, array('product_id' => (int) $product_id));
 		

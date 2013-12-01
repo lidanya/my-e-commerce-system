@@ -351,6 +351,7 @@ class product extends Admin_Controller {
 		$val->set_rules('date_available', 'Geçerlilik Süresi', 'trim|required|xss_clean');
 		$val->set_rules('tax', 'Vergi Oranı', 'trim|required|numeric|xss_clean');
 		$val->set_rules('subtract', 'Stoktan Düş', 'trim|required|numeric|xss_clean');
+		$val->set_rules('hizli', 'Hizli Gönderi', 'trim|required|numeric|xss_clean');
 		$val->set_rules('status', 'Durum', 'trim|required|numeric|xss_clean');
 		$val->set_rules('sort_order', 'Sıralama', 'trim|required|numeric|xss_clean');
 		$val->set_rules('show_homepage', 'Anasayfada Göster', 'trim|required|numeric|xss_clean');
@@ -524,6 +525,14 @@ class product extends Admin_Controller {
 			$data['subtract'] = $product_info->subtract;
 		} else {
 			$data['subtract'] = '1';
+		}
+                
+                if($this->input->post('hizli')) {
+			$data['hizli'] = $this->input->post('hizli');
+		} elseif(isset($product_info)) {
+			$data['hizli'] = $product_info->hizli_gonder;
+		} else {
+			$data['hizli'] = '1';
 		}
 
 		if($this->input->post('status')) {
