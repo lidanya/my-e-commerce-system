@@ -140,6 +140,7 @@ class product extends Admin_Controller {
 			}
 		}
 		$data['manufacturers'] = $manufacturers;
+		$data['hizli_gonder'] = array("0"=>" - Hayır - ","1"=> " - Evet - ");
 
 		$categories					= $this->product_category_model->get_category_by_parent(0, '-1');		
 		$allowed_categories			= array();
@@ -246,6 +247,8 @@ class product extends Admin_Controller {
 		}
 
 		$val->set_rules('tax', 'Vergi Oranı', 'trim|xss_clean');
+		$val->set_rules('hizli', 'Hizli Gönder', 'trim|xss_clean');
+		$val->set_rules('yeni_urun', 'Yeni Ürün', 'trim|xss_clean');
 		$val->set_rules('selected', 'Seçili Ürünler', 'required|xss_clean');
 
 		$val->set_rules('feature_status', 'Özellik Tabını Göster', 'trim|xss_clean');

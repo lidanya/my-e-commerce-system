@@ -205,6 +205,26 @@
 						</td>
 					</tr>
 					<tr>
+						<td>
+							Hızlı Gönderi : <br /><span class="help">Aynı gün kargoya verilir.</span>
+						</td>
+						<td>
+							<?php
+								echo form_dropdown('hizli', $hizli_gonder);
+							?>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Yeni Ürün :
+						</td>
+						<td>
+							<?php
+								echo form_dropdown('yeni_urun', $hizli_gonder);
+							?>
+						</td>
+					</tr>
+					<tr>
 						<td>Özellik Tabını Göster : <br /><span class="help">Ürünlerin özellik tabını gösterin yada göstermeyin.</span></td>
 						<td>
 							<?php

@@ -492,7 +492,7 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 				<div class="clear"></div>
 			</div>
                         
-                        <?php if($product_info->quantity) { ?>
+                        <?php if($product_info->hizli_gonder) { ?>
                         <div style="margin-top: 10px;">
                             <img src="<?php echo site_resim(false)."hizligonderi.png"; ?>" />
                         </div>
