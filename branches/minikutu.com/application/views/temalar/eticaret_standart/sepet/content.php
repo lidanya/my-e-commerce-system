@@ -495,13 +495,17 @@
 					$div_oge_class = " sepet_gri";
 				}
 			?>
-            <?php if(config('site_ayar_sepet_resim_goster')=='1'): //$resim = show_image($items['basket_image'], $w = 40, $h = 40); // sepette resim gösterilsin mi gösterilmesin mi? ?>
-            <div id="spt_image" style="display:inline; float:left;"><img src="<?php echo $items['basket_image']; ?>" width="40" height="40"  /></div>
-            <?php endif; ?>
+       
 			<div class="sepet_oge<?php echo $div_oge_class; ?><?php echo ($items['durum'] == '0') ? ' sepet_iptal':NULL; ?>" id="sepet_oge_<?php echo $items['rowid']; ?>">
+                            
 				<div class="hash_ids" id="<?php echo $items['rowid']; ?>" style="display:none;"></div>
+                                <?php if(config('site_ayar_sepet_resim_goster')=='1'): ?>
+                                <div id="spt_image" style="display:inline; float:left; padding: 8px;">
+                                    <a href="<?php echo $items['product_link']; ?>"><img src="<?php echo $items['basket_image']; ?>" width="40" height="40"  /></a>
+                                 </div>
+                                <?php endif; ?>
 				<span class="s_tablo01 sola" style="width:370px;height:auto;margin-bottom:5px;">
-					<font title="<?php echo $items['name']; ?>"><?php echo character_limiter($items['name'], 50); ?></font>
+                                    <a href="<?php echo $items['product_link']; ?>"><font title="<?php echo $items['name']; ?>"><?php echo character_limiter($items['name'], 50); ?></font></a>
 					<?php if ($this->cart->has_options($items['rowid']) == TRUE) { ?>
 						<br /><span>
 						<?php foreach ($this->cart->product_options($items['rowid']) as $option_name => $option_value) { ?>

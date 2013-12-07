@@ -299,6 +299,7 @@ $lang['messages_product_detail_product_code'] = 'Ürün Kodu';
 $lang['messages_product_detail_product_brand'] = 'Mark';
 $lang['messages_product_detail_product_price_reg'] = 'Ürün fiyatını görmek için lütfen üye olun.';
 $lang['messages_product_detail_product_price'] = 'Fiyat';
+$lang['messages_product_detail_product_bank_transfer_price'] = 'Havale Fiyatı';
 $lang['messages_product_detail_product_campaign'] = 'Kampanya';
 
 $lang['product_detail_time_left'] = 'Kalan Süre'; 

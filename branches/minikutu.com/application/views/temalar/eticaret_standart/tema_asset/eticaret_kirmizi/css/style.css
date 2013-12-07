@@ -72,7 +72,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #sag {display:none;}
 #orta {width:1000px;margin:0px auto;position:relative;z-index:95;float:right; }
 #footer {width:1000px;margin:10px auto;background:url(../images/footer_bg.png) top repeat-x;position:relative;}
-.footust {width:1000px;}
+.footust {width:1000px; font-family: 'Ubuntu Condensed';}
 .footalt {width:1000px;}
 .foustmenu {height:39px;}
 .foustmenu ul {list-style:none;}
@@ -178,13 +178,13 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 .seport ul {list-style:none;}
 .seport ul li {width:458px;margin:2px auto;border-top:1px solid #ddd;height:30px ;line-height:30px ;}
 .seport ul li:first-child {border-top:none;}
-.seport dl {padding:1px;clear:both;font-size:11px;color:#454545;}
+.seport dl {padding:1px;clear:both;font-size:12px;color:#454545;}
 .seport dt {width:365px;float:left;display:inline;margin:auto 5px auto auto;color:#454545;}
 .seport dt i {font-weight:bold;}
 .seport dt a, .seport dt a:link, .seport dt a:visited {color:#454545 ;display:inline-block;margin-right:10px;}
 .seport dt a:hover {color:#08afe6 ;}
 .seport dd {float:left;display:inline;margin:auto auto auto 5px;}
-.seport u {display:inline-block;margin-right:63px;font-size:11px;text-decoration:none;font-weight:bold;}
+.seport u {display:inline-block;margin-right:63px;font-size:12px;text-decoration:none;font-weight:bold;}
 .seport u em {font-style:normal;margin-right:20px;}
 .seport u cite {font-style:normal;}
 .saltlinkler {margin:10px auto auto auto;width:458px;}
