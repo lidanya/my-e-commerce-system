@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,latin-ext");
 /* HTML ANA KODLAR BASLANGIC */
 *			 { padding:0px; margin:0px; }
-body				 { font-size: 14px; background-color:#EEE; font-family: 'Ubuntu Condensed', sans-serif; color:#333; }
+body				 { font-size: 14px; background-color:#EEE; font-family: Arial, sans-serif; color:#333; }
 a, a:link, a:visited {text-decoration: none;outline: none;}
 #Full				 { width:100%;}
 #Top				 { width:960px; height:30px; margin:auto auto auto auto; padding:5px 10px 5px 10px; text-align:right; font-size:11px; letter-spacing:1px;}
@@ -11,7 +11,7 @@ a, a:link, a:visited {text-decoration: none;outline: none;}
 #Arama				 { width:267px; padding:0px; float:right; text-align:right; margin-top: 20px; margin-right: 38px; }
 #Slider				 { width:960px; height: 323px;  margin:10px auto;}
 #NoSlider			 { width:960px; height:60px; margin:auto auto auto auto; padding-top:30px; }
-#Menu				 { width:960px; height:66px; margin:10px auto; padding:0px 10px 0px 10px; }
+#Menu				 { width:960px; height:66px; margin:10px auto; padding:0px 10px 0px 10px; font-family: 'Ubuntu Condensed'; }
 #Menu a				 { float:left; color: #ccc;margin-top: 22px;font-size: 18px;}
 #Menu a:hover			 { color: #999;}
 #InfoBar			 { width:960px; height:100px; padding-top:10px; margin:auto auto auto auto;}

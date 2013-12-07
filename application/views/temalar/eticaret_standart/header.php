@@ -189,7 +189,7 @@
 								<li>
 									<dl>
 										<dt>
-											<font title="<?php echo $items['name']; ?>"><?php echo character_limiter($items['name'], 30); ?></font> - 
+                                                                                    <a href="<?php echo $items['product_link']; ?>"><font title="<?php echo $items['name']; ?>"><?php echo character_limiter($items['name'], 30); ?></font></a> - 
 											<i class="siterenk">
 												(
 													<?php echo $items['qty']; ?>

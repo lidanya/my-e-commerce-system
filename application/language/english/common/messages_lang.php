@@ -304,6 +304,7 @@ $lang['messages_product_detail_product_code'] = 'Product Code';
 $lang['messages_product_detail_product_brand'] = 'Brand';
 $lang['messages_product_detail_product_price_reg'] = 'Please register to see the product price.';
 $lang['messages_product_detail_product_price'] = 'Price';
+$lang['messages_product_detail_product_bank_transfer_price'] = 'With bank transfer price';
 $lang['messages_product_detail_product_campaign'] = 'Campaign';
 $lang['messages_product_detail_product_campaign_price'] = '{price} for piece, if you buy {piece} pieces';
 $lang['messages_product_detail_with_vat'] = 'With VAT';

@@ -241,7 +241,22 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 				<span class="u_baslik sola"><?php echo lang('messages_product_detail_product_price'); ?></span>
 				<span class="u_oge sola" style="width: 250px;"><?php echo $fiyat; ?></span>
 			</div>
-			<?php
+                        
+                        <?php // ürünün havale indirimli fiyatını göstermek için yapıldı. ?>
+                         <?php if($secenek_bilgi && $secenek_bilgi->odeme_indirim_orani != '00') {
+                             //p(number_format($tl_g.".".$kurus_g, 2, '.', ''));
+                             $fyt = (int)$tl_g.".".$kurus_g;
+                             //p($fyt);
+                            $indirim_ucret_havale_fiyatı= ($fyt * ((100-$secenek_bilgi->odeme_indirim_orani)/100));
+                          ?>
+	
+                        <div class="urun_detay_oge">
+				<span class="u_baslik sola"><?php echo lang('messages_product_detail_product_bank_transfer_price'); ?></span>
+                                <span class="u_oge sola" style="width: 250px;"><?php echo number_format($indirim_ucret_havale_fiyatı,2,".","")." ".$fiyat_bilgi['fiyat_tur'].$kdv_goster; ?></span>
+			</div>
+                        <?php } // ürün havale fiyatı ?>
+			
+                        <?php
 				$kampanya = NULL;
 				$kampanya_kontrol = $this->campaign_model->get_campaign($product_info->product_id);
 				if($kampanya_kontrol) {
