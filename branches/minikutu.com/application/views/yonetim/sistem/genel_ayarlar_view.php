@@ -721,7 +721,7 @@
 						{
 							$yuzdeler[$i] = $i;
 						}
-						echo form_dropdown('config_site_ayar_kur_yuzde', $yuzdeler, ($val->config_site_ayar_kur_yuzde) ? $val->config_site_ayar_kur_yuzde:config('site_ayar_kur_yuzde'));
+						echo form_input('config_site_ayar_kur_yuzde', ($val->config_site_ayar_kur_yuzde) ? $val->config_site_ayar_kur_yuzde:config('site_ayar_kur_yuzde'));
 						?>
 							 ekle<br />
 							<input type="radio" name="config_site_ayar_kur" value="3" onclick="$('.tr_class_girilen').attr('style', 'display:table_row;');" <?php echo set_radio('config_site_ayar_kur', '3', ($gelen_veri == 3) ? TRUE:FALSE); ?> />Girilen değerleri kullan<br />
