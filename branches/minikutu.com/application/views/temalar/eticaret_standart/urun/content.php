@@ -244,15 +244,15 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
                         
                         <?php // ürünün havale indirimli fiyatını göstermek için yapıldı. ?>
                          <?php if($secenek_bilgi && $secenek_bilgi->odeme_indirim_orani != '00') {
-                             //p(number_format($tl_g.".".$kurus_g, 2, '.', ''));
-                             $fyt = (int)$tl_g.".".$kurus_g;
-                             //p($fyt);
+							 list($tl,$krs) = explode(",", $fiyat_g);
+							 $tl = strpos($tl, ".") ? str_replace(".", "", $tl) : $tl;
+                             $fyt = (int)$tl.".".$krs;
                             $indirim_ucret_havale_fiyatı= ($fyt * ((100-$secenek_bilgi->odeme_indirim_orani)/100));
                           ?>
 	
                         <div class="urun_detay_oge">
 				<span class="u_baslik sola"><?php echo lang('messages_product_detail_product_bank_transfer_price'); ?></span>
-                                <span class="u_oge sola" style="width: 250px;"><?php echo number_format($indirim_ucret_havale_fiyatı,2,".","")." ".$fiyat_bilgi['fiyat_tur'].$kdv_goster; ?></span>
+                                <span class="u_oge sola" style="width: 250px;"><?php echo number_format($indirim_ucret_havale_fiyatı,2,".",".")." ".$fiyat_bilgi['fiyat_tur'].$kdv_goster; ?></span>
 			</div>
                         <?php } // ürün havale fiyatı ?>
 			
