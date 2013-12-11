@@ -90,8 +90,8 @@ class kur_model extends CI_Model
 			if($type == 'satis') {
 				if(config('site_ayar_kur') == '2' AND config('site_ayar_kur_yuzde')) {
 					$yuzde_oran			= config('site_ayar_kur_yuzde');
-					$oran				= floatval('0.' . $yuzde_oran);
-					$yuzde				= ($kur_satis * $oran);
+					$oran				= (float)$yuzde_oran;
+					$yuzde				= ($kur_satis * $oran)/100;
 					$ret_price			= ($kur_satis + $yuzde);
 				} elseif(config('site_ayar_kur') == '3') {
 					$ret_price			= $kur_satis_manuel;
@@ -101,8 +101,8 @@ class kur_model extends CI_Model
 			} elseif($type == 'alis') {
 				if(config('site_ayar_kur') == '2' AND config('site_ayar_kur_yuzde')) {
 					$yuzde_oran			= config('site_ayar_kur_yuzde');
-					$oran				= floatval('0.' . $yuzde_oran);
-					$yuzde				= ($kur_alis * $oran);
+					$oran				= (float)$yuzde_oran;
+					$yuzde				= ($kur_satis * $oran)/100;
 					$ret_price			= ($kur_alis + $yuzde);
 				} else if(config('site_ayar_kur') == '3') {
 					$ret_price			= $kur_alis_manuel;
@@ -112,8 +112,8 @@ class kur_model extends CI_Model
 			} else {
 				if(config('site_ayar_kur') == '2' AND config('site_ayar_kur_yuzde')) {
 					$yuzde_oran			= config('site_ayar_kur_yuzde');
-					$oran				= floatval('0.' . $yuzde_oran);
-					$yuzde				= ($kur_satis * $oran);
+					$oran				= (float)$yuzde_oran;
+					$yuzde				= ($kur_satis * $oran)/100;
 					$ret_price			= ($kur_satis + $yuzde);
 				} elseif(config('site_ayar_kur') == '3') {
 					$ret_price			= $kur_satis_manuel;
