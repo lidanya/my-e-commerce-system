@@ -103,17 +103,17 @@
 			'provizyon'			=> '/servlet/cc5ApiServer'
 		),
 		'yapikredi'			=> array(
-			'host'				=> array('host' => 'www.posnet.ykb.com', 'test' => 'setmpos.ykb.com'),
+			'host'				=> array('host' => 'https://www.posnet.ykb.com', 'test' => 'http://setmpos.ykb.com'),
 			'3ds'				=> '/3DSWebService/OOS'
 		),
 		'ziraat'			=> array(
 			'host'				=> array('host' => 'sanalpos.ziraatbank.com.tr', 'test' => 'sanalpos-test.ziraatbank.com.tr'),
 			'ccpay'				=> '/?WSDL'
 		),
-                'turkiyefinans'			=> array(
-			'host'				=> array('host' => 'e-tahsildar.com.tr', 
-                                                                  'test' => 'e-tahsildar.com.tr'),
-			'ccpay'				=> '/V2/NetProvOrtakOdeme/NetProvPost.aspx'
+        'turkiyefinans'		=> array(
+			'host'				=> array('host' => 'www.e-tahsildar.com.tr', 
+                                                                  'test' => 'www.e-tahsildar.com.tr'),
+			'3ds'				=> '/V2/NetProvOrtakOdeme/NetProvPost.aspx'
 		)
 	);
 
