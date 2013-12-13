@@ -347,7 +347,7 @@ $lang['messages_product_detail_comments_success_message'] = 'Yorumunuz başarıl
 $lang['messages_product_detail_comments_error_message'] = 'Yorumunuz eklenemedi, lütfen yöneticiye başvurunuz.';
 $lang['messages_product_detail_comments_error_security_code_message'] = 'Girdiğiniz doğrulama kodu yanlıştır lütfen tekrar deneyiniz.';
 $lang['messages_product_detail_instalment'] = 'Taksit';
-$lang['messages_product_detail_dont_instalment'] = 'Sistemizde taksitli ödeme seçeneği bulunmamaktadır.';
+$lang['messages_product_detail_dont_instalment'] = 'Sistemimizde taksitli ödeme seçeneği bulunmamaktadır.';
 $lang['messages_product_detail_instalment_reg'] = 'Taksit seçeneklerini görmek için üye olun.';
 $lang['messages_product_detail_pictures'] = 'Resimler';
 $lang['messages_product_detail_pictures_no_picture'] = 'Ürün\'e ait başka fotograf bulunmamaktadır.';
@@ -624,7 +624,7 @@ $lang['messages_checkout_4_pay_door_message'] = 'Kapıda Ödeme Bedeli olan <b>{
 $lang['messages_checkout_4_pay_door_form_button_text'] = 'Satınalma İşlemine Devam Et';
 // Ödeme Adım 5 Kredi Kartı
 $lang['messages_checkout_5_credit_cart_title'] = 'Sipariş Detayları';
-$lang['messages_checkout_5_credit_cart_error_title'] = 'Siparişiniz Teknik Bir Nedenden Dolayı Alınmıyor';
+$lang['messages_checkout_5_credit_cart_error_title'] = 'Siparişiniz Teknik Bir Nedenden Dolayı Alınamıyor';
 $lang['messages_checkout_5_credit_cart_success_title'] = 'Siparişiniz Alınmıştır';
 $lang['messages_checkout_5_credit_cart_success_a_title'] = 'Sipariş Detaylarını Görmek İçin Tıklayın';
 $lang['messages_checkout_5_credit_cart_success_message'] = '<b>{toplam_ucret}</b> TL tutarı kredi kartınızdan çekilmiştir. <a class="info" title="{siparis_a_title}" href="{siparis_a_href}" target="_blank">Sipariş Numaranız : <i>#{siparis_id}</i></a>.
