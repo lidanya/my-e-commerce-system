@@ -111,15 +111,13 @@
 			'ccpay'				=> '/?WSDL'
 		),
         'turkiyefinans'		=> array(
-			'host'				=> array('host' => 'www.e-tahsildar.com.tr', 
-                                                                  'test' => 'www.e-tahsildar.com.tr'),
+			'host'				=> array('host' => 'www.e-tahsildar.com.tr', 'test' => 'www.e-tahsildar.com.tr'),
 			'3ds'				=> '/V2/NetProvOrtakOdeme/NetProvPost.aspx'
 		)
 	);
 
-	$config['banka_pos_gonderim_adres_basarili'] = 'odeme/adim_5/kredi_karti/{siparis_id}/{fatura_id}/{banka}/{tip}';
-	//$config['banka_pos_gonderim_adres_hatali'] = 'site/deneme/{siparis_id}/{fatura_id}/{banka}/{tip}';
-	$config['banka_pos_gonderim_adres_hatali'] = 'odeme/adim_5/kredi_karti/{siparis_id}/{fatura_id}/{banka}/{tip}';
+	$config['banka_pos_gonderim_adres_basarili'] = 'odeme/adim_5/kredi_karti/{siparis_id}/{fatura_id}/{banka}/{tip}/';
+	$config['banka_pos_gonderim_adres_hatali'] = 'odeme/adim_5/kredi_karti/{siparis_id}/{fatura_id}/{banka}/{tip}/';
 	$config['banka_pos_pesin_mesaji'] = '<h2 align="center" style="margin-top: 30px;">Bilgileriniz kontrol ediliyor...</h2>';
 	$config['banka_pos_3d_mesaji'] = '<h2 align="center" style="margin-top: 30px;">İlgili bankaya yönlendiriliyorsunuz...</h2>';
 ?>

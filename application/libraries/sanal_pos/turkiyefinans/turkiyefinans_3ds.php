@@ -18,7 +18,8 @@ if (!defined('BASEPATH')) {
   echo serialize($olustur);
  */
 
-class turkiyefinans_3ds {
+class turkiyefinans_3ds
+{
 
 	public $ci;
 	protected $banka = 'turkiyefinans';
@@ -86,11 +87,11 @@ class turkiyefinans_3ds {
 			$strcustomeremailaddress = $gelen_veriler->email_adres;
 			$strterminaluserid = $gelen_veriler->user_id;
 			$strorderid = microtime() . $gelen_veriler->user_id;
-			
+
 			$strinstallmentcount = ($gelen_veriler->taksit == '') ? '0' : $gelen_veriler->taksit;
 			//$strinstallmentcount = (strlen($strinstallmentcount1) < 2) ? '0' . $strinstallmentcount1 : $strinstallmentcount1;
 
-			
+
 			$stramount = $gelen_veriler->fiyat; //İşlem Tutarı
 			p($stramount);
 			$stramount = $stramount * 100; // kuruşları 100 ile çarpıyoruz.
@@ -111,20 +112,21 @@ class turkiyefinans_3ds {
 			p($pOrgNo);
 			$pFirmNo = $pos_model_bilgi->merchantid;
 			p($pFirmNo);
-			$pTermNo = "00".$pos_model_bilgi->terminalid;
+			$pTermNo = "00" . $pos_model_bilgi->terminalid;
 			p($pTermNo);
 			$pCardNo = $kart_numarasi;
 			$pAmount = $stramount;
 			$merchanKey = "123456";
 			p($pCardNo);
-			$hash = sha1($pOrgNo.$pFirmNo.$pTermNo.$pCardNo.$pAmount.$merchanKey);
+			$hash = sha1($pOrgNo . $pFirmNo . $pTermNo . $pCardNo . $pAmount . $merchanKey);
 			p($hash);
 			$pHashB64 = base64_encode($hash);
 			$pHashHex = strToHex($hash);
 			p($pHashB64);
 			p($pHashHex);
 			$post_url = 'https://' . $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii]['host'][$banka_bilgi->kk_banka_test_tipi] . $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii][$this->ascii];
-			
+			p($strsuccessurl);
+			p($strerrorurl);
 			$form = '';
 			$form .= $this->ci->config->item('banka_pos_3d_mesaji');
 			$form .= '<script type="text/javascript">' . "\n";
@@ -185,7 +187,7 @@ class turkiyefinans_3ds {
 				$gonder->durum = false;
 				$gonder->kod = (isset($gelen_veriler->post_verileri['ResCode'])) ? $gelen_veriler->post_verileri['ResCode'] : '99';
 				$gonder->mesaj = (isset($gelen_veriler->post_verileri['ResDesc'])) ? $gelen_veriler->post_verileri['ResDesc'] : 'Hata Oluştu İşlem Gerçekleşmedi';
-			} elseif (($gelen_veriler->post_verileri['ResCode'] == '00') ) {
+			} elseif (($gelen_veriler->post_verileri['ResCode'] == '00')) {
 				$gonder->kod = '00';
 				$gonder->durum = true;
 				$gonder->mesaj = 'İşleminiz Başarılı Bir Şekilde Gerçekleşti';
