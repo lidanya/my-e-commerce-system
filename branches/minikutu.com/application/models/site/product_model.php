@@ -53,7 +53,7 @@ class product_model extends CI_Model
 
 	public function get_product_by_seo($product_seo)
 	{
-            $language_id = get_language('language_id');
+        $language_id = get_language('language_id');
 
 		$this->db->distinct();
 		$this->db->select('pd.name AS name, p.image AS image, m.name AS manufacturer, ' .
