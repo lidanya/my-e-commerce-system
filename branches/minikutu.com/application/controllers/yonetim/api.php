@@ -256,10 +256,10 @@ class api extends Admin_Controller
 		if ($images->length > 0) {
 			for ($i = 0; $i < $images->length; $i++) {
 				$src = $images->item($i)->attributes->getNamedItem('src')->nodeValue;
-				$name = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 6);
+				$name = substr(str_shuffle("123456789abcdefghijklmnopqrstuvwxyz"), 0, 6);
 				$newImage = $this->downloadImages($src, $name, "description");
 				// Outputs: foo.jpg bar.png
-				$description = str_replace($src, show_image($newImage,100,100), $description);
+				$description = str_replace($src, show_image($newImage), $description);
 			}
 			return $description;
 		}
