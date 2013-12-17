@@ -68,19 +68,29 @@ class api extends Admin_Controller
 				->join("product p", "p.product_id = pd.product_id")
 				->where("p.status", 1)
 				->get();
-		foreach ($query->result() as $key=>$row) {
-			$description = '<img src="http://www.technomodel.com/data/images/7/F/7f526647b71c3c5be32892bb9bc9ebb3l.jpg" alt="" /> <p><img src="http://www.technomodel.com/data/images/7/E/7ebafb8d85a015730dd1203377338b59l.jpg" alt="" /></p>';
-			$result = $this->getDescriptionImages($description);
-			
-			if($result) {
-				$data = array("description"=>$result);
-				$this->product_product_model->Guncelle($data, "product_description",'product_id',$row->product_id);
+		foreach ($query->result() as $key => $row) {
+			//$description = '<img src="http://www.technomodel.com/data/images/7/F/7f526647b71c3c5be32892bb9bc9ebb3l.jpg" alt="" /> <p><img src="http://www.technomodel.com/data/images/7/E/7ebafb8d85a015730dd1203377338b59l.jpg" alt="" /></p>';
+			$result = $this->getDescriptionImages($row->description);
+
+			if ($result) {
+				$data = array("description" => $result);
+				$this->product_product_model->Guncelle($data, "product_description", 'product_id', $row->product_id);
 				echo "succeed---";
 			}
 			//if($key == 1) exit;
 			//p($result); exit;
 			//$row->description;
 			//$row->product_id;
+		}
+	}
+
+	public function available_two_months() {
+		$query = $this->db->select("p.product_id")->from("product p")
+				->get();
+		foreach ($query->result() as $key => $row) {
+			$data = array("date_available" => time() + 60 * 24 * 60 * 60);
+			$this->product_product_model->Guncelle($data, "product", 'product_id', $row->product_id);
+			echo "success---";
 		}
 	}
 
@@ -238,7 +248,7 @@ class api extends Admin_Controller
 	public function getDescriptionImages($description = "") {
 		//$description = '<img src="http://www.technomodel.com/data/images/7/F/7f526647b71c3c5be32892bb9bc9ebb3l.jpg" alt="" /> <p><img src="http://www.technomodel.com/data/images/7/E/7ebafb8d85a015730dd1203377338b59l.jpg" alt="" /></p>';
 		$doc = new DOMDocument();
-		$doc->loadHTML($description);
+		@$doc->loadHTML($description);
 
 		$images = $doc->getElementsByTagName("img");
 		//p($images);
@@ -246,13 +256,10 @@ class api extends Admin_Controller
 		if ($images->length > 0) {
 			for ($i = 0; $i < $images->length; $i++) {
 				$src = $images->item($i)->attributes->getNamedItem('src')->nodeValue;
-				//p($src); exit;
-				$name = substr($src, -12,-4);
-				//p($name); exit;
+				$name = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 6);
 				$newImage = $this->downloadImages($src, $name, "description");
 				// Outputs: foo.jpg bar.png
-				$description = str_replace($src, $newImage, $description);
-				//p($news_desc); exit;
+				$description = str_replace($src, show_image($newImage,100,100), $description);
 			}
 			return $description;
 		}
