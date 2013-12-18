@@ -64,8 +64,9 @@ class adim_5 extends Public_Controller {
 			$this->output->set_header("Pragma: no-cache");
 			$this->output->set_header("Expires: now");
 
-			$tip_	= base64_decode($model);
-			$tip	= $this->encrypt->decode($tip_);
+			//$tip_	= base64_decode($model);
+			//$tip	= $this->encrypt->decode($tip_);
+			$tip	= $model;
 			$banka_kontrol = FALSE;
 			$banka_kontrol = $this->db->get_where('odeme_secenek_kredi_karti', array('kk_banka_adi_ascii' => $banka, 'kk_banka_pos_tipi' => $tip, 'kk_banka_durum' => '1'), 1);
 			if(($_POST OR $_GET) AND $banka_kontrol->num_rows()) {

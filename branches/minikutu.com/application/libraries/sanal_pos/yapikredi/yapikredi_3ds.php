@@ -81,8 +81,9 @@ class yapikredi_3ds
 			$uye_bilgi	= $gelen_veriler->uye_bilgi;
 			$banka_adi  = $this->banka;
 
-			$banka_tip_ = $this->ci->encrypt->encode($this->ascii);
-			$banka_tip  = base64_encode($banka_tip_);
+			//$banka_tip_ = $this->ci->encrypt->encode($this->ascii);
+			//$banka_tip  = base64_encode($banka_tip_);
+			$banka_tip = $this->ascii;
 
 			$strerrorurl_ = strtr($hatali_url, array('{siparis_id}' => $siparis_id, '{fatura_id}' => $fatura_id, '{banka}' => $banka_adi, '{tip}' => $banka_tip));
 			$strerrorurl = ssl_url($strerrorurl_);

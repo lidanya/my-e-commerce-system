@@ -73,8 +73,9 @@ class turkiyefinans_3ds
 			$kart_numarasi = $gelen_veriler->kart_numarasi;
 			$banka_adi = $this->banka;
 
-			$banka_tip_ = $this->ci->encrypt->encode($this->ascii);
-			$banka_tip = base64_encode($banka_tip_);
+			//$banka_tip_ = $this->ci->encrypt->encode($this->ascii);
+			//$banka_tip = base64_encode($banka_tip_);
+			$banka_tip = $this->ascii;
 
 			$strerrorurl_ = strtr($hatali_url, array('{siparis_id}' => $siparis_id, '{fatura_id}' => $fatura_id, '{banka}' => $banka_adi, '{tip}' => $banka_tip));
 			$strerrorurl = ssl_url($strerrorurl_);
@@ -121,7 +122,7 @@ class turkiyefinans_3ds
 			$hash = sha1($pOrgNo . $pFirmNo . $pTermNo . $pCardNo . $pAmount . $merchanKey);
 			p($hash);
 			$pHashB64 = base64_encode($hash);
-			$pHashHex = strToHex($hash);
+			$pHashHex = bin2hex($hash);
 			p($pHashB64);
 			p($pHashHex);
 			$post_url = 'https://' . $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii]['host'][$banka_bilgi->kk_banka_test_tipi] . $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii][$this->ascii];
