@@ -161,6 +161,8 @@ class api extends Admin_Controller
 						"description" => (string) $product->description
 					);
 					$this->product_product_model->Ekle($urunDescData, "product_description");
+					
+					$this->getDescriptionImages($product->description);
 					// diğer image işlemleri
 					$i = 1;
 					$returnNames = array();
