@@ -94,7 +94,6 @@ class turkiyefinans_3ds
 
 
 			$stramount = $gelen_veriler->fiyat; //İşlem Tutarı
-			p($stramount);
 			$stramount = $stramount * 100; // kuruşları 100 ile çarpıyoruz.
 			$amount_length = strlen($stramount);
 			if ($amount_length == 3) {
@@ -107,27 +106,18 @@ class turkiyefinans_3ds
 				$_ek_zero = "000000";
 			}
 			$stramount = $_ek_zero . $stramount;
-			p($stramount);
 //			$security_data_terminal_hesapla = (strlen($pos_model_bilgi->terminalid) < 9) ? str_repeat('0', (9 - strlen($pos_model_bilgi->terminalid))) . $pos_model_bilgi->terminalid : $pos_model_bilgi->terminalid;
 			$pOrgNo = $pos_model_bilgi->posnetid;
-			p($pOrgNo);
 			$pFirmNo = $pos_model_bilgi->merchantid;
-			p($pFirmNo);
 			$pTermNo = "00" . $pos_model_bilgi->terminalid;
-			p($pTermNo);
 			$pCardNo = $kart_numarasi;
 			$pAmount = $stramount;
-			$merchanKey = "123456";
-			p($pCardNo);
-			$hash = sha1($pOrgNo . $pFirmNo . $pTermNo . $pCardNo . $pAmount . $merchanKey);
-			p($hash);
-			$pHashB64 = base64_encode($hash);
-			$pHashHex = bin2hex($hash);
-			p($pHashB64);
-			p($pHashHex);
+			$merchanKey = "BDb6NDf6";
+			$H = $pOrgNo . $pFirmNo . $pTermNo . $pCardNo . $pAmount . $merchanKey;
+			$hash = sha1($H);
+			$pHashB64 = "";
+			$pHashHex = strtoupper($hash);
 			$post_url = 'https://' . $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii]['host'][$banka_bilgi->kk_banka_test_tipi] . $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii][$this->ascii];
-			p($strsuccessurl);
-			p($strerrorurl);
 			$form = '';
 			$form .= $this->ci->config->item('banka_pos_3d_mesaji');
 			$form .= '<script type="text/javascript">' . "\n";
@@ -145,7 +135,7 @@ class turkiyefinans_3ds
 			$form .= form_hidden('pSipNo', $siparis_id);
 			$form .= form_hidden('pokUrl', $strsuccessurl);
 			$form .= form_hidden('pfailUrl', $strerrorurl);
-			$form .= form_hidden('pHashB64', $pHashB64);
+			//$form .= form_hidden('pHashB64', $pHashB64);
 			$form .= form_hidden('pHashHex', $pHashHex);
 			$form .= '</form>';
 
