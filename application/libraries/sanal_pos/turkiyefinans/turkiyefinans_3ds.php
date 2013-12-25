@@ -71,7 +71,13 @@ class turkiyefinans_3ds
 			$teslimat_bilgi = $gelen_veriler->teslimat_bilgi;
 			$uye_bilgi = $gelen_veriler->uye_bilgi;
 			$kart_numarasi = $gelen_veriler->kart_numarasi;
+			$kart_numarasi_ay = $gelen_veriler->kart_numarasi_ay;
+			$kart_numarasi_yil = $gelen_veriler->kart_numarasi_yil;
+			$kart_numarasi_guvenlik_kodu = $gelen_veriler->kart_numarasi_guvenlik_kodu;
+			$kart_tipi = $gelen_veriler->kart_tipi;
 			$banka_adi = $this->banka;
+			
+			//p($gelen_veriler);
 
 			//$banka_tip_ = $this->ci->encrypt->encode($this->ascii);
 			//$banka_tip = base64_encode($banka_tip_);
@@ -110,7 +116,12 @@ class turkiyefinans_3ds
 			$pOrgNo = $pos_model_bilgi->posnetid;
 			$pFirmNo = $pos_model_bilgi->merchantid;
 			$pTermNo = "00" . $pos_model_bilgi->terminalid;
+			
+			// kart bilgileri
 			$pCardNo = $kart_numarasi;
+			$pCVV2 = $kart_numarasi_guvenlik_kodu;
+			$pExpDate = $kart_numarasi_yil.$kart_numarasi_ay;
+			
 			$pAmount = $stramount;
 			$merchanKey = "BDb6NDf6";
 			$H = $pOrgNo . $pFirmNo . $pTermNo . $pCardNo . $pAmount . $merchanKey;
@@ -129,6 +140,11 @@ class turkiyefinans_3ds
 			$form .= form_hidden('pOrgNo', $pOrgNo);
 			$form .= form_hidden('pFirmNo', $pFirmNo);
 			$form .= form_hidden('pTermNo', $pTermNo);
+			
+			$form .= form_hidden('pCardNo', $pCardNo);
+			$form .= form_hidden('pCVV2', $pCVV2);
+			$form .= form_hidden('pExpDate', $pExpDate);
+
 			$form .= form_hidden('pAmount', $pAmount);
 			$form .= form_hidden('pTaksit', $strinstallmentcount);
 			$form .= form_hidden('pXid', substr(md5($strorderid), 0, 20));
