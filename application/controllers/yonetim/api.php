@@ -115,6 +115,12 @@ class api extends Admin_Controller
 		$products = @simplexml_load_file($this->file['products']);
 		if ($products) {
 			foreach ($products->children() as $product) {
+
+				$price_type = 1;
+				if ($product->currency == 'Dolar')
+					$price_type = 2;
+				else if ($product->currency == 'Euro')
+					$price_type = 3;
 				//p($parentIDList = kategori_ust_kategori(316, 177)); exit;
 				$urun_control = $this->product_product_model->xml_product_control((string) $product->id);
 
@@ -125,12 +131,6 @@ class api extends Admin_Controller
 
 					$WHL = pow($product->desi * 3000, 1 / 3); // width, height,length
 					$WHL = number_format($WHL, 2, '.', '');
-
-					$price_type = 1;
-					if ($product->currency == 'Dolar')
-						$price_type = 2;
-					else if ($product->currency == 'Euro')
-						$price_type = 3;
 
 					$urunData = array(
 						"model" => (string) $product->id,
@@ -161,7 +161,7 @@ class api extends Admin_Controller
 						"description" => (string) $product->description
 					);
 					$this->product_product_model->Ekle($urunDescData, "product_description");
-					
+
 					$this->getDescriptionImages($product->description);
 					// diğer image işlemleri
 					$i = 1;
@@ -223,7 +223,28 @@ class api extends Admin_Controller
 					echo "basarili<br/>";
 					//exit;
 				} else {
-					echo "urun onceden eklenmis <br/>";
+
+					$urunData = array(
+						//"model" => (string) $product->id,
+						//"quantity" => $product->stock,
+						//"stock_status_id" => 0,
+						//"image" => $new_image_name,
+						"price" => $product->price,
+						"price_type" => $price_type,
+						"stock_type" => 12,
+						"tax" => $product->kdv,
+						"date_available" => time() + 30 * 24 * 60 * 60, // default 1 ay
+						//"status" => 1,
+						//"feature_status" => 0,
+						//"cargo_required" => 1,
+						//"date_added" => time(),
+						"date_modified" => time(),
+							//"length" => $WHL,
+							//"width" => $WHL,
+							//"height" => $WHL,
+					);
+					$this->product_product_model->Guncelle($urunData, "product", "model", (string) $product->id);
+					echo "urun güncellendi <br/>";
 				}
 			}
 		}
