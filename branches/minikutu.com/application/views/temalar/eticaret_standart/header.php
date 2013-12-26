@@ -57,7 +57,7 @@
     
     <script type="text/javascript">
 		$(function() {
-			//$(".urun_liste_resim img").lazyload({effect : "fadeIn"});
+			$(".urun_liste_resim img").lazyload({effect : "fadeIn"});
 			/*var defaults = {
 	  			containerID: 'toTop', // fading element id
 				containerHoverID: 'toTopHover', // fading element hover id
