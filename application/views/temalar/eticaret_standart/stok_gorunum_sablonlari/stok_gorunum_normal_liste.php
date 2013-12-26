@@ -109,7 +109,7 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1' and isset($degerler->d
 		{yeni_urun}
 		{kampanya}
 		{indirim}
-		<div class="urun_liste_resim"><a href="{urun_liste_resim_a}"><img src="{urun_liste_resim_img_src}" data-original="{urun_liste_resim_img_src}" alt="{urun_liste_resim_img_alt}" title="{urun_liste_resim_img_title}" /></a></div>
+		<div class="urun_liste_resim"><a href="{urun_liste_resim_a}"><img src="{urun_default_img}" data-original="{urun_liste_resim_img_src}" alt="{urun_liste_resim_img_alt}" title="{urun_liste_resim_img_title}" /></a></div>
 		<a class="urun_liste_baslik sitelink2" href="{urun_liste_baslik_a}">{urun_liste_baslik_deger}</a>
 		{fiyat}
  
