@@ -33,14 +33,14 @@
 
 	<?php echo (!empty($_styles)) ? $_styles:NULL; ?>
 
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-2.0.3.min.js?v=<?php echo APP_VER; ?>"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-migrate-1.2.1.min.js?v=<?php echo APP_VER; ?>"></script>
+	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-1.6.1.min.js?v=<?php echo APP_VER; ?>"></script>
+	<!--<script type="text/javascript" src="<?php echo site_js(); ?>jquery-migrate-1.2.1.min.js?v=<?php echo APP_VER; ?>"></script>-->
 	<script type="text/javascript" src="<?php echo site_js(); ?>easySlider1.7.5.js?v=<?php echo APP_VER; ?>"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>jquery-ui.min.js?v=<?php echo APP_VER; ?>"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.cookie.js?v=<?php echo APP_VER; ?>"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>bookmark.js?v=<?php echo APP_VER; ?>"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>core_header.js?v=<?php echo APP_VER; ?>"></script>
-	<script type="text/javascript" src="<?php echo site_js(); ?>jquery.ui.totop.js?v=<?php echo APP_VER; ?>"></script>
+	<!--<script type="text/javascript" src="<?php echo site_js(); ?>jquery.ui.totop.js?v=<?php echo APP_VER; ?>"></script>-->
 
 	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip02.js?v=<?php echo APP_VER; ?>"></script>
 	<script type="text/javascript" src="<?php echo site_js(); ?>menu_tip03.js?v=<?php echo APP_VER; ?>"></script>
@@ -66,7 +66,7 @@
 	 		};
 			*/
 			
-			$().UItoTop({ easingType: 'easeOutQuart' });
+			//$().UItoTop({ easingType: 'easeOutQuart' });
 		
 	});
     //SKOCH product batch processing
