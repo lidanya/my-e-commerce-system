@@ -9,11 +9,6 @@ $(document).ready(function(){
     	<h1 id="sayfa_baslik"><?php echo lang('messages_static_page_contact_title'); ?></h1>
 			<div class="page_ust"></div>
 			<div class="page_ic" style="<?php echo (config('site_google_maps_durum') == 1) ? 'height:370px;' : '' ?>">
-				<?php if(config('site_google_maps_durum') == 2) {?>
-				<div class="i_logo"><img src="<?php echo base_url(ssl_status()); ?>upload/editor/<?php echo config('site_ayar_logo'); ?>" style="width:140px" alt="<?php echo config('site_ayar_baslik'); ?>" title="<?php echo config('site_ayar_baslik'); ?>" /></div>
-				<?php } else {?>
-					<div class="i_google"><?php echo config('site_google_maps_kodu');?></div>
-				<?php } ?>
 				<span class="ib_baslik i_adres sola"><?php echo lang('messages_static_page_contact_address'); ?></span>
 				<span class="ib_yazi sola" style="width:480px;height:auto;word-wrap:break-word;">: <?php echo config('site_ayar_sirket_adres');?></span>
 				<div class="clear"></div>
@@ -66,6 +61,11 @@ $(document).ready(function(){
 				<span class="ib_baslik i_mail sola"><?php echo lang('messages_static_page_contact_email'); ?></span>
 				<span class="ib_yazi sola">: <a class="sitelink" href="mailto:<?php echo config('site_ayar_mail');?>"><?php echo config('site_ayar_mail');?></a></span>
 				<div class="clear"></div>
+				<?php if(config('site_google_maps_durum') == 2) {?>
+				<div class="i_logo"><img src="<?php echo base_url(ssl_status()); ?>upload/editor/<?php echo config('site_ayar_logo'); ?>" style="width:140px" alt="<?php echo config('site_ayar_baslik'); ?>" title="<?php echo config('site_ayar_baslik'); ?>" /></div>
+				<?php } else {?>
+					<div class="i_google"><?php echo config('site_google_maps_kodu');?></div>
+				<?php } ?>
 			</div>
 			<div class="page_alt"></div>
 <?php 
@@ -231,6 +231,7 @@ if($bayiler->num_rows() > 0)
 					
 				</span>
 				</form>
+				
 			</div>
 			<div class="page_alt"></div>
 		</div>	

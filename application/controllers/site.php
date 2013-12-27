@@ -168,7 +168,7 @@ class site extends Public_Controller
 
 			$this->template->add_region('content');
 			$this->template->write_view('content', tema() . 'iletisim/content', $content_data);
-			$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css');
+			$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/uyeislem.css?v='.APP_VER);
 
 			$this->output->enable_profiler(false);
 			$this->template->render();
