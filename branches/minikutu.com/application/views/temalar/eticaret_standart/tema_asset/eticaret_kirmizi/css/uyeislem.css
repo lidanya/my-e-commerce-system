@@ -21,7 +21,7 @@ Aciklamalar:
 
 /*============================Iletisim=================================*/
 #iletisim {width:720px;}
-.i_google {width:300px;position:absolute;z-index:99;top:50px;left:350px;}
+.i_google {width: 450px; margin: 0 auto;}
 .i_logo {top:50px;left:420px;position:absolute;width:199px;}
 .i_logo img {width:199px;}
 .i_adres {background:url(../images/iletisim_adres.png) no-repeat  0 0;}
