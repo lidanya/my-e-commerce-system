@@ -160,7 +160,7 @@
 			<table class="form">
 				<tr>
 					<td><span class="entry">Cep Telefonu:</span></td>
-					<td><input type="text" name="ide_cep" value="<?php echo ($val->ide_cep) ? $val->ide_cep:$uye_inf->ide_cep; ?>" />
+					<td><input type="text" name="ide_cep" class="phone" value="<?php echo isset($val->ide_cep) ? $val->ide_cep:$uye_inf->ide_cep; ?>" />
 					<?php if (!empty($val->ide_cep_error)) { ?>
 						<span class="error"><?php echo $val->ide_cep_error; ?></span>
 					<?php } ?>
@@ -168,7 +168,7 @@
 				</tr>
 				<tr>
 					<td><span class="entry">İş Telefonu:</span></td>
-					<td><input type="text" name="adr_is_tel1" value="<?php echo ($val->adr_is_tel1) ? $val->adr_is_tel1:$uye_ilt_inf->adr_is_tel1; ?>" />
+					<td><input type="text" name="adr_is_tel1" class="phone" value="<?php echo isset($val->adr_is_tel1) ? $val->adr_is_tel1:$uye_ilt_inf->adr_is_tel1; ?>" />
 					<?php if (!empty($val->adr_is_tel1_error)) { ?>
 						<span class="error"><?php echo $val->adr_is_tel1_error; ?></span>
 					<?php } ?>
@@ -176,7 +176,7 @@
 				</tr>
 				<tr>
 					<td><span class="entry">İş Faks:</span></td>
-					<td><input type="text" name="adr_is_fax" value="<?php echo ($val->adr_is_fax) ? $val->adr_is_fax:$uye_ilt_inf->adr_is_fax; ?>" />
+					<td><input type="text" name="adr_is_fax" class="phone" value="<?php echo isset($val->adr_is_fax) ? $val->adr_is_fax:$uye_ilt_inf->adr_is_fax; ?>" />
 					<?php if (!empty($val->adr_is_fax_error)) { ?>
 						<span class="error"><?php echo $val->adr_is_fax_error; ?></span>
 					<?php } ?>
@@ -184,7 +184,7 @@
 				</tr>
 				<tr>
 					<td><span class="entry">Ev Telefonu:</span></td>
-					<td><input type="text" name="adr_is_tel2" value="<?php echo ($val->adr_is_tel2) ? $val->adr_is_tel2:$uye_ilt_inf->adr_is_tel2; ?>" />
+					<td><input type="text" name="adr_is_tel2" class="phone" value="<?php echo isset($val->adr_is_tel2) ? $val->adr_is_tel2:$uye_ilt_inf->adr_is_tel2; ?>" />
 					<?php if (!empty($val->adr_is_tel2_error)) { ?>
 						<span class="error"><?php echo $val->adr_is_tel2_error; ?></span>
 					<?php } ?>
@@ -192,7 +192,7 @@
 				</tr>
 				<tr>
 					<td><span class="entry">İş Adresi:</span></td>
-					<td><textarea name="adr_is_ack" style="width: 200px; height: 100px;"><?php echo ($val->adr_is_ack) ? $val->adr_is_ack:$uye_ilt_inf->adr_is_ack; ?></textarea>
+					<td><textarea name="adr_is_ack" style="width: 200px; height: 100px;"><?php echo isset($val->adr_is_ack) ? $val->adr_is_ack:$uye_ilt_inf->adr_is_ack; ?></textarea>
 					<?php if (!empty($val->adr_is_ack_error)) { ?>
 						<span class="error"><?php echo $val->adr_is_ack_error; ?></span>
 					<?php } ?>
@@ -244,6 +244,7 @@
 <script type="text/javascript"><!--
 $(document).ready(function() {
 	$('#ide_dogtar').datepicker({dateFormat: 'yy-mm-dd'});
+	$('.date').datepicker({dateFormat:'yy-mm-dd'});
 });
 //--></script>
 <script type="text/javascript"><!--
