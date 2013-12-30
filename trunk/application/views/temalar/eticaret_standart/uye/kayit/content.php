@@ -62,12 +62,10 @@
 			<div class="sola uye_text">&nbsp;</div>
 			<div class="sola uye_checkbox">
 				<a class="butonum sola" onclick="$('#uye_kayit').submit();" href="javascript:;">
-					<span class="butsol"></span>
 					<span class="butor"><?php echo lang('messages_user_register_form_button'); ?></span>
-					<span class="butsag"></span>
 				</a>
 				<?php if (config('site_ayar_facebook_status')) { ?>
-					<a href="javascript:;" onclick="redirect('<?php echo ssl_url('uye/giris/facebook'); ?>');" title="Facebook İle Giriş Yapmak İçin Tıklayın" class="facelogin sola">
+					<a href="javascript:;" onclick="FBLogin();" title="Facebook İle Giriş Yapmak İçin Tıklayın" class="facelogin sola">
 						Facebook İle Giriş Yap
 					</a>
 				<?php } ?>
