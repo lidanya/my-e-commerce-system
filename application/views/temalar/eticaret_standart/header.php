@@ -17,6 +17,10 @@
 		var css_url_n			= eticaret_base_url + "<?php echo site_css(TRUE); ?>";
 		var resim_url			= eticaret_base_url + "<?php echo site_resim(); ?>";
 		var resim_url_n			= eticaret_base_url + "<?php echo site_resim(TRUE); ?>";
+		var fpAppStatus = "<?php echo config('site_ayar_facebook_status'); ?>";
+		var fbAppID = "<?php echo config('site_ayar_facebook_app_id'); ?>";
+		var fbAppSecret = "<?php echo config('site_ayar_facebook_secret'); ?>";
+	
 	</script>
 
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>style.css"/>

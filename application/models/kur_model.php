@@ -90,8 +90,8 @@ class kur_model extends CI_Model
 			if($type == 'satis') {
 				if(config('site_ayar_kur') == '2' AND config('site_ayar_kur_yuzde')) {
 					$yuzde_oran			= config('site_ayar_kur_yuzde');
-					$oran				= floatval('0.' . $yuzde_oran);
-					$yuzde				= ($kur_satis * $oran);
+					$oran				= (float)$yuzde_oran;
+					$yuzde				= ($kur_satis * $oran)/100;
 					$ret_price			= ($kur_satis + $yuzde);
 				} elseif(config('site_ayar_kur') == '3') {
 					$ret_price			= $kur_satis_manuel;
@@ -101,8 +101,8 @@ class kur_model extends CI_Model
 			} elseif($type == 'alis') {
 				if(config('site_ayar_kur') == '2' AND config('site_ayar_kur_yuzde')) {
 					$yuzde_oran			= config('site_ayar_kur_yuzde');
-					$oran				= floatval('0.' . $yuzde_oran);
-					$yuzde				= ($kur_alis * $oran);
+					$oran				= (float)$yuzde_oran;
+					$yuzde				= ($kur_satis * $oran)/100;
 					$ret_price			= ($kur_alis + $yuzde);
 				} else if(config('site_ayar_kur') == '3') {
 					$ret_price			= $kur_alis_manuel;
@@ -112,8 +112,8 @@ class kur_model extends CI_Model
 			} else {
 				if(config('site_ayar_kur') == '2' AND config('site_ayar_kur_yuzde')) {
 					$yuzde_oran			= config('site_ayar_kur_yuzde');
-					$oran				= floatval('0.' . $yuzde_oran);
-					$yuzde				= ($kur_satis * $oran);
+					$oran				= (float)$yuzde_oran;
+					$yuzde				= ($kur_satis * $oran)/100;
 					$ret_price			= ($kur_satis + $yuzde);
 				} elseif(config('site_ayar_kur') == '3') {
 					$ret_price			= $kur_satis_manuel;
@@ -177,7 +177,7 @@ class kur_model extends CI_Model
 		{
 			//if(date('Hi', time()) == '1000' || date('Hi', time()) == '1600')
 			//{
-				$this->yeni_guncelleme($this->kur_adresi['html']);
+				$this->yeni_guncelleme($this->kur_adresi['xml']);
 			//}
 		}
 	}
@@ -190,17 +190,23 @@ class kur_model extends CI_Model
 		if ($gun_kontrol == '0')
 		{
 			@ini_set('default_socket_timeout', 1);
-			$dosya_kontrol = @file($kur_adresi);
+			$dosya_kontrol = @simplexml_load_file($kur_adresi);
 			if($dosya_kontrol)
 			{
-				$usd = explode(" ", $dosya_kontrol[11]);
-				$eur = explode(" ", $dosya_kontrol[14]);
-				$gbp = explode(" ", $dosya_kontrol[15]);
-				if ($usd[25] != '' and $usd[32] != '' and $eur[30] != '' and $eur[37] != '' and $gbp[19] != '' and $gbp[26] != '')
+				$arrUsdSatis = $dosya_kontrol->xpath("Currency[@Kod='USD']/ForexSelling");
+				$arrUsdAlis = $dosya_kontrol->xpath("Currency[@Kod='USD']/ForexBuying");
+				
+				$arrEurSatis = $dosya_kontrol->xpath("Currency[@Kod='EUR']/ForexSelling");
+				$arrEurAlis = $dosya_kontrol->xpath("Currency[@Kod='EUR']/ForexBuying");
+				
+				$arrGbpSatis = $dosya_kontrol->xpath("Currency[@Kod='GBP']/ForexSelling");
+				$arrGbpAlis = $dosya_kontrol->xpath("Currency[@Kod='GBP']/ForexBuying");
+				
+				if ($arrUsdSatis != '' and $arrUsdAlis != '' and $arrEurSatis != '' and $arrEurAlis != '' and $arrGbpSatis != '' and $arrGbpAlis != '')
 				{
 					$usd_kontrol = $this->db->get_where('kurlar', array('kur_adi' => 'USD'));
-					$usd_alis = $usd[25];
-					$usd_satis = $usd[32];
+					$usd_alis = $arrUsdAlis[0];
+					$usd_satis = $arrUsdSatis[0];
 					
 					if($usd_kontrol->num_rows() > 0)
 					{
@@ -227,8 +233,8 @@ class kur_model extends CI_Model
 					}
 
 					$eur_kontrol = $this->db->get_where('kurlar', array('kur_adi' => 'EUR'));
-					$eur_alis = $eur[30];
-					$eur_satis = $eur[37];
+					$eur_alis = $arrEurAlis[0];
+					$eur_satis = $arrEurSatis[0];
 
 					if($eur_kontrol->num_rows() > 0)
 					{
@@ -255,8 +261,8 @@ class kur_model extends CI_Model
 					}
 
 					$gbp_kontrol = $this->db->get_where('kurlar', array('kur_adi' => 'GBP'));
-					$gbp_alis = $gbp[19];
-					$gbp_satis = $gbp[26];
+					$gbp_alis = $arrGbpAlis[0];
+					$gbp_satis = $arrGbpSatis[0];
 
 					if($gbp_kontrol->num_rows() > 0)
 					{
