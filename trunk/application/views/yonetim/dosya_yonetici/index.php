@@ -98,7 +98,14 @@ img {
 </head>
 <body>
 <div id="container">
-  <div id="menu"><a id="create" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/folder.png');">Yeni Klasör</a><a id="delete" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/edit-delete.png');">Sil</a><a id="move" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/edit-cut.png');">Taşı</a><a id="copy" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/edit-copy.png');">Kopyala</a><a id="rename" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/edit-rename.png');">Yeniden Adlandır</a><a id="upload" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/upload.png');">Yükle</a><a id="refresh" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/refresh.png');">Yenile</a></div>
+  <div id="menu">
+	  <a id="create" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/folder.png');">Yeni Klasör</a>
+	  <a id="delete" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/edit-delete.png');">Sil</a>
+	  <a id="move" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/edit-cut.png');">Taşı</a>
+	  <a id="copy" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/edit-copy.png');">Kopyala</a>
+	  <a id="rename" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/edit-rename.png');">Yeniden Adlandır</a>
+	  <a id="upload" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/upload.png');">Yükle</a>
+	  <a id="refresh" class="button" style="background-image: url('<?php echo yonetim_resim(); ?>filemanager/refresh.png');">Yenile</a></div>
   <div id="column_left"></div>
   <div id="column_right"></div>
 </div>
