@@ -302,6 +302,18 @@
 						</td>
 					</tr>
 					<tr>
+						<td><span class="required">*</span>Hızlı Gönderi<br /><span class="help">Aynı gün kargoya verilir.</span></td>
+						<td>
+							<?php
+								$_hizli_array = array('0' => ' - Hayır - ', '1' => ' - Evet - ');
+								echo form_dropdown('hizli', $_hizli_array, $hizli);
+							?>
+							<?php if (form_error('hizli')) { ?>
+								<span class="error"><?php echo form_error('hizli'); ?></span>
+							<?php } ?>
+						</td>
+					</tr>
+					<tr>
 						<td><span class="required">*</span> Durum<br /><span class="help">Ürünleri aktif yada pasif edin.</span></td>
 						<td>
 							<?php

@@ -491,6 +491,12 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 				<div class="clear"></div>
 			</div>
 			
+			 <?php if($product_info->hizli_gonder) { ?>
+                        <div style="margin-top: 10px;">
+                            <img src="<?php echo site_resim(false)."hizligonderi.png"; ?>" />
+                        </div>
+              <?php } ?>
+			
 			<div id="takip_sonuc"></div>
 			<!--
 			<div id="urun_detay_butonlar">
@@ -509,40 +515,20 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 #share_this{float:left;}
 div.addthis_toolbox a{padding:0 5px!important}			
 </style>
-      <div id="share_this">
-            <!-- AddThis Button BEGIN -->
-    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-    <a class="addthis_button_compact"><img src="http://www.notonthehighstreet.com/images/pages/products/share_this_2.png" /></a>
-    <a class="addthis_button_email"><img src="http://www.notonthehighstreet.com/images/pages/products/mail.png" /></a>
-    <a class="addthis_button_print"><img src="http://www.notonthehighstreet.com/images/pages/products/print.png" /></a>
-    <a class="addthis_button_twitter"><img src="http://www.notonthehighstreet.com/images/pages/products/tweet_logo.png" /></a>
-    </div>
+   <div id="urun_paylas" class="sola">      
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ee9eaed0852d3b9"></script>
+<!-- AddThis Button END -->
 
-    <script type="text/javascript">var addthis_config = {"data_track_clickback":true, data_ga_tracker:"UA-431126-1"};</script>
-    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=gregorybecker"></script>
-    <!-- AddThis Button END -->
-
-      </div>
-
-      <div id="facebook_like">
-            <script src="http://connect.facebook.net/en_US/all.js#appId=149811475073425&amp;xfbml=1"></script>
-
-    <fb:like href="<?php echo current_url();?>" layout="button_count" send="true" width="115" show_faces="true" font="arial"></fb:like>
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({appId: '149811475073425', status: true, cookie: true, xfbml: true});
-      };
-      (function() {
-        var e = document.createElement('script'); e.async = true;
-        e.src = document.location.protocol +
-          '//connect.facebook.net/en_US/all.js';
-        document.getElementById('fb-root').appendChild(e);
-      }());
-    </script>
-
-      </div>
-			</div>
+</div>
+</div>
 			 
 			<div class="clear"></div>
 		</div>

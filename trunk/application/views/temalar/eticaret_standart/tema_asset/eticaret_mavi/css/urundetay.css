@@ -48,7 +48,7 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 #urun_detay_butonlar a.u_yorum {background-position:top right;width:65px;}
 #urun_detay_butonlar a:hover.u_yorum {background-position:bottom right;}
 #urun_paylas_metin {color:#7f7f7f;font-size:13px;width:150px;margin-top:20px;text-align:right;padding-top:3px;}
-#urun_paylas {text-align:center;width:240px;margin-top:20px;}
+#urun_paylas {text-align:center;width:402px;margin-top:20px;}
 
 /*tab menu*/
 #urun_tablar {width:745px;margin:15px auto 0;height:35px;}
