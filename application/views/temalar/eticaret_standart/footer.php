@@ -46,7 +46,6 @@ if(config('site_ayar_ssl_kod') != '')
 				<li><a class="<?php $this->menu->menu_class(2,3,'urun','yeni','h_aktif',3);?>" href="<?php echo site_url('urun/yeni'); ?>" title="<?php echo lang('header_middle_menu_new_products'); ?>"><?php echo lang('header_middle_menu_new_products'); ?></a></li>
 				<li><a class="<?php $this->menu->menu_class(2,3,'urun','kampanyali','h_aktif',3);?>" href="<?php echo site_url('urun/kampanyali'); ?>" title="<?php echo lang('header_middle_menu_campaign_products'); ?>"><?php echo lang('header_middle_menu_campaign_products'); ?></a></li>
 				<li><a class="h_son<?php $this->menu->menu_class(2,3,'urun','indirimli',' h_aktif',3);?>" href="<?php echo site_url('urun/indirimli'); ?>" title="<?php echo lang('header_middle_menu_discount_products'); ?>"><?php echo lang('header_middle_menu_discount_products'); ?></a></li>
-				<li><?php echo show_page('1', '', '', ''); ?></li>
 			</ul>
 		</div>
 		<!--fomenu SON -->
