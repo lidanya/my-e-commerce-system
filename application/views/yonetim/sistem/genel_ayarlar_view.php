@@ -31,6 +31,7 @@
     		<a tab="#tab_kurlar">Döviz Kurları</a>
     		<a tab="#tab_coupon">Kupon Uygulaması</a>
     		<a tab="#tab_facebook">Facebook Ayarları</a>
+    		<a tab="#tab_xml">XML Servis Ayarları</a>
 		</div>
 
     	<form action="<?php echo current_url(); ?>" method="post" enctype="multipart/form-data" id="form">
@@ -844,10 +845,47 @@
 				</table>				
 			</div>
 
+			<div id="tab_xml">
+				<table class="form">
+					<tr>
+						<td>Technomodel Ürün Güncelle:</td>
+						<td>
+							<span class="xml_update_but" style="width:100px; border-radius:4px; font-weight:bold; color:#fff; height:20px; background:#0291cb; padding:10px; cursor: pointer;">Güncelle</span>
+							<span class="retMsg" style="color:#333; font-weight:bold;"></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+
     	</form>
   	</div>
 </div>
 <script type="text/javascript">
+	$(function(){
+		$(".xml_update_but").click(function(){
+		$.ajax({
+            type : 'POST',
+            url : "/yonetim/api/addProducts",
+            //async : false,
+            data : {},
+            beforeSend : function (){
+                $(".xml_update_but").text("Güncelleniyor... Bekleyin");
+				$(".retMsg").html("");
+            },
+            success : function (returnData) {
+               $(".xml_update_but").text("Güncelle");
+			   $(".retMsg").html(returnData);
+            },
+            error : function (xhr, textStatus, errorThrown) {
+                //other stuff
+            },
+            complete : function (){
+                $(".xml_update_but").text("Güncelle");
+            }
+        });
+			
+		});
+	});
 	function bakim_modu(val)
 	{
 		if(val == 1)

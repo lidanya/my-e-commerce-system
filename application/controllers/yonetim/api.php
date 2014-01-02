@@ -111,7 +111,8 @@ class api extends Admin_Controller
 	}
 
 	public function addProducts() {
-
+		$_eklenen = 0;
+		$_guncellenen = 0;
 		$products = @simplexml_load_file($this->file['products']);
 		if ($products) {
 			foreach ($products->children() as $product) {
@@ -220,7 +221,8 @@ class api extends Admin_Controller
 					}
 					// category işlemleri son
 
-					echo "basarili<br/>";
+					//echo "basarili<br/>";
+					++$_eklenen;
 					//exit;
 				} else {
 
@@ -244,10 +246,14 @@ class api extends Admin_Controller
 							//"height" => $WHL,
 					);
 					$this->product_product_model->Guncelle($urunData, "product", "model", (string) $product->id);
-					echo "urun güncellendi <br/>";
+					//echo "urun güncellendi <br/>";
+					
+					++$_guncellenen;
 				}
 			}
 		}
+		
+		echo $_eklenen." yeni ürün eklendi. ".$_guncellenen." ürün güncellendi.";
 	}
 
 	public function downloadImages($_im_url = "http://www.technomodel.com/data/images/4/5/45dcfaf60f0418b39e94ac58da80b9f7s.png", $name = "no-name", $path = "xml_resimleri") {
