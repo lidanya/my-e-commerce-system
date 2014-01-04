@@ -1,0 +1,19 @@
+
+Kontrol Paneli
+
+1) Anasayfaya genel bakış tabı'ı altında 
+Toplam Satış:	874,418.10TL
+Bu Yıl Toplam Satış:	3,085.70TL
+Toplam Sipariş:	953
+Toplam Müşteri:	289
+Onay Bekleyen Müşteriler:	0
+Onay Bekleyen Yorumlar:	37
+Toplam Ortaklar:	41
+Onay Bekleyen Ortaklar:	41
+
+2) Satış /Siparişler kısmına Fatura Yazdır butonu koyulabilir.
+
+3) Satış altında toplu e-posta hizmeti eklenebilir. Bülten abonelerine ve / veya tüm müşterilere email gönderilebilir.
+
+4) Raporlama kısımları -- Opencart admin sayfası örnek alınacak.
+
