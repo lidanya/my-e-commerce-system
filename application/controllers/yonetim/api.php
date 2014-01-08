@@ -141,7 +141,7 @@ class api extends Admin_Controller
 						"price" => $product->price,
 						"price_type" => $price_type,
 						"stock_type" => 12,
-						"tax" => $product->kdv,
+						"tax" => 0,//$product->kdv,
 						"date_available" => time() + 30 * 24 * 60 * 60, // default 1 ay
 						"status" => 1,
 						"feature_status" => 0,
@@ -234,7 +234,7 @@ class api extends Admin_Controller
 						"price" => $product->price,
 						"price_type" => $price_type,
 						"stock_type" => 12,
-						"tax" => $product->kdv,
+						"tax" => 0,//$product->kdv,
 						"date_available" => time() + 30 * 24 * 60 * 60, // default 1 ay
 						//"status" => 1,
 						//"feature_status" => 0,
