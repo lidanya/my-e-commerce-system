@@ -7,7 +7,7 @@
  * @author E-Ticaret Sistemim
  **/
 
-	define('ETICARET_VERSION', 'v10');
+	define('ETICARET_VERSION', 'v1.0');
 
 	if(!defined('codeigniter_index'))
 	{
