@@ -1,0 +1,9 @@
+/*
+Dosya Adi: anasayfa.css
+Aciklamalar: 
+- anasayfa icin genel stil sablonlarini icerir 
+- bu css sadece anasayfada cagrilacaktir.
+- bu css dosyasi listeler.css dosyasini cagirmak zorundadir
+*/
+
+@import url("listeler.css");

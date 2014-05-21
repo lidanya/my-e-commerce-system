@@ -1,0 +1,103 @@
+/*
+Dosya Adi: listeler.css
+Yazan: E Ticaret Sistemim
+Aciklamalar: 
+- kategoriler ve urunlerin listelendigi stil sablonlarini icerir 
+- bu css anasayfada ve tum kategori/urun listeleme sayfalarinda cagrilacaktir
+*/
+/*============================Navigasyon=================================*/
+.liste_sol {margin-top:5px;height:30px;}
+.liste_sol select {border:solid 1px #d7d7d7;color:#656565;font-size:12px;width:200px;height:28px;}
+
+/*sayfalama*/
+.liste_sag {margin:5px 11px 0 0;height:30px;}
+.liste_sag ul {list-style-type:none;}
+.liste_sag ul li {float:left;margin-left:5px;/*IE Fix*/display:inline;height:30px;}
+.liste_sag ul li a.l_sayfa, .liste_sag ul li a.l_sayfa:link, .liste_sag ul li a.l_sayfa:visited {line-height:32px;padding:0 3px;color:#565656;font-weight:bold;font-size:18px;}
+.liste_sag ul li a.l_sayfa:hover, .liste_sag ul li.l_aktif a.l_sayfa {color:#ff6300;text-decoration:underline;}
+
+/*=========================Urun listeleme===============================*/
+.yeni, .kampanya {position:absolute;height:19px;padding:3px 0 0 5px;z-index:99;color:#242529;font-weight:bold;}
+.yeni span, .kampanya span {color:#ffffff;letter-spacing:1px;}
+.yeni {top:5px;left:5px;background:url(../images/yeni_bg.png) no-repeat 0 0;}
+.kampanya {top:5px;left:170px;background:url(../images/kampanya_bg.png) no-repeat 0 0;}
+.urun_liste_oge {position:relative;display:block;margin:7px 3px 0 3px;width:245px;height:308px;border:1px solid #e2e2e2;}
+.urun_liste_oge:hover {border:1px solid #666; }
+.urun_liste_resim {display:block;width:235px;height:170px;text-align:center;margin:30px auto 0;}
+.urun_liste_resim img {width:210px;}
+.urun_liste_baslik, .urun_liste_baslik:link, .urun_liste_baslik:visited {height:35px;display:block;text-align:center;width:235px;padding-bottom:5px;margin:auto;font-size:14px;font-weight:bold;}
+.urun_liste_baslik:hover {}
+.urun_liste_fiyat {display:block;width:120px;height:53px;margin:10px 3px 0 auto;text-align:center;font-size:15px;color:#111;font-weight:bold;background-color:#e5e5e5;border:1px solid #cbcbcb;}
+
+.urun_liste_fiyat small {color:#111;font-weight:normal;font-size:9px;display:block;text-align:center;}
+.urun_liste_fiyat big {font-size:21px;display:block;text-align:center;}
+.urun_liste_fiyat em {display:block;text-align:center;font-style:normal;text-decoration:line-through;font-size:11px;color:#ababab;}
+.urun_liste_butonlar {display:block;width:115px;margin:10px auto 0 3px;}
+
+/*=========================Kategori listeleme===============================*/
+.kategori_liste_oge {position:relative;display:block;margin:7px 4px 0 4px;width:243px;height:240px;border:1px solid #f1f1f1}
+.kategori_liste_oge:hover {cursor:auto;border:1px solid #999;}
+.kategori_liste_resim {display:block;width:235px;height:170px;text-align:center;margin:30px auto 0;}
+.kategori_liste_resim img {width:210px;}
+.kategori_liste_baslik, .kategori_liste_baslik:link, .kategori_liste_baslik:visited {height:35px;display:block;text-align:center;width:235px;padding-bottom:5px;margin:auto;font-size:14px;font-weight:bold;}
+.kategori_liste_baslik:hover {}
+
+/*=========================Arama Sonuclari=================================*/
+/*arama modulu*/
+.ara_tumu, .ara_tumu:link, .ara_tumu:visited {position:absolute;display:block;top:3px;right:5px;height:20px;color:#008fff;padding-left:8px;background:url(../images/kategori_menu02_aktif.png) no-repeat 0 -6px;}
+.ara_tumu:hover {color:#000;}
+#ara_tab_cont {width:745px;margin:auto;}
+#ara_tab_cont a, #ara_tab_cont a:link, #ara_tab_cont a:visited {display:block;width:130px;height:23px;padding-top:10px;margin-right:2px;background:url(../images/ara_tab.png) no-repeat 0 0;text-align:center;font-size:14px;font-weight:700;color:#626262;}
+#ara_tab_cont a:hover, #ara_tab_cont a.ara_tab_aktif {background-position:bottom left;}
+#ara_modul {width:735px;margin:auto;padding:5px;background:#f0f0f0 url(../images/ara_tab_bg.png) repeat-x 0 0;}
+#ara_tab_alt {width:745px;height:5px;background:url(../images/ara_tab_alt.png) no-repeat 0 0;margin:0 auto 15px;}
+#ara_marka, #ara_kategori {width:735px;padding-bottom:5px;border-bottom:solid 1px #e0e0e0;display:none;position:relative;color:#878787;}
+#ara_marka i, #ara_kategori i {display:inline-block;margin:5px 10px 0 0;font-style:normal;height:20px;overflow:hidden;}
+#ara_marka div, #ara_kategori div {width:705px;}
+#ara_fiyat {width:735px;height:45px;padding-bottom:5px;border-top:solid 1px #fbfbfb;border-bottom:solid 1px #e0e0e0;position:relative;color:#878787;}
+#af_sol {width:320px;height:45px;}
+#af_sol b {font-size:18px;color:#008fff;}
+#af_sol i {font-style:normal;color:#878787;font-size:12px;width:75px;float:left;display:inline;padding-top:4px;margin-top:18px;}
+#af_fiyatlar {width:240px;margin-left:5px;padding-top:18px;}
+#af_min, #af_max {font-weight:700;color:#008fff;font-size:14px;}
+#af_min span, #af_max span {font-size:18px;}
+#af_sag {width:410px;height:45px;}
+#af_bar {position:relative;width:410px;height:22px;margin:17px auto 0;background:url(../images/ara_fiyat_bar.png) repeat-x 0 13px;}
+#af_gosterge {width:400px;height:5px;position:absolute;top:0px;left:5px;background:url(../images/ara_fiyat_gosterge.png) repeat-x 0 0;}
+#af_left, #af_right {width:400px;height:16px;position:absolute;left:-390px;top:5px;background:url(../images/ara_left.png) no-repeat 0 0;}
+#af_right {left:400px;background:url(../images/ara_right.png) no-repeat 0 0;}
+#af_left div, #af_right div {position:absolute;display:block;width:10px;height:16px;top:0;cursor:pointer;}
+#af_left div {right:0;}
+#af_right div {left:0;}
+#af_selects {border-top:solid 1px #fbfbfb;width:735px;padding:15px 0 5px 0;}
+#af_selects {width:600px;}
+#af_selects select {padding:7px;}
+#af_selects span {float:left;display:inline;margin-right:10px;}
+.af_uzun {width:180px;}
+.af_uzun select {width:180px;}
+.af_orta {width:130px;}
+.af_orta select {width:120px;}
+/*arama sonuclari*/
+.stok_var, .stok_yok {background:url(../images/stok_var_yok.png) no-repeat 0 0;padding-left:20px;width:100px;}
+.stok_yok {background-position:bottom left;}
+.urun_diger_baslik {width:705px;height:30px;padding:10px 0 0 40px;letter-spacing:-1px;margin:auto;background:url(../images/urun_detay_diger_baslik.png) no-repeat 0 0;margin-top:20px;font-weight:bold;color:#666666;font-size:16px;}
+.urun_diger_baslik h1 {display:inline;font-weight:bold;color:#666666;font-size:16px;}
+.urun_diger_cont {width:723px;padding:10px;margin:auto;border:solid 1px #d6d6d6;border-top:none;}
+.urun_diger_oge {width:720px;margin:10px auto;}
+.urun_diger {width:590px;}
+.urun_diger a img {width:70px;margin:5px;border:solid 1px #f2f2f2;float:left;/*IE Fix*/display:inline;}
+.urun_diger a:hover img {border:solid 1px #009bdb;}
+.urun_diger_ad, .urun_diger_ad:link, .urun_diger_ad:visited {display:block;font-size:14px;color:#565656;margin-top:15px;}
+.urun_diger_ad:hover {color:#2096c6}
+.urun_diger_fiyat {color:#444242;font-weight:bold;font-size:21px;}
+.urun_diger_fiyat span.ud_birim {font-weight:normal;font-size:9px;}
+.urun_diger_fiyat span.ud_eski {color:#636363;font-weight:normal;font-size:15px;text-decoration:line-through;}
+.urun_diger_buton {width:120px;}
+.ud_gri {background-color:#f0f0f0;}
+/*Sonuc Yok*/
+#sonuc_yok {width:720px;color:#999999;font-size:15px;font-weight:bold;padding-top:10px;}
+#sonuc_yok img {margin-right:20px;}
+#sonuc_yok b {color:#000;}
+#sonuc_yok ul {list-style-type:disc;margin:20px 0 0 30px;width:500px;}
+#sonuc_yok ul li {margin:5px 0 0 15px;font-size:13px;}
+

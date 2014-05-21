@@ -1,0 +1,831 @@
+.giris_uyari {float:left;margin-left:170px;width:140px;height:36px;padding-left:30px;background:url(../image/uyari_bg.png) no-repeat 0 0;font-size:12px;color:#ca3000;font-weight:normal;text-align:left;}
+.tickLabel {font-size:9px !important;}
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background: #FFFFFF;
+}
+body, td, th, input, select, textarea, option, optgroup {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+	/*border:1px solid #ccc;*/
+	
+}
+input[type='text'] {
+	padding: 2px;
+	/*border:1px solid #ccc;*/
+}
+select {
+	padding: 1px;
+	/*border:1px solid #ccc;*/
+}
+textarea {
+	padding: 2px;
+	/*border:1px solid #ccc;*/
+}
+a, a:visited {
+	color: #003366;
+	cursor: pointer;
+	text-decoration:none;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+img {border:none;}
+.clear{clear:both;}
+#header {
+	height: 83px;
+	padding: 0px 30px;
+	background:#ffffff;
+	width: 1038px;
+	margin:auto;
+}
+.tab_menu_pasif {color: #848484 !important;}
+.header_inputt{ background: url(../image/inputt.png) top left no-repeat;width:239px;height:33px;border:0;color:#c3c3c3;font-size:14px;font-family:Arial;}
+#header_bgnew{ background: url(../image/giris_01.png) top left repeat-x;height:900px;}
+#header_bg_orta{ background: url(../image/giris_02.png) top center no-repeat;height:900px;margin: 0 auto;text-align: center;}
+#header .div1 {
+	color: #FFFFFF;
+	padding: 5px 0px 0px 0px;
+	float: left;
+}
+#header .div2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	text-align: right;
+	padding: 14px 0px 0px 0px;
+	float: right;
+}
+#header .div2 span {
+	font-weight: bold;
+}
+#headerRight-Left{background:url(../image/panel_03.gif) top left no-repeat;width:3px;height:69px;float:left;}
+#headerRight-Center{background:#e2f8ff;width:253px;height:69px;float:left;color:#6a6a6a;font-size:12px;font-family:Arial;text-align: center}
+#headerRight-Center font{color:#0063b5;font-size:12px;}
+#header_sg{background: url(../image/panel_14.gif) 16px 2px no-repeat;}
+#header_sg font{color:#6a6a6a;font-size:10px;}
+#header_alt_hizala{margin-top:7px;}
+#header_alt_Sol a{display: block;background: url(../image/panel_17.gif) 0px 0px no-repeat;color:#363636;font-size:12px;font-family:Arial;font-weight:bold;float:left;padding-left:20px;margin-left:15px;text-decoration: none;}
+#header_alt_Sag a{display: block;background: url(../image/panel_19.gif) 0px 0px no-repeat;color:#363636;font-size:12px;font-family:Arial;font-weight:bold;float:left;padding-left:20px;margin-left:15px;text-decoration: none;}
+
+#headerRight-Right{background:url(../image/panel_05.gif) top left no-repeat;width:3px;height:69px;float:left;}
+#menu {
+	background: url('../image/panel_29.gif') repeat-x;
+	position: relative;
+	z-index: 1;
+	height: 44px;
+	clear: both;
+	padding: 0px 0;
+	min-width: 900px;
+}
+ul.left {
+	float: left;
+}
+ul.right {
+	float: right;
+}
+.nav {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	background: url('../image/transparent.png');
+}
+.nav a {
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 5px;
+}
+.nav > li + li {
+	background: url('../image/panel_27.gif') left 3px no-repeat;
+}
+.nav .top, .nav li li.sfhover {
+	padding: 10px 15px 9px 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-align: center;
+}
+.nav ul li {
+	padding: 2px;
+}
+.nav .selected .top {
+	background: #363636;
+	margin-left: 2px;
+	height:20px;
+	color: #FFFFFF;
+}
+.nav .selected:hover a.top, .nav .sfhover a.top {
+}
+.nav .parent {
+	background: url('../image/arrow_right.png') 95% center no-repeat;
+}
+.nav li {
+	float: left;
+	list-style: none;
+}
+.nav li ul {
+	position: absolute;
+}
+.nav li li {
+	clear: both;
+}
+.nav li ul a {
+	color: #FFFFFF;
+	height: 15px;
+	width: 145px;
+}
+.nav li ul ul {
+	margin: -27px 0 0 157px;
+}
+.nav li li:hover, .nav li li.sfhover {
+	background: #333;
+	color: #000000;
+}
+#content {
+	padding: 0 30px 0px 30px;
+	margin:auto;
+}
+#container {
+	height: 100%;
+}
+body > #container {
+	height: auto;
+	min-height: 100%;
+}
+#footer {
+	background: #FFFFFF url('../image/footer.png') repeat-x;
+	height: 90px;
+	padding-top: 38px;
+	text-align: center;
+	font-size: 12px;
+	color: #333;
+	position: relative;
+	margin-top: 23px;
+	clear: both;
+}
+#footer a {
+	color: #333;
+	text-decoration: underline;
+}
+.breadcrumb, .breadcrumb a {
+	font-size: 12px;
+	color: #666;
+	margin-bottom: 15px;
+}
+.success {
+	padding: 15px 0px;
+	margin-bottom: 15px;
+	background: #E4F1C9;
+	border: 1px solid #A5BD71;
+	font-size: 12px;
+	text-align: center;
+}
+.warning {
+	padding: 15px 0px;
+	margin-bottom: 15px;
+	background: #FFDFE0;
+	border: 1px solid #FF9999;
+	font-size: 12px;
+	text-align: center;
+}
+.attention {
+	padding: 15px 0px;
+	margin-bottom: 15px;
+	background: #FEFBCC;
+	border: 1px solid #E6DB55;
+	font-size: 12px;
+	text-align: center;
+}
+.box {
+	width:100%;
+	margin: 0 auto;
+}
+.box > .heading {
+	height: 40px;
+	background: url('../image/box_center.png') repeat-x;
+	margin-bottom: 0px;
+}
+.box > .left {
+	float: left;
+	width: 7px;
+	height: 40px;
+	background: url('../image/box_left.png') no-repeat;
+}
+.box > .right {
+	float: right;
+	width: 7px;
+	height: 40px;
+	background: url('../image/box_right.png') no-repeat;
+}
+.box > .heading h1 {
+	background-position:  2px 9px;
+	background-repeat: no-repeat;
+	margin: 0px;
+	padding: 11px 0px 11px 30px;
+	color: #003A88;
+	font-size: 16px;
+	float: left;
+}
+.box > .heading .buttons {
+	float: right;
+	padding-top: 8px;
+}
+.box > .content {
+	padding: 10px;
+	border: 1px solid #CCCCCC;
+	min-height: 300px;
+	overflow: auto;
+}
+
+.box {
+	margin-bottom: 15px;
+}
+.box > .heading {
+	height: 38px;
+	padding-left: 7px;
+	padding-right: 7px;
+	border: 1px solid #DBDBDB;
+	background: url('../image/box.png') repeat-x;
+	-webkit-border-radius: 7px 7px 0px 0px;
+	-moz-border-radius: 7px 7px 0px 0px;
+	-khtml-border-radius: 7px 7px 0px 0px;
+	border-radius: 7px 7px 0px 0px;
+}
+.box > .heading h1 {
+	margin: 0px;
+	padding: 11px 0px 0px 30px;
+	color: #003A88;
+	font-size: 16px;
+	float: left;
+}
+.box > .heading h1 img {
+	float: left;
+	margin-top: -1px;
+	margin-left: 3px;
+	margin-right: 8px;
+}
+.box > .heading .buttons {
+	float: right;
+	padding-top: 4px;
+}
+.box > .content {
+	padding: 10px;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	min-height: 300px;
+	overflow: auto;
+}
+
+.button, .button:link, .button:visited {
+	padding:7px 0 0 0;
+	width:66px;
+	height: 23px;
+	text-align:center;
+	font-size:12px;
+	display: inline-block;
+	color:#ffffff;
+	text-decoration:none !important;
+	background: url('../image/btnbtn.png') top left no-repeat;
+}
+
+.buton, .buton:link, .buton:visited {background:url("../image/buton_span.png") no-repeat scroll left top transparent;display:inline-block;padding-left:8px;text-decoration:none !important;}
+.buton:hover {background-position:bottom left;text-decoration:none !important;}
+.buton:hover span {background-position:bottom right;text-decoration:none !important;}
+.buton span {background:url("../image/buton.png") no-repeat scroll right top transparent;color:#fff;display:block;padding:8px 10px 7px 2px;font-size:12px;text-decoration:none !important;}
+
+
+
+.list {
+	border-collapse: collapse;
+	width: 100%;
+	border-top: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	margin-bottom: 20px;
+}
+.list td {
+	border-right: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+}
+.list thead td {
+	background-color: #EFEFEF;
+	padding: 0px 5px;
+}
+.list thead td a, .list thead td {
+	text-decoration: none;
+	color: #222222;
+	font-weight: bold;
+}
+.list tbody a {
+	text-decoration: underline;
+}
+.list tbody td {
+	vertical-align: middle;
+	padding: 0px 5px;
+}
+.list tbody tr:odd {
+	background: #FFFFFF;
+}
+.list tbody tr:even {
+	background: #E4EEF7;
+}
+.list .left {
+	text-align: left;
+	padding: 7px;
+}
+.list .right {
+	text-align: right;
+	padding: 7px;
+}
+.list .center {
+	text-align: center;
+	padding: 7px;
+}
+.list .asc {
+	padding-right: 15px;
+	background: url('../image/asc.png') right center no-repeat;
+}
+.list .desc {
+	padding-right: 15px;
+	background: url('../image/desc.png') right center no-repeat;
+}
+.list .filter td {
+	padding: 5px;
+	background: #E7EFEF;
+}
+.pagination {
+	margin-top: 30px;
+	border-top: 1px solid #EEEEEE;
+	background: #F8F8F8;
+	display: inline-block;
+	width: 100%;
+}
+.pagination .links, .pagination .results {
+	padding: 9px;
+}
+.pagination .links {
+	float: left;
+}
+.pagination .links a {
+	border: 1px solid #CCCCCC;
+	padding: 4px 7px;
+	text-decoration: none;
+	color: #000000;
+}
+.pagination .links b {
+	border: 1px solid #CCCCCC;
+	padding: 4px 7px;
+	text-decoration: none;
+	color: #000000;
+	background: #FFFFFF;
+}
+.pagination .results {
+	float: right;
+}
+.form {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 20px;
+}
+table.form tr td:first-child {
+	width: 200px;
+}
+.form > * > * > td {
+	padding: 10px;
+	color: #000000;
+	border-bottom: 1px dotted #CCCCCC;
+}
+.help {
+	color: #999;
+	font-size: 10px;
+	font-weight: normal;
+	font-family: Verdana, Geneva, sans-serif;
+	display: block;
+}
+.required {
+	color: #FF0000;
+	font-weight: bold;
+}
+.error {
+	color: #FF0000;
+	padding-top: 3px;
+	display: block;
+	font-size: 12px;
+	font-weight: normal;
+}
+.scrollbox {
+	border: 1px solid #CCCCCC;
+	width: 350px;
+	height: 100px;
+	background: #FFFFFF;
+	overflow-y: scroll;
+}
+.htabs {
+	padding: 0px 0px 0px 10px;
+	height: 30px;
+	line-height: 16px;
+	border-bottom: 1px solid #DDDDDD;
+	margin-bottom: 15px;
+}
+.htabs a {
+	border-top: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD; 
+	background: #FFFFFF url('../image/tab.png') repeat-x;
+	padding: 7px 15px 6px 15px;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+	color: #000000;
+	margin-right: 2px;
+}
+.htabs a.selected {
+	padding-bottom: 7px;
+	background: #FFFFFF;
+}
+.vtabs {
+	width: 190px;
+	padding: 10px 0px;
+	min-height: 300px;
+	float: left;
+	display: block;
+	border-right: 1px solid #DDDDDD;
+}
+.vtabs a, .vtabs span {
+	display: block;
+	float: left;
+	width: 160px;
+	margin-bottom: 5px;
+	clear: both;
+	border-top: 1px solid #DDDDDD;
+	border-left: 1px solid #DDDDDD;
+	border-bottom: 1px solid #DDDDDD;
+	background: #F7F7F7;
+	padding: 6px 14px 7px 15px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: right;
+	text-decoration: none;
+	color: #000000;
+}
+.vtabs a.selected {
+	padding-right: 15px;
+	background: #FFFFFF;
+}
+.vtabs a img, .vtabs span img {
+	position: relative;
+	top: 3px;
+	cursor: pointer;
+}
+.vtabs-content {
+	margin-left: 205px;
+}
+.scrollbox div {
+	padding: 3px;
+}
+.scrollbox div input {
+	margin: 0px;
+	padding: 0px;
+	margin-right: 3px;
+}
+.scrollbox div.even {
+	background: #FFFFFF;
+}
+.scrollbox div.odd {
+	background: #E4EEF7;
+}
+
+.add {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(../image/add.png) no-repeat scroll right center;
+	color:#000000;
+	display:inline-block;
+	padding-right:20px;
+	cursor: pointer;
+}
+.remove {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(../image/delete.png) no-repeat scroll right center;
+	color:#000000;
+	display:inline-block;
+	padding-right:20px;
+	cursor: pointer;
+}
+.EkleKapsa {
+	position:relative;
+	width:99.8%;
+	height:50px;
+	background-color:#ebf3e3;
+	border:solid 1px #dbebca;
+}
+.InEkle {
+	position:relative;
+	width:95%;
+	height:auto;
+	margin-left:auto;
+	margin-right:auto;
+}
+.text_box_class {
+	width:200px;
+	height:20px;
+	border:solid 1px #cccccc;
+}
+.ara_bosluk {
+	position:relative;
+	padding-right:20px;
+}
+#thumbBox{ /*Outermost DIV for thumbnail viewer*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: auto;
+	padding: 10px;
+	padding-bottom: 0;
+	background: #313131;
+	visibility: hidden;
+	z-index: 10;
+	/*cursor: hand;*/
+	cursor: pointer;
+}
+
+#thumbBox .footerbar{ /*Footer DIV of thumbbox that contains "close" link */
+	font: bold 16px Tahoma;
+	letter-spacing: 5px;
+	line-height: 1.1em;
+	color: white;
+	padding: 5px 0;
+	text-align: right;
+}
+
+
+#thumbBox #thumbImage{ /*DIV within thumbbox that holds the enlarged image */
+	background-color: white;
+}
+
+#thumbLoading{ /*DIV for showing "loading" status while thumbbox is being generated*/
+	position: absolute;
+	visibility: hidden;
+	border: 1px solid black;
+	background-color: #EFEFEF;
+	padding: 5px;
+	z-index: 5;
+}
+
+#slideshow {
+	margin:0 auto;
+	width:360px;
+	height:95px;	
+	position:relative;
+}
+
+#slideshow #slidesContainer {
+	margin:0 auto;
+	width:360px;
+	height:95px;
+	overflow:auto; /* allow scrollbar */
+	position:relative;
+}
+#slideshow #slidesContainer .slide {
+	margin:0 auto;
+	width:360px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+	height:90px;
+}
+
+/** 
+ * Slideshow controls style rules.
+ */
+.control {
+	display:block;
+	width:39px;
+	height:185px;
+	text-indent:-10000px;
+	position:absolute;
+	cursor: pointer;
+}
+#leftControl {
+	top:95px;
+	left:280px;
+	background:transparent url(../image/img/control_left.jpg) no-repeat  0 0
+}
+#rightControl {
+	top:95px;
+	right:0px;
+	background:transparent url(../image/img/control_right.jpg) no-repeat 0 0;
+}
+
+/** 
+ * Style rules for Demo page
+ */
+* {
+	margin:0;
+	padding:0;
+	font:normal 12px arial;
+}
+
+#pageContainer {
+	margin:0 auto;
+	width:360px;
+}
+#pageContainer h1 {
+	display:block;
+	width:360px;
+	height:114px;
+	background:transparent url(../image/img/bg_pagecontainer_h1.jpg) no-repeat top left;
+	text-indent: -10000px;
+}
+.slide h2 {
+	font:bold 13px arial;
+	color:#0069af;
+	letter-spacing:-1px;
+}
+.slide img {
+	float:left;
+	margin:0 15px;
+}
+
+
+#siparis_takip {width:609px; height:235px; margin:auto; background:url('../image/siparis_takip_bg.png') no-repeat top left;padding-top:5px;}
+#ziyaretci_istatistikleri {width:397px; height:235px; margin:auto; background:url('../image/ziyaretci_istatistik_bg.png') no-repeat top left;padding-top:5px;}
+#lisanslama_haberler {width:397px; height:235px; margin:auto; background:url('../image/lisans_haber_bg.png') no-repeat top left;padding-top:5px;}
+#ziyaretcileriniz {width:313px; height:235px; margin:auto; background:url('../image/ziyaretciler_bg.png') no-repeat top left;float:left;margin-right:8px;padding-top:5px;}
+#son_yapilan_yorumlar {width:288px; height:235px; margin:auto; background:url('../image/son_yazilan_yorumlar_bg.png') no-repeat top left;float:left;padding-top:5px;}
+#siparis_takip_icerik {width:570px; height:230px; margin:0 0 0 32px;}
+#ziyaretci_istatistikleri_icerik {width:360px;height:230px; margin:0 0 0 30px;}
+#ziyaretcileriniz_icerik {width:277px; height:230px; margin:0 0 0 30px;}
+#son_yapilan_yorumlar_icerik {width:250px; height:230px; margin:0 0 0 30px;}
+#lisanslama_haberler_icerik {width:360px; height:230px; margin:0 0 0 30px; }
+#lisans_bilgileri{width:360px; height:120px;margin:auto;}
+#haber_bilgileri{width:360px; height:115px; margin:auto;}
+.tablobaslik1 {font-family: arial;font-size: 13px;font-weight: bold;color: #0069af;}
+.tabloicerik1 {font-family: arial;font-size: 12px;color: #828282;height:20px;}
+.kirmizi {font-family: arial;font-size: 12px;color: #fa3838;}
+.yesil {font-family: arial;font-size: 12px;color: #469d00;}
+.lacivert {font-family: arial;font-size: 10px;color: #004289;}
+.turkuaz {font-family: arial;font-size: 12px;color: #4491c5;font-weight:bold;}
+.boldgri {font-family: arial;font-size: 12px;font-weight:bold;font-style:italic;color: #828282;}
+.mavidoviz {font-family:arial;font-size:11px; font-weight:bold; color:#008fff;}
+.gridoviz {font-family:arial; font-size:11px; color:#817777;}
+.dovizbold {font-family:arial;font-size:12px; font-weight:bold; color:#8f8f8f;}
+#hosgeldin{float:left;}
+#gircik{width:120px; float:right;text-align:left; margin:5px 0 0 15px;}
+.hosgeldin {font-family:arial; font-size:18px; color:#7a7a7a;}
+.isimsoyisim{font-family:arial; font-size:24px; font-weight:bold; color:#0b8ec7;}
+.songiris {font-family:arial; font-size:10px; color;:#7a7a7a;}
+.tarih {font-family:arial; font-size:10px; color:#0b8ec7;}
+.gircik {font-family:arial; font-size:14px; color:#737373;}
+#menum_container {width:1038px; margin:auto;}
+#menu100{background:url('../image/menu_ust_bg.png') repeat-x top left; width:100%; height:37px; margin:auto;}
+#doviz_bilgieri {width:252px; height:22px; float:left; background:url('../image/dovizbg.png') no-repeat top left; margin:25px 0 0 20px; padding-top:6px; padding-left:10px;}
+#main_hizlimenu_sol{background:url(../image/npanel_03.gif) no-repeat top left;float:left;width:9px;height:157px;}
+#main_hizlimenu_orta{background:url(../image/npanel_05.gif) repeat-x top left;float:left;height:157px;}
+#main_hizlimenu_orta_Baslik{background:url(../image/hizli_menu.gif) no-repeat 10px 6px;padding:10px 0 0 50px;color:#575757;font-weight:bold;font-family:Arial;font-size:16px;float:left;}
+#main_hizlimenu_orta_sag{float:right;padding-top:10px;}
+#main_hizlimenu_orta_sag a{color:#0054ad;font-size:13px;font-family:Arial;text-decoration: none;}
+#main_hizlimenu_orta_sag a:hover{color:#363636;}
+#main_kutular_H{padding: 0;}
+#main_kutular_H ul{ list-style-type: none;padding: 0; margin: 0;}
+#main_kutular_H ul li{ float:left;margin:5px 9px 0 9px;}
+#main_kutular_H ul li a{display:block;width:93px;height:91px;text-decoration: none;}
+#main_kutular_H ul li a:hover{ background: url(../image/npanel_12.png) top left no-repeat;}
+#main_kutularlar_rsm{text-align: center;padding-top:5px;height:60px;}
+#main_kutularlar_yazi{text-decoration: none;border:0px;color:#8f8f8f;font-size:13px;font-family:arial;text-align: center; background: url('../image/main_kutular_yazi.png')no-repeat top left;height:21px;padding-top:3px;}
+#main_hizlimenu_sag{background:url(../image/npanel_07.gif) no-repeat top left;float:left;width:9px;height:157px;}
+#main_hizala{margin:0 auto;width:100%;padding-top: 10px;}
+#main_hizala_bosluk{height:15px;}
+#main_hizala_bosluk_alt{height:15px;}
+#content_ust {background: #FFFFFF url('../image/background.png') 0px 1px repeat-x;padding: 10px 30px 0px 30px;min-width: 900px;padding-bottom: 128px;}
+.box > .content_ust {width:1033px;border: 1px solid #CCCCCC;height: auto;padding-top: 10px;padding-left: 5px; background: url('../image/admin_qucik_menu_bg.png') top left no-repeat;}
+
+/* ----------------------------------------Modul Baslik ------------------------------------------ */
+#main_madul_baslikk{height:28px;background: #0060b3; color: #FFF; border-bottom: 1px solid #0060b3;font-size: 14px;padding-top: 2px;}
+#main_madul_alt_baslikk_gri{height:25px;background: #eeeeee; color: #FFF;font-size: 14px;padding-top: 2px;}
+#main_madul_alt_baslikk_gri ul{list-style-type: none;padding: 0;margin:0;}
+#main_madul_alt_baslikk_gri ul li {float:left;color:#525252;font-size:12px;font-family: Arial;font-weight:bold;width:17%;padding:5px 0 0 0; }
+
+#main_madul_baslik_p{float:left;color: #FFF;font-size: 14px;padding: 6px 0 0 5px;}
+#main_madul_baslik_p_img{float:left;padding:4px 5px 0 8px;width:17px;}
+#main_madul_baslik_p_sag{background:url(../image/a_panel_08.jpg) 0px 10px no-repeat;float:right;padding: 7px 10px 0 10px}
+#main_madul_baslik_p_sag a{color:#ffffff;font-size:12px;font-family:arial;display: block;text-decoration: none;}
+#main_madul_baslik_p_sag a:hover{color:#cfcfcf;}
+/* ----------------------------------------Modul Baslik ------------------------------------------ */
+/* ----------------------------------------Modul Alt Baslik -------------------------------------- */
+#main_madul_alt_baslik{float:left;color: #575757;font-size: 12px;font-family: Arial;width:30%;padding:5px 0 0 6px;}
+#main_madul_alt_baslik_orta{float:left;color: #575757;font-size: 12px;font-family: Arial;font-weight:bold;width:25%}
+#main_madul_alt_baslik_aciklama{float:left;color: #0069b9;font-size: 12px;font-family: Arial;width:30%}
+#main_madul_alt_baslik_aciklama_tarih{float:left;color: #252525;font-size: 12px;font-family: Arial;width:10%;font-weight:bold;}
+#main_madul_alt_baslik_aciklama_tarih_n{float:left;color: #252525;font-size: 12px;font-family: Arial;width:10%;}
+#main_madul_alt_baslik_aciklama_byk{float:left;color: #252525;font-size: 12px;font-family: Arial;width:50%;}
+#main_madul_alt_baslik_aciklama_trnc{float:left;color: #cc5514;font-size: 12px;font-family: Arial;width:35%;font-style:italic;}
+#main_madul_alt_baslik_aciklama_img{float:left;width:3%}
+#main_madul_alt_baslik_line{margin:5px;border-top:1px solid #f1f1f1;}
+#main_madul_alt_baslik_devam{float:right;background:url(../image/a_panel_17.jpg) 5px 4px no-repeat;padding:0 20px 0 20px;}
+#main_madul_alt_baslik_devam a{color:#0069b9;font-size:12px;font-weight:bold;font-family:Arial;text-decoration: none;}
+#main_madul_alt_baslik_devam a:hover{color:#575757;}
+#main_madul_alt_baslik_dikkat{float:left;background:url(../image/admin_anasayfa_21.jpg) 5px 0px no-repeat;height:20px;padding:3px 20px 0 30px;color: #252525;font-size: 12px;font-family: Arial;width:50%;}
+.main_madul_alt_baslik_sol_bosluk{margin-left:10px;}
+#main_madul_alt_baslik_aciklama_tarih_alt_iki{float:left;color: #252525;font-size: 12px;font-family: Arial;width:22%;}
+/* ----------------------------------------Modul Alt Baslik -------------------------------------- */
+#main_madul_alt_baslik_doviz{float:left;color: #575757;font-size: 12px;font-family: Arial;width:26%;padding:2px 0 0 6px;}
+#main_madul_alt_baslik_doviz_img{float:left;width:3%;margin-left: 10px;}
+#main_madul_alt_baslik_doviz_d{float:left;color: #575757;font-size: 12px;font-family: Arial;width:24%;padding:2px 0 0 6px;}
+#main_madul_alt_baslik_ziyaret{float:left;color: #575757;font-size: 12px;font-family: Arial;width:10%;padding:2px 0 0 6px;}
+#main_madul_alt_baslik_ziyaret_uyeler{width:90%}
+#main_madul_alt_baslik_ziyaret_uyeler ul{list-style-type: none;padding: 0;margin:0;}
+#main_madul_alt_baslik_ziyaret_uyeler ul li{float:left;color:#0060b3;font-size:12px;font-family: Arial;font-weight:bold;width:10%;padding:5px 0 0 0; }}
+#main_madul_alt_baslik_istatistik{float:left;color: #575757;font-size: 12px;font-family: Arial;padding:2px 0 0 6px;}
+
+#aralik_gelismis_tablo div.gelismis_istatistik
+{
+	margin: 0;
+	padding: 0 20px 10px 20px;
+	clear: both;
+	overflow: hidden;
+}
+
+#aralik_gelismis_tablo div.gelismis_istatistik div.legend
+{
+	margin: 0 0 10px 0;
+	padding: 0 0 10px 0;
+	clear: both;
+	overflow: hidden;
+	border-bottom: 1px solid #dddddd;
+}
+
+#aralik_gelismis_tablo div.gelismis_istatistik div.legend h6
+{
+	margin: 0;
+	padding: 0;
+	float: left;
+	border: none;
+}
+
+#aralik_gelismis_tablo div.gelismis_istatistik div.legend ul
+{
+	margin: 0;
+	padding: 0;
+	float: right;	
+}
+
+#aralik_gelismis_tablo div.gelismis_istatistik div.legend li
+{
+	margin: 0;
+	padding: 0 8px 0 4px;
+	list-style: none;
+	float: left;
+	font-size: 11px;
+}
+
+#aralik_gelismis_tablo div.gelismis_istatistik div.legend li.tekil_ziyaret
+{
+	border-left: 12px solid #edc240;
+}
+
+#aralik_gelismis_tablo div.gelismis_istatistik div.legend li.cogul_ziyaret
+{
+	border-left: 12px solid #afd8f8;
+}
+
+#aralik_gelismis_tablo div.gelismis_istatistik table
+{
+	width: auto;
+}
+
+#aralik_gelismis_tablo div.gelismis_istatistik table td
+{
+	padding: 2px 3px 3px 3px;
+	background: transparent;
+	border: none;
+}
+
+#aralik_gelismis_tablo div.gelismis_istatistik table td.legendLabel
+{
+	padding: 0 3px 2px 3px;
+}
+
+.tickLabel
+{
+	font-size: 11px;
+}
