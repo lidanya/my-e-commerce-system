@@ -112,7 +112,7 @@ class Arama extends Face_Controller
 
 		$this->template->add_region('content');
 		$this->template->write_view('content', face_tema() . 'urun/arama_sonuclari_content',$data);
-		$this->template->add_css(APPPATH . 'views/' . face_tema_asset() . 'css/listeler.css');
+		$this->template->add_css(APPPATH . 'views/' . face_tema_asset() . 'css/listeler.css?v='.APP_VER);
 		$this->template->add_js(APPPATH . 'views/' . face_tema() . 'js/arama_sonuc.js');
 		$this->template->add_js(APPPATH . 'views/' . face_tema() . 'js/arama_sonuclari.js');
 		$this->template->render();

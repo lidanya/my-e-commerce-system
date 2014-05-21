@@ -101,9 +101,10 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 	<?php if(isset($yil) && isset($ay) && isset($gun) && isset($saat) && isset($dakika) && isset($saniye)): ?>
 	<div style="font-size: 12px; padding-top:3px;  font-weight: bold; color:#f66;"><?php echo lang('product_detail_time_left'); ?> :<span id="CountDownUD"></span></div>
 	<script type="text/javascript"> 
-	var date = new Date(<?php echo $yil; ?>,<?php echo $ay; ?>,<?php echo $gun; ?>,<?php echo $saat; ?>,<?php echo $dakika; ?>,<?php echo $saniye; ?>);
-	
-	$("span#CountDownUD").countdown({until: date, compact: true,description: "", format:"dHMS"});
+	$(function(){
+		var date = new Date(<?php echo $yil; ?>,<?php echo $ay; ?>,<?php echo $gun; ?>,<?php echo $saat; ?>,<?php echo $dakika; ?>,<?php echo $saniye; ?>);
+		$("span#CountDownUD").countdown({until: date, compact: true,description: "", format:"dHMS"});
+	});
 	
  	</script>
 	<?php endif; ?>
@@ -240,7 +241,22 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 				<span class="u_baslik sola"><?php echo lang('messages_product_detail_product_price'); ?></span>
 				<span class="u_oge sola" style="width: 250px;"><?php echo $fiyat; ?></span>
 			</div>
-			<?php
+                        
+                        <?php // ürünün havale indirimli fiyatını göstermek için yapıldı. ?>
+                         <?php if($secenek_bilgi && $secenek_bilgi->odeme_indirim_orani != '00') {
+							 list($tl,$krs) = explode(",", $fiyat_g);
+							 $tl = strpos($tl, ".") ? str_replace(".", "", $tl) : $tl;
+                             $fyt = (int)$tl.".".$krs;
+                            $indirim_ucret_havale_fiyatı= ($fyt * ((100-$secenek_bilgi->odeme_indirim_orani)/100));
+                          ?>
+	
+                        <div class="urun_detay_oge">
+				<span class="u_baslik sola"><?php echo lang('messages_product_detail_product_bank_transfer_price'); ?></span>
+                                <span class="u_oge sola" style="width: 250px;"><?php echo number_format($indirim_ucret_havale_fiyatı,2,".",".")." ".$fiyat_bilgi['fiyat_tur'].$kdv_goster; ?></span>
+			</div>
+                        <?php } // ürün havale fiyatı ?>
+			
+                        <?php
 				$kampanya = NULL;
 				$kampanya_kontrol = $this->campaign_model->get_campaign($product_info->product_id);
 				if($kampanya_kontrol) {
@@ -441,7 +457,7 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 			<?php } ?>
 			
 			<?php if( config('site_ayar_urun_info_goster') == '1' and !empty($product_info->info) ) { ?>
-			<div class="urun_detay_oge">
+			<div class="urun_detay_oge" style="height:auto;">
 				<?php echo $product_info->info; ?>
 			</div>
 			<?php } ?>			
@@ -490,12 +506,12 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 				<?php } ?>
 				<div class="clear"></div>
 			</div>
-			
-			 <?php if($product_info->hizli_gonder) { ?>
+                        
+                        <?php if($product_info->hizli_gonder) { ?>
                         <div style="margin-top: 10px;">
                             <img src="<?php echo site_resim(false)."hizligonderi.png"; ?>" />
                         </div>
-              <?php } ?>
+                        <?php } ?>
 			
 			<div id="takip_sonuc"></div>
 			<!--
@@ -507,15 +523,11 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 			
 			<div id="urun_paylas_metin" class="sola"><?php //echo lang('messages_product_detail_share_product'); ?> : </div>
 			 -->
-			<div id="urun_paylas" class="sola">
-				<!--<p id="sosyal_paylasimlar"></p>-->
-				      
-      
-<style>
-#share_this{float:left;}
-div.addthis_toolbox a{padding:0 5px!important}			
-</style>
-   <div id="urun_paylas" class="sola">      
+			
+			 
+			<div class="clear"></div>
+		</div>
+	<div id="urun_paylas" class="sola">      
 <!-- AddThis Button BEGIN -->
 <div class="addthis_toolbox addthis_default_style ">
 <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
@@ -528,10 +540,6 @@ div.addthis_toolbox a{padding:0 5px!important}
 <!-- AddThis Button END -->
 
 </div>
-</div>
-			 
-			<div class="clear"></div>
-		</div>
 </div>
 <?php 
 	if($product_info->quantity) {
@@ -584,6 +592,7 @@ function urun_takip_et(span_id, durum)
 }
 </script>
 <?php } ?>
+
 		<!--tab menu baş -->
 		<div id="urun_tablar">
 			<a href="<?php echo current_url(); ?>#Urun_Aciklamasi" tab="#tab_aciklama" class="sola"><span class="u_detayli"><?php echo lang('messages_product_detail_description'); ?></span></a>
@@ -701,9 +710,9 @@ function urun_takip_et(span_id, durum)
 					<span class="uy_box sola" style="margin:10px 0 0 20px;"><input type="text" name="review_security_code" style="width:100px;"></span>
 					
 					 <a id="yorum_ekle_buton" onclick="urun_yorum_yolla();" class="butonum" title="<?php echo lang('messages_product_detail_comments_form_add_comment'); ?>" style="margin-top:5px;">
-					 	<span class="butsol"></span>
+					 	
 						<span class="butor"><?php echo lang('messages_product_detail_comments_form_add_comment'); ?></span>
-						<span class="butsag"></span>
+						
 					</a>
 					<div class="clear"></div>
 				</div>

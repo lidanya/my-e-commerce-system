@@ -9,7 +9,8 @@
 	<script type="text/javascript" charset="utf-8">
 		$(window).load(function() {
 			$('#slider_<?php echo $yer; ?>').nivoSlider({
-				controlNav : false
+				controlNav : false,
+				manualAdvance:false
 			});
 		});
 	</script>

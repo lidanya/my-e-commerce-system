@@ -31,6 +31,7 @@
     		<a tab="#tab_kurlar">Döviz Kurları</a>
     		<a tab="#tab_coupon">Kupon Uygulaması</a>
     		<a tab="#tab_facebook">Facebook Ayarları</a>
+    		<a tab="#tab_xml">XML Servis Ayarları</a>
 		</div>
 
     	<form action="<?php echo current_url(); ?>" method="post" enctype="multipart/form-data" id="form">
@@ -721,7 +722,7 @@
 						{
 							$yuzdeler[$i] = $i;
 						}
-						echo form_dropdown('config_site_ayar_kur_yuzde', $yuzdeler, ($val->config_site_ayar_kur_yuzde) ? $val->config_site_ayar_kur_yuzde:config('site_ayar_kur_yuzde'));
+						echo form_input('config_site_ayar_kur_yuzde', ($val->config_site_ayar_kur_yuzde) ? $val->config_site_ayar_kur_yuzde:config('site_ayar_kur_yuzde'));
 						?>
 							 ekle<br />
 							<input type="radio" name="config_site_ayar_kur" value="3" onclick="$('.tr_class_girilen').attr('style', 'display:table_row;');" <?php echo set_radio('config_site_ayar_kur', '3', ($gelen_veri == 3) ? TRUE:FALSE); ?> />Girilen değerleri kullan<br />
@@ -844,10 +845,47 @@
 				</table>				
 			</div>
 
+			<div id="tab_xml">
+				<table class="form">
+					<tr>
+						<td>Technomodel Ürün Güncelle:</td>
+						<td>
+							<span class="xml_update_but" style="width:100px; border-radius:4px; font-weight:bold; color:#fff; height:20px; background:#0291cb; padding:10px; cursor: pointer;">Güncelle</span>
+							<span class="retMsg" style="color:#333; font-weight:bold;"></span>
+						</td>
+					</tr>
+				</table>
+			</div>
+
     	</form>
   	</div>
 </div>
 <script type="text/javascript">
+	$(function(){
+		$(".xml_update_but").click(function(){
+		$.ajax({
+            type : 'POST',
+            url : "/yonetim/api/addProducts",
+            //async : false,
+            data : {},
+            beforeSend : function (){
+                $(".xml_update_but").text("Güncelleniyor... Bekleyin");
+				$(".retMsg").html("");
+            },
+            success : function (returnData) {
+               $(".xml_update_but").text("Güncelle");
+			   $(".retMsg").html(returnData);
+            },
+            error : function (xhr, textStatus, errorThrown) {
+                //other stuff
+            },
+            complete : function (){
+                $(".xml_update_but").text("Güncelle");
+            }
+        });
+			
+		});
+	});
 	function bakim_modu(val)
 	{
 		if(val == 1)
@@ -905,7 +943,8 @@ CKEDITOR.config.height = 400;
 $('#tabs a').tabs();
 $('#languages a').tabs();
 jQuery(function($){
-   $("#config_telephone,#config_telephone2,#config_telephone3,#config_telephone4,#config_telephone5, #config_fax,#config_fax2,#config_fax3").mask("(9999) 999 99 99");
+   $("#config_telephone2,#config_telephone3,#config_telephone4,#config_telephone5, #config_fax,#config_fax2,#config_fax3").mask("(9999) 999 99 99");
+   $("#config_telephone").mask("(9999) 999 9 999");
 });
 
 //--></script>

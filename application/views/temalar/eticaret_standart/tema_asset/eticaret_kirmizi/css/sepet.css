@@ -7,7 +7,7 @@ Aciklamalar:
 /*============================genel=================================*/
 #odeme_cont {width:990px;margin:auto;}
 .odeme_baslik {background:url(../images/adim_baslik_bg.png) no-repeat 10px 5px;width:100%;color:#2e2e2e;font-size:15px;font-weight:700;padding:3px 0 5px 30px;border-bottom:solid 1px #e5e5e5;margin:0 auto 10px;}
-#o_sol {width:560px;margin-top:10px;}
+#o_sol {width:560px;margin-top:10px; }
 #o_sag {width:390px;margin-top:10px;}
 /*stepler*/
 #stepler {width:990px;height:46px;margin:5px auto;background:url(../images/adim_bg.png) no-repeat 0 0}
@@ -61,20 +61,20 @@ Aciklamalar:
 .text1 {font-size:14px;color:#a4a4a4;width:100px;padding-left:10px;padding-top:10px;}
 .text1bold {font-size:14px;color:#282828;font-weight:bold;width:100px;padding-left:10px;padding-top:10px;}
 .text2bold {font-size:14px;color:#fff;font-weight:bold;width:100px;padding-left:10px;padding-top:30px;}
-#sepet {width:740px;margin:10px auto;}
+#sepet {width:785px;margin:10px auto;}
 .s_birim {font-weight:normal;font-size:9px;}
 .sepet_iptal {color:#dddddd !important;text-decoration:line-through !important;}
 .s_gri {background-color:#f4f4f4 !important;}
 .sepet_tablo_baslik {color:#434343 !important;height:35px;width:738px;border:solid 1px #e2e2e2;background:url(../images/sepet_menu_bg.png) repeat-x 0 0;margin-top:5px !important;font-size:14px !important;padding-top:3px !important;font-weight:bold;text-align:center;}
-.sepet_oge {width:738px;border-left:solid 1px #e2e2e2;border-right:solid 1px #e2e2e2;margin:auto;color:#3c3c3c;}
-.sepet_oge input {border:solid 1px #979797;text-align:center;width:33px;height:21px;background-color:#fff;margin-top:-3px;}
+.sepet_oge {width:785px;border-left:solid 1px #e2e2e2;border-right:solid 1px #e2e2e2;margin:auto;color:#3c3c3c;}
+.sepet_oge input {border:solid 1px #979797;text-align:center;width:33px;height:21px;background-color:#fff;margin-top:-3px; padding: 0;}
 .s_tablo01, .s_tablo02, .s_tablo03, .s_tablo04, .s_tablo05 {display:block;height:23px;padding-top:7px;margin-left:5px;text-align:center;}
 .s_tablo01 {width:395px;padding-left:10px;text-align:left;}
 .s_tablo02 {width:45px;}
 .s_tablo03 {width:115px;}
 .s_tablo04 {width:115px;font-weight:bold;}
 .s_tablo05 {width:32px;}
-.sepet_alt {width:740px;margin:auto;border-top:solid 1px #e2e2e2;}
+.sepet_alt {width:785px;margin:auto;border-top:solid 1px #e2e2e2;}
 #sepet_butonlar {margin-top:10px;width:500px;}
 #sepet_fiyat {margin-top:10px;width:240px;}
 .buton_alisveris, .buton_alisveris:link, .buton_alisveris:visited {display:inline-block;width:140px;height:23px;padding:7px 0 0 30px;background:url(../images/buton_alisverisdevam.png) no-repeat 0 0;font-size:13px;color:#5d6166;}
@@ -131,7 +131,7 @@ a#ft_teslimat {background-position:58px -243px}
 .os_h_oge u {float:left;display:inline;width:120px;}
 .os_h_oge b {float:left;display:inline;color:#4d4d4d;padding-top:7px;width:280px;font-size:14px;}
 .os_h_oge span {float:left;display:inline;width:75px;padding-top:5px;}
-.os_h_oge span select {width:75px;height:24px;}
+.os_h_oge span select {width:85px;height:30px;}
 .os_h_oge p {float:left;display:inline;width:65px;text-align:right;padding-top:7px}
 #os_diger {font-weight:700;}
 

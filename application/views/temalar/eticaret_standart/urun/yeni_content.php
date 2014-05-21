@@ -1,7 +1,7 @@
     <!--orta -->
     <div id="orta" class="sola">
 	<h1 id="sayfa_baslik"><?php echo lang('messages_new_products_title'); ?></h1>
-	<div style="float:right;display:inline;margin-top:15px;">
+	<div style="float:left;display:inline;margin:10px 0 10px 16px;">
 		<?php
 			$_option_array = array(
 				'price-desc' => lang('messages_select_stok_fiyat-desc'),
@@ -19,7 +19,7 @@
 			echo form_dropdown('urun_filtreleme', $_option_array, $sort_link, 'onchange="redirect(site_url(\''. $_uri .'\' + this.value));"');
 		?>
 	</div>
-	<div class="clear"></div>
+	
 	<?php
 		if($urunler) {
 			$i = 0;
@@ -45,7 +45,7 @@
 				
 				$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
 				
-				if($i == '3') {
+				if($i == '4') {
 					$i = 0;
 					echo '<div class="clear"></div>';
 				}

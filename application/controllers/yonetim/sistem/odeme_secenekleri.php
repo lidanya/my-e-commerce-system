@@ -288,21 +288,6 @@ class odeme_secenekleri extends Admin_Controller {
 	{
 		$poslar = '';
 
-		$yeni_ekle_komisyon['00'] = '0';
-		$yeni_ekle_komisyon['01'] = '1';
-		$yeni_ekle_komisyon['02'] = '2';
-		$yeni_ekle_komisyon['03'] = '3';
-		$yeni_ekle_komisyon['04'] = '4';
-		$yeni_ekle_komisyon['05'] = '5';
-		$yeni_ekle_komisyon['06'] = '6';
-		$yeni_ekle_komisyon['07'] = '7';
-		$yeni_ekle_komisyon['08'] = '8';
-		$yeni_ekle_komisyon['09'] = '9';
-		for($i=10;$i<=99;$i++)
-		{
-			$yeni_ekle_komisyon[$i] = $i;
-		}
-
 		$poslar .= '<tr>
 			<form method="post" enctype="multipart/form-data" id="taksit_ekle_'. $pos_id .'">
 			<td class="left">
@@ -311,7 +296,7 @@ class odeme_secenekleri extends Admin_Controller {
 			</td>
 			<td class="left">';
 
-		$poslar .= '% ' . form_dropdown('taksit_ekle_komisyon', $yeni_ekle_komisyon, '00', 'id="'. 'taksit_ekle_komisyon_' . $pos_id .'"');
+		$poslar .= '% ' . form_input('taksit_ekle_komisyon', "", 'id="'. 'taksit_ekle_komisyon_' . $pos_id .'"');
 
 		$durum_array = array('0' => 'Pasif', '1' => 'Aktif');
 		$poslar .= '</td>
@@ -335,22 +320,7 @@ class odeme_secenekleri extends Admin_Controller {
 			$poslar .= '<td class="left">
 				'. form_hidden('taksit_duzenle_id', $taksit_secenegi->kkts_id);
 
-			$duzenle_komisyon['00'] = '0';
-			$duzenle_komisyon['01'] = '1';
-			$duzenle_komisyon['02'] = '2';
-			$duzenle_komisyon['03'] = '3';
-			$duzenle_komisyon['04'] = '4';
-			$duzenle_komisyon['05'] = '5';
-			$duzenle_komisyon['06'] = '6';
-			$duzenle_komisyon['07'] = '7';
-			$duzenle_komisyon['08'] = '8';
-			$duzenle_komisyon['09'] = '9';
-			for($i=10;$i<=99;$i++)
-			{
-				$duzenle_komisyon[$i] = $i;
-			}
-
-			$poslar .= '% ' . form_dropdown('taksit_duzenle_komisyon', $duzenle_komisyon, $taksit_secenegi->kkts_komisyon, 'id="'. 'taksit_duzenle_komisyon_' . $taksit_secenegi->kkts_id .'"');
+			$poslar .= '% ' . form_input('taksit_duzenle_komisyon',$taksit_secenegi->kkts_komisyon, 'id="'. 'taksit_duzenle_komisyon_' . $taksit_secenegi->kkts_id .'"');
 
 			$poslar .= '</td>
 				<td class="left">';

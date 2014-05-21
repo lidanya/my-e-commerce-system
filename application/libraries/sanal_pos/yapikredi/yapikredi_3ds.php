@@ -81,8 +81,9 @@ class yapikredi_3ds
 			$uye_bilgi	= $gelen_veriler->uye_bilgi;
 			$banka_adi  = $this->banka;
 
-			$banka_tip_ = $this->ci->encrypt->encode($this->ascii);
-			$banka_tip  = base64_encode($banka_tip_);
+			//$banka_tip_ = $this->ci->encrypt->encode($this->ascii);
+			//$banka_tip  = base64_encode($banka_tip_);
+			$banka_tip = $this->ascii;
 
 			$strerrorurl_ = strtr($hatali_url, array('{siparis_id}' => $siparis_id, '{fatura_id}' => $fatura_id, '{banka}' => $banka_adi, '{tip}' => $banka_tip));
 			$strerrorurl = ssl_url($strerrorurl_);
@@ -102,8 +103,22 @@ class yapikredi_3ds
 			
 			$stramount = str_replace('.', ',', $gelen_veriler->fiyat); //İşlem Tutarı
 //			$security_data_terminal_hesapla = (strlen($pos_model_bilgi->terminalid) < 9) ? str_repeat('0', (9 - strlen($pos_model_bilgi->terminalid))) . $pos_model_bilgi->terminalid : $pos_model_bilgi->terminalid;
-
-			$post_url = 'https://'. $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii]['host'][$banka_bilgi->kk_banka_test_tipi] . $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii][$this->ascii];
+			
+			$data = array("installment"=>$strinstallmentcount,
+				"amount"=>$stramount,
+				"posnetID"=>$pos_model_bilgi->posnetid,
+				"mid"=>$pos_model_bilgi->merchantid,
+				'tid'=>$pos_model_bilgi->terminalid,
+				'xid'=>substr(md5($strorderid),0,20),
+				'tranType'=>'Auth',
+				'lang'=>'tr',
+				'currencyCode'=>'TL',
+				'merchantReturnSuccessURL'=>$strsuccessurl,
+				'merchantReturnFailURL'=>$strerrorurl);
+			
+			//p($data); exit;
+			
+			$post_url = $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii]['host'][$banka_bilgi->kk_banka_test_tipi] . $banka_host_bilgileri[$banka_bilgi->kk_banka_adi_ascii][$this->ascii];
 			$form = '';
 			$form .= $this->ci->config->item('banka_pos_3d_mesaji');
 			$form .= '<script type="text/javascript">' . "\n";
@@ -116,9 +131,9 @@ class yapikredi_3ds
 			$form .= form_hidden('amount', $stramount);
 			$form .= form_hidden('posnetID', $pos_model_bilgi->posnetid);
 			$form .= form_hidden('mid', $pos_model_bilgi->merchantid);
-			$form .= form_hidden('tid', $pos_model_bilgi->terminalid);
+			//$form .= form_hidden('tid', $pos_model_bilgi->terminalid);
 			$form .= form_hidden('xid', substr(md5($strorderid),0,20));
-			$form .= form_hidden('tranType', 'Auth');
+			$form .= form_hidden('tranType', 'Sale');
 			$form .= form_hidden('lang', 'tr');
 			$form .= form_hidden('currencyCode', 'TL');
 			$form .= form_hidden('merchantReturnSuccessURL', $strsuccessurl);

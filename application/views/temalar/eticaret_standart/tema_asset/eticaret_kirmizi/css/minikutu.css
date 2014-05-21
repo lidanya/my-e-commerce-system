@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+@import url("https://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,latin-ext");
+/* HTML ANA KODLAR BASLANGIC */
+*			 { padding:0px; margin:0px; }
+body				 { font-size: 14px; background-color:#EEE; font-family: Arial, sans-serif; color:#333; }
+a, a:link, a:visited {text-decoration: none;outline: none;}
+#Full				 { width:100%;}
+#Top				 { width:960px; height:30px; margin:auto auto auto auto; padding:5px 10px 5px 10px; text-align:right; font-size:11px; letter-spacing:1px;}
+#Logo				 { width:350px; padding:5px; float:left; }
+#Arama				 { width:267px; padding:0px; float:right; text-align:right; margin-top: 20px; margin-right: 38px; }
+#Slider				 { width:960px; height: 323px;  margin:10px auto;}
+#NoSlider			 { width:960px; height:60px; margin:auto auto auto auto; padding-top:30px; }
+#Menu				 { width:960px; height:66px; margin:10px auto; padding:0px 10px 0px 10px; font-family: 'Ubuntu Condensed'; }
+#Menu a				 { float:left; color: #ccc;margin-top: 22px;font-size: 18px;}
+#Menu a:hover			 { color: #999;}
+#InfoBar			 { width:960px; height:100px; padding-top:10px; margin:auto auto auto auto;}
+#Govde				 { width:960px; height:auto; margin:auto auto auto auto; padding:10px 0px 10px 0px;}
+#Footer				 { width:940px; height:300px; margin:auto auto auto auto; padding:10px; letter-spacing:1px;}
+.altKatBar			 { padding:5px 0 5px 16px; margin:auto; float:left;}
+.altKatBar a		 { background-color:#bbb; border-radius:5px; padding:5px 10px 5px 10px; margin:2px; color:#FFF; text-decoration:none; float:left; }
+.altKatBar a:hover	 { background-color:#aaa;  }
+
+/* HTML ANA KODLAR BITIS */
+/* STIL TANIMLAMALAR BASLANGIC */
+.Temizle { clear:both; }
+
+.maincolor			 { background-color:#434343; }
+.topmenubg			 { background-image:url(../images/topmenubg.jpg); background-repeat:no-repeat; background-position:top center; }
+.menubg				 { background-image:url(../images/menubg.png); background-repeat:no-repeat; background-position:center; }
+img					 { border:0px; }
+/* STIL TANIMLAMALAR BITIS */
+/* BUTONLAR BASLANGIC */
+.buton-uyegirisi		{ width:112px; height:38px; display:inline-block; background-image:url(../images/buttons/uyegirisi0.png); background-repeat:no-repeat; border:0px; float:left;}
+.buton-uyegirisi:hover	{ background-image:url(../images/buttons/uyegirisi1.png);}
+.buton-anasayfa			{ width:75px; height:26px; display:inline-block; background-image:url(../images/buttons/anasayfa0.png); background-repeat:no-repeat; border:0px; float:left;}
+.buton-anasayfa:hover	{ background-image:url(../images/buttons/anasayfa1.png);}
+.buton-hakkimizda		{ width:85px; height:26px; display:inline-block; background-image:url(../images/buttons/hakkimizda0.png); background-repeat:no-repeat; border:0px; float:left;}
+.buton-hakkimizda:hover	{ background-image:url(../images/buttons/hakkimizda1.png);}
+.buton-sss				{ width:45px; height:26px; display:inline-block; background-image:url(../images/buttons/sss0.png); background-repeat:no-repeat; border:0px; float:left;}
+.buton-sss:hover		{ background-image:url(../images/buttons/sss1.png);}
+.buton-iletisim			{ width:64px; height:26px; display:inline-block; background-image:url(../images/buttons/iletisim0.png); background-repeat:no-repeat; border:0px; float:left;}
+.buton-iletisim:hover	{ background-image:url(../images/buttons/iletisim1.png);}
+.kat-seperator			{ width:13px; height:66px; display:inline-block; margin: 0 15px; background-image:url(../images/buttons/kat-seperator.png); background-repeat:no-repeat; background-position:top center; border:0px; float:left; }
+.kat-teknoloji			{ width:113px; height:66px; display:inline-block; background-image:url(../images/buttons/katteknoloji0.png); background-repeat:no-repeat; border:0px; float:left; }
+.kat-teknoloji:hover	{ background-image:url(../images/buttons/katteknoloji1.png);}
+.kat-dekorasyon			{ width:153px; height:66px; display:inline-block; background-image:url(../images/buttons/katdekorasyon0.png); background-repeat:no-repeat; border:0px; float:left; }
+.kat-dekorasyon:hover	{ background-image:url(../images/buttons/katdekorasyon1.png);}
+.kat-ofis			 	{ width:63px; height:66px; display:inline-block; background-image:url(../images/buttons/katofis0.png); background-repeat:no-repeat; border:0px; float:left; }
+.kat-ofis:hover			{ background-image:url(../images/buttons/katofis1.png);}
+.kat-aksesuar			{ width:113px; height:66px; display:inline-block; background-image:url(../images/buttons/kataksesuar0.png); background-repeat:no-repeat; border:0px; float:left; }
+.kat-aksesuar:hover		{ background-image:url(../images/buttons/kataksesuar1.png);}
+.kat-figur			 	{ width:76px; height:66px; display:inline-block; background-image:url(../images/buttons/katfigur0.png); background-repeat:no-repeat; border:0px; float:left; }
+.kat-figur:hover		{ background-image:url(../images/buttons/katfigur1.png);}
+.kat-rcmodel			{ width:106px; height:66px; display:inline-block; background-image:url(../images/buttons/katrcmodel0.png); background-repeat:no-repeat; border:0px; float:left; }
+.kat-rcmodel:hover		{ background-image:url(buttons/katrcmodel1.png);}
+.kat-oyuncak			{ width:104px; height:66px; display:inline-block; background-image:url(../images/buttons/katoyuncak0.png); background-repeat:no-repeat; border:0px; float:left; }
+.kat-oyuncak:hover		{ background-image:url(../images/buttons/katoyuncak1.png);}
+.kat-outdoor			{ width:109px; height:66px; display:inline-block; background-image:url(../images/buttons/katoutdoor0.png); background-repeat:no-repeat; border:0px; float:left; }
+.kat-outdoor:hover		{ background-image:url(../images/buttons/katoutdoor1.png);}
+/* BUTONLAR BITIS */
+
+/* URUN KUTUSU BASLANGIC */
+#urunbox					{ width:220px; height:305px; display:inline-block; background-color:#222; border:1px solid #CCC; opacity:0.9; margin:3px 9px 10px 5px; z-index:1; float:left; }
+#urunbox:hover				{ border:1px solid #999; opacity:1; }
+#urunbox .gorsel			{ width:220px; height:223px; display:inline-block; background-image:url(../images/urun.jpg); background-position:top center; background-size:250px 250px; background-repeat:no-repeat; float:left; }
+#urunbox .urunadi			{ width:210px; height:30px; font-size:18px; float:left; line-height:19px; padding:5px 5px 10px 5px;}
+#urunbox .fiyat				{ width:105px; height:30px; font-size:30px; float:right; text-align:right; padding:0px 5px 5px 0px; color:#F90;   }
+#urunbox .eskifiyat			{ width:90px; height:30px; font-size:25px; float:left; text-align:right; padding:5px 10px 5px 5px; font-size:22px; text-decoration:line-through; color:#555; }
+a #urunbox			 		{ color:#eee; text-decoration:none;  }
+.indirim 					{ width:138px; height:26px; padding:3px 0px 0px 9px; display:inline-block; background-image:url(../images/bant-indirim.png); background-repeat:no-repeat; position:absolute; z-index:2; margin-top:5px; margin-left:-3px; font-size:14px; float:left; }
+/* URUN KUTUSU BITIS */

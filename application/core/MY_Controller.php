@@ -64,11 +64,11 @@ class Face_Controller extends CI_Controller {
 		$this->load->language(array('common/header', 'common/footer', 'common/messages'));
 		$this->load->model(array('site/product_model', 'site/category_model', 'site/manufacturer_model','site/information_model', 'yonetim/content_management/information_model'));
 
-//		if ( ! config('facebook_app_status')) {
-//			if ($this->uri->segment(4) != 'error') {
-//				redirect(face_site_url('site/error'));
-//			}
-//		}
+		if ( ! config('facebook_app_status')) {
+			if ($this->uri->segment(4) != 'error') {
+				redirect(face_site_url('site/error'));
+			}
+		}
 	}
 
 }

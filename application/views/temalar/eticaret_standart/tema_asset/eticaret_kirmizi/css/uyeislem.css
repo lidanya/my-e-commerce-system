@@ -6,7 +6,7 @@ Aciklamalar:
 
 
 /*=========================Genell Uye Formlari===============================*/
-#uye_giris_container, .uye_giris_container {width:740px;padding:10px;margin:auto;background:url(../images/uye_islem_bg.png) no-repeat 500px 100px;}
+#uye_giris_container, .uye_giris_container {width:740px;padding:10px;background:url(../images/uye_islem_bg.png) no-repeat 500px 100px;}
 #uye_giris_container a, .uye_giris_container a, #uye_giris_container:link, .uye_giris_container a:link, #uye_giris_container:visited, .uye_giris_container a:visited {color:#0260FA;font-weight:bold;}
 #uye_giris_container a:hover, .uye_giris_container a:hover {color:#0099ff;}
 #uye_not {width:500px;padding:10px;margin: 20px auto 10px 20px;font-size:13px;color:#737373;}
@@ -20,15 +20,15 @@ Aciklamalar:
 .uye_captcha {margin-left:10px;margin-top:1px;}
 
 /*============================Iletisim=================================*/
-#iletisim {width:720px;margin:auto;}
-.i_google {width:300px;position:absolute;z-index:99;top:50px;left:350px;}
+#iletisim {width:720px;}
+.i_google {width: 450px; margin: 0 auto;}
 .i_logo {top:50px;left:420px;position:absolute;width:199px;}
 .i_logo img {width:199px;}
 .i_adres {background:url(../images/iletisim_adres.png) no-repeat  0 0;}
 .i_mail {background:url(../images/iletisim_mail.png) no-repeat  0 0;}
 .i_telefon {background:url(../images/iletisim_telefon.png) no-repeat  0 0;}
 .i_fax {background:url(../images/iletisim_fax.png) no-repeat  0 0;}
-.ib_baslik, .ib_yazi {margin-left:40px;display:block;color:#7b7b7b;font-weight:bold;width:100px;height:23px;padding:7px 0 0 35px;font-size:12px;}
+.ib_baslik, .ib_yazi {margin-left:40px;display:block;color:#7b7b7b;font-weight:bold;width:100px;height:23px;padding:7px 0 0 35px;font-size:13px;}
 .ib_yazi {font-weight:normal;width:auto;margin:0;}
 .i_text, .i_box {display:block;margin-top:5px;}
 .i_text {height:25px;padding-top:5px;width:150px;color:#7b7b7b;font-weight:bold;text-align:right;}
@@ -63,7 +63,7 @@ Aciklamalar:
 #fatura {width:720px;padding:10px;margin:10px auto;}
 /*listele*/
 .f_gri {background-color:#efefef;}
-.f_oge_baslik {background:url(../images/fatura_liste_bg.png) repeat-x 0 0;font-weight:bold;color:#fff !important;}
+.f_oge_baslik {background:#2c2c2c;font-weight:bold;color:#fff !important;}
 .f_oge {width:700px;margin:auto;font-size:13px;color:#737373;clear:both;}
 .f_tablo01, .f_tablo02, .f_tablo03 {height:27px;text-align:center;padding-top:7px;width:100px;}
 .f_tablo02 {width:440px;text-align:left;padding-left:10px}
@@ -83,7 +83,7 @@ Aciklamalar:
 /*goster*/
 .fg_text, .fg_text_kucuk {display:block;width:150px;height:25px;padding-top:0px;color:#000;font-size:13px;font-weight:bold;}
 .fg_text_kucuk {width:auto;margin-left:5px;}
-.fg_box {margin-left:5px;font-size:12px;}
+.fg_box {margin-left:5px;font-size:13px;}
 
 /*============================Sipariş Listesi=================================*/
 #siparis {width:720px;padding:10px;margin:10px auto;}

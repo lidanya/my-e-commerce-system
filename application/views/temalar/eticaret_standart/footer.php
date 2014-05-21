@@ -20,7 +20,7 @@ $_3d_guvenlik = '';//'<a href="'. site_url('urun/yeni') .'" title="Yeni Ürünle
 
 if($kredi_karti_durum_if)
 {
-	$_3dtipleri = array('3dpay', '3dmodel', '3dhosting', '3dfull', '3dhalf', '3doosfull', '3dooshalf', '3doospay');
+	$_3dtipleri = array('3ds','3dpay', '3dmodel', '3dhosting', '3dfull', '3dhalf', '3doosfull', '3dooshalf', '3doospay');
 	$this->db->where_in('kk_banka_pos_tipi', $_3dtipleri);
 	$this->db->where('kk_banka_durum', '1');
 	$_3dp_durum = $this->db->count_all_results('odeme_secenek_kredi_karti');
@@ -92,7 +92,7 @@ if(config('site_ayar_ssl_kod') != '')
 	<div id="footer_bilgi">
 		<div class="sola"><?php echo anchor(site_url(), config('site_ayar_copyright')); ?></div>
 		<div class="saga">
-			<a href="#" target="_blank" title="<?php echo lang('footer_system_name'); ?>">
+			<a href="//marsma.com" target="_blank" title="<?php echo lang('footer_system_name'); ?>">
 				<?php echo strtr(lang('footer_copyright_text'), array('{version}' => ETICARET_VERSION)); ?>
 			</a>
 		</div>

@@ -6,27 +6,27 @@ Aciklamalar:
 */
 
 /*=========================Global Ayarlar===============================*/
-* {margin:0;padding:0;}
 div {overflow:hidden;}
 img {border:none;}
-a, a:link, a:visited {text-decoration:none;outline:none;color:#cc0000;}
-a:hover {cursor:pointer;color:#ff0000;}
-body {color:#333;font-size:12px;font-family:Arial, Helvetica, sans-serif;}
-input, textarea, select {color:#DD0000;outline:none;font-weight:bold;font-size:13px;line-height:22px;}
+a, a:link, a:visited {text-decoration:none;outline:none;color:#333;}
+a:hover {cursor:pointer;color:#f5215b;}
+input[type="text"],input[type="button"] textarea, select {color:#333;outline:none;font-weight:bold;font-size:13px;line-height:22px; padding: 5px; border:1px solid #ccc;}
 input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;}
 
+.liste_container { background: #eee;}
+.Top_alt { width: 960px; margin: auto; height: 85px;}
 /*=========================Global Stiller===============================*/
 /*yapisal*/
 .saga {float:right;/*IE Fix*/display:inline;}
 .sola {float:left;/*IE Fix*/display:inline;}
 .clear {clear:both;height:0px;overflow:hidden !important;}
 /*urun_butonlari*/
-.buton_sepete_ekle, .buton_sepete_ekle:link, .buton_sepete_ekle:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #990000;border-right:1px solid #990000;padding:0 5px;}
+.buton_sepete_ekle, .buton_sepete_ekle:link, .buton_sepete_ekle:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:#ffbb0f;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #ffbb0f;border-right:1px solid #ffbb0f;padding:0 5px;}
 .buton_hizli_al, .buton_hizli_al:link, .buton_hizli_al:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#676b70;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}
-.buton_detay, .buton_detay:link, .buton_detay:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #990000;border-right:1px solid #990000;padding:0 5px;}
-.buton_takip_et, .buton_takip_et:link, .buton_takip_et:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #990000;border-right:1px solid #990000;padding:0 5px;}
+.buton_detay, .buton_detay:link, .buton_detay:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:#ffbb0f;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #ffbb0f;border-right:1px solid #ffbb0f;padding:0 5px;}
+.buton_takip_et, .buton_takip_et:link, .buton_takip_et:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:#ffbb0f;;color:#fff;font-size:12px;font-weight:700;border-left:1px solid #ffbb0f;border-right:1px solid #ffbb0f;padding:0 5px;}
 .buton_takip_cikar, .buton_takip_cikar:link, .buton_takip_cikar:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#676b70;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}
-.buton_detay:hover, .buton_hizli_al:hover, .buton_sepete_ekle:hover, .buton_takip_et:hover, .buton_takip_cikar:hover {background-position:bottom left;color:#fff;border-left:1px solid #000;border-right:1px solid #000;}
+.buton_detay:hover, .buton_hizli_al:hover, .buton_sepete_ekle:hover, .buton_takip_et:hover, .buton_takip_cikar:hover {color:#fff;border-left:1px solid #f5215b;border-right:1px solid #f5215b; background: #f5215b;}
 .buton_stok_yok {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#333 !important;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}/*islevsiz buton*/
 /*genel_butonlar*/
 .urmercek {background:url(../images/urmercek.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
@@ -36,11 +36,11 @@ input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;
 .cekk {background:url(../images/cekk.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
 .corpi {background:url(../images/corpi.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
 
-.siterenk {color:#cc0000;}
+.siterenk {color:#f5215b;}
 .sitelink, .sitelink:link, .sitelink:hover {color:#333;}
-.sitelink:hover {color:#cc0000;}
-.sitelink2, .sitelink2:link, .sitelink2:hover {color:#990000;}
-.sitelink2:hover {color:#cc0000;}
+.sitelink:hover {color:#f5215b;}
+.sitelink2, .sitelink2:link, .sitelink2:hover {color:#f5215b;}
+.sitelink2:hover {color:#f5215b;}
 
 /*sayfa baslik*/
 h1#sayfa_baslik, .baslik {margin:auto;width:95%;padding:8px 0 8px 23px;font-weight:bold;font-size:16px;color:#5f5f5f;text-align:left;border-bottom:solid 1px #dadada;background:url(../images/sayfa_baslik_bg.png) no-repeat 0 8px;}
@@ -53,7 +53,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 .page_alt {width:720px;height:5px;background:url(../images/page_alt.png) no-repeat 0 0;}
 
 /*=========================Global Yapi===============================*/
-#header {width:1000px;margin:auto;position:relative;z-index:599;overflow:visible;}
+#header {/*width:1000px;margin:auto;position:relative;z-index:599;*/overflow:visible;}
 #header div {overflow:visible;}
 .hesol {width:250px;}
 .hesag {width:750px;height:40px;}
@@ -64,17 +64,15 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_ust_menu ul {list-style:none;}
 #h_ust_menu ul li {float:left;display:inline;}
 #h_ust_menu a,  #h_ust_menu a:link, #h_ust_menu a:visited {color:#a6a6a6;display:inline-block;margin:10px;font-size:11px;}
-#h_ust_menu a:hover {color:#cc0000;}
-
-
+#h_ust_menu a:hover {color:#f5215b;}
 
 #main {width:1000px;margin:auto;}
 #sol {width:220px;overflow:visible;position:relative;z-index:96;}
 #sol div {overflow:visible;}
 #sag {display:none;}
-#orta {width:760px;margin:10px 0 0 5px;position:relative;z-index:95;float:right;}
+#orta {width:1000px;margin:0px auto;position:relative;z-index:95;float:right; }
 #footer {width:1000px;margin:10px auto;background:url(../images/footer_bg.png) top repeat-x;position:relative;}
-.footust {width:1000px;}
+.footust {width:1000px; font-family: 'Ubuntu Condensed';}
 .footalt {width:1000px;}
 .foustmenu {height:39px;}
 .foustmenu ul {list-style:none;}
@@ -85,20 +83,17 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 .fomenu {padding:10px;}
 .fomenu ul {list-style:none;}
 .fomenu ul li {}
-.fomenu ul li a, .fomenu ul li a, .fomenu ul li a:link {font-size:18px;height:22px;line-height:22px;font-size:12px;color:#86898d;}
-.fomenu ul li a:hover {color:#cc0000;}
+.fomenu ul li a, .fomenu ul li a, .fomenu ul li a:link {font-size:18px; font-weight: bold; height:22px;line-height:22px;font-size:12px;color:#86898d;}
+.fomenu ul li a:hover {color:#f5215b;}
 #footer_iletisim {display:block;background:url(../images/footer_telefon.png) no-repeat  0 0;width:183px;height:39px;line-height:39px;padding-left:35px;color:#fff;font-size:24px;font-weight:bold;}
 .fologo {width:155px;margin-top:10px;}
 .tree3 {width:450px;margin-top:25px;}
 .tree3 div {float:left;display:inline;margin-right:35px;}
 
-
 #fobildis {width:100%;background:url(../images/fobilgi.png) top repeat-x;height:35px;line-height:31px;}
 #footer_bilgi {width:1000px;margin:auto;color:#000 !important;font-size:12px;}
 #footer_bilgi a, #footer_bilgi a:link, #footer_bilgi a:visited {color:#515151 !important;}
 #footer_bilgi a:hover {color:#000 !important;}
-
-
 
 /*=========================Slider===============================*/
 .slides-box-little {width:750px;margin-left:auto;margin-right:auto;}
@@ -118,38 +113,31 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*=========================Header===============================*/
 #h_ust {width:1000px;margin:auto;height:40px;padding-top:6px;}
 /*uye paneli ve giris linkleri*/
-#h_uye_menu {margin-top:13px;height:27px;}
+#h_uye_menu { height:27px; margin-left: 150px;}
+#h_uye_menu .uye-kayit { background: url(../images/kayitol_1.png) no-repeat;}
+#h_uye_menu .feys { background: url(../images/uyegirisi1.png) no-repeat;}
 #h_uye_menu ul {list-style:none;}
 #h_uye_menu ul li {float:left;display:inline;}
-#h_uye_menu ul li a,  #h_uye_menu ul li a:link, #h_uye_menu ul li a:visited {position:relative;text-indent:35px;background:url(../images/uye_menu.png); width:127px;height:34px;line-height:34px;color:#a6a6a6;display:inline-block;margin-right:5px;font-size:11px;font-weight:700;}
-#h_uye_menu ul li a:hover {background-position:bottom;color:#00ace0 !important;}
+#h_uye_menu ul li a,  #h_uye_menu ul li a:link, #h_uye_menu ul li a:visited {position:relative;text-indent:9999px;width:76px;height:26px;line-height:34px;display:inline-block; bottom: 2px;}
 #h_uye_menu ul li a.feys small {background:url(../images/faceicon.png) no-repeat;position:absolute;top:3px;right:3px;width:22px;height:21px;display:block;}
 
-#h_uye_menu em a, #h_uye_menu em a:link, #h_uye_menu em a:visited, #h_uye_panel {font-style:normal;display:inline-block;width:127px;height:34px;background:url(../images/uye_menu_bg.png);line-height:34px;text-align:center;color:#a6a6a6;font-weight:700;font-size:11px;}
-#h_uye_menu em a:hover, #h_uye_panel.hd_aktif {background-position:bottom left;color:#cc0000;}
-
-
+#h_uye_menu em a, #h_uye_menu em a:link, #h_uye_menu em a:visited, #h_uye_panel {font-style:normal;display:inline-block;width:66px;height:26px;background:url(../images/hesabim.png) center -2px;line-height:34px;text-align:center;color:#a6a6a6;font-weight:700;font-size:11px;}
+#h_uye_menu em a:hover, #h_uye_panel.hd_aktif {color:#f5215b;}
 
 .facelogin, .facelogin:link, .facelogin:visited {margin-left:10px;width:192px;height:31px;display:block;background:url(../images/facelogin.png) no-repeat;color:#fff !important;line-height:26px;text-indent:35px;}
 .facelogin:hover {color:#f1f1f1;}
-
-
-
-#h_uye_panel {display:block;cursor:pointer;position:relative;top:13px;}
-#h_uye_panel ul {background:url(../images/kulmbg.png) top repeat-x; display:none;position:absolute;top:34px;left:0px;border:solid 1px #ff9fa4;padding:5px 0 0 2px;width:150px;list-style-type:none;text-align:left;}
-#h_uye_panel ul li {width:140px;margin:0 0 3px 5px;}
-#h_uye_panel ul li a, #h_uye_panel ul li a:link, #h_uye_panel ul li a:visited {height:20px;line-height:20px;display:block;padding:0 5px;color:#fff;font-size:11px;background:url(../images/kulmenulink.png) repeat;font-weight:400;}
-#h_uye_panel ul li a:hover {color:#333;}
+ 
+#h_uye_panel {display:block;cursor:pointer; margin-left: 150px;}
+#Full .panel-acik { position: absolute;top: 31px;width: 154px;z-index: 99999;height: 179px;}
+#Full .panel-acik ul {background:#fff; display:none; z-index: 9999;position:absolute;left:0px;padding:5px 0 0 2px;width:150px;list-style-type:none;text-align:left;}
+#Full .panel-acik ul li {width:140px;margin:0 0 3px 5px;}
+#Full .panel-acik ul li a, #Full .panel-acik ul li a:link, #Full .panel-acik ul li a:visited {height:20px;line-height:20px;display:block;padding:0 5px;color:#fff;font-size:11px;background:#f5215b; font-weight:400;}
+#Full .panel-acik ul li a:hover {color:#333;}
 /*header ust menu*/
-
 
 .busol {width:5px;height:30px;background:url(../images/busol.png) no-repeat;}
 .buor {height:22px;background:url(../images/buor.png) repeat-x;text-align:center;padding:4px 10px 4px 10px;}
 .busag {width:5px;height:30px;background:url(../images/busag.png) no-repeat;}
-
-
-
-
 
 /*Dil secimi v2*/
 
@@ -174,11 +162,11 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*logo*/
 #h_logo {margin-top:15px;}
 /*sepet*/
-#h_sepet, #h_sepet:link, #h_sepet:visited {position:relative;position:relative;top:-8px;right:5px;width:200px;height:42px;padding:0px 0 0 0px;}
-#h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:200px;height:42px;background:url(../images/h_sepet_bg.png) no-repeat 0 0;color:#e0e0e0;display:block;}
+#h_sepet, #h_sepet:link, #h_sepet:visited {position:absolute;top:1px;right:11px;width:200px;height:42px;padding:0px 0 0 0px;}
+#h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:200px;height:30px;background:url(../images/h_sepet_bg.jpg) no-repeat 0 0;color:#e0e0e0;display:block;}
 #h_sepet p a:hover {background-position:bottom left;}
-#h_sepet span {display:inline-block;margin-top:20px;text-indent:10px;}
-.hizlisepet {width:498px;position:absolute;top:35px;right:-10px;overflow:hidden;display:none;}
+#h_sepet span {display:inline-block;margin-top:8px;text-indent:10px;}
+.hizlisepet {width:498px;position:absolute;top:22px;right:0px;overflow:hidden;display:none; z-index: 9999;}
 .hizlisepet div {overflow:hidden !important;}
 .sepust {width:498px;height:16px;background:url(../images/sepust.png) no-repeat;}
 .seport {width:498px;background:url(../images/seport.png) repeat-y;}
@@ -190,13 +178,13 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 .seport ul {list-style:none;}
 .seport ul li {width:458px;margin:2px auto;border-top:1px solid #ddd;height:30px ;line-height:30px ;}
 .seport ul li:first-child {border-top:none;}
-.seport dl {padding:1px;clear:both;font-size:11px;color:#454545;}
+.seport dl {padding:1px;clear:both;font-size:12px;color:#454545;}
 .seport dt {width:365px;float:left;display:inline;margin:auto 5px auto auto;color:#454545;}
 .seport dt i {font-weight:bold;}
 .seport dt a, .seport dt a:link, .seport dt a:visited {color:#454545 ;display:inline-block;margin-right:10px;}
 .seport dt a:hover {color:#08afe6 ;}
 .seport dd {float:left;display:inline;margin:auto auto auto 5px;}
-.seport u {display:inline-block;margin-right:63px;font-size:11px;text-decoration:none;font-weight:bold;}
+.seport u {display:inline-block;margin-right:63px;font-size:12px;text-decoration:none;font-weight:bold;}
 .seport u em {font-style:normal;margin-right:20px;}
 .seport u cite {font-style:normal;}
 .saltlinkler {margin:10px auto auto auto;width:458px;}
@@ -215,10 +203,9 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_a_kat ul li {}
 #h_a_kat a, #h_a_kat a:link, #h_a_kat a:visited {background:url(../images/kathov.png) top repeat-x; height:20px;line-height:20px;margin:1px auto;display:block;width:155px;padding:0 5px;color:#fff;}
 #h_a_kat a:hover {background-position:bottom; color:#fff;}
-#h_a_text {width:235px;margin-left:7px;/*padding-top:3px;*/}
-#h_a_text input {height:32px;line-height:32px;width:235px;border:none;background-color:transparent;font-size:11px;color:#a6a6a6;font-weight:400;}
-#h_a_text input:focus {background-color:transparent !important;}
-#h_a_buton, #h_a_buton:link, #h_a_buton:visited {display:block;width:16px;height:32px;overflow:hidden;text-indent:-999px;background:url(../images/h_ara_buton.png) no-repeat 0 5px;}
+#h_a_text {width:235px;margin-left:7px; border: 1px solid #ccc;/*padding-top:3px;*/}
+#h_a_text input {height:32px;line-height:32px;width:235px;border:none;color:#a6a6a6;font-weight:400; padding: 2px 5px;}
+#h_a_buton, #h_a_buton:link, #h_a_buton:visited {display:block;width:16px;height:32px;overflow:hidden;text-indent:999px;background:url(../images/h_ara_buton.png) no-repeat 0 5px; position: relative; right: 27px; top: 2px;}
 #h_a_buton:hover {background-position:0 -37px;}
 
 /*header alt menu*/
@@ -286,15 +273,15 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #kategori_menu01 ul {list-style-type:none;}
 #kategori_menu01 ul li {width:218px;}
 #kategori_menu01 ul li a, #kategori_menu01 ul li a:link, #kategori_menu01 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#4b4b4b;font-size:14px;}
-#kategori_menu01 ul li a:hover, #kategori_menu01 ul li a.k_aktif {color:#cc0000;}
+#kategori_menu01 ul li a:hover, #kategori_menu01 ul li a.k_aktif {color:#f5215b;}
 
 /*=========================Yan Kategori Menu Tip 02===============================*/
 #kategori_menu02 {width:218px;}
 #kategori_menu02 ul {list-style-type:none;}
 #kategori_menu02 ul li {width:218px;background:url(../images/katlinkbg.png) repeat-x;}
 #kategori_menu02 ul li a, #kategori_menu02 ul li a:link, #kategori_menu02 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#4b4b4b;font-size:14px;}
-#kategori_menu02 ul li a:hover, #kategori_menu02 ul li a.k_aktif {color:#cc0000;}
-#kategori_menu02 ul li a.k_aktif {color:#cc0000;}
+#kategori_menu02 ul li a:hover, #kategori_menu02 ul li a.k_aktif {color:#f5215b;}
+#kategori_menu02 ul li a.k_aktif {color:#f5215b;}
 #kategori_menu02 ul li ul {list-style-type:none;width:215px}
 #kategori_menu02 ul li ul li {background:none #eee;border-top:1px solid #fff;}
 #kategori_menu02 ul li ul li a, #kategori_menu02 ul li ul li a:link, #kategori_menu02 ul li ul li a:visited {width:213px;background-color:transparent;}
@@ -305,8 +292,8 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #kategori_menu03 ul {list-style-type:none;}
 #kategori_menu03 ul li {width:218px;background:url(../images/katlinkbg.png) repeat-x;}
 #kategori_menu03 ul li a, #kategori_menu03 ul li a:link, #kategori_menu03 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#494949;font-size:12px;}
-#kategori_menu03 ul li a:hover, #kategori_menu03 ul li.k_aktif {color:#cc0000;}
-#kategori_menu03 ul li a.k_aktif {color:#cc0000;}
+#kategori_menu03 ul li a:hover, #kategori_menu03 ul li.k_aktif {color:#f5215b;}
+#kategori_menu03 ul li a.k_aktif {color:#f5215b;}
 #kategori_menu03 ul li ul {list-style-type:none;width:220px;overflow:hidden;}
 #kategori_menu03 ul li ul li {border:none;width:auto;}
 #kategori_menu03 ul li ul li a, #kategori_menu03 ul li ul li a:link, #kategori_menu03 ul li ul li a:visited {background-color:#eeeeee;}
@@ -315,7 +302,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*=========================Yan Kategori Menu Tip 04===============================*/
 #kategori_menu04 {width:200px;color:#4b4b4b;font-size:13px;}
 #kategori_menu04 a, #kategori_menu04 a:link, #kategori_menu04 a:visited {color:#4b4b4b}
-#kategori_menu04 a:hover {color:#cc0000}
+#kategori_menu04 a:hover {color:#f5215b}
 .treeview, .treeview ul {padding: 0;margin: 0;list-style: none;}
 .treeview ul {margin-top: 4px;}
 .treeview .hitarea {background: url(../images/treeview-default.gif) -64px -25px no-repeat;height: 16px;width: 16px;margin-left: -16px;float: left;cursor: pointer;}
@@ -342,9 +329,9 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 .k_urun_adi, .k_urun_adi:link, .k_urun_adi:visited {line-height:20px;height:35px;display:block;width:200px;padding:5px 0;text-align:center;font-size:12px;font-weight:bold;margin-bottom:10px;}
 .k_urun_adi:hover{}
 
-.k_fiyat {width:115px;height:53px;text-align:center;font-size:15px;color:#cc0000;background-color:#fcdfe0;border:1px solid #ffb6b9;}
+.k_fiyat {width:115px;height:53px;text-align:center;font-size:15px;color:#f5215b;background-color:#fcdfe0;border:1px solid #ffb6b9;}
 .k_fiyat small {font-size:9px;display:block;text-align:center;}
-.k_fiyat big {color:#636363;font-weight:bold;font-size:19px;color:#cc0000;display:block;text-align:center;padding-top:5px;}
+.k_fiyat big {color:#636363;font-weight:bold;font-size:19px;color:#f5215b;display:block;text-align:center;padding-top:5px;}
 .k_fiyat em {font-style:normal;text-decoration:line-through;color:#ababab;font-size:10px;}
 .k_butonlar {width:auto;padding-top:17px;}
 .k_ileri, .k_geri {list-style-type:none;}
@@ -419,7 +406,8 @@ input.hata_yazisi, textarea.hata_yazisi, select.hata_yazisi  {font-style:normal 
 .butonum:hover span {background-position:bottom;}
 .butonum span {float:left;display:inline-block;background-position:top;margin:auto !important;text-indent:0 !important;}
 .butsol {width:6px;height:26px;background:url(../images/butsol.png) no-repeat ;}
-.butor {height:21px;background:url(../images/butor.png) repeat-x;padding:5px 10px 0 10px;color:#ffffff;}
+.butor {height:21px;background:#ffbb0f;padding:5px 10px 0 10px;color:#ffffff;}
+.butor:hover {background:#f5215b;}
 .butsag {width:6px;height:26px;background:url(../images/butsag.png) no-repeat ;}
 
 .facelog, .facelog:link, .facelog:visited {padding:16px 0 0 55px;position:absolute;left:250px;top:-5px;font-weight:700;width:175px;height:26px;background:url(../images/facebook_login.png) top no-repeat;color:#fff;font-family:Calibri;font-size:15px;display:block;}

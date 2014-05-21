@@ -25,7 +25,7 @@ class site extends Face_Controller
 		$data['baslik'] = lang('messages_page_not_found_title');
 
 		$this->load->view(face_tema() . 'header', $data);
-		//$this->load->view(tema() . 'left');
+		////$this->load->view(tema() . 'left');
 		$this->load->view(face_tema() . 'index/page_not_found_content');
 		//$this->load->view(tema() . 'right');
 		$this->load->view(face_tema() . 'footer');

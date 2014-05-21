@@ -4,7 +4,7 @@ Aciklamalar:
 - urun detay sayfasi stil sablonlarini icerir 
 */
 /*============================Ayarlar=================================*/
-#urun, #urun_tab_cont {width:723px;padding:10px;border:solid 1px #dadada;margin:auto;}
+#urun, #urun_tab_cont {width:723px;padding:10px; background: #fff; border: 1px solid #d6d6d6;}
 h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding:0 0 5px 23px;margin:auto;font-size:16px;font-weight:bold;color:#5f5f5f;background:url(../images/urun_baslik_bg.png) no-repeat 0 1px;}
 .u_yesil_bg {background-color:#E4F1C9;}
 .u_sari_bg {background-color:#FBFAEA;}
@@ -24,7 +24,7 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 .urun_detay_oge {width:400px;height:33px;border-bottom:dashed 1px #e3e3e3;clear:both;}
 .u_baslik, .u_oge {display:block;width:120px;margin-left:10px;color:#7f7f7f;font-size:13px;margin-top:5px;}
 .u_oge {color:#565656;font-weight:bold;width:200px;}
-.u_oge span {font-size:9px;}
+.u_oge span {font-size:13px;}
 .u_oge b.u_turuncu {color:#ff6c00;font-size:16px;}
 .u_oge b.u_yesil {color:#007e2e;font-size:16px;}
 .u_oge b.u_cizgili {text-decoration:line-through;color:#ff0000}
@@ -47,10 +47,10 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 #urun_detay_butonlar a.u_yorum {background-position:top right;width:65px;}
 #urun_detay_butonlar a:hover.u_yorum {background-position:bottom right;}
 #urun_paylas_metin {color:#7f7f7f;font-size:13px;width:150px;margin-top:20px;text-align:right;padding-top:3px;}
-#urun_paylas {text-align:center;width:240px;margin-top:20px;}
+#urun_paylas {text-align:center; background: #fff; padding: 0 10px; width: 723px; margin-top: 10px;}
 
 /*tab menu*/
-#urun_tablar {width:745px;margin:15px auto 0;height:35px;}
+#urun_tablar {width:743px;margin:10px 0 0;height:35px;}
 #urun_tablar a, #urun_tablar a:link, #urun_tablar a:visited {text-align:center;display:block;color:#7f7f7f;width:122px;height:35px;background:url(../images/urun_tab.png) no-repeat 0 0;}
 #urun_tablar a:hover {background-position:center;color:#000;}
 #urun_tablar a.u_aktif {background-position:bottom;color:#000;}
@@ -65,7 +65,7 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 
 /*tablar -->*/
 #urun_tab_cont {border-top:none;}
-.urun_tab_container {border:solid 1px #f6f6f6;width:701px;padding:10px;font-size:13px;color:#7b7b7b}
+.urun_tab_container {width:701px;padding:10px;font-size:13px;color:#7b7b7b}
 
 /*urun ozellikleri*/
 .uo_gri {background-color:#efefef;}
@@ -93,7 +93,7 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 .uy_mesaj {width:auto;margin:5px auto;padding:5px 0px;font-size: 11px;text-align:center;}
 
 /*urun taksitleri*/
-.u_taksit_container {width:170px;display:inline-block;text-align:left;font-size:10px;margin-bottom:5px;}
+.u_taksit_container {width:170px;display:inline-block;text-align:left;font-size:12px;margin-bottom:5px;}
 .u_taksit_ust {width:170px;height:5px;background:url(../images/u_taksit_modul.png) no-repeat 0 0;}
 .u_taksit_ic {width:168px;border-left:solid 1px #d7d7d7;border-right:solid 1px #d7d7d7;}
 .u_taksit_alt {width:170px;height:5px;background:url(../images/u_taksit_modul.png) no-repeat bottom center;}
@@ -111,8 +111,9 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 .u_video_wrapper {border:solid 2px #dedede;width:304px;margin:10px 0 0 30px;}
 
 /*diger urunler*/
-.urun_diger_baslik {width:705px;height:30px;padding:10px 0 0 40px;letter-spacing:-1px;margin:auto;background:url(../images/urun_detay_diger_baslik.png) no-repeat 0 0;margin-top:20px;font-weight:bold;color:#666666;font-size:16px;}
-.urun_diger_cont {width:723px;padding:10px;margin:auto;border:solid 1px #d6d6d6;border-top:none;}
+.urun_diger_baslik {width:705px;height:30px;padding:10px 0 0 40px;letter-spacing:-1px;background:url(../images/urun_detay_diger_baslik.png) no-repeat 0 0;margin-top:10px;font-weight:bold;color:#666666;font-size:16px;}
+.urun_diger_baslik h1 {display:inline;font-weight:bold;color:#666666;font-size:16px;}
+.urun_diger_cont {width:723px;padding:10px;border:solid 1px #d6d6d6;border-top:none; background: #fff;}
 .urun_diger_oge {width:720px;margin:10px auto;}
 .urun_diger {width:590px;}
 .urun_diger a img {width:70px;margin:5px;border:solid 1px #f2f2f2;float:left;/*IE Fix*/display:inline;}

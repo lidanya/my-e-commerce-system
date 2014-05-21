@@ -265,8 +265,9 @@ $lang['messages_static_page_customer_services_order_contact_suggest'] = 'Görü�
 /*- Ürün listeleme tanımları -*/
 // Ürün Şablon Dilleri
 // Normal
-$lang['messages_product_shema_normal_new_product_text'] = '<span>Ye</span>ni Ürün';
+$lang['messages_product_shema_normal_new_product_text'] = '<span>Yeni Ürün</span>';
 $lang['messages_product_shema_normal_campaign_text'] = '<span>Ka</span>mpanya';
+$lang['messages_product_shema_normal_discount_text'] = '<span>İn</span>dirimli';
 $lang['messages_product_shema_normal_vat_text'] = 'KDV';
 $lang['messages_product_shema_normal_campaign_product_piece'] = '<div class="urun_liste_fiyat saga" style="font-size: 12px;">{adet} adet alana tanesi<br /><span class="k_fiyat" style="margin:0;padding:0;font-size: 12px;">{fiyat}</span> <span class="u_birim">{tur}{kdv}</span></div>';
 $lang['messages_product_shema_normal_fast_buy_button'] = 'Hızlı Al';
@@ -298,6 +299,7 @@ $lang['messages_product_detail_product_code'] = 'Ürün Kodu';
 $lang['messages_product_detail_product_brand'] = 'Mark';
 $lang['messages_product_detail_product_price_reg'] = 'Ürün fiyatını görmek için lütfen üye olun.';
 $lang['messages_product_detail_product_price'] = 'Fiyat';
+$lang['messages_product_detail_product_bank_transfer_price'] = 'Havale Fiyatı';
 $lang['messages_product_detail_product_campaign'] = 'Kampanya';
 
 $lang['product_detail_time_left'] = 'Kalan Süre'; 
@@ -345,7 +347,7 @@ $lang['messages_product_detail_comments_success_message'] = 'Yorumunuz başarıl
 $lang['messages_product_detail_comments_error_message'] = 'Yorumunuz eklenemedi, lütfen yöneticiye başvurunuz.';
 $lang['messages_product_detail_comments_error_security_code_message'] = 'Girdiğiniz doğrulama kodu yanlıştır lütfen tekrar deneyiniz.';
 $lang['messages_product_detail_instalment'] = 'Taksit';
-$lang['messages_product_detail_dont_instalment'] = 'Sistemizde taksitli ödeme seçeneği bulunmamaktadır.';
+$lang['messages_product_detail_dont_instalment'] = 'Sistemimizde taksitli ödeme seçeneği bulunmamaktadır.';
 $lang['messages_product_detail_instalment_reg'] = 'Taksit seçeneklerini görmek için üye olun.';
 $lang['messages_product_detail_pictures'] = 'Resimler';
 $lang['messages_product_detail_pictures_no_picture'] = 'Ürün\'e ait başka fotograf bulunmamaktadır.';
@@ -622,7 +624,7 @@ $lang['messages_checkout_4_pay_door_message'] = 'Kapıda Ödeme Bedeli olan <b>{
 $lang['messages_checkout_4_pay_door_form_button_text'] = 'Satınalma İşlemine Devam Et';
 // Ödeme Adım 5 Kredi Kartı
 $lang['messages_checkout_5_credit_cart_title'] = 'Sipariş Detayları';
-$lang['messages_checkout_5_credit_cart_error_title'] = 'Siparişiniz Teknik Bir Nedenden Dolayı Alınmıyor';
+$lang['messages_checkout_5_credit_cart_error_title'] = 'Siparişiniz Teknik Bir Nedenden Dolayı Alınamıyor';
 $lang['messages_checkout_5_credit_cart_success_title'] = 'Siparişiniz Alınmıştır';
 $lang['messages_checkout_5_credit_cart_success_a_title'] = 'Sipariş Detaylarını Görmek İçin Tıklayın';
 $lang['messages_checkout_5_credit_cart_success_message'] = '<b>{toplam_ucret}</b> TL tutarı kredi kartınızdan çekilmiştir. <a class="info" title="{siparis_a_title}" href="{siparis_a_href}" target="_blank">Sipariş Numaranız : <i>#{siparis_id}</i></a>.

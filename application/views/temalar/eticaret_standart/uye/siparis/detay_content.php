@@ -64,7 +64,7 @@
 			{			
 				$indirim_ucret_hesapla = ($stok_toplam_fiyat * ((100-$indirim_orani)/100));
 				$indirim_ucret = (float) ($stok_toplam_fiyat - $indirim_ucret_hesapla);
-				$stok_toplam_fiyat = ($stok_toplam_fiyat - $indirim_ucret);
+				//$stok_toplam_fiyat = ($stok_toplam_fiyat - $indirim_ucret);
 			}
 			/* İndirim Oran & Fiyat Hesaplaması */
 
@@ -170,9 +170,7 @@
 			<div class="sg_alt">
 				<div class="sola" style="margin-top:25px;">
 					<a rel="nofollow" href="javascript:;" onclick="location = '<?php echo ssl_url('uye/siparisler'); ?>';" class="butonum">
-						<span class="butsol"></span>
 						<span class="butor"><img src="<?php echo site_resim(); ?>btn_img_geri.png" alt="" /> <?php echo lang('messages_button_back_list'); ?></span>
-						<span class="butsag"></span>
 					</a>
 					
 				</div>
@@ -236,7 +234,7 @@
 					<span class="sg_text saga"><?php echo lang('messages_member_order_detail_payment_at_the_door_total'); ?> :</span>
 					<div class="clear"></div>
 					<?php } ?>
-
+					
 					<span class="sg_fiyat saga"><b class="siterenk" style="font-size:16px;"><?php echo ($stok_toplam_fiyat + $kargo_ucret + $kapida_odeme_ucret  - $indirim_ucret - $kupon_indirim); ?> TL</b></span>
 					<span class="sg_text saga" style="padding-top:3px;"><?php echo lang('messages_member_order_detail_total'); ?> :</span>
 					<div class="clear"></div>

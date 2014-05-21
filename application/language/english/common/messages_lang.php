@@ -268,6 +268,7 @@ $lang['messages_static_page_customer_services_order_contact_suggest'] = 'Opinion
 // Normal
 $lang['messages_product_shema_normal_new_product_text'] = '<span>Ne</span>w Product';
 $lang['messages_product_shema_normal_campaign_text'] = '<span>Ca</span>mpaign';
+$lang['messages_product_shema_normal_discount_text'] = '<span>Di</span>scount';
 $lang['messages_product_shema_normal_vat_text'] = 'VAT';
 $lang['messages_product_shema_normal_campaign_product_piece'] = '<div class="urun_liste_fiyat saga" style="font-size: 12px;">{adet} pieces of this product is
 <br /><span class="k_fiyat" style="margin:0;padding:0;font-size: 12px;">{fiyat}</span> <span class="u_birim">{tur}{kdv}</span></div>';
@@ -303,6 +304,7 @@ $lang['messages_product_detail_product_code'] = 'Product Code';
 $lang['messages_product_detail_product_brand'] = 'Brand';
 $lang['messages_product_detail_product_price_reg'] = 'Please register to see the product price.';
 $lang['messages_product_detail_product_price'] = 'Price';
+$lang['messages_product_detail_product_bank_transfer_price'] = 'With bank transfer price';
 $lang['messages_product_detail_product_campaign'] = 'Campaign';
 $lang['messages_product_detail_product_campaign_price'] = '{price} for piece, if you buy {piece} pieces';
 $lang['messages_product_detail_with_vat'] = 'With VAT';

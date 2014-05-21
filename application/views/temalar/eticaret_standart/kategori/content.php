@@ -5,32 +5,9 @@
 		<?php } ?>
 	</h1>
 	<p style="margin:10px 0px 0px 10px;"><?php  echo $category_info->description;?></p>
-	<div style="float:right;display:inline;margin-top:15px;">
-		<?php
-			$_option_array = array(
-				'price-desc' => lang('messages_select_stok_fiyat-desc'),
-				'price-asc' => lang('messages_select_stok_fiyat-asc'),
-				'name-desc' => lang('messages_select_stok_adi-desc'),
-				'name-asc' => lang('messages_select_stok_adi-asc'),
-				'viewed-desc' => lang('messages_select_stok_hit-desc'),
-				'viewed-asc' => lang('messages_select_stok_hit-asc'),
-				'product_id-desc' => lang('messages_select_stok_id-desc'),
-				'product_id-asc' => lang('messages_select_stok_id-asc')
-			);
-
-			$_uri = $seo . '--category/';
-			if($category_products AND !$sub_category) {
-				echo form_dropdown('urun_filtreleme', $_option_array, $sort_link, 'onchange="redirect(site_url(\''. $_uri .'\' + this.value));"');
-			}
-		?>
-	</div>
-	<div class="clear"></div>
-	<?php
-		if($sub_category) {
-			$i = 0;
-	?>
+	
 	<div class="liste_container">
-		<?php
+		<?php if($sub_category) { $i = 0;
 			foreach($sub_category as $sub_categories) {
 				$i = $i + 1;
 				if($sub_categories->image != 'resim_ekle.jpg') {
@@ -61,6 +38,8 @@
 					$category_url = str_replace('--category', '', $this->uri->segment(2)) . '---' . $sub_categories->seo . '--category';
 				}
 		?>
+		<?php if(!$category_products){ ?>
+			<?php if($total_products > 0){ ?>
 			<div class="kategori_liste_oge sola">
 				<div class="kategori_liste_resim">
 					<a href="<?php echo site_url($category_url); ?>">
@@ -71,19 +50,59 @@
 					<?php echo character_limiter($sub_categories->name, 50) . $stok_say; ?>
 				</a>
 			</div>
-	<?php
-			if($i == '3') {
+		
+		<?php
+			if($i == '4') {
 				$i = 0;
 				echo '<div class="clear"></div>';
 			}
+		} else {
+			--$i;
 		}
+		?>
+		<?php } else { ?>
+	
+			<?php if($total_products > 0){ ?>
+			<div class="altKatBar">
+				<a href="<?php echo site_url($category_url); ?>"><?php echo $sub_categories->name . $stok_say; ?></a>
+			</div>
+			<?php } ?>
+	
+		<?php }
+		
+			} 
+		
+		} 
 	?>
+		<div class="clear"></div>
 	</div>
+	<?php if($category_products): ?>
+	<div style="float:left;display:inline;margin:10px 0 10px 16px;">
+		<?php
+			$_option_array = array(
+				'price-desc' => lang('messages_select_stok_fiyat-desc'),
+				'price-asc' => lang('messages_select_stok_fiyat-asc'),
+				'name-desc' => lang('messages_select_stok_adi-desc'),
+				'name-asc' => lang('messages_select_stok_adi-asc'),
+				'viewed-desc' => lang('messages_select_stok_hit-desc'),
+				'viewed-asc' => lang('messages_select_stok_hit-asc'),
+				'product_id-desc' => lang('messages_select_stok_id-desc'),
+				'product_id-asc' => lang('messages_select_stok_id-asc')
+			);
+
+			$_uri = $seo . '--category/';
+			
+				echo form_dropdown('urun_filtreleme', $_option_array, $sort_link, 'onchange="redirect(site_url(\''. $_uri .'\' + this.value));"');
+			
+		?>
+	</div>
+	<?php endif; ?>
+		
 <?php
-	} else if($category_products) {
+	 if($category_products) {
 		$i = 0;
 ?>
-	<div class="clear"></div>
+	
 	<?php
 		if($category_products_pagination) {
 			echo $category_products_pagination['links'];
@@ -91,7 +110,7 @@
 	?>
 	<div class="clear"></div>
 	<div class="liste_container">
-	<?php foreach($category_products['query'] as $kategori_urunler) { ?>
+	<?php $sablon_gonder = new stdClass(); foreach($category_products['query'] as $kategori_urunler) { ?>
 		<?php
 			$i = $i+1;
 				$sablon_gonder->product_id		= $kategori_urunler->product_id;
@@ -102,7 +121,7 @@
 				$sablon_gonder->seo				= $kategori_urunler->seo;
 				$sablon_gonder->image			= $kategori_urunler->image;
 				$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
-			if($i == '3') {
+			if($i == '4') {
 				$i = 0;
 				echo '<div class="clear"></div>';
 			}
@@ -115,7 +134,7 @@
 			echo $category_products_pagination['links'];
 		}
 	?>
-<?php } else { ?>
+<?php } else if(!$sub_category && !$category_products) { ?>
 	<!-- Hata -->
 	 <div id="onay_mesaj">
 	 	<div class="onay_image sola"><img src="<?php echo site_resim();?>unlem.png" alt="<?php echo lang('messages_not_new_products_title'); ?>" title="<?php echo lang('messages_not_new_products_title'); ?>"></div>
@@ -126,14 +145,10 @@
 	 	<div class="clear"></div>
 	 	<p class="onay_buton">
 	 		<a href="javascript:history.back();" title="<?php echo lang('messages_button_back'); ?>" class="butonum">
-	 			<span class="butsol"></span>
 	 			<span class="butor"><img src="<?php echo site_resim();?>btn_img_geri.png" alt="<?php echo lang('messages_button_back'); ?>" />&nbsp;<?php echo lang('messages_button_back'); ?></span>
-	 			<span class="butsag"></span>
  			</a>
 			<a class="butonum" style="margin-left:10px;" href="<?php echo site_url(); ?>" title="<?php echo lang('messages_button_back_home'); ?>">
-				<span class="butsol"></span>
 				<span class="butor"><img src="<?php echo site_resim();?>btn_img_anasayfa.png" alt="<?php echo lang('messages_button_back_home'); ?>" />&nbsp;<?php echo lang('messages_button_back_home'); ?></span>
-				<span class="butsag"></span>
 			</a>
 	 	</p>
 	 </div>

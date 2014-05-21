@@ -111,7 +111,7 @@ class product_product_model extends CI_Model
 			'weight'					=> $get_values['weight'],
 			'weight_class_id'			=> $get_values['weight_class_id'],
 			'subtract'					=> $get_values['subtract'],
-			'hizli_gonder'				=> $get_values['hizli']
+			'hizli_gonder'					=> $get_values['hizli']
 		);
 		$this->db->insert('product', $product_insert_data);
 		$product_id = $this->db->insert_id();
@@ -522,7 +522,7 @@ class product_product_model extends CI_Model
 			'weight'					=> $get_values['weight'],
 			'weight_class_id'			=> $get_values['weight_class_id'],
 			'subtract'					=> $get_values['subtract'],
-			'hizli_gonder'				=> $get_values['hizli']
+			'hizli_gonder'					=> $get_values['hizli']
 		);
 		$this->db->update('product', $product_insert_data, array('product_id' => (int) $product_id));
 		
@@ -941,6 +941,8 @@ class product_product_model extends CI_Model
 		$quantity				= isset($get_values['quantity']) ? $get_values['quantity'] : 'seciniz';
 		$stock_type				= isset($get_values['stock_type']) ? $get_values['stock_type'] : 'seciniz';
 		$tax					= isset($get_values['tax']) ? $get_values['tax'] : 'seciniz';
+		$yeni_urun				= isset($get_values['yeni_urun']) ? $get_values['yeni_urun'] : 'seciniz';
+		$hizli					= isset($get_values['hizli']) ? $get_values['hizli'] : 'seciniz';
 		$status					= isset($get_values['status']) ? $get_values['status'] : 'seciniz';
 		$subtract				= isset($get_values['subtract']) ? $get_values['subtract'] : 'seciniz';
 		$manufacturer_id		= isset($get_values['manufacturer_id']) ? $get_values['manufacturer_id'] : 'seciniz';
@@ -967,6 +969,14 @@ class product_product_model extends CI_Model
 	
 				if($tax !== 'seciniz' AND !is_null($tax) AND is_numeric($tax)) {
 					$product_update_data['tax']				= $tax;
+				}
+				
+				if($yeni_urun !== 'seciniz' AND !is_null($yeni_urun) AND is_numeric($yeni_urun)) {
+					$product_update_data['new_product']				= $yeni_urun;
+				}
+				
+				if($hizli !== 'seciniz' AND !is_null($hizli) AND is_numeric($hizli)) {
+					$product_update_data['hizli_gonder']				= $hizli;
 				}
 
 				if($quantity !== 'seciniz' AND !is_null($quantity) AND is_numeric($quantity)) {
@@ -1370,6 +1380,15 @@ Toplam '. $toplam_sayfa .' sayfa içinde '. $mevcut_sayfa .'. sayfadasın, topla
 		}
 
 		return TRUE;
+	}
+	
+	public function xml_product_control($model) {
+		$query = $this->db->select("model")
+				->from("product p")
+				->where("p.model",$model)
+				->limit(1)
+				->get();
+		return $query->row() ? true : false;
 	}
 
 	public function get_product_uuid($prefix = '')

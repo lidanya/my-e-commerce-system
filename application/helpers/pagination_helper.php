@@ -21,7 +21,7 @@ function create_pagination($uri, $total_rows, $limit = NULL, $uri_segment = 4, $
 	$config['full_tag_open']		= '<div class="liste_sag saga"><ul>';
 	$config['full_tag_close']		= '</ul></div>';
 
-	$config['first_link']			= '<img src="'. site_resim() .'liste_bas.png" alt="" style="margin:3px 0;" />';
+	$config['first_link']			= '<img src="'. site_resim() .'liste_bas.png" alt="" style="margin:8px 0;" />';
 	$config['first_tag_open']		= '<li><span>';
 	$config['first_tag_close']		= '</span></li>';
 	if ($type == 'face') {
@@ -30,7 +30,7 @@ function create_pagination($uri, $total_rows, $limit = NULL, $uri_segment = 4, $
 		$config['first_a_class']	= 'class="buton"';
 	}
 
-	$config['last_link']			= '<img src="'. site_resim() .'liste_son.png" alt="" style="margin:3px 0;" />';
+	$config['last_link']			= '<img src="'. site_resim() .'liste_son.png" alt="" style="margin:8px 0;" />';
 	$config['last_tag_open']		= '<li><span>';
 	$config['last_tag_close']		= '</span></li>';
 	if ($type == 'face') {
@@ -39,7 +39,7 @@ function create_pagination($uri, $total_rows, $limit = NULL, $uri_segment = 4, $
 		$config['last_a_class']		= 'class="buton"';
 	}
 
-	$config['next_link']			= '<img src="'. site_resim() .'liste_ileri.png" alt="" style="margin:3px 0;" />';
+	$config['next_link']			= '<img src="'. site_resim() .'liste_ileri.png" alt="" style="margin:8px 0;" />';
 	$config['next_tag_open']		= '<li><span>';
 	$config['next_tag_close']		= '</span></li>';
 	if ($type == 'face') {
@@ -48,7 +48,7 @@ function create_pagination($uri, $total_rows, $limit = NULL, $uri_segment = 4, $
 		$config['next_a_class']		= 'class="buton"';
 	}
 
-	$config['prev_link']			= '<img src="'. site_resim() .'liste_geri.png" alt="" style="margin:3px 0;" />';
+	$config['prev_link']			= '<img src="'. site_resim() .'liste_geri.png" alt="" style="margin:8px 0;" />';
 	$config['prev_tag_open']		= '<li><span>';
 	$config['prev_tag_close']		= '</span></li>';
 	if ($type == 'face') {

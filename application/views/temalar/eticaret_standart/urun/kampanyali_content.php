@@ -1,7 +1,7 @@
     <!--orta -->
     <div id="orta" class="sola">
 	<h1 id="sayfa_baslik"><?php echo lang('messages_campaign_products_title'); ?></h1>
-	<div style="float:right;display:inline;margin-top:15px;">
+	<div style="float:left;display:inline;margin:10px 0 10px 16px;">
 		<?php
 			$_option_array = array(
 				'price-desc' => lang('messages_select_stok_fiyat-desc'),
@@ -30,6 +30,7 @@
 		<div class="clear"></div>
 		<div class="liste_container">
 		<?php
+			$sablon_gonder = new stdClass();
 			foreach($urunler['query'] as $indirimli) {
 				$i = $i+1;
 				$sablon_gonder->product_id		= $indirimli->product_id;
@@ -43,7 +44,7 @@
 				$sablon_gonder->date_end		=  $indirimli->date_end;
 				$sablon_gonder->durum		= 'kampanya';
 				$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
-				if($i == '3') {
+				if($i == '4') {
 					$i = 0;
 					echo '<div class="clear"></div>';
 				}
@@ -67,14 +68,14 @@
 			 	<div class="clear"></div>
 			 	<p class="onay_buton">
 			 		<a href="javascript:history.back();" class="butonum" title="<?php echo lang('messages_button_back'); ?>">
-			 			<span class="butsol"></span>
+			 			
 			 			<span class="butor"><img src="<?php echo site_resim();?>btn_img_geri.png" alt="<?php echo lang('messages_button_back'); ?>" />&nbsp;<?php echo lang('messages_button_back'); ?></span>
-			 			<span class="butsag"></span>
+			 			
 		 			</a>
 					<a class="butonum" style="margin-left:10px;" href="<?php echo site_url(); ?>" title="<?php echo lang('messages_button_back_home'); ?>">
-						<span class="butsol"></span>
+						
 						<span class="butor"><img src="<?php echo site_resim();?>btn_img_anasayfa.png" alt="<?php echo lang('messages_button_back_home'); ?>" />&nbsp;<?php echo lang('messages_button_back_home'); ?></span>
-						<span class="butsag"></span>
+						
 					</a>
 			 	</p>
 			 </div>
