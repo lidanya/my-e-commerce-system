@@ -1,0 +1,9 @@
+1) Bülten aboneliği
+
+2) Detaylı ürün filtreleme yapılabilir. 100 - 500 TL arası kırmızı renkli ürünler gibi
+
+3) Favori ürünlerim olabilir.
+
+4) İptal İade talebi müşteri hesabında görüntülenebilir. Geri iade formu doldurulabilir.
+
+5) Canlı destek zopim tipi vs..

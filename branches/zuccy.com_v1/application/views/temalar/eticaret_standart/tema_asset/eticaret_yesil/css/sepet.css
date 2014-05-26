@@ -1,0 +1,209 @@
+/*
+Dosya Adi: sepet.css
+Yazan: E Ticaret Sistemim
+Aciklamalar: 
+- Alisveris asamalari ve sepet icin gerekli stil sablonlarini icerir
+- bu css tum alisveris asamalarinda cekilecektir
+*/
+/*============================genel=================================*/
+#odeme_cont {width:990px;margin:auto;}
+.odeme_baslik {background:url(../images/adim_baslik_bg.png) no-repeat 10px 5px;width:100%;color:#2e2e2e;font-size:15px;font-weight:700;padding:3px 0 5px 30px;border-bottom:solid 1px #e5e5e5;margin:0 auto 10px;}
+#o_sol {width:560px;margin-top:10px;}
+#o_sag {width:390px;margin-top:10px;}
+/*stepler*/
+#stepler {width:990px;height:46px;margin:5px auto;background:url(../images/adim_bg.png) no-repeat 0 0}
+#stepler span {float:left;display:inline;padding:2px 0 0 45px;height:30px;background:url(../images/stepler_bg.png) no-repeat;color:#898989;font-size:12px;margin-top:7px;border-left:solid 1px #d8d8d8;border-right:solid 1px #f3f3f3;}
+#stepler span.step_aktif {color:#3fa503;}
+#stepler span.step_fatura {width:113px;border-left:none;background-position:10px 0;}
+#stepler span.step_kargo {width:58px;padding-left:75px;background-position:10px -60px;}
+#stepler span.step_odeme {width:97px;background-position:10px -125px;}
+#stepler span.step_detay {width:97px;background-position:10px -192px;}
+#stepler span.step_siparis {width:97px;background-position:10px -253px;border-right:none;}
+#stepler span.step_baslik {float:right;margin-right:15px;background:none;width:130px;font-weight:bold;margin-top:12px;border:none;font-size:14px;color:#5f5f5f;text-align:right;}
+/*bilgi mesajları*/
+.adim_info {padding:6px 10px 9px 30px;margin:auto;background:url(../images/adim_info_bg.png) no-repeat 11px 7px;color:#231301;font-size:12px;line-height:18px;}
+.adim_info.adim_beyaz {background-color:#fff;}
+.adim_info.adim_sari {background-color:#fff7d6;}
+.adim_info.adim_gri {background-color:#f4f4f4;}
+#sa_tip {width:230px;background-color:#f0f0f0;padding:10px;color:#5f5f5f;border:solid 1px #dedede;line-height:18px;}
+/*formlar*/
+#odeme_form b {float:left;display:inline;color:#737373;font-size:13px;width:160px;padding:4px 0 0 6px;margin-top:13px;}
+#odeme_form b.of_kisa {width:40px;}
+#odeme_form b.of_orta {width:80px;}
+#odeme_form i {width:265px;padding:4px 0 0 6px;font-size:12px;color:#ff6400;float:left;display:inline;margin-top:10px;}
+#odeme_form i.of_hata {color:#ff0000;}
+#odeme_form p {float:left;display:inline;margin-top:13px;}
+#odeme_form p input, #odeme_form p textarea, #odeme_form p select {border:solid 1px #dddddd;background-color:#fff;padding:5px;font-size:12px;}
+#odeme_form p select {height:34px;}
+#odeme_form p.of_normal {width:210px;}
+#odeme_form p.of_normal input {width:198px;}
+#odeme_form p.of_kisa {width:100px;margin-right:5px;padding-top:2px;}
+#odeme_form p.of_kisa input {width:88px;}
+#odeme_form p.of_kisa select {width:100px;}
+#odeme_form p.of_aciklama {width:285px;}
+#odeme_form p.of_uzun {width:450px;}
+#odeme_form p.of_uzun textarea {width:438px;height:70px;}
+/*kasa ve toplamlar*/
+#os_bilgi_bg {width:390px;padding-left:160px;margin:auto;background:url(../images/sepet_kasa.png) no-repeat 0 0;text-align:left;}
+#os_bilgi {width:388px;border:solid 1px #ededed;position:relative;font-size:14px;}
+#os_rak {width:375px;padding:4px 4px 4px 9px;background:#fff url(../images/odeme_fiyat_bg.png) repeat-x bottom left;}
+#os_toplam {width:375px;padding:0px 4px 0px 9px;height:30px;background:url(../images/odeme_toplam_bg.png) repeat-x 0 0;}
+#os_bilgi i {font-style:normal;color:#8a8a8a;float:left;display:inline;width:200px;clear:left;margin-top:12px;}
+#os_bilgi #os_toplam i {color:#fff;font-weight:700;margin-top:8px;}
+#os_bilgi b {color:#282828;float:left;display:inline;width:175px;margin-top:12px;}
+#os_bilgi #os_toplam b {color:#fff;margin-top:8px;}
+/*============================Sepet=================================*/
+.s_turuncu {color:#0099ff !important;}
+.s_sari {color:#0099ff !important;}
+.s_yesil {color:#119200 !important;}
+#sepet_container {width:740px;padding:10px;margin:auto;}
+#toplamlar {width:400px;padding:10px;margin: 10px auto 10px 0px;}
+.kasa_tablo {width:245px;height:133px;display:block;background:url(../images/sepet_kasa_ara_toplam_bg.png) repeat-x top center;border-right: 1px solid #dadada;border-left: 1px solid #dadada;}
+.text1 {font-size:14px;color:#a4a4a4;width:100px;padding-left:10px;padding-top:10px;}
+.text1bold {font-size:14px;color:#282828;font-weight:bold;width:100px;padding-left:10px;padding-top:10px;}
+.text2bold {font-size:14px;color:#fff;font-weight:bold;width:100px;padding-left:10px;padding-top:30px;}
+#sepet {width:740px;margin:10px auto;}
+.s_birim {font-weight:normal;font-size:9px;}
+.sepet_iptal {color:#dddddd !important;text-decoration:line-through !important;}
+.s_gri {background-color:#f4f4f4 !important;}
+.sepet_tablo_baslik {color:#434343 !important;height:35px;width:738px;border:solid 1px #e2e2e2;background:url(../images/sepet_menu_bg.png) repeat-x 0 0;margin-top:5px !important;font-size:14px !important;padding-top:3px !important;font-weight:bold;text-align:center;}
+.sepet_oge {width:738px;border-left:solid 1px #e2e2e2;border-right:solid 1px #e2e2e2;margin:auto;color:#3c3c3c;}
+.sepet_oge input {border:solid 1px #979797;text-align:center;width:33px;height:21px;background-color:#fff;margin-top:-3px;}
+.s_tablo01, .s_tablo02, .s_tablo03, .s_tablo04, .s_tablo05 {display:block;height:23px;padding-top:7px;margin-left:5px;text-align:center;}
+.s_tablo01 {width:395px;padding-left:10px;text-align:left;}
+.s_tablo02 {width:45px;}
+.s_tablo03 {width:115px;}
+.s_tablo04 {width:115px;font-weight:bold;}
+.s_tablo05 {width:32px;}
+.sepet_alt {width:740px;margin:auto;border-top:solid 1px #e2e2e2;}
+#sepet_butonlar {margin-top:10px;width:500px;}
+#sepet_fiyat {margin-top:10px;width:240px;}
+.buton_alisveris, .buton_alisveris:link, .buton_alisveris:visited {display:inline-block;width:140px;height:23px;padding:7px 0 0 30px;background:url(../images/buton_alisverisdevam.png) no-repeat 0 0;font-size:13px;color:#5d6166;}
+.buton_alisveris:hover {background-position:bottom left;color:#fff;}
+.buton_alisveristamam, .buton_alisveristamam:link, .buton_alisveristamam:visited {display:inline-block;width:140px;height:23px;padding:7px 0 0 30px;background:url(../images/buton_alisveristamam.png) no-repeat 0 0;font-size:13px;color:#5d6166;}
+.buton_alisveristamam:hover {background-position:bottom left;color:#fff;}
+#sepet_fiyat span {display:block;margin-top:5px;font-size:14px;}
+.s_fiyat_baslik {width:130px;color:#303030;text-align:right;}
+.s_fiyat {width:100px;margin-left:5px;text-align:left;}
+
+/*============================uye kontrolu=============================*/
+#uye_kontrol {width:990px;margin:10px auto 0;padding-bottom:10px;}
+#uk_baslik {width:981px;margin:auto;height:34px;margin:auto;}
+#uk_tablar {width:981px;height:299px;background:url(../images/odeme_tab_bg.png) no-repeat 0 -34px;margin:auto;}
+#uye_giris, #uye_kayit, #uye_giris:link, #uye_kayit:link, #uye_giris:visited, #uye_kayit:visited {width:130px;height:27px;padding-top:7px;background:url(../images/odeme_tab_bg.png) no-repeat -132px 0px;text-align:center;font-size:14px;font-weight:700;color:#626262 !important;margin-right:3px;}
+#uye_giris:hover, #uye_kayit:hover, .uk_aktif {background-position:0px 0px !important;}
+.sifremut {margin:-15px -85px;display:inline-block;}
+.uk_tab {width:960px;height:285px;padding:10px 13px 14px 8px;}
+
+/*============================Fatura Teslimat=============================*/
+#fatura_teslimat {width:960px;margin:10px auto 0;padding-bottom:10px;}
+#ft_secenekler {padding:10px 0 0 165px;}
+#ft_secenekler a, #ft_secenekler a:link, #ft_secenekler a:visited {float:left;display:inline;margin-right:5px;width:145px;padding-top:45px;text-align:center;height:20px;border:solid 1px #f7e8ab;color:#4a4949;font-size:11px;position:relative;background:#fff7d6 url(../images/stepler_bg.png) no-repeat;}
+#ft_secenekler a.ft_onelmi {background-color:#ffc5b6;border-color:#fab3a1;color:#632f22;}
+#ft_secenekler a:hover, #ft_secenekler a:hover.ft_onelmi, #ft_secenekler a.ft_aktif {background-color:#d1ffc7;border-color:#b9fbad;color:#0e5600;}
+#ft_secenekler a span {display:block;position:absolute;top:5px;right:5px;background:url(../images/adim_soru.png) no-repeat 0 0;width:15px;height:15px;z-index:9;}
+a#ft_fatura {background-position:58px 7px}
+a#ft_not {background-position:58px -243px}
+a#ft_teslimat {background-position:58px -243px}
+
+/*============================Kargo Secimi=================================*/
+#kargo_secimi {width:960px;margin:10px auto 0;padding-bottom:10px;}
+.k_oge {width:560px;border-bottom:solid 1px #e1e1e1;padding-bottom:5px;cursor:pointer;margin-top:5px;color:#5f5f5f;font-size:13px;font-weight:700;text-align:center;}
+.k_oge:hover {border-bottom:solid 1px #0099ff;}
+.k_oge i {float:left;display:inline;width:25px;padding-top:20px;}
+.k_oge p {float:left;display:inline;width:170px;margin-left:5px;}
+.k_oge span {float:left;display:inline;width:210px;padding-top:20px;}
+.k_oge u {float:left;display:inline;width:135px;padding-top:20px;text-decoration:none;text-align:right;font-size:16px;}
+#k_buton {width:560px;text-align:right;margin:5px auto;}
+
+/*============================Odeme Secenekleri=============================*/
+#odeme_secimi {width:960px;margin:10px auto 0;padding-bottom:10px;}
+#os {margin-top:20px;}
+.os_oge {width:560px;font-size:12px;color:#747474;padding:10px 0;border-bottom:solid 1px #f0f0f0;}
+.os_oge i {float:left;display:inline;width:40px;padding-top:10px;}
+.os_oge u {float:left;display:inline;width:60px;}
+.os_oge p {float:left;display:inline;width:460px;}
+.os_oge p b {color:#4d4d4d;font-size:14px;}
+#os_buton {width:550px;margin-top:15px;text-align:right;}
+.os_baslik {display:block;font-size:15px;margin:5px 0;}
+/*Havale*/
+.os_h_oge {width:560px;font-size:12px;color:#747474;padding:10px 0;border-bottom:solid 1px #f0f0f0;}
+.os_h_oge i {float:left;display:inline;padding-top:7px;width:20px;}
+.os_h_oge u {float:left;display:inline;width:120px;}
+.os_h_oge b {float:left;display:inline;color:#4d4d4d;padding-top:7px;width:280px;font-size:14px;}
+.os_h_oge span {float:left;display:inline;width:75px;padding-top:5px;}
+.os_h_oge span select {width:75px;height:24px;}
+.os_h_oge p {float:left;display:inline;width:65px;text-align:right;padding-top:7px}
+#os_diger {font-weight:700;}
+
+#os_k_aciklama {width:550px;padding:5px;}
+#os_k_aciklama u {float:left;display:inline;width:50px;}
+#os_k_aciklama p {float:left;display:inline;margin-left:10px;width:490px;padding-top:10px;font-size:14px;}
+/*Kredi Karti*/
+#os_kredi {width:980px;margin:10px auto;}
+#os_kredi_linkler {width:980px;height:34px;}
+#os_k_tablar {width:940px;background-color:#f0f0f0;padding:20px;}
+#k_tek_cekim, #k_tek_cekim:link, #k_tek_cekim:visited {display:block;width:90px;padding-top:10px;height:24px;padding-left:40px;background:url(../images/kredi-tablari.png) no-repeat bottom left;font-size:12px;color:#5f5f5f;font-weight:bold;}
+#k_tek_cekim:hover, #k_tek_cekim.k_aktif {background-position:0 0}
+#k_taksitli_cekim, #k_taksitli_cekim:link, #k_taksitli_cekim:visited {margin-left:3px;display:block;width:99px;padding-top:10px;height:24px;padding-left:40px;height:34px;background:url(../images/kredi-tablari.png) no-repeat -132px -34px;font-size:12px;color:#5f5f5f;font-weight:bold;}
+#k_taksitli_cekim:hover, #k_taksitli_cekim.k_aktif {background-position:-132px 0px}
+#k_tablar_alt {width:980px;height:5px;background:url(../images/kredi_alt.png) no-repeat 0 0;}
+#k_taksitli_cekim_tab {display:none;}
+.k_form {margin:10px 0 0 65px;}
+.k_baslik {height:34px;font-size:11px;padding:3px 0 0 50px;margin-left:15px;}
+.k_baslik.k_tek {background:url(../images/kredi_pesin.png) no-repeat 0 0;}
+.k_baslik.k_taksit {background:url(../images/kredi_taksit.png) no-repeat 0 0;}
+.k_form b {font-size:13px;font-weight:700;float:left;display:inline;width:160px;margin-top:5px;padding-top:5px;}
+.k_form p, .k_form u {float:left;display:inline;width:230px;margin-top:5px;text-decoration:none;_width:300px;}
+.k_form p input, .k_form u input, .k_form p select {width:210px;background-color:#fff;border:solid 1px #d4d4d4;padding:5px;}
+.k_form u input {width:41px;}
+.k_form u img {vertical-align:middle;}
+.k_form p select.k_kisa {width:55px;}
+.k_form p select.k_orta {width:109px;}
+.k_form i {float:left;display:inline;color:#ff0000;width:400px;padding:5px 0 0 5px;;margin-top:5px;}
+.k_taksit_form {border:solid 1px #dedede;margin:10px 0 0 65px;padding:15px;width:843px;background-color:#fff;}
+.k_tf_sol {width:150px;text-align:center;}
+.k_tf_sag {width:680px}
+.k_tf_oge {width:680;border-bottom:solid 1px #dedede;padding:5px 0;}
+.k_tf_oge:hover {background-color:#f9f9f9;}
+.k_tf_oge:hover.k_tf_baslik {background-color:#fff;}
+.k_tf_sag i {width:150px;float:left;display:inline;margin-right:5px;font-style:normal;color:#ff6400;}
+.k_tf_sag b {width:150px;float:left;display:inline;margin-right:5px;font-weight:400;}
+.k_tf_sag u {float:left;display:inline;width:25px;text-decoration:none;}
+.k_tf_sag .k_tf_baslik b, .k_tf_sag .k_tf_baslik i {font-weight:700 !important;}
+/*Kredi Karti Yonlendirme*/
+#k_yonlendir {width:760px;height:45px;padding:10px 0 0 70px; margin:50px auto;background:url(../images/yonlendir.png) no-repeat 0 0;font-weight:700;font-size:25px;color:#6d6d6d;}
+/*============================Odeme Onay=============================*/
+#odenme_onay {width:960px;margin:10px auto 0;padding-bottom:10px;}
+#oo_mesaj {width:880px;padding:10px 10px 10px 70px;line-height:18px;} 
+#oo_mesaj b {font-size:14px;}
+#oo_mesaj a, #oo_mesaj a:link, #oo_mesaj a:visited {font-weight:700;color:#ff6400}
+#oo_mesaj a:hover {color:#000;}
+#oo_mesaj a i {font-size:25px;}
+.oo_onay {background:#f1ffd9 url(../images/odeme_onay.png) no-repeat 10px 10px;}
+.oo_onay b {color:#209b2c;}
+.oo_hata {background:#ffd9d9 url(../images/odeme_hata.png) no-repeat 10px 10px;}
+.oo_hata b {color:#9b2020;}
+.oo_buton {text-align:right;margin-top:15px;}
+#oo_baslik {width:850px;height:40px;padding:10px 0 0 70px;color:#4d4d4d;font-weight:700;font-size:14px;margin:20px auto 0;}
+/*Havale*/
+.oo_havale {background:url(../images/ds3_havaleli.png) no-repeat 0 0;}
+#oo_havale {width:890px;margin-left:70px;}
+#oo_hesap {width:150px;padding-left:10px;}
+#oo_sahip {width:500px;font-weight:700;}
+#oo_h_tablo {width:870px;padding:10px;background-color:#f5f5f5;margin-top:10px;color:#4e4e4e;}
+#oo_h_tablo b {float:left;display:inline;width:115px;font-weight:400;}
+#oo_h_tablo i {float:left;display:inline;width:200px;font-style:normal;margin-left:5px;}
+#oo_h_tablo u {float:left;display:inline;width:150px;text-decoration:none;}
+#oo_h_tablo p {float:left;display:inline;width:400px;}
+#oo_h_ust {border-bottom:solid 1px #e8e8e8;padding-bottom:10px;}
+#oo_h_alt {border-top:#ffffff;padding-top:10px;}
+#oo_h_alt i, #oo_h_alt u, #oo_h_alt p {padding-top:6px;}
+#oo_h_alt b {background-color:#fff;}
+.oo_t_bold {font-weight:700 !important;}
+/*Kapida Odeme*/
+.oo_kapida {background:url(../images/ds3_kapida.png) no-repeat 0 0;}
+#oo_kapida {width:870px;padding:10px;background-color:#f5f5f5;margin-top:10px;color:#4e4e4e;margin-left:70px;}
+/*Kredi Karti*/
+.oo_kredi {background:url(../images/ds3_visali.png) no-repeat 0 0;}
+
