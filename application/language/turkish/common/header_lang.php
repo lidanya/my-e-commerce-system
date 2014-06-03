@@ -28,7 +28,7 @@ $lang['header_search_input'] = 'Aramaya buradan başlayın';
 $lang['header_search_button'] = 'Ara';
 
 // sepet
-$lang['header_cart_items'] = 'Sepet (<b>{product_count}</b>) Ürün';
+$lang['header_cart_items'] = '<b>{product_count}</b>';
 
 // küçük sepet
 $lang['header_large_cart_items'] = 'Sepetinizde <b>{product_count}</b> Ürün Bulunmaktadır.';

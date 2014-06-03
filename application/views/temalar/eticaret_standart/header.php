@@ -80,6 +80,22 @@
 </head>
 
 <body>
+<div id="head-ust">
+    <div id="h_ust_menu"s>
+        <a href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_top_menu_mainpage'); ?>"><?php echo lang('header_top_menu_mainpage'); ?></a>
+
+        <?php echo show_page('1', '', '', ''); ?>
+
+        <a href="<?php echo site_url('site/musteri_hizmetleri'); ?>" title="<?php echo lang('header_top_menu_customer_services'); ?>">
+            <?php echo lang('header_top_menu_customer_services'); ?>
+        </a>
+
+        <a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('header_top_menu_contact_us'); ?>">
+            <?php echo lang('header_top_menu_contact_us'); ?>
+        </a>
+    </div>
+    <!--h_ust_menu SON -->
+</div>
 <div id="header">
 	<div class="hesol sola">
 		<div id="h_logo" class="sola">
@@ -129,20 +145,7 @@
 				</div>
 			</div>
 			<!--dil_alan SON -->
-			<div id="h_ust_menu" class="saga">
-				<a href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_top_menu_mainpage'); ?>"><?php echo lang('header_top_menu_mainpage'); ?></a>
-				
-				<?php echo show_page('1', '', '', ''); ?> 
 
-				<a href="<?php echo site_url('site/musteri_hizmetleri'); ?>" title="<?php echo lang('header_top_menu_customer_services'); ?>">
-					<?php echo lang('header_top_menu_customer_services'); ?>
-				</a> 
-
-				<a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('header_top_menu_contact_us'); ?>">
-					<?php echo lang('header_top_menu_contact_us'); ?>
-				</a>
-			</div>
-			<!--h_ust_menu SON -->
 		</div>
 		<!--hesag1 SON -->
 		<div class="hesag2" style="position:relative;z-index:1000;">
@@ -179,16 +182,13 @@
 					</li>
 				</ul>
 			</div>
-			<div class="sola" style="padding-left:10px;padding-top:13px;"> 
-			<a href="https://apps.facebook.com/eticaret/" target="_blank" title="<?php echo 
-					
-					lang('header_top_facebook_application'); ?>">
+            <?php if (config('facebook_app_status') AND config('site_ayar_facebook_url')) { ?>
+                    <div class="sola" style="padding-left:10px;padding-top:13px;">
+			            <a href="https://apps.facebook.com/eticaret/" target="_blank" title="<?php echo lang('header_top_facebook_application'); ?>">
 					
 						<img src="<?php echo site_resim(TRUE); ?>face.png" style="height:32px;" />
 					</a></div>
 			
-		<?php if (config('facebook_app_status') AND config('site_ayar_facebook_url')) { ?> 
-				
 			<?php } ?>
 			<?php } ?>
 			
@@ -199,16 +199,16 @@
 						<span id="h_a_kat_txt"><?php echo lang('header_search_category_select'); ?></span>
 						<div>
 							<a href="javascript:;" dyn="0"><?php echo lang('header_search_category_select'); ?></a>
-							<?php 
+							<?php
 								$urun_kategori = urun_ana_kategori();
 								if($urun_kategori) {
 									foreach($urun_kategori as $kategori) {
 							?>
 								<a href="javascript:;" dyn="<?php echo $kategori['urun_kat_id']; ?>"><?php echo $kategori['urun_kat_adi'];?></a>
-							<?php 
+							<?php
 									}
 								}
-							?>	
+							?>
 						</div>
 					</div>
 					<div id="h_a_text" style="padding-top:0;" class="sola">

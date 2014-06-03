@@ -50,7 +50,7 @@ input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;
 .sitelink2:hover {color:#00b5fe;}
 
 /*sayfa baslik*/
-h1#sayfa_baslik, .baslik {margin:auto;width:95%;padding:8px 0 8px 23px;font-weight:bold;font-size:16px;color:#5f5f5f;text-align:left;border-bottom:solid 1px #dadada;background:url(../images/sayfa_baslik_bg.png) no-repeat 0 8px;}
+h1#sayfa_baslik, .baslik {margin:auto;width:95%;padding:8px 32px 8px 0;font-weight:bold;font-size:16px;color:#5f5f5f;text-align:left;border-bottom:solid 1px #dadada;/*background:url(../images/sayfa_baslik_bg.png) no-repeat 0 8px;*/}
 h1#sayfa_baslik a, h1#sayfa_baslik a:link, h1#sayfa_baslik a:visited {color:#5f5f5f;}
 h1#sayfa_baslik a:hover {color:#0099ff;}
 h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
@@ -67,7 +67,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 .hesag1 {width:750px;height:40px;}
 .hesag2 {width:750px;}
 .dil_alan {width:150px;}
-#h_ust_menu {height:30px;color:#ffffff;font-size:11px;margin-left:15px;margin-top:5px;}
+#h_ust_menu {height:30px;color:#ffffff;font-size:15px;margin:0 auto; width: 1000px;}
 #h_ust_menu ul {list-style:none;}
 #h_ust_menu ul li {float:left;display:inline;}
 #h_ust_menu a,  #h_ust_menu a:link, #h_ust_menu a:visited {color:#a6a6a6;display:inline-block;margin:10px;font-size:11px;}
@@ -80,27 +80,28 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #sol div {overflow:visible;}
 #sag {display:none;}
 #orta {width:760px;margin:10px 0 0 5px;position:relative;z-index:95;float:right;}
-#footer {width:1000px;margin:10px auto;background:url(../images/footer_bg.png) top repeat-x;position:relative;}
+#footer {width:100%;margin:10px auto;background:url(../images/foot-bg.png) top repeat-x;position:relative;}
 .footust {width:1000px;}
-.footalt {width:1000px;}
+.footalt {width:1000px; margin:0 auto;}
 .foustmenu {height:39px;}
 .foustmenu ul {list-style:none;}
 .foustmenu ul li {float:left;display:inline;margin-right:20px;}
 .foustmenu ul li a, .foustmenu ul li a:link, .foustmenu ul li a:visited {display:inline-block;height:39px;line-height:39px;padding:0 10px;color:#fff;background:url(../images/hmenubg.png) top repeat-x;}
 .foustmenu ul li a:hover {background-position:bottom;} 
 
-.fomenu {padding:10px;}
+.fomenu {padding:30px 40px 10px;}
 .fomenu ul {list-style:none;}
 .fomenu ul li {}
 .fomenu ul li a, .fomenu ul li a, .fomenu ul li a:link {font-size:18px;height:22px;line-height:22px;font-size:12px;color:#86898d;}
 .fomenu ul li a:hover {color:#009bd9;}
 #footer_iletisim {display:block;background:url(../images/footer_telefon.png) no-repeat  0 0;width:183px;height:39px;line-height:39px;padding-left:35px;color:#fff;font-size:24px;font-weight:bold;}
-.fologo {width:155px;margin-top:10px;}
+.fologo {width:155px;margin-top:30px;}
 .tree3 {width:450px;margin-top:25px;}
 .tree3 div {float:left;display:inline;margin-right:35px;}
 
+#head-ust { width: 100%; height: 31px; background: #000;}
 
-#fobildis {width:100%;background:url(../images/fobilgi.png) top repeat-x;height:35px;line-height:31px;}
+#fobildis {width:100%;/*background:url(../images/fobilgi.png) top repeat-x;*/height:35px;line-height:31px;}
 #footer_bilgi {width:1000px;margin:auto;color:#000 !important;font-size:12px;}
 #footer_bilgi a, #footer_bilgi a:link, #footer_bilgi a:visited {color:#515151 !important;}
 #footer_bilgi a:hover {color:#000 !important;}
@@ -181,10 +182,10 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*logo*/
 #h_logo {margin-top:15px;}
 /*sepet*/
-#h_sepet, #h_sepet:link, #h_sepet:visited {position:relative;position:relative;top:-8px;right:5px;width:200px;height:42px;padding:0px 0 0 0px;}
-#h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:200px;height:42px;background:url(../images/h_sepet_bg.png) no-repeat 0 0;color:#e0e0e0;display:block;}
+#h_sepet, #h_sepet:link, #h_sepet:visited {position:relative;position:relative;top:-8px;right:5px;padding:0px 0 0 0px;}
+#h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:24px;height:34px;background:url(../images/sepet.png) no-repeat 0 0;color:#e0e0e0;display:block;}
 #h_sepet p a:hover {background-position:bottom left;}
-#h_sepet span {display:inline-block;margin-top:20px;text-indent:10px;}
+#h_sepet span {display:inline-block;margin-top:14px; margin-right:1px; text-indent:10px; color: #fff;}
 .hizlisepet {width:498px;position:absolute;top:35px;right:-10px;overflow:hidden;display:none;}
 .hizlisepet div {overflow:hidden !important;}
 .sepust {width:498px;height:16px;background:url(../images/sepust.png) no-repeat;}
@@ -229,13 +230,13 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_a_buton:hover {background-position:0 -37px;}
 
 /*header alt menu*/
-#menubar {width:1000px;height:39px;background:url(../images/h_alt_menu_bg.png) no-repeat 0 0;margin:25px auto 0 auto;}
+#menubar {width:1000px;height:39px;/*background:url(../images/h_alt_menu_bg.png) no-repeat 0 0;*/margin:25px auto 0 auto;}
 #h_alt_menu {}
 #h_alt_menu ul {list-style-type:none;}
 #h_alt_menu ul li {float:left;/*IE Fix*/display:inline;}
-#h_alt_menu ul li a, #h_alt_menu ul li a:link, #h_alt_menu ul li a:visited {line-height:39px;background:url(../images/hmenubg.png) top repeat-x; display:block;font-size:12px;color:#efefef;padding:0 20px;font-weight:bold;/*text-transform:uppercase;*/}
+#h_alt_menu ul li a, #h_alt_menu ul li a:link, #h_alt_menu ul li a:visited {line-height:39px;/*background:url(../images/hmenubg.png) top repeat-x;*/ display:block;font-size:12px;color:#000;padding:0 40px 0 0;font-weight:bold;/*text-transform:uppercase;*/}
 #h_alt_menu ul li a:hover, #h_alt_menu ul li a.h_aktif {background-position:bottom;}
-#h_alt_menu ul li a em {background:url(../images/menulibg.png) left center no-repeat;display:inline-block;font-style:normal;padding-left:20px;}
+#h_alt_menu ul li a em {/*background:url(../images/menulibg.png) left center no-repeat;*/display:inline-block;font-style:normal;/*padding-left:20px;*/}
 
 /* açılır kategori menüsü */
 #menu {overflow:visible;margin:auto;width:990px;background: #585858;border-bottom: 1px solid #000000;height: 37px;margin-bottom: 0px;-webkit-border-radius: 5px 5px 5px 5px;-moz-border-radius: 2px 2px 2px 2px;-khtml-border-radius: 2px 2px 2px 2px;border-radius: 2px 2px 2px 2px;-webkit-box-shadow: 0px 2px 2px #DDDDDD;-moz-box-shadow: 0px 2px 2px #DDDDDD;box-shadow: 0px 2px 2px #DDDDDD;padding: 0px 5px;}
@@ -258,11 +259,24 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*tüm modullere stil vermek icin kullanılacak class*/
 .kutu {width:220px;margin-top:10px;overflow:visible}
 /*modul*/
-.modul_ust {color:#ffffff;width:185px;height:28px;padding:10px 0 0 35px;background:url(../images/modul_baslik.png) no-repeat 0 0;font-weight:bold;font-size:14px;}
+.modul_ust {color:#111; border:1px solid #ccc; width:204px;height:28px;padding:10px 0 0 6px;/*background:url(../images/modul_baslik.png) no-repeat 0 0;*/font-weight:bold;font-size:14px;}
 .modul_ust2 {color:#494949;width:185px;height:28px;padding:10px 0 0 35px;background:url(../images/modul_baslik2.png) no-repeat 0 0;font-weight:bold;font-size:14px;}
-.modul_ic {width:200px;padding:9px;background-color:#fff;border-left:solid 1px #dadada;border-right:solid 1px #dadada;overflow:visible;position:relative;}
-.modul_alt {width:218px;height:2px;background-color:#fff;border:solid 1px #dadada;border-top:none;}
+.modul_ic {width:200px;padding:9px;background-color:#fff;/*border-left:solid 1px #dadada;border-right:solid 1px #dadada;*/overflow:visible;position:relative;}
+.modul_alt {width:218px;/*height:2px;*/background-color:#fff;/*border:solid 1px #dadada;*/border-top:none;}
 
+.indirimBadge {
+    width: 85px;
+    height: 25px;
+    line-height: 25px;
+    right: 0px;
+    top: 215px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 1px #6a0a00;
+    padding: 0 0 0 15px;
+    background: url(../images/theme_general_image.png) no-repeat -240px -81px;
+    z-index: 6;
+}
 /*================================= Yan Marka ====================================*/
 #y_marka_cont {width:200px;margin:auto;}
 #y_marka_cont ul {list-style-type:none;}
@@ -310,8 +324,8 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*=========================Yan Kategori Menu Tip 03===============================*/
 #kategori_menu03 {width:200px;}
 #kategori_menu03 ul {list-style-type:none;}
-#kategori_menu03 ul li {width:218px;background:url(../images/katlinkbg.png) repeat-x;}
-#kategori_menu03 ul li a, #kategori_menu03 ul li a:link, #kategori_menu03 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#494949;font-size:12px;}
+#kategori_menu03 ul li {width:218px; padding-left:10px; background:url(../images/left-menu-bg.jpg) left center no-repeat;}
+#kategori_menu03 ul li a, #kategori_menu03 ul li a:link, #kategori_menu03 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#121212;font-size:12px;}
 #kategori_menu03 ul li a:hover, #kategori_menu03 ul li.k_aktif {color:#009BD9;}
 #kategori_menu03 ul li a.k_aktif {color:#009BD9;}
 #kategori_menu03 ul li ul {list-style-type:none;width:220px;overflow:hidden;}

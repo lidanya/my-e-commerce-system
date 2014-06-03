@@ -7,6 +7,6 @@ $lang['footer_contact'] = 'İletişim';
 $lang['footer_help'] = 'Yardım';
 
 $lang['footer_system_name'] = 'E-Ticaret Sistemim';
-$lang['footer_copyright_text'] = 'E-Ticaret Sistemim : {version}';
+$lang['footer_copyright_text'] = 'Marsma E-Ticaret : {version}';
 
 ?>

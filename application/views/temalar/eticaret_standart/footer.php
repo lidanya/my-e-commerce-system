@@ -39,22 +39,11 @@ if(config('site_ayar_ssl_kod') != '')
 ?>
 <!-- footer-->
 <div id="footer">
-	<div class="footust">
-		<div class="foustmenu sola">
-			<ul>
-				<li><a class="h_ilk<?php $this->menu->menu_class(2,3,'site','index',' h_aktif',3);?>" href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_middle_menu_mainpage'); ?>"><?php echo lang('header_middle_menu_mainpage'); ?></a></li>
-				<li><a class="<?php $this->menu->menu_class(2,3,'urun','yeni','h_aktif',3);?>" href="<?php echo site_url('urun/yeni'); ?>" title="<?php echo lang('header_middle_menu_new_products'); ?>"><?php echo lang('header_middle_menu_new_products'); ?></a></li>
-				<li><a class="<?php $this->menu->menu_class(2,3,'urun','kampanyali','h_aktif',3);?>" href="<?php echo site_url('urun/kampanyali'); ?>" title="<?php echo lang('header_middle_menu_campaign_products'); ?>"><?php echo lang('header_middle_menu_campaign_products'); ?></a></li>
-				<li><a class="h_son<?php $this->menu->menu_class(2,3,'urun','indirimli',' h_aktif',3);?>" href="<?php echo site_url('urun/indirimli'); ?>" title="<?php echo lang('header_middle_menu_discount_products'); ?>"><?php echo lang('header_middle_menu_discount_products'); ?></a></li>
-			</ul>
-		</div>
-		<!--fomenu SON -->
-		<div id="footer_iletisim" class="saga"><?php echo config('site_ayar_sirket_tel');?></div>
-	</div>
 	<!--foust SON -->
 	<div class="footalt">
 		<div class="fomenu sola">
 			<ul>
+				<li><b>ZUCCY</b></li>
 				<li><?php echo show_page('6', '', '', ''); ?></li>
 				<li><?php echo show_page('7', '', '', ''); ?></li>
 				<li><a href="<?php echo site_url('site/banka_bilgileri'); ?>" title="<?php echo lang('footer_bank_information'); ?>"><?php echo lang('footer_bank_information'); ?></a></li>
@@ -64,6 +53,7 @@ if(config('site_ayar_ssl_kod') != '')
 		<!--fomenu SON -->
 		<div class="fomenu sola">
 			<ul>
+                <li><b>BİZE ULAŞIN</b></li>
 				<li><a href="<?php echo site_url('site/musteri_hizmetleri'); ?>" title="<?php echo lang('footer_customer_services'); ?>"><?php echo lang('footer_customer_services'); ?></a></li>
 				<li><a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('footer_contact'); ?>"><?php echo lang('footer_contact'); ?></a></li>
 				<li><a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('footer_help'); ?>"><?php echo lang('footer_help'); ?></a></li>
@@ -72,7 +62,7 @@ if(config('site_ayar_ssl_kod') != '')
 		<!--fomenu SON -->
 		<div class="fologo saga">
 			<a href="<?php echo site_url('site/index'); ?>">
-				<img src="<?php echo base_url(ssl_status()); ?>upload/editor/<?php echo config('site_ayar_logo'); ?>" width="140" alt="<?php echo config('site_ayar_baslik'); ?>" title="<?php echo config('site_ayar_baslik'); ?>" />
+                <img src="<?php echo site_resim();?>foot-sag.png" width="143" height="100" alt="Güvenli Alışveriş" title="3 Boyutlu Güvenlik"/>
 			</a>
 		</div>
 		<!--fologo SON -->
