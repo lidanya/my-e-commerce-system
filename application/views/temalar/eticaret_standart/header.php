@@ -353,6 +353,8 @@
 </div>
 <div class="clear"></div>
 
+<div class="head-bottom-line"></div>
+
 <!-- main -->
 <div id="main">
 
