@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87d0ad40-3478-4066-9904-afe1cbc1ca05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/yonetim/moduller/duzenle/cok_satan_urunler_duzenle_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/cok_satan_urunler_view.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/yonetim/urunler/product.php" afterPath="$PROJECT_DIR$/application/controllers/yonetim/urunler/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/yonetim/urunler/product_form_view.php" afterPath="$PROJECT_DIR$/application/views/yonetim/urunler/product_form_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php" afterPath="$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/eticaret_version.php" afterPath="$PROJECT_DIR$/application/eticaret_version.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/turkish/common/footer_lang.php" afterPath="$PROJECT_DIR$/application/language/turkish/common/footer_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/yonetim/footer_view.php" afterPath="$PROJECT_DIR$/application/views/yonetim/footer_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/english/common/header_lang.php" afterPath="$PROJECT_DIR$/application/language/english/common/header_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/turkish/common/header_lang.php" afterPath="$PROJECT_DIR$/application/language/turkish/common/header_lang.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/slider_view.php" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/slider_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css" />
     </list>
     <ignored path="zuccy.com_v1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,7 +73,36 @@
         <entry file="file://$PROJECT_DIR$/application/views/yonetim/moduller/duzenle/cok_satan_urunler_duzenle_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3315">
-              <folding />
+              <folding>
+                <marker date="1401216512398" expanded="true" signature="2919:6696" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="2995:3450" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="3010:3076" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="3396:3413" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3473:6689" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3619:6681" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3643:6671" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3652:3760" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="3676:3693" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3769:4438" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3809:4428" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="3954:3969" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="4447:5014" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="4488:5004" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5023:5246" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5062:5236" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5255:5517" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5301:5507" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5526:5698" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5566:5688" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5707:5817" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="5731:5748" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5826:6061" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5866:6051" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="6070:6429" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="6112:6419" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="6438:6659" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="6482:6649" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,15 +156,112 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eklentiler_cok_satan_urunler_model.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="eklentiler_cok_satan_urunler_model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="53" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.65008575" vertical-offset="743" max-vertical-offset="2108">
+            <state line="47" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-2.1538463" vertical-offset="743" max-vertical-offset="2125">
               <folding>
-                <marker date="1401223386721" expanded="true" signature="725:1238" placeholder="SELECT sd.st..siparis_detay..." />
-                <marker date="1401223386721" expanded="true" signature="725:973" placeholder="SELECT sd.st..e_siparis_detay..." />
-                <marker date="1401223386721" expanded="true" signature="725:948" placeholder="SELECT sd.st..e_siparis_detay..." />
+                <marker date="1401827474741" expanded="true" signature="725:1239" placeholder="SELECT sd.st..siparis_detay..." />
+                <marker date="1401827474741" expanded="true" signature="725:973" placeholder="SELECT sd.st..e_siparis_detay..." />
+                <marker date="1401827474741" expanded="true" signature="725:948" placeholder="SELECT sd.st..e_siparis_detay..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="60" selection-start="3585" selection-end="3606" vertical-scroll-proportion="-5.6862745" vertical-offset="1155" max-vertical-offset="1700">
+              <folding>
+                <marker date="1401828685378" expanded="true" signature="3337:3420" placeholder="..." />
+                <marker date="1401828685378" expanded="true" signature="3362:3420" placeholder="..." />
+                <marker date="1401828685378" expanded="true" signature="3474:3529" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer_lang.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/language/turkish/common/footer_lang.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="50" selection-start="348" selection-end="348" vertical-scroll-proportion="0.4090909" vertical-offset="0" max-vertical-offset="374">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="326" column="55" selection-start="24478" selection-end="24478" vertical-scroll-proportion="-4.8" vertical-offset="5422" max-vertical-offset="7735">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="33" selection-start="4252" selection-end="4252" vertical-scroll-proportion="96.11539" vertical-offset="3825" max-vertical-offset="6324">
+              <folding>
+                <element signature="e#5609#5661#0" expanded="true" />
+                <element signature="e#7025#7064#0" expanded="true" />
+                <element signature="e#9144#9187#0" expanded="true" />
+                <element signature="e#9393#9413#0" expanded="true" />
+                <element signature="e#10268#10290#0" expanded="true" />
+                <element signature="e#15072#15111#0" expanded="true" />
+                <marker date="1401830913364" expanded="true" signature="14358:14373" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="eticaret_version.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/eticaret_version.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="36" selection-start="121" selection-end="121" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="374">
+              <folding>
+                <element signature="e#7#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/yonetim/footer_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="119" selection-start="276" selection-end="276" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="357">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slider_view.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/slider_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="27" selection-start="1151" selection-end="1151" vertical-scroll-proportion="-9.807693" vertical-offset="153" max-vertical-offset="629">
+              <folding>
+                <element signature="e#1205#1226#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header_lang.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/language/english/common/header_lang.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="54" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-5.1153846" vertical-offset="377" max-vertical-offset="816">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header_lang.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/language/turkish/common/header_lang.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="52" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-5.1153846" vertical-offset="377" max-vertical-offset="816">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,7 +281,36 @@
         <entry file="file://$PROJECT_DIR$/application/views/yonetim/moduller/duzenle/populer_urunler_duzenle_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="6749" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3315">
-              <folding />
+              <folding>
+                <marker date="1401216512398" expanded="true" signature="2919:6696" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="2995:3450" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="3010:3076" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="3396:3413" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3473:6689" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3619:6681" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3643:6671" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3652:3760" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="3676:3693" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3769:4438" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="3809:4428" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="3954:3969" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="4447:5014" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="4488:5004" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5023:5246" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5062:5236" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5255:5517" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5301:5507" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5526:5698" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5566:5688" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5707:5817" placeholder="..." />
+                <marker date="1401216512398" expanded="false" signature="5731:5748" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5826:6061" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="5866:6051" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="6070:6429" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="6112:6419" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="6438:6659" placeholder="..." />
+                <marker date="1401216512398" expanded="true" signature="6482:6649" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -168,7 +329,16 @@
         <option value="$PROJECT_DIR$/application/controllers/yonetim/urunler/product.php" />
         <option value="$PROJECT_DIR$/application/views/yonetim/urunler/product_form_view.php" />
         <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/cok_satan_urunler_view.php" />
+        <option value="$PROJECT_DIR$/application/language/english/common/header_lang.php" />
+        <option value="$PROJECT_DIR$/application/language/turkish/common/header_lang.php" />
         <option value="$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php" />
+        <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php" />
+        <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/slider_view.php" />
+        <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css" />
+        <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php" />
+        <option value="$PROJECT_DIR$/application/views/yonetim/footer_view.php" />
+        <option value="$PROJECT_DIR$/application/eticaret_version.php" />
+        <option value="$PROJECT_DIR$/application/language/turkish/common/footer_lang.php" />
       </list>
     </option>
   </component>
@@ -304,36 +474,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zuccy.com_v1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="zuccy.com_v1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="temalar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="eticaret_standart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stok_gorunum_sablonlari" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -344,6 +484,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistory" value="style.css" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -415,24 +556,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10980967" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16325037" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10980967" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15300146" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -487,14 +628,72 @@
     <entry file="file://$PROJECT_DIR$/application/views/yonetim/moduller/duzenle/populer_urunler_duzenle_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="6749" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3315">
-          <folding />
+          <folding>
+            <marker date="1401216512398" expanded="true" signature="2919:6696" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="2995:3450" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3010:3076" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3396:3413" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3473:6689" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3619:6681" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3643:6671" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3652:3760" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3676:3693" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3769:4438" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3809:4428" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3954:3969" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="4447:5014" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="4488:5004" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5023:5246" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5062:5236" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5255:5517" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5301:5507" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5526:5698" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5566:5688" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5707:5817" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="5731:5748" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5826:6061" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5866:6051" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6070:6429" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6112:6419" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6438:6659" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6482:6649" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/yonetim/moduller/duzenle/cok_satan_urunler_duzenle_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3315">
-          <folding />
+          <folding>
+            <marker date="1401216512398" expanded="true" signature="2919:6696" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="2995:3450" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3010:3076" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3396:3413" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3473:6689" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3619:6681" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3643:6671" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3652:3760" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3676:3693" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3769:4438" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3809:4428" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3954:3969" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="4447:5014" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="4488:5004" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5023:5246" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5062:5236" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5255:5517" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5301:5507" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5526:5698" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5566:5688" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5707:5817" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="5731:5748" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5826:6061" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5866:6051" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6070:6429" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6112:6419" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6438:6659" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6482:6649" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -548,14 +747,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/english/common/header_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="54" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-5.1153846" vertical-offset="377" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/turkish/common/header_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="52" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-5.1153846" vertical-offset="377" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="53" selection-start="2013" selection-end="2013" vertical-scroll-proportion="0.65008575" vertical-offset="743" max-vertical-offset="2108">
+        <state line="47" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-2.1538463" vertical-offset="743" max-vertical-offset="2125">
           <folding>
-            <marker date="1401223386721" expanded="true" signature="725:1238" placeholder="SELECT sd.st..siparis_detay..." />
-            <marker date="1401223386721" expanded="true" signature="725:973" placeholder="SELECT sd.st..e_siparis_detay..." />
-            <marker date="1401223386721" expanded="true" signature="725:948" placeholder="SELECT sd.st..e_siparis_detay..." />
+            <marker date="1401827474741" expanded="true" signature="725:1239" placeholder="SELECT sd.st..siparis_detay..." />
+            <marker date="1401827474741" expanded="true" signature="725:973" placeholder="SELECT sd.st..e_siparis_detay..." />
+            <marker date="1401827474741" expanded="true" signature="725:948" placeholder="SELECT sd.st..e_siparis_detay..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/image/image.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="20" selection-start="228" selection-end="228" vertical-scroll-proportion="-3.3157895" vertical-offset="1486" max-vertical-offset="3689">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/image/image_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="28" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.76454294" vertical-offset="472" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/fonksiyonlar_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="45" selection-start="3758" selection-end="3769" vertical-scroll-proportion="0.59279776" vertical-offset="2455" max-vertical-offset="19873">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/slider_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="27" selection-start="1151" selection-end="1151" vertical-scroll-proportion="-9.807693" vertical-offset="153" max-vertical-offset="629">
+          <folding>
+            <element signature="e#1205#1226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="326" column="55" selection-start="24478" selection-end="24478" vertical-scroll-proportion="-4.8" vertical-offset="5422" max-vertical-offset="7735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/yonetim/footer_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="119" selection-start="276" selection-end="276" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/eticaret_version.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="121" selection-end="121" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="374">
+          <folding>
+            <element signature="e#7#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="33" selection-start="4252" selection-end="4252" vertical-scroll-proportion="96.11539" vertical-offset="3825" max-vertical-offset="6324">
+          <folding>
+            <element signature="e#5609#5661#0" expanded="true" />
+            <element signature="e#7025#7064#0" expanded="true" />
+            <element signature="e#9144#9187#0" expanded="true" />
+            <element signature="e#9393#9413#0" expanded="true" />
+            <element signature="e#10268#10290#0" expanded="true" />
+            <element signature="e#15072#15111#0" expanded="true" />
+            <marker date="1401830913364" expanded="true" signature="14358:14373" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="60" selection-start="3585" selection-end="3606" vertical-scroll-proportion="-5.6862745" vertical-offset="1155" max-vertical-offset="1700">
+          <folding>
+            <marker date="1401828685378" expanded="true" signature="3337:3420" placeholder="..." />
+            <marker date="1401828685378" expanded="true" signature="3362:3420" placeholder="..." />
+            <marker date="1401828685378" expanded="true" signature="3474:3529" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/turkish/common/footer_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="50" selection-start="348" selection-end="348" vertical-scroll-proportion="0.4090909" vertical-offset="0" max-vertical-offset="374">
+          <folding />
         </state>
       </provider>
     </entry>
