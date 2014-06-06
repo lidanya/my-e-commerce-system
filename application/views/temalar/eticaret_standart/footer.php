@@ -38,9 +38,12 @@ if(config('site_ayar_ssl_kod') != '')
 }
 ?>
 <!-- footer-->
+<div style="width: 991px; margin: 0 auto;"><img src="<?php echo site_resim();?>foot-banks.png"/></div>
 <div id="footer">
 	<!--foust SON -->
+
 	<div class="footalt">
+
 		<div class="fomenu sola">
 			<ul>
 				<li><b>ZUCCY</b></li>

@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87d0ad40-3478-4066-9904-afe1cbc1ca05" name="Default" comment="">
+    <list default="true" readonly="true" id="87d0ad40-3478-4066-9904-afe1cbc1ca05" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/images/buton_hizli_satin_al.png" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/images/buton_hizli_satin_al.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/images/buton_sepete_ekle.png" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/images/buton_sepete_ekle.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/listeler.css" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/listeler.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/stok_gorunum_sablonlari/stok_gorunum_normal_liste.php" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/stok_gorunum_sablonlari/stok_gorunum_normal_liste.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/urundetay.css" afterPath="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/urundetay.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="zuccy.com_v1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,7 +36,7 @@
       <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="33" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.60714287" vertical-offset="1020" max-vertical-offset="3621">
+            <state line="59" column="33" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="3621">
               <folding />
             </state>
           </provider>
@@ -38,7 +45,7 @@
       <file leaf-file-name="product.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/yonetim/urunler/product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="565" column="27" selection-start="19693" selection-end="19708" vertical-scroll-proportion="9.692307" vertical-offset="9857" max-vertical-offset="15623">
+            <state line="565" column="27" selection-start="19693" selection-end="19708" vertical-scroll-proportion="0.0" vertical-offset="9857" max-vertical-offset="15623">
               <folding />
             </state>
           </provider>
@@ -47,9 +54,8 @@
       <file leaf-file-name="product_form_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/yonetim/urunler/product_form_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="420" column="41" selection-start="17835" selection-end="17835" vertical-scroll-proportion="-42.615383" vertical-offset="6032" max-vertical-offset="22508">
+            <state line="420" column="41" selection-start="17835" selection-end="17835" vertical-scroll-proportion="0.0" vertical-offset="6032" max-vertical-offset="22508">
               <folding>
-                <element signature="e#19137#19156#0" expanded="true" />
                 <marker date="1401218042331" expanded="false" signature="45288:45300" placeholder="..." />
                 <marker date="1401218042331" expanded="false" signature="46073:46088" placeholder="..." />
                 <marker date="1401218042331" expanded="false" signature="46536:46551" placeholder="..." />
@@ -63,7 +69,7 @@
       <file leaf-file-name="cok_satan_urunler_duzenle_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/yonetim/moduller/duzenle/cok_satan_urunler_duzenle_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3315">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3315">
               <folding>
                 <marker date="1401216512398" expanded="true" signature="2919:6696" placeholder="..." />
                 <marker date="1401216512398" expanded="true" signature="2995:3450" placeholder="..." />
@@ -101,7 +107,7 @@
       <file leaf-file-name="cok_satan_urunler_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/cok_satan_urunler_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="89" selection-start="1601" selection-end="1601" vertical-scroll-proportion="-28.76923" vertical-offset="0" max-vertical-offset="1105">
+            <state line="44" column="89" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
@@ -110,7 +116,7 @@
       <file leaf-file-name="stok_gorunum_kayan_liste.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/stok_gorunum_sablonlari/stok_gorunum_kayan_liste.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="79" selection-start="849" selection-end="854" vertical-scroll-proportion="-3.5490196" vertical-offset="397" max-vertical-offset="4760">
+            <state line="34" column="79" selection-start="849" selection-end="854" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="4760">
               <folding>
                 <marker date="1401216620695" expanded="true" signature="3740:4572" placeholder="..." />
                 <marker date="1401216620695" expanded="true" signature="4519:4564" placeholder="..." />
@@ -132,7 +138,7 @@
       <file leaf-file-name="left.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/left.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="32" selection-start="52" selection-end="63" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="170">
+            <state line="2" column="32" selection-start="52" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
               <folding />
             </state>
           </provider>
@@ -141,7 +147,7 @@
       <file leaf-file-name="moduller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/libraries/moduller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="54" selection-start="372" selection-end="372" vertical-scroll-proportion="-3.6923077" vertical-offset="295" max-vertical-offset="1275">
+            <state line="23" column="54" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="1275">
               <folding />
             </state>
           </provider>
@@ -150,7 +156,7 @@
       <file leaf-file-name="eklentiler_cok_satan_urunler_model.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="1069" selection-end="1069" vertical-scroll-proportion="-2.1538463" vertical-offset="726" max-vertical-offset="2108">
+            <state line="46" column="0" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="2108">
               <folding>
                 <marker date="1401834665525" expanded="true" signature="724:1238" placeholder="SELECT sd.st..siparis_detay..." />
                 <marker date="1401834665525" expanded="true" signature="725:973" placeholder="SELECT sd.st..e_siparis_detay..." />
@@ -163,11 +169,12 @@
       <file leaf-file-name="footer.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="60" selection-start="3585" selection-end="3606" vertical-scroll-proportion="-5.6862745" vertical-offset="1155" max-vertical-offset="1700">
+            <state line="40" column="102" selection-start="1688" selection-end="1688" vertical-scroll-proportion="-8.192307" vertical-offset="467" max-vertical-offset="1751">
               <folding>
-                <marker date="1401828685378" expanded="true" signature="3337:3420" placeholder="..." />
-                <marker date="1401828685378" expanded="true" signature="3362:3420" placeholder="..." />
-                <marker date="1401828685378" expanded="true" signature="3474:3529" placeholder="..." />
+                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+                <marker date="1402002897279" expanded="true" signature="3442:3525" placeholder="..." />
+                <marker date="1402002897279" expanded="true" signature="3467:3525" placeholder="..." />
+                <marker date="1402002897279" expanded="true" signature="3579:3634" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -176,7 +183,7 @@
       <file leaf-file-name="footer_lang.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/language/turkish/common/footer_lang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="50" selection-start="348" selection-end="348" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="289">
+            <state line="9" column="50" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
               <folding />
             </state>
           </provider>
@@ -185,10 +192,8 @@
       <file leaf-file-name="kategori_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/kategori_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="24" selection-start="3564" selection-end="3579" vertical-scroll-proportion="-6.5384617" vertical-offset="1479" max-vertical-offset="3876">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="97" column="24" selection-start="3564" selection-end="3579" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="3876">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -196,7 +201,7 @@
       <file leaf-file-name="menu_tip03.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/js/menu_tip03.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="20" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+            <state line="1" column="20" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="561">
               <folding />
             </state>
           </provider>
@@ -205,8 +210,50 @@
       <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="240" column="44" selection-start="17704" selection-end="17704" vertical-scroll-proportion="0.80110496" vertical-offset="3790" max-vertical-offset="7752">
+            <state line="27" column="272" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.5318792" vertical-offset="142" max-vertical-offset="7752">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urundetay.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/urundetay.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="83" selection-start="3735" selection-end="3735" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="2244">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="listeler.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/listeler.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="89" selection-start="2238" selection-end="2238" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1853">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stok_gorunum_normal_liste.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/stok_gorunum_sablonlari/stok_gorunum_normal_liste.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="105" column="105" selection-start="4367" selection-end="4367" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="6511">
+              <folding>
+                <marker date="1401912892775" expanded="true" signature="3896:4845" placeholder="..." />
+                <marker date="1401912892775" expanded="true" signature="4401:4835" placeholder="..." />
+                <marker date="1401912892775" expanded="true" signature="4764:4826" placeholder="..." />
+                <marker date="1401912892775" expanded="true" signature="5001:5953" placeholder="..." />
+                <marker date="1401912892775" expanded="true" signature="5506:5943" placeholder="..." />
+                <marker date="1401912892775" expanded="true" signature="5870:5932" placeholder="..." />
+                <marker date="1401912892775" expanded="true" signature="5985:7253" placeholder="..." />
+                <marker date="1401912892775" expanded="true" signature="6016:7241" placeholder="{...}" />
+                <marker date="1401912892775" expanded="true" signature="6063:7237" placeholder="{...}" />
+                <marker date="1401912892775" expanded="true" signature="6169:7232" placeholder="{&quot;type&quot;: &quot;post&quot;...}" />
+                <marker date="1401912892775" expanded="true" signature="6301:6569" placeholder="{...}" />
+                <marker date="1401912892775" expanded="true" signature="6597:7225" placeholder="{...}" />
+                <marker date="1401912892775" expanded="true" signature="6953:7113" placeholder="{&quot;opacity&quot;: 0.0...}" />
+                <marker date="1401912892775" expanded="true" signature="7123:7220" placeholder="//..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -214,15 +261,9 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="355" column="24" selection-start="16720" selection-end="16720" vertical-scroll-proportion="-6.5384617" vertical-offset="5865" max-vertical-offset="6358">
+            <state line="257" column="91" selection-start="12869" selection-end="12869" vertical-scroll-proportion="-8.0" vertical-offset="4161" max-vertical-offset="6392">
               <folding>
-                <element signature="e#5609#5661#0" expanded="true" />
-                <element signature="e#7025#7064#0" expanded="true" />
-                <element signature="e#9144#9187#0" expanded="true" />
-                <element signature="e#9393#9413#0" expanded="true" />
-                <element signature="e#10268#10290#0" expanded="true" />
-                <element signature="e#15072#15111#0" expanded="true" />
-                <marker date="1401835659145" expanded="true" signature="14358:14373" placeholder="..." />
+                <marker date="1402003031537" expanded="false" signature="14468:14483" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -231,10 +272,8 @@
       <file leaf-file-name="eticaret_version.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/eticaret_version.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="36" selection-start="121" selection-end="121" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="374">
-              <folding>
-                <element signature="e#7#86#0" expanded="true" />
-              </folding>
+            <state line="9" column="36" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="374">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -242,7 +281,7 @@
       <file leaf-file-name="footer_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/yonetim/footer_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="119" selection-start="276" selection-end="276" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="357">
+            <state line="13" column="119" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="357">
               <folding />
             </state>
           </provider>
@@ -251,9 +290,8 @@
       <file leaf-file-name="slider_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/slider_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="27" selection-start="1151" selection-end="1151" vertical-scroll-proportion="-9.807693" vertical-offset="153" max-vertical-offset="629">
+            <state line="24" column="27" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="629">
               <folding>
-                <element signature="e#1205#1226#0" expanded="true" />
                 <marker date="1401834679142" expanded="true" signature="89:1317" placeholder="..." />
               </folding>
             </state>
@@ -263,7 +301,7 @@
       <file leaf-file-name="header_lang.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/language/english/common/header_lang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="54" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-5.1153846" vertical-offset="377" max-vertical-offset="816">
+            <state line="30" column="54" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="377" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -272,7 +310,7 @@
       <file leaf-file-name="header_lang.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/language/turkish/common/header_lang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="52" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-5.1153846" vertical-offset="377" max-vertical-offset="816">
+            <state line="30" column="52" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0" vertical-offset="377" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -281,10 +319,8 @@
       <file leaf-file-name="populer_urunler_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/populer_urunler_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1105">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -292,7 +328,7 @@
       <file leaf-file-name="populer_urunler_duzenle_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/yonetim/moduller/duzenle/populer_urunler_duzenle_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="6749" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="3315">
+            <state line="0" column="0" selection-start="0" selection-end="6749" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3315">
               <folding>
                 <marker date="1401216512398" expanded="true" signature="2919:6696" placeholder="..." />
                 <marker date="1401216512398" expanded="true" signature="2995:3450" placeholder="..." />
@@ -344,11 +380,14 @@
         <option value="$PROJECT_DIR$/application/language/english/common/header_lang.php" />
         <option value="$PROJECT_DIR$/application/language/turkish/common/header_lang.php" />
         <option value="$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php" />
-        <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php" />
         <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/slider_view.php" />
         <option value="$PROJECT_DIR$/application/views/yonetim/footer_view.php" />
         <option value="$PROJECT_DIR$/application/eticaret_version.php" />
         <option value="$PROJECT_DIR$/application/language/turkish/common/footer_lang.php" />
+        <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/stok_gorunum_sablonlari/stok_gorunum_normal_liste.php" />
+        <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/listeler.css" />
+        <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/urundetay.css" />
+        <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php" />
         <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php" />
         <option value="$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css" />
       </list>
@@ -496,7 +535,8 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="SearchEverywhereHistory" value="style.css" />
+    <property name="SearchEverywhereHistory" value="urundetay&#10;listeler.css&#10;style.css" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -516,7 +556,7 @@
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="1c5d68a2-7b5d-486c-975c-0bbdefe12e8e" server_name="marsma.net">
       <method />
     </configuration>
     <list size="0" />
@@ -539,6 +579,7 @@
     <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="false">C:\Users\hardcoder-skoc\AppData\Roaming\Subversion</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+    <supportedVersion>125</supportedVersion>
   </component>
   <component name="SvnFileUrlMappingImpl">
     <option name="myMappingRoots">
@@ -570,22 +611,22 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10980967" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15300146" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1522694" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -609,25 +650,290 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="33" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.60714287" vertical-offset="1020" max-vertical-offset="3621">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/yonetim/urunler/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="565" column="27" selection-start="19693" selection-end="19708" vertical-scroll-proportion="9.692307" vertical-offset="9857" max-vertical-offset="15623">
+        <state line="565" column="27" selection-start="19693" selection-end="19708" vertical-scroll-proportion="0.0" vertical-offset="9857" max-vertical-offset="15623">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/yonetim/urunler/product_form_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="420" column="41" selection-start="17835" selection-end="17835" vertical-scroll-proportion="-42.615383" vertical-offset="6032" max-vertical-offset="22508">
+        <state line="420" column="41" selection-start="17835" selection-end="17835" vertical-scroll-proportion="0.0" vertical-offset="6032" max-vertical-offset="22508">
           <folding>
-            <element signature="e#19137#19156#0" expanded="true" />
+            <marker date="1401218042331" expanded="false" signature="45288:45300" placeholder="..." />
+            <marker date="1401218042331" expanded="false" signature="46073:46088" placeholder="..." />
+            <marker date="1401218042331" expanded="false" signature="46536:46551" placeholder="..." />
+            <marker date="1401218042331" expanded="false" signature="46742:46754" placeholder="..." />
+            <marker date="1401218042331" expanded="false" signature="51092:51106" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/yonetim/moduller/duzenle/cok_satan_urunler_duzenle_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3315">
+          <folding>
+            <marker date="1401216512398" expanded="true" signature="2919:6696" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="2995:3450" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3010:3076" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3396:3413" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3473:6689" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3619:6681" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3643:6671" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3652:3760" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3676:3693" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3769:4438" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3809:4428" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3954:3969" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="4447:5014" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="4488:5004" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5023:5246" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5062:5236" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5255:5517" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5301:5507" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5526:5698" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5566:5688" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5707:5817" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="5731:5748" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5826:6061" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5866:6051" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6070:6429" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6112:6419" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6438:6659" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6482:6649" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/cok_satan_urunler_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="89" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/stok_gorunum_sablonlari/stok_gorunum_kayan_liste.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="79" selection-start="849" selection-end="854" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="4760">
+          <folding>
+            <marker date="1401216620695" expanded="true" signature="3740:4572" placeholder="..." />
+            <marker date="1401216620695" expanded="true" signature="4519:4564" placeholder="..." />
+            <marker date="1401216620695" expanded="true" signature="4724:5556" placeholder="..." />
+            <marker date="1401216620695" expanded="true" signature="5503:5548" placeholder="..." />
+            <marker date="1401216620695" expanded="true" signature="5588:6863" placeholder="..." />
+            <marker date="1401216620695" expanded="true" signature="5619:6851" placeholder="{...}" />
+            <marker date="1401216620695" expanded="true" signature="5666:6847" placeholder="{...}" />
+            <marker date="1401216620695" expanded="true" signature="5772:6842" placeholder="{&quot;type&quot;: &quot;post&quot;...}" />
+            <marker date="1401216620695" expanded="true" signature="5904:6179" placeholder="{...}" />
+            <marker date="1401216620695" expanded="true" signature="6207:6835" placeholder="{...}" />
+            <marker date="1401216620695" expanded="true" signature="6563:6723" placeholder="{&quot;opacity&quot;: 0.0...}" />
+            <marker date="1401216620695" expanded="true" signature="6733:6830" placeholder="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/left.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="52" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/moduller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="54" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="2108">
+          <folding>
+            <marker date="1401834665525" expanded="true" signature="724:1238" placeholder="SELECT sd.st..siparis_detay..." />
+            <marker date="1401834665525" expanded="true" signature="725:973" placeholder="SELECT sd.st..e_siparis_detay..." />
+            <marker date="1401834665525" expanded="true" signature="725:948" placeholder="SELECT sd.st..e_siparis_detay..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="60" selection-start="3585" selection-end="3606" vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="1700">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1402002897279" expanded="true" signature="3442:3525" placeholder="..." />
+            <marker date="1402002897279" expanded="true" signature="3467:3525" placeholder="..." />
+            <marker date="1402002897279" expanded="true" signature="3579:3634" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/turkish/common/footer_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="50" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/kategori_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="24" selection-start="3564" selection-end="3579" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="3876">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/js/menu_tip03.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="20" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="561">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="61" selection-start="13102" selection-end="13102" vertical-scroll-proportion="0.0" vertical-offset="2974" max-vertical-offset="7752">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/listeler.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="89" selection-start="2238" selection-end="2238" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/stok_gorunum_sablonlari/stok_gorunum_normal_liste.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="105" selection-start="4367" selection-end="4367" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="6511">
+          <folding>
+            <marker date="1401912892775" expanded="true" signature="3896:4845" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="4401:4835" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="4764:4826" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="5001:5953" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="5506:5943" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="5870:5932" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="5985:7253" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="6016:7241" placeholder="{...}" />
+            <marker date="1401912892775" expanded="true" signature="6063:7237" placeholder="{...}" />
+            <marker date="1401912892775" expanded="true" signature="6169:7232" placeholder="{&quot;type&quot;: &quot;post&quot;...}" />
+            <marker date="1401912892775" expanded="true" signature="6301:6569" placeholder="{...}" />
+            <marker date="1401912892775" expanded="true" signature="6597:7225" placeholder="{...}" />
+            <marker date="1401912892775" expanded="true" signature="6953:7113" placeholder="{&quot;opacity&quot;: 0.0...}" />
+            <marker date="1401912892775" expanded="true" signature="7123:7220" placeholder="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="257" column="43" selection-start="12821" selection-end="12821" vertical-scroll-proportion="0.0" vertical-offset="4161" max-vertical-offset="6392">
+          <folding>
+            <marker date="1402003031537" expanded="false" signature="14468:14483" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/eticaret_version.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="36" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="374">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/yonetim/footer_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="119" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="357">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/slider_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="27" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="629">
+          <folding>
+            <marker date="1401834679142" expanded="true" signature="89:1317" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/english/common/header_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="54" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="377" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/language/turkish/common/header_lang.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="52" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0" vertical-offset="377" max-vertical-offset="816">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/populer_urunler_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/yonetim/moduller/duzenle/populer_urunler_duzenle_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="6749" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3315">
+          <folding>
+            <marker date="1401216512398" expanded="true" signature="2919:6696" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="2995:3450" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3010:3076" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3396:3413" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3473:6689" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3619:6681" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3643:6671" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3652:3760" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3676:3693" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3769:4438" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="3809:4428" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="3954:3969" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="4447:5014" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="4488:5004" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5023:5246" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5062:5236" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5255:5517" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5301:5507" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5526:5698" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5566:5688" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5707:5817" placeholder="..." />
+            <marker date="1401216512398" expanded="false" signature="5731:5748" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5826:6061" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="5866:6051" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6070:6429" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6112:6419" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6438:6659" placeholder="..." />
+            <marker date="1401216512398" expanded="true" signature="6482:6649" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="33" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="3621">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/yonetim/urunler/product.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="565" column="27" selection-start="19693" selection-end="19708" vertical-scroll-proportion="0.0" vertical-offset="9857" max-vertical-offset="15623">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/yonetim/urunler/product_form_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="420" column="41" selection-start="17835" selection-end="17835" vertical-scroll-proportion="0.0" vertical-offset="6032" max-vertical-offset="22508">
+          <folding>
             <marker date="1401218042331" expanded="false" signature="45288:45300" placeholder="..." />
             <marker date="1401218042331" expanded="false" signature="46073:46088" placeholder="..." />
             <marker date="1401218042331" expanded="false" signature="46536:46551" placeholder="..." />
@@ -712,22 +1018,20 @@
     <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/populer_urunler_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/left.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="52" selection-end="63" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="170">
+        <state line="2" column="32" selection-start="52" selection-end="63" vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="170">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/stok_gorunum_sablonlari/stok_gorunum_kayan_liste.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="79" selection-start="849" selection-end="854" vertical-scroll-proportion="-3.5490196" vertical-offset="397" max-vertical-offset="4760">
+        <state line="34" column="79" selection-start="849" selection-end="854" vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="4760">
           <folding>
             <marker date="1401216620695" expanded="true" signature="3740:4572" placeholder="..." />
             <marker date="1401216620695" expanded="true" signature="4519:4564" placeholder="..." />
@@ -747,35 +1051,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/cok_satan_urunler_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="89" selection-start="1601" selection-end="1601" vertical-scroll-proportion="-28.76923" vertical-offset="0" max-vertical-offset="1105">
+        <state line="44" column="89" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/libraries/moduller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="54" selection-start="372" selection-end="372" vertical-scroll-proportion="-3.6923077" vertical-offset="295" max-vertical-offset="1275">
+        <state line="23" column="54" selection-start="372" selection-end="372" vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="1275">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/language/english/common/header_lang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="54" selection-start="1098" selection-end="1098" vertical-scroll-proportion="-5.1153846" vertical-offset="377" max-vertical-offset="816">
+        <state line="30" column="54" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0" vertical-offset="377" max-vertical-offset="816">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/language/turkish/common/header_lang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="52" selection-start="1108" selection-end="1108" vertical-scroll-proportion="-5.1153846" vertical-offset="377" max-vertical-offset="816">
+        <state line="30" column="52" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0" vertical-offset="377" max-vertical-offset="816">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/eklentiler/eklentiler_cok_satan_urunler_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="1069" selection-end="1069" vertical-scroll-proportion="-2.1538463" vertical-offset="726" max-vertical-offset="2108">
+        <state line="46" column="0" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="2108">
           <folding>
             <marker date="1401834665525" expanded="true" signature="724:1238" placeholder="SELECT sd.st..siparis_detay..." />
             <marker date="1401834665525" expanded="true" signature="725:973" placeholder="SELECT sd.st..e_siparis_detay..." />
@@ -786,16 +1090,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/image/image.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="20" selection-start="228" selection-end="228" vertical-scroll-proportion="-3.3157895" vertical-offset="1486" max-vertical-offset="3689">
-          <folding />
-        </state>
+        <state line="17" column="20" selection-start="228" selection-end="228" vertical-scroll-proportion="-3.3157895" vertical-offset="1486" max-vertical-offset="3689" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/image/image_model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="28" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.76454294" vertical-offset="472" max-vertical-offset="1037">
-          <folding />
-        </state>
+        <state line="44" column="28" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.76454294" vertical-offset="472" max-vertical-offset="1037" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/helpers/fonksiyonlar_helper.php">
@@ -807,9 +1107,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/slider_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="27" selection-start="1151" selection-end="1151" vertical-scroll-proportion="-9.807693" vertical-offset="153" max-vertical-offset="629">
+        <state line="24" column="27" selection-start="1151" selection-end="1151" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="629">
           <folding>
-            <element signature="e#1205#1226#0" expanded="true" />
             <marker date="1401834679142" expanded="true" signature="89:1317" placeholder="..." />
           </folding>
         </state>
@@ -817,44 +1116,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/yonetim/footer_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="119" selection-start="276" selection-end="276" vertical-scroll-proportion="-8.5" vertical-offset="0" max-vertical-offset="357">
+        <state line="13" column="119" selection-start="276" selection-end="276" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="357">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/eticaret_version.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="36" selection-start="121" selection-end="121" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="374">
-          <folding>
-            <element signature="e#7#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="60" selection-start="3585" selection-end="3606" vertical-scroll-proportion="-5.6862745" vertical-offset="1155" max-vertical-offset="1700">
-          <folding>
-            <marker date="1401828685378" expanded="true" signature="3337:3420" placeholder="..." />
-            <marker date="1401828685378" expanded="true" signature="3362:3420" placeholder="..." />
-            <marker date="1401828685378" expanded="true" signature="3474:3529" placeholder="..." />
-          </folding>
+        <state line="9" column="36" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="374">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/language/turkish/common/footer_lang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="50" selection-start="348" selection-end="348" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="289">
+        <state line="9" column="50" selection-start="348" selection-end="348" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/eklentiler/kategori_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="24" selection-start="3564" selection-end="3579" vertical-scroll-proportion="-6.5384617" vertical-offset="1479" max-vertical-offset="3876">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="97" column="24" selection-start="3564" selection-end="3579" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="3876">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -865,24 +1149,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/stok_gorunum_sablonlari/stok_gorunum_normal_liste.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="105" selection-start="4367" selection-end="4367" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="6511">
+          <folding>
+            <marker date="1401912892775" expanded="true" signature="3896:4845" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="4401:4835" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="4764:4826" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="5001:5953" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="5506:5943" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="5870:5932" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="5985:7253" placeholder="..." />
+            <marker date="1401912892775" expanded="true" signature="6016:7241" placeholder="{...}" />
+            <marker date="1401912892775" expanded="true" signature="6063:7237" placeholder="{...}" />
+            <marker date="1401912892775" expanded="true" signature="6169:7232" placeholder="{&quot;type&quot;: &quot;post&quot;...}" />
+            <marker date="1401912892775" expanded="true" signature="6301:6569" placeholder="{...}" />
+            <marker date="1401912892775" expanded="true" signature="6597:7225" placeholder="{...}" />
+            <marker date="1401912892775" expanded="true" signature="6953:7113" placeholder="{&quot;opacity&quot;: 0.0...}" />
+            <marker date="1401912892775" expanded="true" signature="7123:7220" placeholder="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/listeler.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="89" selection-start="2238" selection-end="2238" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1853">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="102" selection-start="1688" selection-end="1688" vertical-scroll-proportion="-8.192307" vertical-offset="467" max-vertical-offset="1751">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1402002897279" expanded="true" signature="3442:3525" placeholder="..." />
+            <marker date="1402002897279" expanded="true" signature="3467:3525" placeholder="..." />
+            <marker date="1402002897279" expanded="true" signature="3579:3634" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="355" column="24" selection-start="16720" selection-end="16720" vertical-scroll-proportion="-6.5384617" vertical-offset="5865" max-vertical-offset="6358">
+        <state line="257" column="91" selection-start="12869" selection-end="12869" vertical-scroll-proportion="-8.0" vertical-offset="4161" max-vertical-offset="6392">
           <folding>
-            <element signature="e#5609#5661#0" expanded="true" />
-            <element signature="e#7025#7064#0" expanded="true" />
-            <element signature="e#9144#9187#0" expanded="true" />
-            <element signature="e#9393#9413#0" expanded="true" />
-            <element signature="e#10268#10290#0" expanded="true" />
-            <element signature="e#15072#15111#0" expanded="true" />
-            <marker date="1401835659145" expanded="true" signature="14358:14373" placeholder="..." />
+            <marker date="1402003031537" expanded="false" signature="14468:14483" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/urundetay.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="83" selection-start="3735" selection-end="3735" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="2244">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/temalar/eticaret_standart/tema_asset/eticaret_mavi/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="240" column="44" selection-start="17704" selection-end="17704" vertical-scroll-proportion="0.80110496" vertical-offset="3790" max-vertical-offset="7752">
+        <state line="27" column="272" selection-start="2091" selection-end="2091" vertical-scroll-proportion="0.5318792" vertical-offset="142" max-vertical-offset="7752">
           <folding />
         </state>
       </provider>
