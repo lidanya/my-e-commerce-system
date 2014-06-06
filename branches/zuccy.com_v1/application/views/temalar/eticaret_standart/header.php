@@ -253,7 +253,9 @@
 			   $("div.hizlisepet").slideUp('slow');
 		    }
 		</script>
+
 		<div id="h_sepet" class="saga">
+            <span style="position: absolute; right: 84px; font-weight: bold; color: #373737;">Sepetim</span>
 			<p>
 				<a href="javascript:;" rel="nofollow">
 					<?php $cart_item = ($this->cart->total_items()) ? $this->cart->total_items() : 0; ?>
