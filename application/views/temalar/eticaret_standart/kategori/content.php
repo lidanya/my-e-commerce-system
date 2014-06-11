@@ -32,24 +32,24 @@
 	<div class="liste_container">
 		<?php
 			foreach($sub_category as $sub_categories) {
-				$i = $i + 1;
+
 				if($sub_categories->image != 'resim_ekle.jpg') {
 					if(file_exists(DIR_IMAGE . $sub_categories->image)) {
-						$resim = show_image($sub_categories->image, 210, 160);
+						$resim = show_image($sub_categories->image, 193, 141);
 					} else {
 						$random_image = $this->category_model->get_image_product_by_random($sub_categories->category_id);
 						if($random_image) {
-							$resim = show_image($random_image->image, 210, 160);
+							$resim = show_image($random_image->image, 193, 141);
 						} else {
-							$resim = show_image('no-image.jpg', 210, 160);
+							$resim = show_image('no-image.jpg', 193, 141);
 						}
 					}
 				} else {
 					$random_image = $this->category_model->get_image_product_by_random($sub_categories->category_id);
 					if($random_image) {
-						$resim = show_image($random_image->image, 210, 160);
+						$resim = show_image($random_image->image, 193, 141);
 					} else {
-						$resim = show_image('no-image.jpg', 210, 160);
+						$resim = show_image('no-image.jpg', 193, 141);
 					}
 				}
 				$total_products = $this->category_model->get_product_count($sub_categories->category_id);
@@ -61,6 +61,8 @@
 					$category_url = str_replace('--category', '', $this->uri->segment(2)) . '---' . $sub_categories->seo . '--category';
 				}
 		?>
+           <?php if($total_products > 0) {
+                    $i = $i + 1; ?>
 			<div class="kategori_liste_oge sola">
 				<div class="kategori_liste_resim">
 					<a href="<?php echo site_url($category_url); ?>">
@@ -71,19 +73,39 @@
 					<?php echo character_limiter($sub_categories->name, 50) . $stok_say; ?>
 				</a>
 			</div>
+           <?php } ?>
 	<?php
-			if($i == '3') {
+			if($i == '4') {
 				$i = 0;
 				echo '<div class="clear"></div>';
 			}
 		}
+
 	?>
 	</div>
 <?php
-	} else if($category_products) {
+	} if($category_products) {
 		$i = 0;
 ?>
 	<div class="clear"></div>
+        <div id="anasayfa_urun_tablar" style="margin-top: 10px;">
+            <a href="javascript:;" tab="#tab_yeni_geldi" class="sola u_aktif">
+                <span class="u_yeni_geldi">YENİ GELDİ!</span>
+            </a>
+            <a href="javascript:;" tab="#tab_editor" class="sola">
+                <span class="u_editor">EDİTÖRÜN SEÇİMİ</span>
+            </a>
+            <a href="javascript:;" tab="#tab_cok_satan" class="sola" style="background: none;">
+                <span class="u_cok">ÇOK SATANLAR</span>
+            </a>
+            <div class="u_bosluk sola"></div>
+            <div class="clear"></div>
+        </div>
+        <script type="text/javascript">
+            <!--
+            $.tabs('#anasayfa_urun_tablar a', 'u_aktif');
+            //-->
+        </script>
 	<?php
 		if($category_products_pagination) {
 			echo $category_products_pagination['links'];
@@ -102,7 +124,7 @@
 				$sablon_gonder->seo				= $kategori_urunler->seo;
 				$sablon_gonder->image			= $kategori_urunler->image;
 				$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
-			if($i == '3') {
+			if($i == '5') {
 				$i = 0;
 				echo '<div class="clear"></div>';
 			}
@@ -116,6 +138,7 @@
 		}
 	?>
 <?php } else { ?>
+    <?php if(!$sub_category) { ?>
 	<!-- Hata -->
 	 <div id="onay_mesaj">
 	 	<div class="onay_image sola"><img src="<?php echo site_resim();?>unlem.png" alt="<?php echo lang('messages_not_new_products_title'); ?>" title="<?php echo lang('messages_not_new_products_title'); ?>"></div>
@@ -138,6 +161,7 @@
 	 	</p>
 	 </div>
 	 <!-- Hata SON -->
+      <?php } ?>
 <?php } ?>
 
 </div>

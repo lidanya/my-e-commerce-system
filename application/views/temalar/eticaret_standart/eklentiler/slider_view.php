@@ -14,8 +14,8 @@
 		});
 	</script>
 	<?php
-		$width = ($yer == 'anasayfa') ? '750' : '980';
-		$height = ($yer == 'anasayfa') ? '240' : '314';
+		$width = ($yer == 'anasayfa' || $yer == 'slider') ? '821' : '980';
+		$height = ($yer == 'anasayfa' || $yer == 'slider') ? '474' : '314';
 	?>
 	<div id="slider_<?php echo $yer; ?>" style="width:<?php echo $width; ?>px;height:<?php echo $height; ?>px;" class="dynamic_slider nivoSlider">
 		<?php foreach($slider_sorgu->result() as $row) { ?>
