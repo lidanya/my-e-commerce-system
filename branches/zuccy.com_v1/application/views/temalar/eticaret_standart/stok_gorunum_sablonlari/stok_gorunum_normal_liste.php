@@ -209,7 +209,7 @@ $("#{form_sepet_ekle_id}").submit(function(e){
 
 	/* tasarımcıların değiştireceği alanlar */
 
-	$resim = show_image($degerler->image, $w = 210, $h = 160);
+	$resim = show_image($degerler->image, $w = 156, $h = 118);
 	$secenek_kontrol = $this->product_model->get_product_option($degerler->product_id);
 
 	if($degerler->new_product) {

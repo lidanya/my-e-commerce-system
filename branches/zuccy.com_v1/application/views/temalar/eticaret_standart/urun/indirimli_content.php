@@ -50,7 +50,7 @@
 				$sablon_gonder->durum		= 'indirimli';
 				
 				$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
-				if($i == '3') {
+				if($i == '5') {
 					$i = 0;
 					echo '<div class="clear"></div>';
 				}

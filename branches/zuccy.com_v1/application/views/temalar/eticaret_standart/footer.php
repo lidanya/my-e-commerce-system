@@ -38,7 +38,14 @@ if(config('site_ayar_ssl_kod') != '')
 }
 ?>
 <!-- footer-->
-<div style="width: 991px; margin: 0 auto;"><img src="<?php echo site_resim();?>foot-banks.png"/></div>
+<div style="width: 990px; margin: 10px auto; height: 35px;"><img src="<?php echo site_resim();?>kargo_foot.png"/></div>
+<div style="width: 990px; margin: 0px auto;">
+    <div class="sola" style="margin-right: 10px;"><a href="#"><img src="<?php echo site_resim();?>kombin.png"/></a></div>
+    <div class="sola" style="margin-right: 10px;"><a href="#"><img src="<?php echo site_resim();?>exclusive.png"/></a></div>
+    <div class="sola"><a href="#"><img src="<?php echo site_resim();?>blog.png"/></a></div>
+</div>
+<div class="clear"></div>
+<div style="width: 991px; margin: 10px auto 0;"><img src="<?php echo site_resim();?>foot-banks.png"/></div>
 <div id="footer">
 	<!--foust SON -->
 

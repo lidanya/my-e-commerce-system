@@ -52,78 +52,81 @@ class detay extends Public_Controller {
 						'separator'	=> ' &gt; '
 					);
 				}
-			}
-		
-			$category_id = array_pop($parts);
-		} else {
-			$category_id = 0;
-			$content_data['breadcrumbs'][] = array(
+            }
+
+            $category_id = array_pop($parts);
+        } else {
+            $category_id = 0;
+            $content_data['breadcrumbs'][] = array(
 				'href'		=> site_url('tum_kategoriler--category'),
 				'text'		=> lang('messages_breadcrumbs_all_categories'),
 				'separator'	=> ' &gt; '
 			);
-		}
+        }
+        $this->load->model("eklentiler/eklentiler_markalarimiz_model");
+        $content_data['markalarimiz'] = $this->eklentiler_markalarimiz_model->marka_getir();
 
-		if($seo == 'tum_kategoriler') {
-			$_order								= (eklenti_ayar('kategori', 'siralama_sekli')) ? eklenti_ayar('kategori', 'siralama_sekli') : 'desc';
-			$content_data['sub_category']		= $this->category_model->get_categories_by_parent_id(0, '-1', 'c.category_id', $_order);
-			$content_data['sort_link']			= $sort_link;
-			$content_data['category_info'] 		= FALSE;
-			$content_data['category_products']	= FALSE;
-			$content_data['seo']				= $seo;
-		} else {
-			$category_info = $this->category_model->get_category_by_seo($category_id);
-			if(!$category_info) {
-				redirect('site/index');
-			}
+        if($seo == 'tum_kategoriler') {
+            $_order								= (eklenti_ayar('kategori', 'siralama_sekli')) ? eklenti_ayar('kategori', 'siralama_sekli') : 'desc';
+            $content_data['sub_category']		= $this->category_model->get_categories_by_parent_id(0, '-1', 'c.category_id', $_order);
+            $content_data['sort_link']			= $sort_link;
+            $content_data['category_info'] 		= FALSE;
+            $content_data['category_products']	= FALSE;
+            $content_data['seo']				= $seo;
+        } else {
+            $category_info = $this->category_model->get_category_by_seo($category_id);
+            if(!$category_info) {
+                redirect('site/index');
+            }
 
-			$content_data['category_info'] = $category_info;
+            $content_data['category_info'] = $category_info;
 
-			$_izin_verilenler = array('product_id-desc', 'product_id-asc', 'price-desc', 'price-asc', 'name-desc', 'name-asc', 'viewed-desc', 'viewed-asc');
-	
-			if(in_array($sort_link, $_izin_verilenler)) {
-				$_sort_link = $sort_link;
-			} else {
-				$_sort_link = 'price-asc';
-			}
+            $_izin_verilenler = array('product_id-desc', 'product_id-asc', 'price-desc', 'price-asc', 'name-desc', 'name-asc', 'viewed-desc', 'viewed-asc');
 
-			$sort_link_e = explode('-', $_sort_link);
-			$sort  = $sort_link_e[0];
-			$order = $sort_link_e[1];
-			$content_data['sort_link'] = $sort_link;
+            if(in_array($sort_link, $_izin_verilenler)) {
+                $_sort_link = $sort_link;
+            } else {
+                $_sort_link = 'price-asc';
+            }
 
-			$limit = (config('site_ayar_urun_site_sayfa')) ? config('site_ayar_urun_site_sayfa') : 9;
-			$uri_segment = 4;
-			$category_products = $this->product_model->get_products_by_category_id($category_info->category_id, $sort, $order, $page, $limit);
+            $sort_link_e = explode('-', $_sort_link);
+            $sort  = $sort_link_e[0];
+            $order = $sort_link_e[1];
+            $content_data['sort_link'] = $sort_link;
 
-			$content_data['category_products'] = $category_products;
-			if($category_products) {
-				$content_data['category_products_pagination'] = create_pagination(site_url($seo . '--category/' . $sort_link), $category_products['total'], $limit, $uri_segment);
-			} else {
-				$content_data['category_products_pagination'] = FALSE;
-			}
+            $limit = (config('site_ayar_urun_site_sayfa')) ? config('site_ayar_urun_site_sayfa') : 9;
+            $uri_segment = 4;
+            $category_products = $this->product_model->get_products_by_category_id($category_info->category_id, $sort, $order, $page, $limit);
 
-			$_order								= (eklenti_ayar('kategori', 'siralama_sekli')) ? eklenti_ayar('kategori', 'siralama_sekli') : 'desc';
-			$content_data['sub_category']		= $this->category_model->get_categories_by_parent_id($category_info->category_id, '-1', 'c.category_id', $_order);
-			$content_data['sort_link']			= $sort_link;
-			$content_data['seo']				= $seo;
-		}
+            $content_data['category_products'] = $category_products;
+            if($category_products) {
+                $content_data['category_products_pagination'] = create_pagination(site_url($seo . '--category/' . $sort_link), $category_products['total'], $limit, $uri_segment);
+            } else {
+                $content_data['category_products_pagination'] = FALSE;
+            }
 
-		/* Sayfa Tanımlamaları */
-		$this->template->add_region('baslik');
-		$this->template->add_region('keywords');
-		$this->template->add_region('description');
-		if($seo != 'tum_kategoriler') {
-			$this->template->write('baslik', $category_info->name);
-			$this->template->write('keywords', $category_info->meta_keywords);
-			$this->template->write('description', $category_info->meta_description);
-		}
+            $_order								= (eklenti_ayar('kategori', 'siralama_sekli')) ? eklenti_ayar('kategori', 'siralama_sekli') : 'desc';
+            $content_data['sub_category']		= $this->category_model->get_categories_by_parent_id($category_info->category_id, '-1', 'c.category_id', $_order);
+            $content_data['sort_link']			= $sort_link;
+            $content_data['seo']				= $seo;
+        }
 
-		$this->template->set_master_template(tema() . 'kategori/index');
+        /* Sayfa Tanımlamaları */
+        $this->template->add_region('baslik');
+        $this->template->add_region('keywords');
+        $this->template->add_region('description');
+        if($seo != 'tum_kategoriler') {
+            $this->template->write('baslik', $category_info->name);
+            $this->template->write('keywords', $category_info->meta_keywords);
+            $this->template->write('description', $category_info->meta_description);
+        }
 
-		$this->template->add_region('content');
-		$this->template->write_view('content', tema() . 'kategori/content', $content_data);
-		$this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/listeler.css');
+        $this->template->set_master_template(tema() . 'kategori/index');
+
+        $this->template->add_region('content');
+        $this->template->write_view('content', tema() . 'kategori/content', $content_data);
+        $this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/listeler.css');
+        $this->template->add_js(APPPATH . 'views/' . tema() . 'js/tab.js');
 
 		$this->template->render();
 	}

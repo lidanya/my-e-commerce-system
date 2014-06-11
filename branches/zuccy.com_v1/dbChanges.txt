@@ -1,0 +1,4 @@
+-- serkan
+-- 10.06.2014
+
+ALTER TABLE  `e_product` ADD  `editorun_secimi` TINYINT UNSIGNED NOT NULL DEFAULT  '0' AFTER  `hizli_gonder`
