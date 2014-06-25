@@ -235,6 +235,185 @@ class product_model extends CI_Model
 		}
 	}
 
+    public function get_products_by_category_id_editor($category_id, $sort = 'product_id', $order = 'asc', $start = 0, $limit = 20,$special_filters = array())
+    {
+        $sort_allowed = array('product_id', 'price', 'name', 'viewed');
+        if ( ! in_array($sort, $sort_allowed)) {
+            $sort = 'product_id';
+        } else {
+            if ($sort == 'product_id' OR $sort == 'price' OR $sort == 'viewed') {
+                $sort = 'p.' . $sort;
+            } elseif ($sort == 'name') {
+                $sort = 'pd.' . $sort;
+            }
+        }
+
+        $language_id = get_language('language_id');
+        $this->db->distinct();
+        $this->db->select('SQL_CALC_FOUND_ROWS pd.name AS name, p.image AS image, m.name AS manufacturer, ' .
+            get_fields_from_table('product', 'p.', array(), ', ') .
+            get_fields_from_table('product_description', 'pd.', array(), '')
+            , FALSE);
+        $this->db->from('product_to_category p2c');
+        $this->db->join('product p', 'p2c.product_id = p.product_id', 'left');
+        $this->db->join('product_description pd', 'p.product_id = pd.product_id', 'left');
+        $this->db->join('manufacturer m', 'p.manufacturer_id = m.manufacturer_id', 'left');
+        $this->db->where('pd.language_id', (int) $language_id);
+        $this->db->where('p.date_available >= UNIX_TIMESTAMP()');
+        $this->db->where('p.status', '1');
+        $this->db->where('p.editorun_secimi', '1');
+
+        if(isset($special_filters["sub_category"]) && $special_filters["sub_category"] != "") {
+            $this->db->where_in('p2c.category_id', $special_filters["sub_category"]);
+        } else {
+            $this->db->where('p2c.category_id', (int) $category_id);
+        }
+
+        if(isset($special_filters["manufacturer"]) && $special_filters["manufacturer"] != "") {
+            $this->db->where_in('m.manufacturer_id', $special_filters["manufacturer"]);
+        }
+
+        if(isset($special_filters["fiyat"]) && $special_filters["fiyat"] != "") {
+            $fiyat = $special_filters["fiyat"];
+            switch($fiyat) {
+                case 1:
+                    $this->db->where('p.price <=', 50);
+                case 2:
+                    $this->db->where('p.price <=', 100);
+                    $this->db->where('p.price >', 50);
+                case 3:
+                    $this->db->where(array('p.price >' => 100, 'p.price <=' =>  200));
+                case 4:
+                    $this->db->where('p.price <=', 300);
+                    $this->db->where('p.price >', 200);
+                case 5:
+                    $this->db->where('p.price <', 400);
+                    $this->db->where('p.price >', 300);
+                case 6:
+                    $this->db->where('p.price <', 500);
+                    $this->db->where('p.price >', 400);
+                case 7:
+                    $this->db->where('p.price <', 1000);
+                    $this->db->where('p.price >', 500);
+
+                case 8:
+                    $this->db->where('p.price >', 1000);
+            }
+        }
+
+        $this->db->order_by($sort, $order);
+        $this->db->limit($limit, $start);
+        $query = $this->db->get();
+        $total_row = $this->db->select('FOUND_ROWS() as total')->get()->row()->total;
+        if($query->num_rows()) {
+            return array(
+                'query' => $query->result(),
+                'total' => $total_row
+            );
+        } else {
+            return FALSE;
+        }
+    }
+    public function get_products_by_category_id_cok_satan($category_id, $sort = 'product_id', $order = 'asc', $start = 0, $limit = 20,$special_filters = array())
+    {
+        $sort_allowed = array('product_id', 'price', 'name', 'viewed');
+        if ( ! in_array($sort, $sort_allowed)) {
+            $sort = 'product_id';
+        } else {
+            if ($sort == 'product_id' OR $sort == 'price' OR $sort == 'viewed') {
+                $sort = 'p.' . $sort;
+            } elseif ($sort == 'name') {
+                $sort = 'pd.' . $sort;
+            }
+        }
+
+        $sql = "SELECT sd.stok_kodu, SUM(stok_miktar) as totalStock FROM e_siparis_detay sd
+        JOIN e_siparis s ON s.siparis_id = sd.siparis_id
+        WHERE s.siparis_flag = 2
+        GROUP BY sd.stok_kodu
+        ORDER BY totalStock ".$order."
+        LIMIT ".$limit;
+
+
+        $query = $this->db->query($sql);
+        $prods = $query->result_array();
+
+        $stokKodList = array();
+        if($prods)  {
+            foreach($prods as $prod) {
+                $stokKodList[] = $prod['stok_kodu'];
+            }
+        }
+        if(!$stokKodList)
+            return FALSE;
+
+        $language_id = get_language('language_id');
+        $this->db->distinct();
+        $this->db->select('SQL_CALC_FOUND_ROWS pd.name AS name, p.image AS image, m.name AS manufacturer, ' .
+            get_fields_from_table('product', 'p.', array(), ', ') .
+            get_fields_from_table('product_description', 'pd.', array(), '')
+            , FALSE);
+        $this->db->from('product_to_category p2c');
+        $this->db->join('product p', 'p2c.product_id = p.product_id', 'left');
+        $this->db->join('product_description pd', 'p.product_id = pd.product_id', 'left');
+        $this->db->join('manufacturer m', 'p.manufacturer_id = m.manufacturer_id', 'left');
+        $this->db->where('pd.language_id', (int) $language_id);
+        $this->db->where('p.date_available >= UNIX_TIMESTAMP()');
+        $this->db->where_in('p.model', $stokKodList);
+        $this->db->where('p.status', '1');
+
+        if(isset($special_filters["sub_category"]) && $special_filters["sub_category"] != "") {
+            $this->db->where_in('p2c.category_id', $special_filters["sub_category"]);
+        } else {
+            $this->db->where('p2c.category_id', (int) $category_id);
+        }
+
+        if(isset($special_filters["manufacturer"]) && $special_filters["manufacturer"] != "") {
+            $this->db->where_in('m.manufacturer_id', $special_filters["manufacturer"]);
+        }
+
+        if(isset($special_filters["fiyat"]) && $special_filters["fiyat"] != "") {
+            $fiyat = $special_filters["fiyat"];
+            switch($fiyat) {
+                case 1:
+                    $this->db->where('p.price <=', 50);
+                case 2:
+                    $this->db->where('p.price <=', 100);
+                    $this->db->where('p.price >', 50);
+                case 3:
+                    $this->db->where(array('p.price >' => 100, 'p.price <=' =>  200));
+                case 4:
+                    $this->db->where('p.price <=', 300);
+                    $this->db->where('p.price >', 200);
+                case 5:
+                    $this->db->where('p.price <', 400);
+                    $this->db->where('p.price >', 300);
+                case 6:
+                    $this->db->where('p.price <', 500);
+                    $this->db->where('p.price >', 400);
+                case 7:
+                    $this->db->where('p.price <', 1000);
+                    $this->db->where('p.price >', 500);
+
+                case 8:
+                    $this->db->where('p.price >', 1000);
+            }
+        }
+
+        $this->db->order_by($sort, $order);
+        $this->db->limit($limit, $start);
+        $query = $this->db->get();
+        $total_row = $this->db->select('FOUND_ROWS() as total')->get()->row()->total;
+        if($query->num_rows()) {
+            return array(
+                'query' => $query->result(),
+                'total' => $total_row
+            );
+        } else {
+            return FALSE;
+        }
+    }
+
 	public function get_campaign_product($sort = 'product_id', $order = 'asc', $start = 0, $limit = 20)
 	{
 		$sort_allowed = array('product_id', 'price', 'name', 'viewed');

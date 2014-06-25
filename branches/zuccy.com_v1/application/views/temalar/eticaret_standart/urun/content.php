@@ -954,7 +954,7 @@ function urun_takip_et(span_id, durum)
 			if($product_related) {
 		?>
 		<!-- Benzer urunler sınır:5-->
-		<div class="urun_diger_baslik"><?php echo $related_title; ?></div>
+		<div class="urun_diger_baslik">BENZER ÜRÜNLER</div>
 		<div class="urun_diger_cont">
 			<?php
 			$digerurun=array();
@@ -968,7 +968,7 @@ function urun_takip_et(span_id, durum)
 						} else {
 							$div_class = NULL;
 						}
-						
+						$sablon_gonder = new stdClass();
 						$sablon_gonder->product_id				= $benzer->product_id;
 						$sablon_gonder->model					= $benzer->model;
 						$sablon_gonder->name					= $benzer->name;
@@ -978,7 +978,7 @@ function urun_takip_et(span_id, durum)
 						$sablon_gonder->image					= $benzer->image;
 						$sablon_gonder->div_class				= $div_class;
 
-						$this->product_model->stock_shema($sablon_gonder, 'arama_sonuclari');
+						$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
 						$sii++;
 					$digerurun[]=$benzer->product_id;
 				   }

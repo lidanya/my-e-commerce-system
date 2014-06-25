@@ -112,9 +112,9 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 .u_video_wrapper {border:solid 2px #dedede;width:304px;margin:10px 0 0 30px;}
 
 /*diger urunler*/
-.urun_diger_baslik {width:705px;height:30px;padding:10px 0 0 40px;letter-spacing:-1px;margin:auto;background:url(../images/urun_detay_diger_baslik.png) no-repeat 0 0;margin-top:20px;font-weight:bold;color:#666666;font-size:16px;}
-.urun_diger_cont {width:723px;padding:10px;margin:auto;border:solid 1px #d6d6d6;border-top:none;}
-.urun_diger_oge {width:720px;margin:10px auto;}
+.urun_diger_baslik {height:30px;letter-spacing:-1px;margin:auto; margin-top:20px;font-weight:bold;color:#666666;font-size:16px;}
+.urun_diger_cont {margin:auto;border-top:none;}
+.urun_diger_oge {margin:10px auto;}
 .urun_diger {width:590px;}
 .urun_diger a img {width:70px;margin:5px;border:solid 1px #f2f2f2;float:left;/*IE Fix*/display:inline;}
 .urun_diger a:hover img {border:solid 1px #009bdb;}

@@ -80,19 +80,6 @@ Aciklamalar:
 /*arama sonuclari*/
 .stok_var, .stok_yok {background:url(../images/stok_var_yok.png) no-repeat 0 0;padding-left:20px;width:100px;}
 .stok_yok {background-position:bottom left;}
-.urun_diger_baslik {width:705px;height:30px;padding:10px 0 0 40px;letter-spacing:-1px;margin:auto;background:url(../images/urun_detay_diger_baslik.png) no-repeat 0 0;margin-top:20px;font-weight:bold;color:#666666;font-size:16px;}
-.urun_diger_baslik h1 {display:inline;font-weight:bold;color:#666666;font-size:16px;}
-.urun_diger_cont {width:723px;padding:10px;margin:auto;border:solid 1px #d6d6d6;border-top:none;}
-.urun_diger_oge {width:720px;margin:10px auto;}
-.urun_diger {width:590px;}
-.urun_diger a img {width:70px;margin:5px;border:solid 1px #f2f2f2;float:left;/*IE Fix*/display:inline;}
-.urun_diger a:hover img {border:solid 1px #D00;}
-.urun_diger_ad, .urun_diger_ad:link, .urun_diger_ad:visited {display:block;font-size:14px;color:#565656;margin-top:15px;}
-.urun_diger_ad:hover {color:#2096c6}
-.urun_diger_fiyat {color:#444242;font-weight:bold;font-size:21px;}
-.urun_diger_fiyat span.ud_birim {font-weight:normal;font-size:9px;}
-.urun_diger_fiyat span.ud_eski {color:#636363;font-weight:normal;font-size:15px;text-decoration:line-through;}
-.urun_diger_buton {width:120px;}
 .ud_gri {background-color:#f0f0f0;}
 /*Sonuc Yok*/
 #sonuc_yok {width:720px;color:#999999;font-size:15px;font-weight:bold;padding-top:10px;}
