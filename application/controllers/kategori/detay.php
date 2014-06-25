@@ -109,8 +109,12 @@ class detay extends Public_Controller {
             $limit = (config('site_ayar_urun_site_sayfa')) ? config('site_ayar_urun_site_sayfa') : 9;
             $uri_segment = 4;
             $category_products = $this->product_model->get_products_by_category_id($category_info->category_id, $sort, $order, $page, $limit,$special_filters);
+            $category_products_editor = $this->product_model->get_products_by_category_id_editor($category_info->category_id, $sort, $order, $page, $limit,$special_filters);
+            $category_products_cok_satan = $this->product_model->get_products_by_category_id_cok_satan($category_info->category_id, $sort, $order, $page, $limit,$special_filters);
 
             $content_data['category_products'] = $category_products;
+            $content_data['category_products_editor'] = $category_products_editor;
+            $content_data['category_products_cok_satan'] = $category_products_cok_satan;
             if($category_products) {
                 $content_data['category_products_pagination'] = create_pagination(site_url($seo . '--category/' . $sort_link), $category_products['total'], $limit, $uri_segment);
             } else {

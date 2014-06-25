@@ -24,7 +24,7 @@ $lang['header_user_logout'] = 'Güvenli Çıkış';
 
 // arama
 $lang['header_search_category_select'] = 'Tüm Kategorilerde';
-$lang['header_search_input'] = 'Aramaya buradan başlayın';
+$lang['header_search_input'] = 'Aradığınız kelimeyi yazınız';
 $lang['header_search_button'] = 'Ara';
 
 // sepet

@@ -112,26 +112,82 @@
 		}
 	?>
 	<div class="clear"></div>
-	<div class="liste_container">
-	<?php foreach($category_products['query'] as $kategori_urunler) { ?>
-		<?php
-			$i = $i+1;
-				$sablon_gonder->product_id		= $kategori_urunler->product_id;
-				$sablon_gonder->model			= $kategori_urunler->model;
-				$sablon_gonder->name			= $kategori_urunler->name;
-				$sablon_gonder->new_product		= $kategori_urunler->new_product;
-				$sablon_gonder->quantity		= $kategori_urunler->quantity;
-				$sablon_gonder->seo				= $kategori_urunler->seo;
-				$sablon_gonder->image			= $kategori_urunler->image;
-				$this->product_model->stock_shema($sablon_gonder, 'normal_liste');
-			if($i == '5') {
-				$i = 0;
-				echo '<div class="clear"></div>';
-			}
-		?>
-	<?php } ?>
-	</div>
+    <div id="tab_yeni_geldi">
+        <div class="liste_container">
+        <?php foreach($category_products['query'] as $kategori_urunler) { ?>
+            <?php
+                $i = $i+1;
+                    $sablon_gonder = new stdClass();
+                    $sablon_gonder->product_id		= $kategori_urunler->product_id;
+                    $sablon_gonder->model			= $kategori_urunler->model;
+                    $sablon_gonder->name			= $kategori_urunler->name;
+                    $sablon_gonder->new_product		= $kategori_urunler->new_product;
+                    $sablon_gonder->quantity		= $kategori_urunler->quantity;
+                    $sablon_gonder->seo				= $kategori_urunler->seo;
+                    $sablon_gonder->image			= $kategori_urunler->image;
+                    $this->product_model->stock_shema($sablon_gonder, 'normal_liste');
+                if($i == '5') {
+                    $i = 0;
+                    echo '<div class="clear"></div>';
+                }
+            ?>
+        <?php } ?>
+        </div>
+    </div>
 	<div class="clear"></div>
+
+    <div id="tab_editor" style="display: none;">
+        <div class="liste_container">
+            <?php if($category_products_editor) {
+            foreach($category_products_editor['query'] as $kategori_urunler) { ?>
+                <?php
+                $i = $i+1;
+                $sablon_gonder = new stdClass();
+                $sablon_gonder->product_id		= $kategori_urunler->product_id;
+                $sablon_gonder->model			= $kategori_urunler->model;
+                $sablon_gonder->name			= $kategori_urunler->name;
+                $sablon_gonder->new_product		= $kategori_urunler->new_product;
+                $sablon_gonder->quantity		= $kategori_urunler->quantity;
+                $sablon_gonder->seo				= $kategori_urunler->seo;
+                $sablon_gonder->image			= $kategori_urunler->image;
+                $this->product_model->stock_shema($sablon_gonder, 'normal_liste');
+                if($i == '5') {
+                    $i = 0;
+                    echo '<div class="clear"></div>';
+                }
+                ?>
+            <?php } ?>
+            <?php } ?>
+        </div>
+    </div>
+    <div class="clear"></div>
+
+    <div id="tab_cok_satan" style="display: none;">
+        <div class="liste_container">
+            <?php if($category_products_cok_satan) {
+                foreach($category_products_cok_satan['query'] as $kategori_urunler) { ?>
+                    <?php
+                    $i = $i+1;
+                    $sablon_gonder = new stdClass();
+                    $sablon_gonder->product_id		= $kategori_urunler->product_id;
+                    $sablon_gonder->model			= $kategori_urunler->model;
+                    $sablon_gonder->name			= $kategori_urunler->name;
+                    $sablon_gonder->new_product		= $kategori_urunler->new_product;
+                    $sablon_gonder->quantity		= $kategori_urunler->quantity;
+                    $sablon_gonder->seo				= $kategori_urunler->seo;
+                    $sablon_gonder->image			= $kategori_urunler->image;
+                    $this->product_model->stock_shema($sablon_gonder, 'normal_liste');
+                    if($i == '5') {
+                        $i = 0;
+                        echo '<div class="clear"></div>';
+                    }
+                    ?>
+                <?php }
+                    }
+                    ?>
+        </div>
+    </div>
+    <div class="clear"></div>
 	<?php
 		if($category_products_pagination) {
 			echo $category_products_pagination['links'];

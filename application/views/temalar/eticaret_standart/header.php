@@ -95,7 +95,9 @@
         <a href="<?php echo site_url('urun/indirimli'); ?>" title="İndirimli">
             İNDİRİMDEKİLER
         </a>
+        <img style="float:right; margin-top: 8px;" src="<?php echo site_resim()."vip.png"; ?>"/>
     </div>
+    <div class="clear"></div>
     <!--h_ust_menu SON -->
 </div>
 <div id="header">
