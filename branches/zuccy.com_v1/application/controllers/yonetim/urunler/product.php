@@ -336,6 +336,7 @@ class product extends Admin_Controller
 		$val->set_rules('tax', 'Vergi Oranı', 'trim|required|numeric|xss_clean');
 		$val->set_rules('subtract', 'Stoktan Düş', 'trim|required|numeric|xss_clean');
 		$val->set_rules('hizli', 'Hizli Gönderi', 'trim|required|numeric|xss_clean');
+		$val->set_rules('esecimi', 'Editörün Seçimi', 'trim|required|numeric|xss_clean');
 		$val->set_rules('status', 'Durum', 'trim|required|numeric|xss_clean');
 		$val->set_rules('sort_order', 'Sıralama', 'trim|required|numeric|xss_clean');
 		$val->set_rules('show_homepage', 'Anasayfada Göster', 'trim|required|numeric|xss_clean');
@@ -519,6 +520,14 @@ class product extends Admin_Controller
 			$data['hizli'] = '1';
 		}
 
+        if ($this->input->post('esecimi')) {
+            $data['esecimi'] = $this->input->post('esecimi');
+        } elseif (isset($product_info)) {
+            $data['esecimi'] = $product_info->editorun_secimi;
+        } else {
+            $data['esecimi'] = '1';
+        }
+
 		if ($this->input->post('status')) {
 			$data['status'] = $this->input->post('status');
 		} elseif (isset($product_info)) {
@@ -624,6 +633,7 @@ class product extends Admin_Controller
 		$data['no_image'] = show_image('no-image.jpg', 100, 100);
 
 		$data['product_images'] = array();
+
 		if ($this->input->post('product_images')) {
 			foreach ($this->input->post('product_images') as $result) {
 				if ($result AND file_exists(DIR_IMAGE . $result)) {

@@ -23,9 +23,23 @@
 ?>
     <form action="<?php echo current_url(); ?>" method="get" id="search_filtre">
 
+        <?php if(isset($sub_category) && $sub_category) { ?>
+            <?php  $cat_get= $this->input->get("sub_category"); ?>
+            <div class="left_filter">
+                <span class="clean_filter"><a href="javascript:;" onclick="clean_filter(this)">Temizle</a></span>
+                <h3>Kategoriler</h3>
+                <ul>
+                    <?php foreach($sub_category as $category) { ?>
+                        <li><input <?php echo is_array($cat_get) && in_array($category->category_id,$cat_get) ? "checked" : ""; ?> onclick="$('#search_filtre').submit();" type="checkbox" id="cat_<?php echo $category->category_id; ?>" value="<?php echo $category->category_id; ?>" name="sub_category[]" /><span><?php echo $category->name; ?></span></li>
+                    <? } ?>
+                </ul>
+            </div>
+        <? } ?>
+
         <?php if(isset($markalarimiz["query"]) && isset($markalarimiz)) { ?>
             <?php  $marka_get= $this->input->get("manufacturer"); ?>
             <div class="left_filter">
+                <span class="clean_filter"><a href="javascript:;" onclick="clean_filter(this)">Temizle</a></span>
                 <h3>Markalar</h3>
                 <ul>
                     <?php foreach($markalarimiz["query"] as $marka) { ?>
@@ -35,21 +49,10 @@
             </div>
         <? } ?>
 
-        <?php if(isset($sub_category) && $sub_category) { ?>
-            <?php  $cat_get= $this->input->get("sub_category"); ?>
-            <div class="left_filter">
-                <h3>Kategoriler</h3>
-                <ul>
-                    <?php foreach($sub_category as $category) { ?>
-                    <li><input <?php echo is_array($cat_get) && in_array($category->category_id,$cat_get) ? "checked" : ""; ?> onclick="$('#search_filtre').submit();" type="checkbox" id="cat_<?php echo $category->category_id; ?>" value="<?php echo $category->category_id; ?>" name="sub_category[]" /><span><?php echo $category->name; ?></span></li>
-                    <? } ?>
-                </ul>
-            </div>
-        <? } ?>
-
         <?php if(isset($sub_category)) { ?>
             <?php $fiyat_get = (int)$this->input->get("fiyat"); ?>
             <div class="left_filter">
+                <span class="clean_filter"><a href="javascript:;" onclick="clean_filter(this)" >Temizle</a></span>
                 <h3>Fiyat</h3>
                 <ul>
                     <?php foreach($fiyat_filtre as $key =>$fiyat) { ?>
@@ -62,6 +65,7 @@
         <?php if(isset($sub_category)) { ?>
             <?php $teslimat_get = (int)$this->input->get("teslimat"); ?>
             <div class="left_filter">
+                <span class="clean_filter"><a href="javascript:;" onclick="clean_filter(this)">Temizle</a></span>
                 <h3>Teslimat</h3>
                 <ul>
                     <?php foreach($teslimat_filtre as $key =>$teslimat) { ?>
@@ -74,10 +78,21 @@
 </div>
 
 <style>
-    .left_filter { margin-top: 10px;}
+    .left_filter { margin-top: 10px; height: 155px; overflow: auto !important; position: relative;}
+    .left_filter .clean_filter { position: absolute; right: 5px; top:1px; font-size: 11px; }
+    .left_filter .clean_filter a {color:#666;}
     .left_filter h3 { margin-bottom: 5px;}
     .left_filter input { border: 1px solid #ccc;}
     .left_filter li { padding: 5px 0;}
     .left_filter li span { padding-left: 5px; position: relative; bottom: 2px;}
 
 </style>
+<script>
+ function clean_filter(elem) {
+     var $elem = $(elem);
+     var rootElem = $elem.parent().parent();
+
+    rootElem.find("input").prop("checked",false);
+     $('#search_filtre').submit();
+ }
+</script>

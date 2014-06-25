@@ -5,7 +5,7 @@ Aciklamalar:
 - urun detay sayfasi stil sablonlarini icerir 
 */
 /*============================Ayarlar=================================*/
-#urun, #urun_tab_cont {width:723px;padding:10px;border:solid 1px #dadada;margin:auto;}
+#urun, #urun_tab_cont {padding:0px 0;}
 h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding:0 0 5px 23px;margin:auto;font-size:16px;font-weight:bold;color:#5f5f5f;background:url(../images/urun_baslik_bg.png) no-repeat 0 1px;}
 .u_yesil_bg {background-color:#E4F1C9;}
 .u_sari_bg {background-color:#FBFAEA;}
@@ -13,16 +13,16 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 
 
 /*resimler*/
-#urun_resim_cont {width:315px;text-align:center;margin-top:10px;}
-#urun_resim {width:313px;height:263px;border:solid 1px #dadada;margin:auto;}
-#urun_resim img {width:230px;}
-.urun_diger_resim, .urun_diger_resim:link, .urun_diger_resim:visited {width:92px;height:65px;margin:5px 5px 0 0;display:block;border:solid 1px #e3e3e3;overflow:hidden;padding:3px;text-align:center;}
-.urun_diger_resim:hover {border:solid 1px #009bdb;}
-.urun_diger_resim img {width:70px;}
+#urun_resim_cont {width:376px;text-align:center;margin-top:10px;}
+#urun_resim {width:374px;height:498px;border:solid 1px #c4c3c9;margin:auto;}
+#urun_resim img {width:374px;}
+.urun_diger_resim, .urun_diger_resim:link, .urun_diger_resim:visited {width:88px;height:119px;margin:5px 5px 0 0;display:block;border:solid 1px #cbcbcd;overflow:hidden;text-align:center;}
+.urun_diger_resim:hover {border:solid 1px #c4c3c9;}
+.urun_diger_resim img {width:88px;}
 
 /*detay*/
 #urun_detay {margin-top:10px;}
-.urun_detay_oge {width:400px;height:33px;border-bottom:dashed 1px #e3e3e3;clear:both;}
+.urun_detay_oge {height:33px;clear:both;}
 .u_baslik, .u_oge {display:block;width:120px;margin-left:10px;color:#7f7f7f;font-size:13px;margin-top:5px;}
 .u_oge {color:#565656;font-weight:bold;width:200px;}
 .u_oge span {font-size:9px;}
@@ -34,7 +34,7 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 .u_kargo_hizli, .u_kargo_gun {display:inline-block;color:#7f7f7f;font-size:9px;height:22px;text-align:left;}
 .u_kargo_hizli {padding-left:36px;width:69px;background:url(../images/kargo_araba.png) no-repeat 0 0;}
 .u_kargo_gun {width:54px;padding-left:26px;background:url(../images/kargo_24_saat.png) no-repeat 0 0;}
-#urun_detay_satinal_butonlar {width:375px;margin:20px auto 0;text-align:center;}
+#urun_detay_satinal_butonlar {margin:10px 0 0 10px; padding:10px 0 0 0;text-align:center; border-top: 1px solid #c7c7c7;}
 #urun_detay_satinal_butonlar a {margin-right:10px;}
 #urun_detay_butonlar {width:400px;margin:35px auto 0;text-align:center;}
 #urun_detay_butonlar a, #urun_detay_butonlar a:link, #urun_detay_butonlar a:visited {display:inline-block;text-align:left;letter-spacing:-1px;color:#7f7f7f;font-size:10px;padding:5px 0 0 27px;height:20px;background:url(../images/buton_urun_detay.png) no-repeat scroll 0 0 transparent}
@@ -48,14 +48,14 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 #urun_detay_butonlar a.u_yorum {background-position:top right;width:65px;}
 #urun_detay_butonlar a:hover.u_yorum {background-position:bottom right;}
 #urun_paylas_metin {color:#7f7f7f;font-size:13px;width:150px;margin-top:20px;text-align:right;padding-top:3px;}
-#urun_paylas {text-align:center;width:402px;margin-top:20px;}
+#urun_paylas {text-align:left;width:402px;margin-top:10px;}
 
 /*tab menu*/
-#urun_tablar {width:745px;margin:15px auto 0;height:35px;}
+#urun_tablar {margin:15px auto 0;height:35px;}
 #urun_tablar a, #urun_tablar a:link, #urun_tablar a:visited {text-align:center;display:block;color:#fff;width:122px;height:35px;background:#b9b9b9; margin-right: 3px;}
 #urun_tablar a:hover {background-position:center;color:#fff;}
 #urun_tablar a.u_aktif {background-position:bottom;color:#fff; background: #171717;}
-.u_bosluk {width:135px;border-bottom: solid 1px #dedede;height:34px;}
+.u_bosluk {width:135px;height:34px;}
 #urun_tablar a span {text-align:left;display:inline-block;width:85px;padding:5px 0 0 35px;height:17px;margin-top:5px;/*background:url(../images/urun_tab_logo.png) no-repeat 0 0;*/}
 #urun_tablar a span.u_ozellikli {background-position:0 0;}
 #urun_tablar a span.u_detayli {background-position:0 -22px;}
@@ -66,7 +66,7 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 
 /*tablar -->*/
 #urun_tab_cont {border-top:none;}
-.urun_tab_container {border:solid 1px #f6f6f6;width:701px;padding:10px;font-size:13px;color:#7b7b7b}
+.urun_tab_container {border:solid 1px #c7c7c5;padding:10px;font-size:13px;color:#5d5d5b; background: #f2f2f0;}
 
 /*urun ozellikleri*/
 .uo_gri {background-color:#efefef;}

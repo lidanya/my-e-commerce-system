@@ -82,16 +82,18 @@
 <body>
 <div id="head-ust">
     <div id="h_ust_menu"s>
-        <a href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_top_menu_mainpage'); ?>"><?php echo lang('header_top_menu_mainpage'); ?></a>
+        <a href="<?php echo site_url('site/index'); ?>" title="anasayfa">ANASAYFA</a>
 
-        <?php echo show_page('1', '', '', ''); ?>
-
-        <a href="<?php echo site_url('site/musteri_hizmetleri'); ?>" title="<?php echo lang('header_top_menu_customer_services'); ?>">
-            <?php echo lang('header_top_menu_customer_services'); ?>
+        <a href="<?php echo site_url('urun/yeni'); ?>" title="yeni gelenler">
+            YENİ GELENLER
         </a>
 
-        <a href="<?php echo site_url('site/iletisim'); ?>" title="<?php echo lang('header_top_menu_contact_us'); ?>">
-            <?php echo lang('header_top_menu_contact_us'); ?>
+        <a href="<?php echo site_url('urun/kampanyali'); ?>" title="kampanyali ürünler">
+            KAMPANYALI ÜRÜNLER
+        </a>
+
+        <a href="<?php echo site_url('urun/indirimli'); ?>" title="İndirimli">
+            İNDİRİMDEKİLER
         </a>
     </div>
     <!--h_ust_menu SON -->
@@ -227,11 +229,13 @@
 	<div id="menubar">
 		<div id="h_alt_menu" class="sola">
 			<ul class="sola">
-				<li><a class="h_ilk<?php $this->menu->menu_class(2,3,'site','index',' h_aktif',3);?>" href="<?php echo site_url('site/index'); ?>" title="<?php echo lang('header_middle_menu_mainpage'); ?>"><em><?php echo mb_strtoupper(lang('header_middle_menu_mainpage')); ?></em></a></li>
-				<li><a class="<?php $this->menu->menu_class(2,3,'urun','yeni','h_aktif',3);?>" href="<?php echo site_url('urun/yeni'); ?>" title="<?php echo lang('header_middle_menu_new_products'); ?>"><em><?php echo mb_strtoupper(lang('header_middle_menu_new_products')); ?></em></a></li>
-				<li><a class="<?php $this->menu->menu_class(2,3,'urun','kampanyali','h_aktif',3);?>" href="<?php echo site_url('urun/kampanyali'); ?>" title="<?php echo lang('header_middle_menu_campaign_products'); ?>"><em><?php echo mb_strtoupper(lang('header_middle_menu_campaign_products')); ?></em></a></li>
-				<li><a class="h_son<?php $this->menu->menu_class(2,3,'urun','indirimli',' h_aktif',3);?>" href="<?php echo site_url('urun/indirimli'); ?>" title="<?php echo lang('header_middle_menu_discount_products'); ?>"><em><?php echo mb_strtoupper(lang('header_middle_menu_discount_products')); ?></em></a></li>
-			</ul>
+				<li><a class="h_ilk<?php $this->menu->menu_class(2,3,'site','index',' h_aktif',3);?>" href="<?php echo site_url('mutfak--category'); ?>" title="Mutfak"><em>MUTFAK</em></a></li>
+				<li><a class="h_ilk<?php $this->menu->menu_class(2,3,'site','index',' h_aktif',3);?>" href="<?php echo site_url('banyo--category'); ?>" title="Banyo"><em>BANYO</em></a></li>
+				<li><a class="h_ilk<?php $this->menu->menu_class(2,3,'site','index',' h_aktif',3);?>" href="<?php echo site_url('salon--category'); ?>" title="Salon"><em>SALON</em></a></li>
+				<li><a class="h_ilk<?php $this->menu->menu_class(2,3,'site','index',' h_aktif',3);?>" href="<?php echo site_url('yatak-odasi--category'); ?>" title="Yatak Odası"><em>YATAK ODASI</em></a></li>
+				<li><a class="h_ilk<?php $this->menu->menu_class(2,3,'site','index',' h_aktif',3);?>" href="<?php echo site_url('dekorasyon--category'); ?>" title="Dekorasyon"><em>DEKORASYON</em></a></li>
+				<li><a class="h_ilk<?php $this->menu->menu_class(2,3,'site','index',' h_aktif',3);?>" href="<?php echo site_url('bahce--category'); ?>" title="Bahçe"><em>BAHÇE</em></a></li>
+		    </ul>
 		</div>
 		<!--h_alt_menu SON -->
 		<script type="text/javascript" charset="utf-8">

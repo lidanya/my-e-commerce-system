@@ -302,10 +302,10 @@
 						</td>
 					</tr>
 					<tr>
-						<td><span class="required">*</span>Hızlı Gönderi<br /><span class="help">Aynı gün kargoya verilir.</span></td>
+						<td><span class="required">*</span>Hızlı Gönderi<br /><span class="help">Aynı gün kargoya verilir vs.</span></td>
 						<td>
 							<?php
-								$_hizli_array = array('0' => ' - Hayır - ', '1' => ' - Evet - ');
+								$_hizli_array = array('0' => ' - Seçiniz - ', '1' => 'Aynı Gün Kargo', '2' => '1-3 iş günü', '3' => '1 hafta ve üzeri');
 								echo form_dropdown('hizli', $_hizli_array, $hizli);
 							?>
 							<?php if (form_error('hizli')) { ?>
@@ -313,6 +313,19 @@
 							<?php } ?>
 						</td>
 					</tr>
+
+                    <tr>
+                        <td><span class="required">*</span>Editörün seçimi<br /></td>
+                        <td>
+                            <?php
+                            $_esecimi_array = array('0' => ' - Hayır - ', '1' => ' - Evet - ');
+                            echo form_dropdown('esecimi', $_esecimi_array, $esecimi);
+                            ?>
+                            <?php if (form_error('esecimi')) { ?>
+                                <span class="error"><?php echo form_error('esecimi'); ?></span>
+                            <?php } ?>
+                        </td>
+                    </tr>
 					<tr>
 						<td><span class="required">*</span> Durum<br /><span class="help">Ürünleri aktif yada pasif edin.</span></td>
 						<td>
