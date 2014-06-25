@@ -522,7 +522,8 @@ class product_product_model extends CI_Model
 			'weight'					=> $get_values['weight'],
 			'weight_class_id'			=> $get_values['weight_class_id'],
 			'subtract'					=> $get_values['subtract'],
-			'hizli_gonder'				=> $get_values['hizli']
+			'hizli_gonder'				=> $get_values['hizli'],
+			'editorun_secimi'		    => $get_values['esecimi']
 		);
 		$this->db->update('product', $product_insert_data, array('product_id' => (int) $product_id));
 		

@@ -23,19 +23,19 @@ input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;
 .clear {clear:both;height:0px;overflow:hidden !important;}
 /*urun_butonlari*/
 .buton_sepete_ekle, .buton_sepete_ekle:link, .buton_sepete_ekle:visited {text-align:left; border-radius:3px;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;padding:0 5px;}
-.buton_hizli_al, .buton_hizli_al:link, .buton_hizli_al:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#fff;font-size:12px;padding:0 5px; border-radius: 3px;}
+.buton_hizli_al, .buton_hizli_al:link, .buton_hizli_al:visited {text-align:left;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#fff;font-size:12px;padding:0 5px; border-radius: 3px;}
 .buton_detay, .buton_detay:link, .buton_detay:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;padding:0 5px; border-radius: 3px;}
 .buton_takip_et, .buton_takip_et:link, .buton_takip_et:visited {text-align:left;display:inline-block;height:27px;line-height:27px;background:url(../images/buton_sepete_ekle.png) top left repeat-x;color:#fff;font-size:12px;font-weight:700;padding:0 5px; border-radius: 3px;}
 .buton_takip_cikar, .buton_takip_cikar:link, .buton_takip_cikar:visited {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#676b70;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}
 .buton_detay:hover, .buton_hizli_al:hover, .buton_sepete_ekle:hover, .buton_takip_et:hover, .buton_takip_cikar:hover {background-position:bottom left;color:#fff;}
 .buton_stok_yok {text-align:left;margin-top:1px;display:block;height:27px;line-height:27px;background:url(../images/buton_hizli_satin_al.png) top left repeat-x;color:#333 !important;font-size:12px;padding:0 5px;border-left:1px solid #b0b0b0;border-right:1px solid #b0b0b0;}/*islevsiz buton*/
 /*genel_butonlar*/
-.urmercek {background:url(../images/urmercek.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
-.urstokyok {background:url(../images/urstokyok.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
-.ursepetat {background:url(../images/ursepetat.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
-.urhizlial {background:url(../images/urhizlial.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
-.cekk {background:url(../images/cekk.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
-.corpi {background:url(../images/corpi.png) left center no-repeat;padding-left:23px;height:27px;display:inline-block;}
+.urmercek {padding:0 10px;height:27px;display:inline-block;}
+.urstokyok {padding:0 10px;padding-left:23px;height:27px;display:inline-block;}
+.ursepetat {padding:0 10px;height:27px;display:inline-block;}
+.urhizlial {padding:0 10px;height:27px;display:inline-block;}
+.cekk {padding:0 10px;height:27px;display:inline-block;}
+.corpi {padding:0 10px;height:27px;display:inline-block;}
 /*genel_butonlar*/
 .buton, .buton:link, .buton:visited {font-size:12px;font-weight:normal;overflow:hidden;background:url(../images/buton_sol.png) no-repeat left top;display:inline-block;padding-left:8px;}
 .buton span {font-size:12px;font-weight:normal;background:url(../images/buton_sag.png) no-repeat right top;color:#656565;display:block;padding:7px 10px 7px 2px;}
@@ -43,7 +43,7 @@ input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;
 .buton:hover span {font-weight:normal;background-position:right bottom;}
 .buton img {vertical-align:middle;}
 
-.siterenk {color:#009BD9;}
+.siterenk {color:#75a734;}
 .sitelink, .sitelink:link, .sitelink:hover {color:#333;}
 .sitelink:hover {color:#07aae2;}
 .sitelink2, .sitelink2:link, .sitelink2:hover {color:#000;}
@@ -70,7 +70,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_ust_menu {height:30px;color:#ffffff;font-size:15px;margin:0 auto; width: 990px;}
 #h_ust_menu ul {list-style:none;}
 #h_ust_menu ul li {float:left;display:inline;}
-#h_ust_menu a,  #h_ust_menu a:link, #h_ust_menu a:visited {color:#a6a6a6;display:inline-block;margin:10px;font-size:11px;}
+#h_ust_menu a,  #h_ust_menu a:link, #h_ust_menu a:visited {color:#fff;display:inline-block;margin:10px;font-size:11px;}
 #h_ust_menu a:hover {color:#00a0dc;}
 
 
@@ -144,9 +144,19 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 
 
 #h_uye_panel {display:block;cursor:pointer;position:relative;top:13px;}
-#h_uye_panel ul {background:url(../images/kulmbg.png) top repeat-x; display:none;position:absolute;top:34px;left:0px;border:solid 1px #d4f1ff;padding:5px 0 0 2px;width:150px;list-style-type:none;text-align:left;}
+#h_uye_panel ul {background: none repeat scroll 0 0 #F3F3F3;
+    border: 1px solid #DADADA; display:none;position:absolute;top:34px;left:0px;padding:5px 0 0 2px;width:150px;list-style-type:none;text-align:left;}
 #h_uye_panel ul li {width:140px;margin:0 0 3px 5px;}
-#h_uye_panel ul li a, #h_uye_panel ul li a:link, #h_uye_panel ul li a:visited {height:20px;line-height:20px;display:block;padding:0 5px;color:#00ace0;font-size:11px;background:url(../images/kulmenulink.png) repeat;font-weight:400;}
+#h_uye_panel ul li a, #h_uye_panel ul li a:link, #h_uye_panel ul li a:visited {
+    color: #424242;
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 5px;
+    border: 1px solid #dadada;
+}
 #h_uye_panel ul li a:hover {color:#333;}
 /*header ust menu*/
 
@@ -477,3 +487,6 @@ input.hata_yazisi, textarea.hata_yazisi, select.hata_yazisi  {font-style:normal 
     height: 17px;
     margin-top: 5px;
 }
+.ud-butons { border-bottom: 1px solid #c7c7c7; padding: 0 0 10px 0;}
+.ud-butons .elem {height:43px; margin-left: 5px; margin-top: 10px; font-weight: bold; color: #7b7b7b;}
+.ud-butons .elem .right {width: 200px; padding: 10px 0 0 10px; }

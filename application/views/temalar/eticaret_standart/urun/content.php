@@ -1,4 +1,4 @@
-<div id="orta" class="sola">
+
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
 		var jqzoom_options = {
@@ -95,8 +95,7 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 ?>
 
 <div id="urun">
-<?php //echo $sayac; ?>
-	<h1 id="urun_baslik"><?php echo $product_info->name; ?></h1>
+<?php //echo $sayac; s?>
 	
 	<?php if(isset($yil) && isset($ay) && isset($gun) && isset($saat) && isset($dakika) && isset($saniye)): ?>
 	<div style="font-size: 12px; padding-top:3px;  font-weight: bold; color:#f66;"><?php echo lang('product_detail_time_left'); ?> :<span id="CountDownUD"></span></div>
@@ -113,12 +112,12 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 			<?php
 				if($product_info->image) {
 					if(file_exists(DIR_IMAGE . $product_info->image)) {
-						$resim = show_image($product_info->image, 300, 300);
+						$resim = show_image($product_info->image, 374, 374);
 					} else {
-						$resim = show_image('no-image.jpg', 300, 300);
+						$resim = show_image('no-image.jpg', 374, 374);
 					}
 				} else {
-					$resim = show_image('no-image.jpg', 300, 300);
+					$resim = show_image('no-image.jpg', 374, 374);
 				}
 				if($product_info->image) {
 			?>
@@ -132,25 +131,28 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 			<?php } ?>
 		</div>
 		<?php
-			$_r_kucuk = show_image($product_info->image, 70, 66);
-			$_r_buyuk = show_image($product_info->image, 300, 300);
+			$_r_kucuk = show_image($product_info->image, 88, 117);
+			$_r_buyuk = show_image($product_info->image, 374, 374);
 			echo '<a class="urun_diger_resim sola" href="javascript:;" onclick="$(\'#buyuk_resim\').attr(\'src\',\''. $_r_buyuk .'\');$(\'#buyuk_resim_a\').attr(\'href\',\''. base_url(ssl_status()) . 'upload/editor/' .  $product_info->image .'\');"><image src="'. $_r_kucuk .'"/></a>';
 			if($product_images) {
-				foreach($product_images as $image) {
+				foreach($product_images as $key=>$image) {
+                    if($key < 4) {
 					if($image->image != '') {
 						if(file_exists(DIR_IMAGE . $image->image)) {
-							$resim_buyuk = show_image($image->image, 300, 300);
-							$resim = show_image($image->image, 70, 66);
+							$resim_buyuk = show_image($image->image, 374, 374);
+							$resim = show_image($image->image, 88, 117);
 						} else {
-							$resim = show_image('no-image.jpg', 70, 66);
-							$resim_buyuk = show_image('no-image.jpg', 300, 300);
+							$resim = show_image('no-image.jpg', 88, 117);
+							$resim_buyuk = show_image('no-image.jpg', 374, 374);
 						}
 					} else {
-						$resim = show_image('no-image.jpg', 70, 66);
-						$resim_buyuk = show_image('no-image.jpg', 300, 300);
+						$resim = show_image('no-image.jpg', 88, 117);
+						$resim_buyuk = show_image('no-image.jpg', 374, 374);
 					}
-					echo '<a class="urun_diger_resim sola" href="javascript:;" onclick="$(\'#buyuk_resim\').attr(\'src\',\''. $resim_buyuk .'\');$(\'#buyuk_resim_a\').attr(\'href\',\''. base_url(ssl_status()) . 'upload/editor/' .  $image->image .'\');"><image src="'. $resim .'"/></a>';
-				}
+                    $no_margin = ($key+1) % 3 == 0 ? 'style="margin-right:0"' : "";
+					echo '<a class="urun_diger_resim sola" '.$no_margin.' href="javascript:;" onclick="$(\'#buyuk_resim\').attr(\'src\',\''. $resim_buyuk .'\');$(\'#buyuk_resim_a\').attr(\'href\',\''. base_url(ssl_status()) . 'upload/editor/' .  $image->image .'\');"><image src="'. $resim .'"/></a>';
+                   }
+                }
 			}
 		?>
 		<div class="clear"></div>
@@ -168,7 +170,9 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 			}
 		?>
 		</div>
-		<div id="urun_detay" class="saga">
+
+		<div id="urun_detay" class="sola" style="margin-left: 15px;">
+        <h3 style="margin: 0 0 10px 10px;"><?php echo $product_info->name; ?></h3>
 			<?php
 			if(config('site_ayar_urun_kodu_goster') == '1') {
 				echo '<div class="urun_detay_oge"><span class="u_baslik sola">'. lang('messages_product_detail_product_code') .'</span>';
@@ -490,12 +494,35 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 				<?php } ?>
 				<div class="clear"></div>
 			</div>
-			
-			 <?php if($product_info->hizli_gonder) { ?>
-                        <div style="margin-top: 10px;">
-                            <img src="<?php echo site_resim(false)."hizligonderi.png"; ?>" />
-                        </div>
-              <?php } ?>
+        <?php if($product_info->hizli_gonder == 1) {
+            $text = "Hızlı kargo";
+        } else if($product_info->hizli_gonder == 2) {
+            $text = "1-3 İş günü";
+        } else if($product_info->hizli_gonder == 3) {
+            $text = "1 Hafta ve üzeri";
+        } else {
+            $text = "1-3 İş günü";
+        } ?>
+            <div class="ud-butons">
+                <div class="sola elem">
+                    <div class="sola"><img src="<?php echo site_resim()."ud-kargo.png" ?>" /></div>
+                    <div class="sola right"><?php echo $text; ?></div>
+                </div>
+                <div class="sola elem">
+                    <div class="sola"><img src="<?php echo site_resim()."ud-tel.png" ?>" /></div>
+                    <div class="sola right">10-18 saatleri arasında 0212 659 69 55</div>
+                </div>
+                <div class="clear"></div>
+                <div class="sola elem">
+                    <div class="sola"><img src="<?php echo site_resim()."ud-ssl.png" ?>" /></div>
+                    <div class="sola right">SSL 128 bit Güvenli Alışveriş</div>
+                </div>
+                <div class="sola elem">
+                    <div class="sola"><img src="<?php echo site_resim()."ud-iade.png" ?>" /></div>
+                    <div class="sola right">7 gün boyunca koşulsuz iade</div>
+                </div>
+            </div>
+
 			
 			<div id="takip_sonuc"></div>
 			<!--
@@ -507,27 +534,20 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 			
 			<div id="urun_paylas_metin" class="sola"><?php //echo lang('messages_product_detail_share_product'); ?> : </div>
 			 -->
-			<div id="urun_paylas" class="sola">
-				<!--<p id="sosyal_paylasimlar"></p>-->
-				      
       
 <style>
 #share_this{float:left;}
 div.addthis_toolbox a{padding:0 5px!important}			
 </style>
-   <div id="urun_paylas" class="sola">      
+   <div id="urun_paylas" class="sola">
+       <h3 style="margin-bottom: 10px;">Sevdiklerinle Paylaş</h3>
 <!-- AddThis Button BEGIN -->
-<div class="addthis_toolbox addthis_default_style ">
-<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-<a class="addthis_button_tweet"></a>
-<a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
-<a class="addthis_counter addthis_pill_style"></a>
-</div>
-<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+<div class="addthis_sharing_toolbox"></div>
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ee9eaed0852d3b9"></script>
+
+
 <!-- AddThis Button END -->
 
-</div>
 </div>
 			 
 			<div class="clear"></div>
@@ -970,7 +990,7 @@ function urun_takip_et(span_id, durum)
 		<?php 						
 			}
 		  ?>
-</div>
+
 <script type="text/javascript" charset="utf-8">
 	function sepete_ekle() {
 		var _sepete_ekle_kontrol = $.fn.ajax_post({

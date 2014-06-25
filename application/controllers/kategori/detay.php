@@ -25,6 +25,18 @@ class detay extends Public_Controller {
 
 	function index($seo, $sort_link = 'price-asc', $page = 0)
 	{
+        $sub_category = $this->input->get("sub_category");
+        $manufacturer = $this->input->get("manufacturer");
+        $fiyat = $this->input->get("fiyat");
+        $teslimat = $this->input->get("teslimat");
+
+        $special_filters = array(
+            "sub_category"=> $sub_category,
+            "manufacturer"=> $manufacturer,
+            "fiyat"=> $fiyat,
+            "teslimat"=> $teslimat
+        );
+
 		$content_data['breadcrumbs'] = array();
 		$content_data['breadcrumbs'][] = array(
 			'href'		=> site_url('site/index'),
@@ -96,7 +108,7 @@ class detay extends Public_Controller {
 
             $limit = (config('site_ayar_urun_site_sayfa')) ? config('site_ayar_urun_site_sayfa') : 9;
             $uri_segment = 4;
-            $category_products = $this->product_model->get_products_by_category_id($category_info->category_id, $sort, $order, $page, $limit);
+            $category_products = $this->product_model->get_products_by_category_id($category_info->category_id, $sort, $order, $page, $limit,$special_filters);
 
             $content_data['category_products'] = $category_products;
             if($category_products) {

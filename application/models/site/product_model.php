@@ -156,7 +156,7 @@ class product_model extends CI_Model
 		}
 	}
 
-	public function get_products_by_category_id($category_id, $sort = 'product_id', $order = 'asc', $start = 0, $limit = 20)
+	public function get_products_by_category_id($category_id, $sort = 'product_id', $order = 'asc', $start = 0, $limit = 20,$special_filters = array())
 	{
 		$sort_allowed = array('product_id', 'price', 'name', 'viewed');
 		if ( ! in_array($sort, $sort_allowed)) {
@@ -178,11 +178,49 @@ class product_model extends CI_Model
 		$this->db->from('product_to_category p2c');
 		$this->db->join('product p', 'p2c.product_id = p.product_id', 'left');
 		$this->db->join('product_description pd', 'p.product_id = pd.product_id', 'left');
-		$this->db->join('manufacturer m', 'p.manufacturer_id = m.manufacturer_id', 'left');
-		$this->db->where('p2c.category_id', (int) $category_id);
+        $this->db->join('manufacturer m', 'p.manufacturer_id = m.manufacturer_id', 'left');
 		$this->db->where('pd.language_id', (int) $language_id);
 		$this->db->where('p.date_available >= UNIX_TIMESTAMP()');
 		$this->db->where('p.status', '1');
+
+        if(isset($special_filters["sub_category"]) && $special_filters["sub_category"] != "") {
+            $this->db->where_in('p2c.category_id', $special_filters["sub_category"]);
+        } else {
+            $this->db->where('p2c.category_id', (int) $category_id);
+        }
+
+        if(isset($special_filters["manufacturer"]) && $special_filters["manufacturer"] != "") {
+            $this->db->where_in('m.manufacturer_id', $special_filters["manufacturer"]);
+        }
+
+        if(isset($special_filters["fiyat"]) && $special_filters["fiyat"] != "") {
+            $fiyat = $special_filters["fiyat"];
+            switch($fiyat) {
+                case 1:
+                    $this->db->where('p.price <=', 50);
+                case 2:
+                    $this->db->where('p.price <= 100');
+                    $this->db->where('p.price >', 50);
+                case 3:
+                    $this->db->where(array('p.price >' => 100.0000, 'p.price <=' => (float) 200));
+                case 4:
+                    $this->db->where('p.price <=', 300);
+                    $this->db->where('p.price >', 200);
+                case 5:
+                    $this->db->where('p.price <', 400);
+                    $this->db->where('p.price >', 300);
+                case 6:
+                    $this->db->where('p.price <', 500);
+                    $this->db->where('p.price >', 400);
+                case 7:
+                    $this->db->where('p.price <', 1000);
+                    $this->db->where('p.price >', 500);
+
+                case 8:
+                    $this->db->where('p.price >', 1000);
+            }
+        }
+
 		$this->db->order_by($sort, $order);
 		$this->db->limit($limit, $start);
 		$query = $this->db->get();
