@@ -22,7 +22,7 @@
 		var fbAppSecret = "<?php echo config('site_ayar_facebook_secret'); ?>";
 	
 	</script>
-
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>style.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(); ?>anasayfa.css"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo site_css(TRUE); ?>jquery.countdown.css"/>
@@ -154,8 +154,16 @@
 		<!--hesag1 SON -->
 		<div class="hesag2" style="position:relative;z-index:1000;">
 			<?php if($this->dx_auth->is_logged_in()) { ?>
-			<div id="h_uye_panel" class="sola">
-				<span><?php echo lang('header_user_account'); ?></span>
+			<div id="h_uye_panel" class="saga">
+                <?php
+                $user_ide_inf = user_ide_inf($this->dx_auth->get_user_id());
+                if($user_ide_inf->num_rows()) {
+                    $usr 				= $user_ide_inf->row();
+                    $name 				= $usr->ide_adi;
+                    $surname 			= $usr->ide_soy;
+                }
+                ?>
+				<span><?php echo $name." ".$surname;?></span>
 				<ul>
 					<li><a href="<?php echo ssl_url('uye/bilgi'); ?>" rel="nofollow" title="<?php echo lang('header_user_information'); ?>"><?php echo lang('header_user_information'); ?></a></li>
 					<li><a href="<?php echo ssl_url('uye/cagri'); ?>" rel="nofollow" title="<?php echo lang('header_user_ticket'); ?>"><?php echo lang('header_user_ticket'); ?></a></li>
@@ -169,7 +177,7 @@
 			</div>
 			<?php } ?>
 			<?php } else { ?>
-			<div id="h_uye_menu" class="sola">
+			<div id="h_uye_menu" class="saga">
 				<ul>
 					<li>
 						<a href="<?php echo ssl_url('uye/kayit'); ?>" rel="nofollow" title="<?php echo lang('header_user_reg'); ?>">
@@ -195,34 +203,73 @@
 			
 			<?php } ?>
 			<?php } ?>
-			
-			<div id="h_arama" class="saga">
-				<form action="<?php echo site_url('urun/arama/index'); ?>" id="form_h_arama" method="get">
-					<input type="hidden" value="0" id="kategori_kriter" name="kategori" />
-					<div id="h_a_kat" class="sola">
-						<span id="h_a_kat_txt"><?php echo lang('header_search_category_select'); ?></span>
-						<div>
-							<a href="javascript:;" dyn="0"><?php echo lang('header_search_category_select'); ?></a>
-							<?php
-								$urun_kategori = urun_ana_kategori();
-								if($urun_kategori) {
-									foreach($urun_kategori as $kategori) {
-							?>
-								<a href="javascript:;" dyn="<?php echo $kategori['urun_kat_id']; ?>"><?php echo $kategori['urun_kat_adi'];?></a>
-							<?php
-									}
-								}
-							?>
-						</div>
-					</div>
-					<div id="h_a_text" style="padding-top:0;" class="sola">
-						<input type="text" name="aranan" value="<?php echo _get('aranan', lang('header_search_input')); ?>" onclick="if(this.value==this.defaultValue){this.value=''}" onblur="if(this.value==''){this.value=this.defaultValue}" />
-					</div>
-					<a id="h_a_buton" href="javascript:;" onclick="if($('#arama_box').val() == '<?php echo lang('header_search_input'); ?>'){return false;} else {$('#form_h_arama').submit();}"><?php echo lang('header_search_button'); ?></a>
-					<div class="clear"></div>
-				</form>	
-			</div>
-			<!--arama SON -->
+
+        <div id="h_sepet" class="saga">
+            <span style="position: absolute; right: 84px; font-weight: bold; color: #373737;">Sepetim</span>
+            <p>
+                <a href="javascript:;" rel="nofollow">
+                    <?php $cart_item = ($this->cart->total_items()) ? $this->cart->total_items() : 0; ?>
+                    <span id="cart_total"><?php echo strtr(lang('header_cart_items'), array('{product_count}' => $cart_item)); ?></span>
+                </a>
+            </p>
+            <div class="hizlisepet" id="ust_hizlisepet">
+                <div class="sepust"></div>
+                <div class="seport">
+                    <?php $cart_item = ($this->cart->total_items()) ? $this->cart->total_items() : 0; ?>
+                    <big id="ic_total"><?php echo strtr(lang('header_large_cart_items'), array('{product_count}' => $cart_item)); ?></big>
+                    <small><strong><?php echo lang('header_large_cart_product_title'); ?></strong><em><?php echo lang('header_large_cart_price_title'); ?></em></small>
+                    <?php if ($this->cart->contents()) { ?>
+                        <ul>
+                            <?php foreach ($this->cart->contents() as $items) { ?>
+                                <?php if ($items['durum']) { ?>
+                                    <li>
+                                        <dl>
+                                            <dt>
+                                                <font title="<?php echo $items['name']; ?>"><?php echo character_limiter($items['name'], 30); ?></font> -
+                                                <i class="siterenk">
+                                                    (
+                                                    <?php echo $items['qty']; ?>
+                                                    <?php
+                                                    $tanim_bilgi = $this->yonetim_model->tanimlar_bilgi('stok_birim', $items['tip']);
+                                                    if($tanim_bilgi->num_rows() > 0)
+                                                    {
+                                                        $tanim_bilgi_b = $tanim_bilgi->row();
+                                                        echo '<font style="cursor:pointer;" title="'. $tanim_bilgi_b->tanimlar_adi .'">' . $tanim_bilgi_b->tanimlar_kod . '</font>';
+                                                    } else {
+                                                        echo '<font style="cursor:pointer;" title="Ürün Birimi Bulunamadı">bln</font>';
+                                                    }
+                                                    ?>
+                                                    )
+                                                </i>
+                                            </dt>
+                                            <dd><?php echo $this->cart->format_number($items['price']); ?> TL</dd>
+                                        </dl>
+                                    </li>
+                                <?php } ?>
+                            <?php } ?>
+                        </ul>
+                        <u class="saga siterenk">
+                            <em><?php echo lang('header_large_cart_total_price'); ?>:</em>
+                            <cite><span id="ttl"><?php echo $this->cart->format_number($this->cart->total()); ?></span> TL</cite>
+                        </u>
+                    <?php } ?>
+                    <div class="clear"></div>
+                    <div class="saltlinkler">
+                        <a title="<?php echo lang('header_large_cart_close'); ?>" href="javascript:;" id="sepetkapa" onclick="sepet_kapa();" style="position:relative;bottom:-10px;" class="sitelink sola"><b>x</b> <?php echo lang('header_large_cart_close'); ?></a>
+                        <a href="javascript:;" onclick="redirect('<?php echo ssl_url('sepet/goster'); ?>');" class="butonum saga">
+                            <span class="butsol"></span>
+                            <span class="butor"><?php echo lang('header_large_cart_go_cart'); ?></span>
+                            <span class="butsag"></span>
+                        </a>
+                    </div>
+                    <!--saltlinkler SON -->
+                </div>
+                <!--seport SON -->
+                <div class="sepalt"></div>
+            </div>
+            <!--hizlisepet SON -->
+        </div>
+
 		</div>
 		<!--hesag2 SON -->
 	</div>
@@ -260,71 +307,20 @@
 		    }
 		</script>
 
-		<div id="h_sepet" class="saga">
-            <span style="position: absolute; right: 84px; font-weight: bold; color: #373737;">Sepetim</span>
-			<p>
-				<a href="javascript:;" rel="nofollow">
-					<?php $cart_item = ($this->cart->total_items()) ? $this->cart->total_items() : 0; ?>
-					<span id="cart_total"><?php echo strtr(lang('header_cart_items'), array('{product_count}' => $cart_item)); ?></span>
-				</a>
-			</p>
-			<div class="hizlisepet" id="ust_hizlisepet">
-				<div class="sepust"></div>
-				<div class="seport">
-					<?php $cart_item = ($this->cart->total_items()) ? $this->cart->total_items() : 0; ?>
-					<big id="ic_total"><?php echo strtr(lang('header_large_cart_items'), array('{product_count}' => $cart_item)); ?></big>
-					<small><strong><?php echo lang('header_large_cart_product_title'); ?></strong><em><?php echo lang('header_large_cart_price_title'); ?></em></small>
-					<?php if ($this->cart->contents()) { ?>
-					<ul>
-						<?php foreach ($this->cart->contents() as $items) { ?>
-							<?php if ($items['durum']) { ?>
-								<li>
-									<dl>
-										<dt>
-											<font title="<?php echo $items['name']; ?>"><?php echo character_limiter($items['name'], 30); ?></font> - 
-											<i class="siterenk">
-												(
-													<?php echo $items['qty']; ?>
-													<?php
-														$tanim_bilgi = $this->yonetim_model->tanimlar_bilgi('stok_birim', $items['tip']);
-														if($tanim_bilgi->num_rows() > 0)
-														{
-															$tanim_bilgi_b = $tanim_bilgi->row();
-															echo '<font style="cursor:pointer;" title="'. $tanim_bilgi_b->tanimlar_adi .'">' . $tanim_bilgi_b->tanimlar_kod . '</font>';
-														} else {
-															echo '<font style="cursor:pointer;" title="Ürün Birimi Bulunamadı">bln</font>';
-														}
-													?>
-												)
-											</i>
-										</dt>
-										<dd><?php echo $this->cart->format_number($items['price']); ?> TL</dd>
-									</dl>
-								</li>
-							<?php } ?>
-						<?php } ?>
-					</ul>
-					<u class="saga siterenk">
-						<em><?php echo lang('header_large_cart_total_price'); ?>:</em>
-						<cite><span id="ttl"><?php echo $this->cart->format_number($this->cart->total()); ?></span> TL</cite>
-					</u>
-					<?php } ?>
-					<div class="clear"></div>
-					<div class="saltlinkler">
-						<a title="<?php echo lang('header_large_cart_close'); ?>" href="javascript:;" id="sepetkapa" onclick="sepet_kapa();" style="position:relative;bottom:-10px;" class="sitelink sola"><b>x</b> <?php echo lang('header_large_cart_close'); ?></a>
-						<a href="javascript:;" onclick="redirect('<?php echo ssl_url('sepet/goster'); ?>');" class="butonum saga">
-							<span class="butsol"></span>
-							<span class="butor"><?php echo lang('header_large_cart_go_cart'); ?></span>
-							<span class="butsag"></span>
-						</a>
-					</div>
-					<!--saltlinkler SON -->
-				</div>
-				<!--seport SON -->
-				<div class="sepalt"></div>
-			</div>
-			<!--hizlisepet SON -->
-		</div>
+
+
+        <div id="h_arama" class="saga">
+            <form action="<?php echo site_url('urun/arama/index'); ?>" id="form_h_arama" method="get">
+                <input type="hidden" value="0" id="kategori_kriter" name="kategori" />
+
+                <div id="h_a_text" style="padding-top:0;" class="sola">
+                    <input type="text" name="aranan" value="<?php echo _get('aranan', lang('header_search_input')); ?>" onclick="if(this.value==this.defaultValue){this.value=''}" onblur="if(this.value==''){this.value=this.defaultValue}" />
+                </div>
+                <a id="h_a_buton" href="javascript:;" onclick="if($('#arama_box').val() == '<?php echo lang('header_search_input'); ?>'){return false;} else {$('#form_h_arama').submit();}"><?php echo lang('header_search_button'); ?></a>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <!--arama SON -->
 	</div>
 	<!--menuar SON -->
 	<div class="clear"></div>

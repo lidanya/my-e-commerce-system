@@ -669,11 +669,12 @@ class dx_auth
 	function getUserVeri($istenen)
 	{
 		$this->ci->load->model('dx_auth/users', 'users');
-		$sorgu = $this->ci->users->getUserById($this->getUserID());
-		$goster = $sorgu->row();
-		
-		return $goster->$istenen;
-	}
+		$sorgu = $this->ci->users->get_user_by_id($this->get_user_id());
+        $goster = $sorgu->row();
+
+        return $goster->$istenen;
+
+    }
 
 	function getUserPVeri($istenen)
 	{

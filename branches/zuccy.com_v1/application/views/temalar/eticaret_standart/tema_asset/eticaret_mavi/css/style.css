@@ -12,7 +12,7 @@ div {overflow:hidden;}
 img {border:none;}
 a, a:link, a:visited {text-decoration:none;outline:none;color:#000;}
 a:hover {cursor:pointer;color:#00b5fe;}
-body {color:#333;font-size:12px;font-family:Arial, Helvetica, sans-serif;}
+body {color:#333;font-size:12px;font-family: 'Roboto', sans-serif;}
 input, textarea, select {color:#008fff;outline:none;font-weight:bold;font-size:13px;line-height:22px;}
 input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;}
 
@@ -126,14 +126,14 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*=========================Header===============================*/
 #h_ust {width:990px;margin:auto;height:40px;padding-top:6px;}
 /*uye paneli ve giris linkleri*/
-#h_uye_menu {margin-top:13px;height:27px;}
+#h_uye_menu {height:27px; position: absolute; right: 100px; top: -5px;}
 #h_uye_menu ul {list-style:none;}
 #h_uye_menu ul li {float:left;display:inline;}
-#h_uye_menu ul li a,  #h_uye_menu ul li a:link, #h_uye_menu ul li a:visited {position:relative;text-indent:35px;background:url(../images/uye_menu.png); width:127px;height:34px;line-height:34px;color:#a6a6a6;display:inline-block;margin-right:5px;font-size:11px;font-weight:700;}
+#h_uye_menu ul li a,  #h_uye_menu ul li a:link, #h_uye_menu ul li a:visited {position:relative;text-indent:35px;height:34px;line-height:34px;color:#373737;display:inline-block;margin-right:5px;font-size:12px;font-weight:700;}
 #h_uye_menu ul li a:hover {background-position:bottom;color:#00ace0 !important;}
-#h_uye_menu ul li a.feys small {background:url(../images/faceicon.png) no-repeat;position:absolute;top:3px;right:3px;width:22px;height:21px;display:block;}
+#h_uye_menu ul li a.feys small {position:absolute;top:3px;right:3px;width:22px;height:21px;display:block;}
 
-#h_uye_menu em a, #h_uye_menu em a:link, #h_uye_menu em a:visited, #h_uye_panel {font-style:normal;display:inline-block;width:127px;height:34px;background:url(../images/uye_menu_bg.png);line-height:34px;text-align:center;color:#a6a6a6;font-weight:700;font-size:11px;}
+#h_uye_menu em a, #h_uye_menu em a:link, #h_uye_menu em a:visited, #h_uye_panel {font-style:normal;display:inline-block;height:34px;line-height:26px;text-align:center;color:#373737;font-weight:700;font-size:12px;}
 #h_uye_menu em a:hover, #h_uye_panel.hd_aktif {background-position:bottom left;color:#00ace0;}
 
 
@@ -143,21 +143,21 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 
 
 
-#h_uye_panel {display:block;cursor:pointer;position:relative;top:13px;}
-#h_uye_panel ul {background: none repeat scroll 0 0 #F3F3F3;
-    border: 1px solid #DADADA; display:none;position:absolute;top:34px;left:0px;padding:5px 0 0 2px;width:150px;list-style-type:none;text-align:left;}
+#h_uye_panel {display:block;cursor:pointer;position:absolute; right: 97px;}
+#h_uye_panel span {padding-right: 20px;
+    background: url(../images/u_tab_bg.png) no-repeat right center;}
+#h_uye_panel ul {background: none repeat scroll 0 0 #000; opacity: 0.8; display:none;position:absolute;top:25px;left:0px;padding:5px 0 0 2px;width:160px;list-style-type:none;text-align:left;}
 #h_uye_panel ul li {width:140px;margin:0 0 3px 5px;}
 #h_uye_panel ul li a, #h_uye_panel ul li a:link, #h_uye_panel ul li a:visited {
-    color: #424242;
+    color: #fff;
     display: block;
     font-size: 11px;
     font-weight: 400;
     height: 20px;
     line-height: 20px;
     padding: 0 5px;
-    border: 1px solid #dadada;
 }
-#h_uye_panel ul li a:hover {color:#333;}
+#h_uye_panel ul li a:hover {color:#ccc;}
 /*header ust menu*/
 
 
@@ -224,7 +224,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_banner ul {list-style-type:none;}
 #h_banner ul li {width:503px;height:76px;}
 /*urun arama*/
-#h_arama {width:407px;height:34px;background:url(../images/h_arama_bg.png) no-repeat 0 0;margin:13px 0px 0 0;}
+#h_arama {width:265px; border: 1px solid #dfdfdf; border-radius: 3px;}
 #h_a_kat {text-indent:3px;width:135px;height:30px;line-height:33px; padding-left:5px;;background:url(../images/h_arama_secim.png) no-repeat 115px 10px;position:relative;font-weight:700;font-size:12px;color:#fff;cursor:pointer;}
 /*#h_a_kat_txt {width:135px;height:30px;line-height:30px;}*/
 #h_a_kat.h_a_aktif {color:#fff;}
