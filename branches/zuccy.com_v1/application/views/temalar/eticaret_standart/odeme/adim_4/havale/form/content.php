@@ -111,9 +111,9 @@
 				</a>
 				<div id="os_buton">
 					<a href="javascript:;" onclick="$('#form_devam_et').submit();" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo lang('messages_checkout_4_bank_transfer_form_button_text'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 				</div>
 			</div>

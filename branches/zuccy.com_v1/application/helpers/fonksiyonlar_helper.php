@@ -73,6 +73,19 @@ if(!defined('BASEPATH'))
 		}
 	}
 
+if ( ! function_exists('indirim_orani'))
+{
+    function indirim_orani($i_fiyat, $normal_fiyat)
+    {
+        $fark = $normal_fiyat-$i_fiyat;
+        if($fark > 0)
+
+        return  ceil(100 * $fark / $normal_fiyat);
+
+        else return false;
+    }
+}
+
 	if ( ! function_exists('get_language_v2'))
 	{
 		function get_language_v2($item = null, $language = null)

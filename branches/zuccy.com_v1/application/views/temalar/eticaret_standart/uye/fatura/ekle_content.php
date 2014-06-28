@@ -166,15 +166,15 @@ $adr_usr = user_adr_inf($this->dx_auth->get_user_id())->row();
 		</div>
 		<p style="text-align:right;width:690px;margin-top:10px;">
 			<a class="butonum" href="<?php echo ssl_url('uye/fatura'); ?>">
-				<span class="butsol"></span>
+
 				<span class="butor">İptal</span>
-				<span class="butsag"></span>
+
 			</a>
 			
 			 <a class="butonum" href="javascript:;" onclick="$('#fatura_ekle').submit();">
-			 	<span class="butsol"></span>
+
 			 	<span class="butor">Bilgileri Kaydet</span>
-				<span class="butsag"></span>
+
 			</a>
 			
 		</p>

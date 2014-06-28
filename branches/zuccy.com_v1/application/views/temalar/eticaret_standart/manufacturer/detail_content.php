@@ -65,14 +65,14 @@
 			 	<div class="clear"></div>
 			 	<p class="onay_buton">
 			 		<a href="javascript:history.back();" title="<?php echo lang('messages_button_back'); ?>" class="butonum">
-			 			<span class="butsol"></span>
+
 			 			<span class="butor"><img src="<?php echo site_resim();?>btn_img_geri.png" alt="<?php echo lang('messages_button_back'); ?>" />&nbsp;<?php echo lang('messages_button_back'); ?></span>
-			 			<span class="butsag"></span>
+
 		 			</a>
 					<a class="butonum" style="margin-left:10px;" href="<?php echo site_url(); ?>" title="<?php echo lang('messages_button_back_home'); ?>">
-						<span class="butsol"></span>
+
 						<span class="butor"><img src="<?php echo site_resim();?>btn_img_anasayfa.png" alt="<?php echo lang('messages_button_back_home'); ?>" />&nbsp;<?php echo lang('messages_button_back_home'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 			 	</p>
 			 </div>

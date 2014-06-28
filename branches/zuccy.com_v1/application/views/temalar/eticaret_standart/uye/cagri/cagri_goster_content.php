@@ -74,14 +74,14 @@
 				<span class="ib_baslik sola">&nbsp; </span>
 				<span class="ib_yazi sola" style="width:500px;height:auto;">
 					<a class="butonum sola" href="javascript:;" onclick="$('#ticket_form').submit();">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo lang('messages_member_tickets_send_message_button'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 					<a class="butonum saga" href="javascript:;" onclick="$('#kapat').attr('value','2'); $('#ticket_form').submit();">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo lang('messages_member_tickets_close_ticket_button'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 					<div class="clear"></div>
 				</span>
@@ -101,14 +101,14 @@
 		<!-- Navigasyon -->
 			<div id="t_navigasyon" class="saga">
 				<a href="<?php echo site_url('site/iletisim#iletisim_form'); ?>" class="butonum">
-					<span class="butsol"></span>
+
 					<span class="butor"><?php echo lang('messages_member_tickets_send'); ?></span>
-					<span class="butsag"></span>
+
 				</a>
 				<a onclick="history.back();" class="butonum">
-					<span class="butsol"></span>
+
 					<span class="butor"><?php echo lang('messages_button_back'); ?></span>
-					<span class="butsag"></span>
+
 				</a>	
 			</div>
 		<!-- Navigasyon -->

@@ -9,9 +9,9 @@
 	</div>
 	<div class="oo_buton">
 		<a href="javascript:;" onclick="redirect('<?php echo site_url('site/index'); ?>');" class="butonum">
-			<span class="butsol"></span>
+
 			<span class="butor"><?php echo lang('messages_button_back_home'); ?></span>
-			<span class="butsag"></span>
+
 		</a>
 	</div>
 	<?php } else { ?>
@@ -33,14 +33,14 @@
 	</div>
 	<div class="oo_buton">
 		<a href="javascript:;" onclick="redirect('<?php echo ssl_url('odeme/adim_4/kredi_karti/'. $siparis_id .'/'. $fatura_id); ?>');" class="butonum">
-			<span class="butsol"></span>
+
 			<span class="butor"><?php echo lang('messages_button_try_again'); ?></span>
-			<span class="butsag"></span>
+
 		</a>
 		<a href="javascript:;" onclick="redirect('<?php echo site_url('site/index'); ?>');" class="butonum">
-			<span class="butsol"></span>
+
 			<span class="butor"><?php echo lang('messages_button_back_home'); ?></span>
-			<span class="butsag"></span>
+
 		</a>
 	</div>
 	<?php } ?>

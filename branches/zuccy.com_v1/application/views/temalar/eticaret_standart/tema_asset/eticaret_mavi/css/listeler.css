@@ -21,17 +21,22 @@ Aciklamalar:
 .yeni span, .kampanya span {color:#ffffff;letter-spacing:1px;}
 .yeni {top:5px;left:5px;background:url(../images/yeni_bg.png) no-repeat 0 0;}
 .kampanya {top:5px;left:170px;background:url(../images/kampanya_bg.png) no-repeat 0 0;}
-.urun_liste_oge {position:relative;display:block;margin:7px 3px 0 3px;width:156px;height:337px;border:1px solid #c8c8c8;}
-.urun_liste_oge:hover {border:1px solid #7ccfe6; }
+.urun_liste_oge {position:relative;display:block;margin:7px 3px 0 3px;width:156px;height:337px;}
+.urun_liste_oge .ur_ust { border:1px solid #c8c8c8; height: 202px;}
+.urun_liste_oge .ur_orta { padding: 10px 0;}
+.urun_liste_oge .ur_orta .ur_indirim { color:#657a2f; font-weight: 700; position: absolute; bottom: 142px; left: 7px;}
+.urun_liste_oge .ur_orta .ur_kat { font-weight: 700; height: 30px;}
+.urun_liste_oge .ur_alt { border-top:1px solid #c8c8c8; height: 202px; padding: 10px 0;}
+
 .urun_liste_resim {display:block;width:156px;height:130px;text-align:center;margin:30px auto 0;}
 .urun_liste_resim img {width:156px;}
-.urun_liste_baslik, .urun_liste_baslik:link, .urun_liste_baslik:visited {height:35px;display:block;text-align:center;width:156px;padding-bottom:5px;margin:auto;font-size:14px;font-weight:bold;}
+.urun_liste_baslik, .urun_liste_baslik:link, .urun_liste_baslik:visited {text-align:left;width:156px;;margin:auto;font-size:12px;font-weight:bold;}
 .urun_liste_baslik:hover {}
-.urun_liste_fiyat {display:block;width:120px;height:53px;margin:10px 3px 0 auto;text-align:center;font-size:15px;color:#000;font-weight:bold;/*background-color:#e5f7ff;border:1px solid #cff0ff;*/}
+.urun_liste_fiyat {display:block;}
 
-.urun_liste_fiyat small {color:#000;font-weight:normal;font-size:12px;display:block;text-align:center;}
-.urun_liste_fiyat big {font-size:21px;display:block;text-align:center; font-weight: bold;}
-.urun_liste_fiyat em {display:block;text-align:center;font-style:normal;text-decoration:line-through;font-size:11px;color:#ababab;}
+.urun_liste_fiyat small {color:#000;font-weight:normal;font-size:11px;display:inline-block;text-align:center;}
+.urun_liste_fiyat big {font-size:12px;display:inline-block;text-align:center; font-weight: bold;}
+.urun_liste_fiyat em {position:absolute; left:0;display:block;text-align:center;font-style:normal;text-decoration:line-through;font-size:12px;color:#333;}
 .urun_liste_butonlar {display:block;width:115px;margin:10px auto 0 3px;}
 
 /*=========================Kategori listeleme===============================*/

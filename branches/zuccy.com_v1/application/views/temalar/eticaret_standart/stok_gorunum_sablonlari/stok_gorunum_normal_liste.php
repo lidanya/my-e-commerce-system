@@ -73,7 +73,11 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1' and isset($degerler->d
 } else {
 	$sayac = '';
 }*/
-
+    $fiyat_bilgi = fiyat_hesapla($degerler->model, 1, kur_oku('usd'), kur_oku('eur'), true);
+    $indirim_orani_yeni = "";
+    if($fiyat_bilgi['stok_indirim']) {
+        $indirim_orani_yeni = "%".indirim_orani($fiyat_bilgi['fiyat_t'],$fiyat_bilgi['stok_gercek_fiyat'])." indirim";
+    }
 
 	$kampanyali_urun_yazisi_tanimi				= '<div class="kampanya">'. lang('messages_product_shema_normal_campaign_text') .'</div>';
 	$yeni_urun_yazisi_tanimi					= '<div class="yeni">'. lang('messages_product_shema_normal_new_product_text') .'</div>';
@@ -105,17 +109,29 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1' and isset($degerler->d
 	
 	<input type="hidden" name="redirect_url" id="redirect_url" value="{form_sepet_redirect_url_value}" />
 	<div class="urun_liste_oge sola">
-		{yeni_urun}
-		{kampanya}
-		<div class="urun_liste_resim"><a href="{urun_liste_resim_a}"><img src="{urun_liste_resim_img_src}" alt="{urun_liste_resim_img_alt}" title="{urun_liste_resim_img_title}" /></a></div>
-		<a class="urun_liste_baslik sitelink2" href="{urun_liste_baslik_a}">{urun_liste_baslik_deger}</a>
-		{fiyat}
- 
-		<div class="urun_liste_butonlar sola">
+		<div class="ur_ust">
+		    {yeni_urun}
+		    {kampanya}
+		    <div class="urun_liste_resim"><a href="{urun_liste_resim_a}"><img src="{urun_liste_resim_img_src}" alt="{urun_liste_resim_img_alt}" title="{urun_liste_resim_img_title}" /></a></div>
+		</div>
+		<div class="ur_orta">
+		    <div class="ur_indirim sola">'.$indirim_orani_yeni.'</div>
+		    <div class="ur_kat saga"><a class="urun_liste_baslik sitelink2" href="{urun_liste_baslik_a}">{urun_liste_baslik_deger}</a></div>
+		</div>
+		<div class="clear"></div>
+
+		<div class="ur_alt">
+            <div class="g_fiyat sola"></div>
+            <div class="g_fiyat saga">{fiyat}</div>
+		</div>
+		<div class="clear"></div>
+
+
+		<!--<div class="urun_liste_butonlar sola">
 			{hizli_al}
 			{stok}
 			<div class="clear"></div>
-		</div>
+		</div>-->
 		
 	</div>
 	
@@ -374,5 +390,5 @@ $("#{form_sepet_ekle_id}").submit(function(e){
 		$stok = strtr($secenek_var_buton_tanimi, array('{url}' => site_url($degerler->seo . '--product')));
 	}
 
-	echo strtr($urun_liste_detay_tanimi, array('{yeni_urun}' => $yeni_urun, '{kampanya}' => $kampanya, '{urun_liste_resim_a}' => site_url($degerler->seo . '--product'), '{urun_liste_resim_img_src}' => $resim, '{urun_liste_resim_img_alt}' => $degerler->name, '{urun_liste_resim_img_title}' => $degerler->name, '{urun_liste_baslik_a}' => site_url($degerler->seo . '--product'), '{urun_liste_baslik_deger}' => character_limiter($degerler->name, 50), '{fiyat}' => $fiyat, '{hizli_al}' => $hizli_al, '{stok}' => $stok, '{form_sepet_ekle_url}' => ssl_url('sepet/ekle/urun_ekle/index'), '{form_sepet_ekle_name}' => $key, '{form_sepet_ekle_id}' => $key, '{form_sepet_model_value}' => $degerler->model, '{form_sepet_stok_id_value}' => $degerler->product_id, '{form_sepet_stok_adet_value}' => '1', '{form_sepet_redirect_url_value}' => current_url(ssl_status())));
+	echo strtr($urun_liste_detay_tanimi, array('{yeni_urun}' => $yeni_urun, '{kampanya}' => $kampanya, '{urun_liste_resim_a}' => site_url($degerler->seo . '--product'), '{urun_liste_resim_img_src}' => $resim, '{urun_liste_resim_img_alt}' => $degerler->name, '{urun_liste_resim_img_title}' => $degerler->name, '{urun_liste_baslik_a}' => site_url($degerler->seo . '--product'), '{urun_liste_baslik_deger}' => character_limiter($degerler->name, 40), '{fiyat}' => $fiyat, '{hizli_al}' => $hizli_al, '{stok}' => $stok, '{form_sepet_ekle_url}' => ssl_url('sepet/ekle/urun_ekle/index'), '{form_sepet_ekle_name}' => $key, '{form_sepet_ekle_id}' => $key, '{form_sepet_model_value}' => $degerler->model, '{form_sepet_stok_id_value}' => $degerler->product_id, '{form_sepet_stok_adet_value}' => '1', '{form_sepet_redirect_url_value}' => current_url(ssl_status())));
 	?>

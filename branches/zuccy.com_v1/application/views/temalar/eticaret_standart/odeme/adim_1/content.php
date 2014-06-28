@@ -149,9 +149,9 @@
 		<b>&nbsp;</b>
 		<p class="of_aciklama">
 			<a href="javascript:;" onclick="step_check();" class="butonum">
-				<span class="butsol"></span>
+
 				<span class="butor"><?php echo lang('messages_checkout_1_billing_form_button_text'); ?></span>
-				<span class="butsag"></span>
+
 			</a>
 			
 		</p>

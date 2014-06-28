@@ -78,9 +78,9 @@
 		<?php /*?>
 		<p style="text-align:right;width:700px;margin:auto;margin-top:10px;">
 			<a class="butonum" href="<?php echo ssl_url('uye/fatura/ekle'); ?>">
-				<span class="butsol"></span>
+
 				<span class="butor">Yeni Fatura Bilgisi Ekle</span>
-				<span class="butsag"></span>
+
 			</a>
 		</p>
 		<!-- Listele SON -->
