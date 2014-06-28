@@ -41,9 +41,9 @@
 				<b>&nbsp;</b>
 				<p class="of_aciklama" id="uye_kayit_form_buton">
 					<a href="javascript:;" onclick="uye_ol_form_gonder();" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo lang('messages_checkout_user_check_fast_buy_form_button_text'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 				</p>
 				<div class="clear"></div>
@@ -82,17 +82,17 @@
 				<b>&nbsp;</b>
 				<p class="of_aciklama" id="uye_giris_form_buton">
 					<a href="javascript:;" onclick="uye_giris_form_gonder();" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo lang('messages_checkout_user_check_login_form_button_text'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 				</p><br/>
 				<div class="sifremut">
 				<p class="of_aciklama" id="uye_kayit_form_buton">
 					<a href="<?php echo ssl_url('uye/sifre_hatirlat'); ?>" onclick="" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo 'Şifremi Unuttum';?> </span>
-						<span class="butsag"></span>
+
 					</a>
 				</p>
 				</div>

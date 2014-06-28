@@ -147,9 +147,9 @@
 			<?php if($i > 0) { ?>
 			<div id="os_buton">
 				<a href="javascript:;" onclick="$('#form_devam_et').submit();" class="butonum">
-					<span class="butsol"></span>
+
 					<span class="butor"><?php echo lang('messages_checkout_3_form_button_text'); ?></span>
-					<span class="butsag"></span>
+
 				</a>
 				
 			</div>
@@ -167,9 +167,9 @@
 		<div id="os_buton">
 			
 			<a href="javascript:;" onclick="redirect('<?php echo ssl_url('odeme/adim_2/'. $siparis_id .'/'. $fatura_id .''); ?>');" class="butonum">
-				<span class="butsol"></span>
+
 				<span class="butor"><?php echo lang('messages_button_back'); ?></span>
-				<span class="butsag"></span>
+
 			</a>
 			
 		</div>

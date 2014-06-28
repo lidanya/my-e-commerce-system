@@ -12,15 +12,15 @@
 			 	<p class="onay_buton">
 			 		<?php if($this->input->get('gd') == 'true') { ?>
 			 		<a class="butonum" onclick="history.back();">
-			 			<span class="butsol"></span>
+
 			 			<span class="butor"><img src="<?php echo site_resim(); ?>btn_img_geri.png" alt="<?php echo lang('messages_button_back'); ?>" /> <?php echo lang('messages_button_back'); ?></span>
-			 			<span class="butsag"></span>
+
 		 			</a>
 			 		<?php } ?>
 					<a class="butonum" style="margin-left:10px;" href="<?php echo site_url('site/index'); ?>">
-						<span class="butsol"></span>
+
 						<span class="butor"><img src="<?php echo site_resim(); ?>btn_img_anasayfa.png" alt="Anasayfaya Dön" /> <?php echo lang('messages_button_back_home'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 			 	</p>
 			 </div>
@@ -37,15 +37,15 @@
 			 		
 			 		<?php if($this->input->get('gd') == 'true') { ?>
 			 		<a class="butonum" onclick="history.back();">
-			 			<span class="butsol"></span>
+
 			 			<span class="butor"><img src="<?php echo site_resim(); ?>btn_img_geri.png" alt="Geri Dön" /> <?php echo lang('messages_button_back'); ?></span>
-			 			<span class="butsag"></span>
+
 		 			</a>
 			 		<?php } ?>
 					<a class="butonum" style="margin-left:10px;" href="<?php echo site_url('site/index'); ?>">
-						<span class="butsol"></span>
+
 						<span class="butor"><img src="<?php echo site_resim(); ?>btn_img_anasayfa.png" alt="Anasayfaya Dön" /> <?php echo lang('messages_button_back_home'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 			 	</p>
 			 </div>

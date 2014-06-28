@@ -445,17 +445,17 @@
 				<?php if($this->cart->total()) { ?>
 				<span id="sepet_bosalt">
 					<a href="<?php echo ssl_url('sepet/bosalt/tumu'); ?>" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><image src="<?php echo site_resim(); ?>sepet_mini.png" alt="" /> <?php echo lang('messages_cart_empty_cart_button'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 				</span>
 				<?php } else { ?>
 				<span id="sepet_bosalt" style="display:none;">
 					<a href="<?php echo ssl_url('sepet/bosalt/tumu'); ?>" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><image src="<?php echo site_resim(); ?>sepet_mini.png" alt="" /> <?php echo lang('messages_cart_empty_cart_button'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 				</span>
 				<?php } ?>
@@ -475,14 +475,14 @@
 			 	<div class="clear"></div>
 			 	<p class="onay_buton">
 			 		<a href="javascript:history.back(1);" class="butonum">
-			 			<span class="butsol"></span>
+
 			 			<span class="butor"><img src="<?php echo site_resim(); ?>btn_img_geri.png" alt="Geri Dön"  /> <?php echo lang('messages_button_back'); ?></span>
-			 			<span class="butsag"></span>
+
 		 			</a>
 					<a href="<?php echo site_url(); ?>" class="butonum" style="margin-left:10px;" href="<?php echo site_url(); ?>">
-						<span class="butsol"></span>
+
 						<span class="butor"><img src="<?php echo site_resim(); ?>btn_img_anasayfa.png" alt="Anasayfaya Dön" /> <?php echo lang('messages_button_back_home'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 			 	</p>
 			 </div>
@@ -575,14 +575,14 @@
 				<?php if($this->cart->total()) { ?>
 				<div id="sepet_butonlar" class="sola" style="width:400px;">
 					<a href="<?php echo site_url(); ?>" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo lang('messages_cart_continue_shopping'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 					<a href="javascript:;" rel="nofollow" onclick="next_step();" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo lang('messages_cart_checkout'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 					<span id="submit_wait" style="display:none;"></span>
 					<?php if (config('site_ayar_coupon_status')) { ?>
@@ -603,9 +603,9 @@
 								<div class="clear"></div>
 								<span id="button" style="margin-top:10px;display:inline-block;">
 									<a href="javascript:;" onclick="return apply_coupon_code()" class="butonum">
-										<span class="butsol"></span>
+
 										<span class="butor"><?php echo lang('messages_cart_apply_code') ?></span>
-										<span class="butsag"></span>
+
 									</a>
 								</span>
 							</div>
@@ -616,9 +616,9 @@
 								<div class="clear"></div>
 								<div id="name" style="margin-top:15px;">
 									<a href="javascript:;" onclick="return kuponu_sil()" class="butonum">
-										<span class="butsol"></span>
+
 										<span class="butor"><?php echo lang('messages_cart_delete_code') ?></span>
-										<span class="butsag"></span>
+
 									</a>
 								</div>
 							</div>
@@ -637,14 +637,14 @@
 				<?php } else { ?>
 				<div id="sepet_butonlar" class="sola" style="display:none;width:400px;">
 					<a href="<?php echo site_url(); ?>" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo lang('messages_cart_continue_shopping'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 					<a href="javascript:;" rel="nofollow" onclick="next_step();" class="butonum">
-						<span class="butsol"></span>
+
 						<span class="butor"><?php echo lang('messages_cart_checkout'); ?></span>
-						<span class="butsag"></span>
+
 					</a>
 					<span id="submit_wait" style="display:none;"></span>
 				</div>

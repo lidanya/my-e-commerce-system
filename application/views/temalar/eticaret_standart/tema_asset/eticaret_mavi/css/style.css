@@ -47,7 +47,7 @@ input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;
 .sitelink, .sitelink:link, .sitelink:hover {color:#333;}
 .sitelink:hover {color:#07aae2;}
 .sitelink2, .sitelink2:link, .sitelink2:hover {color:#000;}
-.sitelink2:hover {color:#00b5fe;}
+.sitelink2:hover {color:#657a2f;}
 
 /*sayfa baslik*/
 h1#sayfa_baslik, .baslik {margin:auto;width:95%;padding:8px 32px 8px 0;font-weight:bold;font-size:16px;color:#5f5f5f;text-align:left;border-bottom:solid 1px #dadada;/*background:url(../images/sayfa_baslik_bg.png) no-repeat 0 8px;*/}
@@ -71,7 +71,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_ust_menu ul {list-style:none;}
 #h_ust_menu ul li {float:left;display:inline;}
 #h_ust_menu a,  #h_ust_menu a:link, #h_ust_menu a:visited {color:#fff;display:inline-block;margin:10px;font-size:11px;}
-#h_ust_menu a:hover {color:#00a0dc;}
+#h_ust_menu a:hover {color:;}
 
 
 
@@ -93,7 +93,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 .fomenu ul {list-style:none;}
 .fomenu ul li {}
 .fomenu ul li a, .fomenu ul li a, .fomenu ul li a:link {font-size:18px;height:22px;line-height:22px;font-size:12px;color:#86898d;}
-.fomenu ul li a:hover {color:#009bd9;}
+.fomenu ul li a:hover {color:#61812e;}
 #footer_iletisim {display:block;background:url(../images/footer_telefon.png) no-repeat  0 0;width:183px;height:39px;line-height:39px;padding-left:35px;color:#fff;font-size:24px;font-weight:bold;}
 .fologo {width:155px;margin-top:30px;}
 .tree3 {width:450px;margin-top:25px;}
@@ -126,15 +126,15 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 /*=========================Header===============================*/
 #h_ust {width:990px;margin:auto;height:40px;padding-top:6px;}
 /*uye paneli ve giris linkleri*/
-#h_uye_menu {height:27px; position: absolute; right: 100px; top: -5px;}
+#h_uye_menu {height:27px; position: absolute; right: 100px; top: 0;}
 #h_uye_menu ul {list-style:none;}
 #h_uye_menu ul li {float:left;display:inline;}
 #h_uye_menu ul li a,  #h_uye_menu ul li a:link, #h_uye_menu ul li a:visited {position:relative;text-indent:35px;height:34px;line-height:34px;color:#373737;display:inline-block;margin-right:5px;font-size:12px;font-weight:700;}
-#h_uye_menu ul li a:hover {background-position:bottom;color:#00ace0 !important;}
+#h_uye_menu ul li a:hover {background-position:bottom;color:#61812e !important;}
 #h_uye_menu ul li a.feys small {position:absolute;top:3px;right:3px;width:22px;height:21px;display:block;}
 
-#h_uye_menu em a, #h_uye_menu em a:link, #h_uye_menu em a:visited, #h_uye_panel {font-style:normal;display:inline-block;height:34px;line-height:26px;text-align:center;color:#373737;font-weight:700;font-size:12px;}
-#h_uye_menu em a:hover, #h_uye_panel.hd_aktif {background-position:bottom left;color:#00ace0;}
+#h_uye_menu em a, #h_uye_menu em a:link, #h_uye_menu em a:visited, #h_uye_panel {font-style:normal;display:inline-block;height:34px;line-height:32px;text-align:center;color:#373737;font-weight:700;font-size:12px;}
+#h_uye_menu em a:hover, #h_uye_panel.hd_aktif {color:#61812e;}
 
 
 
@@ -143,10 +143,9 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 
 
 
-#h_uye_panel {display:block;cursor:pointer;position:absolute; right: 97px;}
-#h_uye_panel span {padding-right: 20px;
-    background: url(../images/u_tab_bg.png) no-repeat right center;}
-#h_uye_panel ul {background: none repeat scroll 0 0 #000; opacity: 0.8; display:none;position:absolute;top:25px;left:0px;padding:5px 0 0 2px;width:160px;list-style-type:none;text-align:left;}
+#h_uye_panel {display:block;cursor:pointer;position:absolute; right: 97px; background: url(../images/user-bg.png) no-repeat center right;}
+#h_uye_panel span {padding-right: 15px;}
+#h_uye_panel ul {background: none repeat scroll 0 0 #000; opacity: 0.8; display:none;position:absolute;top:25px;left:0px;padding:5px 0 0 2px;width:155px;list-style-type:none;text-align:left;}
 #h_uye_panel ul li {width:140px;margin:0 0 3px 5px;}
 #h_uye_panel ul li a, #h_uye_panel ul li a:link, #h_uye_panel ul li a:visited {
     color: #fff;
@@ -193,9 +192,9 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_logo {margin-top:15px;}
 /*sepet*/
 #h_sepet, #h_sepet:link, #h_sepet:visited {position:relative; width:76px; top:-8px;right:-50px;padding:0px 0 0 0px;}
-#h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:24px;height:34px;background:url(../images/sepet.png) no-repeat 0 0;color:#e0e0e0;display:block;}
+#h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:24px;height:34px;background:url(../images/sepet.png) no-repeat 0 0;color:#e0e0e0;display:block; margin-top: 5px;}
 #h_sepet p a:hover {background-position:bottom left;}
-#h_sepet span {display:inline-block;margin-top:12px; margin-right:1px; text-indent:4px; color: #fff;}
+#h_sepet span {display:inline-block;margin-top:19px; margin-right:1px; text-indent:8px; color: #fff; position: relative; bottom:7px;}
 .hizlisepet {width:498px;position:absolute;top:35px;right:-10px;overflow:hidden;display:none;}
 .hizlisepet div {overflow:hidden !important;}
 .sepust {width:498px;height:16px;background:url(../images/sepust.png) no-repeat;}
@@ -318,15 +317,15 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #kategori_menu01 ul {list-style-type:none;}
 #kategori_menu01 ul li {width:218px;background:url(../images/katlinkbg.png) repeat-x;}
 #kategori_menu01 ul li a, #kategori_menu01 ul li a:link, #kategori_menu01 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#4b4b4b;font-size:14px;}
-#kategori_menu01 ul li a:hover, #kategori_menu01 ul li a.k_aktif {color:#009BD9;}
+#kategori_menu01 ul li a:hover, #kategori_menu01 ul li a.k_aktif {color:#61812e;}
 
 /*=========================Yan Kategori Menu Tip 02===============================*/
 #kategori_menu02 {width:218px;}
 #kategori_menu02 ul {list-style-type:none;}
 #kategori_menu02 ul li {width:218px;background:url(../images/katlinkbg.png) repeat-x;}
 #kategori_menu02 ul li a, #kategori_menu02 ul li a:link, #kategori_menu02 ul li a:visited {display:block;width:213px;height:25px;line-height:25px;padding:0 0 0 5px;color:#4b4b4b;font-size:14px;}
-#kategori_menu02 ul li a:hover, #kategori_menu02 ul li a.k_aktif {color:#009BD9;}
-#kategori_menu02 ul li a.k_aktif {color:#009BD9;}
+#kategori_menu02 ul li a:hover, #kategori_menu02 ul li a.k_aktif {color:#61812e;}
+#kategori_menu02 ul li a.k_aktif {color:#61812e;}
 #kategori_menu02 ul li ul {list-style-type:none;width:215px}
 #kategori_menu02 ul li ul li {background:none #eee;border-top:1px solid #fff;}
 #kategori_menu02 ul li ul li a, #kategori_menu02 ul li ul li a:link, #kategori_menu02 ul li ul li a:visited {width:213px;background-color:transparent;}
@@ -337,8 +336,8 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #kategori_menu03 ul {list-style-type:none;}
 #kategori_menu03 ul li {width:178px; padding-left:10px; background:url(../images/left-menu-bg.jpg) left center no-repeat;}
 #kategori_menu03 ul li a, #kategori_menu03 ul li a:link, #kategori_menu03 ul li a:visited {display:block;width:178px;height:25px;line-height:25px;padding:0 0 0 5px;color:#121212;font-size:12px;}
-#kategori_menu03 ul li a:hover, #kategori_menu03 ul li.k_aktif {color:#009BD9;}
-#kategori_menu03 ul li a.k_aktif {color:#009BD9;}
+#kategori_menu03 ul li a:hover, #kategori_menu03 ul li.k_aktif {color:#61812e;}
+#kategori_menu03 ul li a.k_aktif {color:#61812e;}
 #kategori_menu03 ul li ul {list-style-type:none;width:162px;overflow:hidden;}
 #kategori_menu03 ul li ul li {border:none;width:auto;}
 #kategori_menu03 ul li ul li a, #kategori_menu03 ul li ul li a:link, #kategori_menu03 ul li ul li a:visited {background-color:#eeeeee;}
@@ -374,7 +373,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 .k_urun_adi, .k_urun_adi:link, .k_urun_adi:visited {line-height:20px;height:35px;display:block;width:200px;padding:5px 0;text-align:left;font-size:12px;font-weight:bold;margin-bottom:10px;}
 .k_urun_adi:hover{}
 
-.k_fiyat {width:115px;height:53px;text-align:center;font-size:15px;color:#000;/*background-color:#e3f6ff;border:1px solid #cff0ff;*/}
+.k_fiyat {width:115px;height:53px;text-align:center;font-size:15px;color:#000; font-weight: bold;/*background-color:#e3f6ff;border:1px solid #cff0ff;*/}
 .k_fiyat small {font-size:12px;display:block;text-align:center;}
 .k_fiyat big {color:#636363;font-weight:bold;font-size:19px;color:#000;display:block;text-align:center;padding-top:5px;}
 .k_fiyat em {font-style:normal;text-decoration:line-through;color:#ababab;font-size:10px;}
@@ -476,7 +475,7 @@ input.hata_yazisi, textarea.hata_yazisi, select.hata_yazisi  {font-style:normal 
     display: block;
     color: #7b7b7b;
     height: 35px;
-    padding-right: 20px;
+    padding-right: 40px;
     background: url(../images/u_tab_bg.png) no-repeat right center;
 }
 
