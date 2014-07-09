@@ -133,6 +133,79 @@ class adim_4 extends Public_Controller {
 			redirect('');
 		}
 	}
+
+    function payu($siparis_id, $fatura_id)
+    {
+
+        self::step_control();
+
+        $this->output->set_header("Pragma: no-cache");
+        $this->output->set_header("Expires: now");
+        if($this->dx_auth->is_logged_in()) {
+            $user_id = $this->dx_auth->get_user_id();
+            $siparis_sorgu = $this->db->get_where('siparis', array('siparis_id' => $siparis_id, 'user_id' => $user_id, 'siparis_flag' => '-1'));
+            if($siparis_sorgu->num_rows()) {
+                $odeme_sorgu = $this->db->get_where('odeme_secenekleri', array('odeme_model' => 'payu'), 1);
+                if($odeme_sorgu->num_rows()) {
+                    $_siparis_detay = $this->session->userdata('siparis_detay');
+                    $_siparis_detay['odeme_adim'] = 'detay';
+                    $this->session->set_userdata('siparis_detay', $_siparis_detay);
+
+                    $toplam_kdv_fiyati = 0;
+                    $this->db->select('stok_kdv_orani, stok_tfiyat');
+                    $siparis_detay_sorgu = $this->db->get_where('siparis_detay', array('siparis_id' => $siparis_id));
+                    foreach($siparis_detay_sorgu->result() as $siparis_detay) {
+                        $toplam_kdv_fiyati += kdv_hesapla($siparis_detay->stok_tfiyat, $siparis_detay->stok_kdv_orani, true);
+                    }
+                    $content_data['toplam_kdv_fiyati'] = $toplam_kdv_fiyati;
+
+                    $_siparis_detay = $this->session->userdata('siparis_detay');
+
+                    $secenek_bilgi = $odeme_sorgu->row();
+                    $content_data['secenek_bilgi'] 	= $secenek_bilgi;
+                    $content_data['siparis_bilgi'] 	= $siparis_sorgu->row();
+                    $content_data['siparis_id']		= $siparis_id;
+                    $content_data['fatura_id']		= $fatura_id;
+                    $content_data['siparis_detay']	= $_siparis_detay;
+
+                    if(array_key_exists('kargo_id', $_siparis_detay) AND array_key_exists('kargo_ucret', $_siparis_detay)) {
+                        $content_data['kargo_ucret'] = $_siparis_detay['kargo_ucret'];
+                    } else {
+                        $content_data['kargo_ucret'] = '0';
+                    }
+
+                    if(array_key_exists('kupon_indirim', $_siparis_detay) AND array_key_exists('fiyat', $_siparis_detay['kupon_indirim'])) {
+                        $content_data['kupon_ucret'] = $_siparis_detay['kupon_indirim']['fiyat'];
+                    } else {
+                        $content_data['kupon_ucret'] = '0';
+                    }
+
+                    $this->template->set_master_template(tema() . 'odeme/adim_4/payu/form/index');
+                    /* Sayfa Tanımlamaları */
+                    $this->template->add_region('baslik');
+                    $this->template->write('baslik', lang('messages_checkout_title_payment_details'));
+
+                    $this->template->add_css(APPPATH . 'views/' . tema_asset() . 'css/sepet.css');
+
+                    $this->template->add_js(APPPATH . 'views/' . tema() . 'js/sa_tip-1.0.1.min.js');
+                    $this->template->add_js(APPPATH . 'views/' . tema() . 'js/odeme_adimlari.js');
+
+                    $this->template->add_region('content');
+                    $this->template->write_view('content', tema() . 'odeme/adim_4/payu/form/content', $content_data);
+
+                    $this->session->set_userdata('adim_4',TRUE);
+                    /* Sayfa Tnımlamaları */
+                    $this->template->render();
+                } else {
+                    ssl_redirect('uye/siparisler');
+                }
+            } else {
+                ssl_redirect('uye/siparisler');
+            }
+        } else {
+            redirect('');
+        }
+    }
 	
 	function havale($siparis_id, $fatura_id)
 	{

@@ -123,7 +123,26 @@
 								</div>
 							';
 						}
-					} elseif($odeme_secenekleri->odeme_model == 'kapida_odeme') {
+					}  elseif($odeme_secenekleri->odeme_model == 'payu') {
+
+                        $_baslik_unserialize = @unserialize($odeme_secenekleri->odeme_baslik);
+                        $_aciklama_unserialize = @unserialize($odeme_secenekleri->odeme_aciklama);
+                        $language_id = get_language('language_id');
+                        $baslik = (isset($_baslik_unserialize[$language_id])) ? $_baslik_unserialize[$language_id] : NULL;
+                        $aciklama = (isset($_aciklama_unserialize[$language_id])) ? $_aciklama_unserialize[$language_id] : NULL;
+
+                        $secili = ' checked="checked"';
+
+                        echo '
+                            <div class="os_oge" onclick="tip_sec(\''. $odeme_secenekleri->odeme_model .'\');">
+                                <i><input type="radio" '. $secili .' class="odeme_secenekleri" onclick="tip_sec(\''. $odeme_secenekleri->odeme_model .'\');" id="odeme_secenek_'. $odeme_secenekleri->odeme_model .'" name="odeme_secenegi" value="'. $odeme_secenekleri->odeme_model .'" /></i>
+                                <u><img src="'. site_resim() . $odeme_secenekleri->odeme_resim . '.png" alt="'. $odeme_secenekleri->odeme_model .'" /></u>
+                                <p><b>'. $baslik .'</b><br />'. $aciklama .'</p>
+                                <div class="clear"></div>
+                            </div>
+                        ';
+
+                    } elseif($odeme_secenekleri->odeme_model == 'kapida_odeme') {
 						$i++;
 						$secili = ($i == '1') ? ' checked="checked"':NULL;
 
