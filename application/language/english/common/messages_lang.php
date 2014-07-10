@@ -266,7 +266,7 @@ $lang['messages_static_page_customer_services_order_contact_suggest'] = 'Opinion
 /*- Ürün listeleme tanımları -*/
 // Ürün Şablon Dilleri
 // Normal
-$lang['messages_product_shema_normal_new_product_text'] = '<span>Ne</span>w Product';
+$lang['messages_product_shema_normal_new_product_text'] = '<span>New Product</span>';
 $lang['messages_product_shema_normal_campaign_text'] = '<span>Ca</span>mpaign';
 $lang['messages_product_shema_normal_vat_text'] = 'VAT';
 $lang['messages_product_shema_normal_campaign_product_piece'] = '<div class="urun_liste_fiyat saga" style="font-size: 12px;">{adet} pieces of this product is
