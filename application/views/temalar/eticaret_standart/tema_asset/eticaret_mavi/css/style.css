@@ -195,7 +195,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_sepet p a, #h_sepet p a:link, #h_sepet p a:visited {width:24px;height:34px;background:url(../images/sepet.png) no-repeat 0 0;color:#e0e0e0;display:block; margin-top: 5px;}
 #h_sepet p a:hover {background-position:bottom left;}
 #h_sepet span {display:inline-block;margin-top:19px; margin-right:1px; text-indent:8px; color: #fff; position: relative; bottom:7px;}
-.hizlisepet {width:498px;position:absolute;top:35px;right:-10px;overflow:hidden;display:none;}
+.hizlisepet {width:498px;position:absolute;top:100px;left:32%;overflow:hidden;display:none; z-index: 9999;}
 .hizlisepet div {overflow:hidden !important;}
 .sepust {width:498px;height:16px;background:url(../images/sepust.png) no-repeat;}
 .seport {width:498px;background:url(../images/seport.png) repeat-y;}

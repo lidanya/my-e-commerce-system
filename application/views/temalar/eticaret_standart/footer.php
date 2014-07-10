@@ -100,6 +100,20 @@ if(config('site_ayar_ssl_kod') != '')
 	<!-- footer_bilgi son-->
 </div>
 <!--fobildis SON-->
-	
+	<div class="blockOverlay" style="
+z-index: 1000;
+border: none;
+margin: 0px;
+padding: 0px;
+width: 100%;
+height: 100%;
+top: 0px;
+left: 0px;
+cursor: pointer;
+position: fixed;
+opacity: 0.6;
+background-color: rgb(0, 0, 0);
+display: none;;
+"></div>
 </body>
 </html>

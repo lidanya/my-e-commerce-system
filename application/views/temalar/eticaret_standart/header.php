@@ -80,6 +80,62 @@
 </head>
 
 <body>
+<div class="hizlisepet" id="ust_hizlisepet">
+    <div class="sepust"></div>
+    <div class="seport">
+        <?php $cart_item = ($this->cart->total_items()) ? $this->cart->total_items() : 0; ?>
+        <big id="ic_total"><?php echo strtr(lang('header_large_cart_items'), array('{product_count}' => $cart_item)); ?></big>
+        <small><strong><?php echo lang('header_large_cart_product_title'); ?></strong><em><?php echo lang('header_large_cart_price_title'); ?></em></small>
+        <?php if ($this->cart->contents()) { ?>
+            <ul>
+                <?php foreach ($this->cart->contents() as $items) { ?>
+                    <?php if ($items['durum']) { ?>
+                        <li>
+                            <dl>
+                                <dt>
+                                    <font title="<?php echo $items['name']; ?>"><?php echo character_limiter($items['name'], 30); ?></font> -
+                                    <i class="siterenk">
+                                        (
+                                        <?php echo $items['qty']; ?>
+                                        <?php
+                                        $tanim_bilgi = $this->yonetim_model->tanimlar_bilgi('stok_birim', $items['tip']);
+                                        if($tanim_bilgi->num_rows() > 0)
+                                        {
+                                            $tanim_bilgi_b = $tanim_bilgi->row();
+                                            echo '<font style="cursor:pointer;" title="'. $tanim_bilgi_b->tanimlar_adi .'">' . $tanim_bilgi_b->tanimlar_kod . '</font>';
+                                        } else {
+                                            echo '<font style="cursor:pointer;" title="Ürün Birimi Bulunamadı">bln</font>';
+                                        }
+                                        ?>
+                                        )
+                                    </i>
+                                </dt>
+                                <dd><?php echo $this->cart->format_number($items['price']); ?> TL</dd>
+                            </dl>
+                        </li>
+                    <?php } ?>
+                <?php } ?>
+            </ul>
+            <u class="saga siterenk">
+                <em><?php echo lang('header_large_cart_total_price'); ?>:</em>
+                <cite><span id="ttl"><?php echo $this->cart->format_number($this->cart->total()); ?></span> TL</cite>
+            </u>
+        <?php } ?>
+        <div class="clear"></div>
+        <div class="saltlinkler">
+            <a title="<?php echo lang('header_large_cart_close'); ?>" href="javascript:;" id="sepetkapa" onclick="sepet_kapa();" style="position:relative;bottom:-10px;" class="sitelink sola"><b>x</b> <?php echo lang('header_large_cart_close'); ?></a>
+            <a href="javascript:;" onclick="redirect('<?php echo ssl_url('sepet/goster'); ?>');" class="butonum saga">
+
+                <span class="butor"><?php echo lang('header_large_cart_go_cart'); ?></span>
+
+            </a>
+        </div>
+        <!--saltlinkler SON -->
+    </div>
+    <!--seport SON -->
+    <div class="sepalt"></div>
+</div>
+<!--hizlisepet SON -->
 <div id="head-ust">
     <div id="h_ust_menu"s>
         <a href="<?php echo site_url('site/index'); ?>" title="anasayfa">ANASAYFA</a>
@@ -212,62 +268,6 @@
                     <span id="cart_total"><?php echo strtr(lang('header_cart_items'), array('{product_count}' => $cart_item)); ?></span>
                 </a>
             </p>
-            <div class="hizlisepet" id="ust_hizlisepet">
-                <div class="sepust"></div>
-                <div class="seport">
-                    <?php $cart_item = ($this->cart->total_items()) ? $this->cart->total_items() : 0; ?>
-                    <big id="ic_total"><?php echo strtr(lang('header_large_cart_items'), array('{product_count}' => $cart_item)); ?></big>
-                    <small><strong><?php echo lang('header_large_cart_product_title'); ?></strong><em><?php echo lang('header_large_cart_price_title'); ?></em></small>
-                    <?php if ($this->cart->contents()) { ?>
-                        <ul>
-                            <?php foreach ($this->cart->contents() as $items) { ?>
-                                <?php if ($items['durum']) { ?>
-                                    <li>
-                                        <dl>
-                                            <dt>
-                                                <font title="<?php echo $items['name']; ?>"><?php echo character_limiter($items['name'], 30); ?></font> -
-                                                <i class="siterenk">
-                                                    (
-                                                    <?php echo $items['qty']; ?>
-                                                    <?php
-                                                    $tanim_bilgi = $this->yonetim_model->tanimlar_bilgi('stok_birim', $items['tip']);
-                                                    if($tanim_bilgi->num_rows() > 0)
-                                                    {
-                                                        $tanim_bilgi_b = $tanim_bilgi->row();
-                                                        echo '<font style="cursor:pointer;" title="'. $tanim_bilgi_b->tanimlar_adi .'">' . $tanim_bilgi_b->tanimlar_kod . '</font>';
-                                                    } else {
-                                                        echo '<font style="cursor:pointer;" title="Ürün Birimi Bulunamadı">bln</font>';
-                                                    }
-                                                    ?>
-                                                    )
-                                                </i>
-                                            </dt>
-                                            <dd><?php echo $this->cart->format_number($items['price']); ?> TL</dd>
-                                        </dl>
-                                    </li>
-                                <?php } ?>
-                            <?php } ?>
-                        </ul>
-                        <u class="saga siterenk">
-                            <em><?php echo lang('header_large_cart_total_price'); ?>:</em>
-                            <cite><span id="ttl"><?php echo $this->cart->format_number($this->cart->total()); ?></span> TL</cite>
-                        </u>
-                    <?php } ?>
-                    <div class="clear"></div>
-                    <div class="saltlinkler">
-                        <a title="<?php echo lang('header_large_cart_close'); ?>" href="javascript:;" id="sepetkapa" onclick="sepet_kapa();" style="position:relative;bottom:-10px;" class="sitelink sola"><b>x</b> <?php echo lang('header_large_cart_close'); ?></a>
-                        <a href="javascript:;" onclick="redirect('<?php echo ssl_url('sepet/goster'); ?>');" class="butonum saga">
-
-                            <span class="butor"><?php echo lang('header_large_cart_go_cart'); ?></span>
-
-                        </a>
-                    </div>
-                    <!--saltlinkler SON -->
-                </div>
-                <!--seport SON -->
-                <div class="sepalt"></div>
-            </div>
-            <!--hizlisepet SON -->
         </div>
 
 		</div>
@@ -292,13 +292,20 @@
 				$("#h_sepet a").click(function(){
 					if($('#ust_hizlisepet').is(':visible')) {
 						$("#ust_hizlisepet").stop(true, true).fadeOut("normal");
+                        $(".blockOverlay").hide();
 					} else {
 						$("#ust_hizlisepet").stop(true, true).fadeIn("normal");
+                        $(".blockOverlay").show();
 					}
 				});
 				$("#sepetkapa").click(function(){
 					$("#ust_hizlisepet").stop(true, true).fadeOut("normal");
+                    $(".blockOverlay").hide();
 				});
+                $(".blockOverlay").click(function(){
+                    $("#ust_hizlisepet").stop(true, true).fadeOut("normal");
+                    $(this).hide();
+                });
 			});
 			
 			function sepet_kapa()
