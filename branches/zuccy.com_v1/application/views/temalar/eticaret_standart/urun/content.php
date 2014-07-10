@@ -95,17 +95,6 @@ elseif ( config('site_ayar_urun_kalansure_goster') == '1'  and $q2->num_rows()>0
 ?>
 
 <div id="urun">
-<?php //echo $sayac; s?>
-	
-	<?php if(isset($yil) && isset($ay) && isset($gun) && isset($saat) && isset($dakika) && isset($saniye)): ?>
-	<div style="font-size: 12px; padding-top:3px;  font-weight: bold; color:#f66;"><?php echo lang('product_detail_time_left'); ?> :<span id="CountDownUD"></span></div>
-	<script type="text/javascript"> 
-	var date = new Date(<?php echo $yil; ?>,<?php echo $ay; ?>,<?php echo $gun; ?>,<?php echo $saat; ?>,<?php echo $dakika; ?>,<?php echo $saniye; ?>);
-	
-	$("span#CountDownUD").countdown({until: date, compact: true,description: "", format:"dHMS"});
-	
- 	</script>
-	<?php endif; ?>
 
 	<div id="urun_resim_cont" class="sola">
 		<div id="urun_resim" style="position:relative;">

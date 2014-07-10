@@ -233,7 +233,7 @@ h1#sayfa_baslik span, .baslik span {font-weight:normal;color:#ff8f00;}
 #h_a_kat a, #h_a_kat a:link, #h_a_kat a:visited {background:url(../images/kathov.png) top repeat-x; height:20px;line-height:20px;margin:1px auto;display:block;width:155px;padding:0 5px;color:#fff;}
 #h_a_kat a:hover {background-position:bottom; color:#fff;}
 #h_a_text {width:235px;margin-left:7px;/*padding-top:3px;*/}
-#h_a_text input {height:32px;line-height:32px;width:235px;border:none;background-color:transparent;font-size:11px;color:#a6a6a6;font-weight:400;}
+#h_a_text input {height:32px;line-height:32px;width:235px;border:none;background-color:transparent;font-size:11px;color:#a6a6a6;}
 #h_a_text input:focus {background-color:transparent !important;}
 #h_a_buton, #h_a_buton:link, #h_a_buton:visited {display:block;width:16px;height:32px;overflow:hidden;text-indent:-999px;background:url(../images/h_ara_buton.png) no-repeat 0 5px;}
 #h_a_buton:hover {background-position:0 -37px;}

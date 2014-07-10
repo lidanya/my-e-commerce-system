@@ -25,7 +25,7 @@ h1#urun_baslik {width:703px;margin:auto;border-bottom:dashed 1px #e3e3e3;padding
 .urun_detay_oge {height:33px;clear:both;}
 .u_baslik, .u_oge {display:block;width:120px;margin-left:10px;color:#7f7f7f;font-size:13px;margin-top:5px;}
 .u_oge {color:#565656;font-weight:bold;width:200px;}
-.u_oge span {font-size:9px;}
+.u_oge span {font-size:14px;}
 .u_oge b.u_turuncu {color:#ff6c00;font-size:16px;}
 .u_oge b.u_yesil {color:#007e2e;font-size:16px;}
 .u_oge b.u_cizgili {text-decoration:line-through;color:#ff0000}
