@@ -446,9 +446,9 @@ class dosya_yonetici extends Admin_Controller
 	public function resim_yukle($key = 'upload', $kok_dizin) {
 		$config['upload_path'] = $kok_dizin;
 		$config['allowed_types'] = 'gif|jpg|jpeg|jpe|png|ico';
-		$config['max_size'] = '1024';
-		$config['max_width'] = '1024';
-		$config['max_height'] = '768';
+		$config['max_size'] = '5000';
+		$config['max_width'] = '5000';
+		$config['max_height'] = '5000';
 
 		$this->load->library('upload', $config);
 

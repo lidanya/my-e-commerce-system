@@ -19,7 +19,7 @@ Aciklamalar:
 /*=========================Urun listeleme===============================*/
 .yeni, .kampanya {position:absolute;height:19px;padding:3px 0 0 5px;z-index:99;color:#242529;font-weight:bold;}
 .yeni span, .kampanya span {color:#ffffff;letter-spacing:1px;}
-.yeni {top:5px;left:5px;background:url(../images/yeni_bg.png) no-repeat 0 0;}
+.yeni {top:5px;left:0px;background: #000; height: 15px; padding: 3px;}
 .kampanya {top:5px;left:170px;background:url(../images/kampanya_bg.png) no-repeat 0 0;}
 .urun_liste_oge {position:relative;display:block;margin:7px 3px 0 3px;width:156px;height:337px;}
 .urun_liste_oge .ur_ust { border:1px solid #c8c8c8; height: 202px;}

@@ -265,7 +265,7 @@ $lang['messages_static_page_customer_services_order_contact_suggest'] = 'Görü�
 /*- Ürün listeleme tanımları -*/
 // Ürün Şablon Dilleri
 // Normal
-$lang['messages_product_shema_normal_new_product_text'] = '<span>Ye</span>ni Ürün';
+$lang['messages_product_shema_normal_new_product_text'] = '<span>Yeni Ürün</span>';
 $lang['messages_product_shema_normal_campaign_text'] = '<span>Ka</span>mpanya';
 $lang['messages_product_shema_normal_vat_text'] = 'KDV';
 $lang['messages_product_shema_normal_campaign_product_piece'] = '<div class="urun_liste_fiyat saga" style="font-size: 12px;">{adet} adet alana tanesi<br /><span class="k_fiyat" style="margin:0;padding:0;font-size: 12px;">{fiyat}</span> <span class="u_birim">{tur}{kdv}</span></div>';
