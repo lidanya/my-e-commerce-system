@@ -84,7 +84,7 @@
 	?>
 	</div>
 <?php
-	} if($category_products) {
+	} if($category_products || $category_products_editor || $category_products_cok_satan) {
 		$i = 0;
 ?>
 	<div class="clear"></div>
