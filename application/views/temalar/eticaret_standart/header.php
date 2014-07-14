@@ -321,7 +321,7 @@
                 <input type="hidden" value="0" id="kategori_kriter" name="kategori" />
 
                 <div id="h_a_text" style="padding-top:0;" class="sola">
-                    <input type="text" name="aranan" value="<?php echo _get('aranan', lang('header_search_input')); ?>" onclick="if(this.value==this.defaultValue){this.value=''}" onblur="if(this.value==''){this.value=this.defaultValue}" />
+                    <input style="padding: 0 !important;" type="text" name="aranan" value="<?php echo _get('aranan', lang('header_search_input')); ?>" onclick="if(this.value==this.defaultValue){this.value=''}" onblur="if(this.value==''){this.value=this.defaultValue}" />
                 </div>
                 <a id="h_a_buton" href="javascript:;" onclick="if($('#arama_box').val() == '<?php echo lang('header_search_input'); ?>'){return false;} else {$('#form_h_arama').submit();}"><?php echo lang('header_search_button'); ?></a>
                 <div class="clear"></div>

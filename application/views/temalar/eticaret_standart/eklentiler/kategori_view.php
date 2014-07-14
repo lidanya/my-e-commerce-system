@@ -109,7 +109,8 @@ if($eklenti_baslik_goster)
 				}
 			?>
 		<li>
-			<li><a <?php echo $aktif; ?> href="<?php echo site_url($kategori->seo . '--category'); ?>" title="<?php echo $kategori->name; ?>"><?php echo character_limiter($kategori->name, 28); ?></a>
+            <?php $totalCategoryProducts = get_count_category_product($kategori->category_id); ?>
+			<li><a <?php echo $aktif; ?> href="<?php echo site_url($kategori->seo . '--category'); ?>" title="<?php echo $kategori->name; ?>"><?php echo character_limiter($kategori->name, 28)." <span style='color:#afafaf;'>(".$totalCategoryProducts.")</span>"; ?></a>
 			<ul>
 				<?php
 					$a_kategoriler = $this->eklentiler_kategori_model->kategori_listele($kategori->category_id);
