@@ -86,6 +86,18 @@ if ( ! function_exists('indirim_orani'))
     }
 }
 
+if ( ! function_exists('get_count_category_product'))
+{
+    function get_count_category_product($category_id)
+    {
+        $ci =& get_instance();
+
+        $ci->load->model('category_model');
+        return  $ci->category_model->get_product_count($category_id);
+    }
+}
+
+
 	if ( ! function_exists('get_language_v2'))
 	{
 		function get_language_v2($item = null, $language = null)

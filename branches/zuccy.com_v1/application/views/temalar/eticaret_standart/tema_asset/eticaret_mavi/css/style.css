@@ -13,7 +13,7 @@ img {border:none;}
 a, a:link, a:visited {text-decoration:none;outline:none;color:#000;}
 a:hover {cursor:pointer;color:#00b5fe;}
 body {color:#333;font-size:12px;font-family: 'Roboto', sans-serif;}
-input, textarea, select {color:#008fff;outline:none;font-weight:bold;font-size:13px;line-height:22px;}
+input, textarea, select {color:#637e2f ;outline:none;font-weight:bold;font-size:13px;line-height:22px; padding: 3px;}
 input:focus, textarea:focus, select:focus {background-color: #ffffdf !important;}
 
 /*=========================Global Stiller===============================*/
