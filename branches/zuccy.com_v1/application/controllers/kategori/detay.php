@@ -28,7 +28,7 @@ class detay extends Public_Controller {
         $sub_category = $this->input->get("sub_category");
         $manufacturer = $this->input->get("manufacturer");
         $fiyat = $this->input->get("fiyat");
-        $teslimat = $this->input->get("teslimat");
+        $teslimat = (int)$this->input->get("teslimat");
 
         $special_filters = array(
             "sub_category"=> $sub_category,

@@ -221,6 +221,10 @@ class product_model extends CI_Model
             }
         }
 
+        if(isset($special_filters['teslimat']) && $special_filters['teslimat']) {
+            $this->db->where('p.hizli_gonder',$special_filters['teslimat']);
+        }
+
 		$this->db->order_by($sort, $order);
 		$this->db->limit($limit, $start);
 		$query = $this->db->get();
@@ -299,6 +303,10 @@ class product_model extends CI_Model
                 case 8:
                     $this->db->where('p.price >', 1000);
             }
+        }
+
+        if(isset($special_filters['teslimat']) && $special_filters['teslimat']) {
+            $this->db->where('p.hizli_gonder',$special_filters['teslimat']);
         }
 
         $this->db->order_by($sort, $order);
@@ -398,6 +406,10 @@ class product_model extends CI_Model
                 case 8:
                     $this->db->where('p.price >', 1000);
             }
+        }
+
+        if(isset($special_filters['teslimat']) && $special_filters['teslimat']) {
+            $this->db->where('p.hizli_gonder',$special_filters['teslimat']);
         }
 
         $this->db->order_by($sort, $order);
