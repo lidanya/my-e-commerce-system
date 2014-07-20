@@ -118,6 +118,7 @@ class product_import extends Admin_Controller {
 			$price												= $this->float($price);
 
 			/* İnsert Verileri */
+            $insert_datas = new stdClass();
 			$insert_datas->model								= $model;
 			$insert_datas->name									= $name;
 			$insert_datas->description							= $description;
