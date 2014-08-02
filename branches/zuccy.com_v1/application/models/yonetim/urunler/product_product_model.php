@@ -746,7 +746,7 @@ class product_product_model extends CI_Model
 			'subtract'				=> 0
 		);
 		$this->db->update('product', $_product_update_data, array('product_id' => $product_id));
-
+        $_product_update_data_ = array();
 		if ($this->db->affected_rows()) {
 			/* Check Product Name */
 			if ($update_datas->name) {
@@ -926,8 +926,9 @@ class product_product_model extends CI_Model
 				$this->db->insert('product_to_category', array('product_id' => (int) $product_id, 'category_id' => (int) $category_id));
 			}
 			/* Check Category Insert */
-
-			$this->db->update('product', $_product_update_data_, array('product_id' => (int) $product_id));
+            if($_product_update_data_) {
+			    $this->db->update('product', $_product_update_data_, array('product_id' => (int) $product_id));
+            }
 
 			return TRUE;
 		}
